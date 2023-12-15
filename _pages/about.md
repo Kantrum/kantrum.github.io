@@ -27,10 +27,7 @@ Life Beyond Work
 ------
 There's more to me than academics and entrepreneurship. In this personal section, discover the individual behind the accolades. From my athletic pursuits as a record-holding sprinter to my hobbies and travels, this space offers a peek into the diverse interests that enrich my life.
 
-
-
-
-<span style="color: red;">Join My Journey</span>
+<span style="color: red; margin-top: 20px; display: inline-block;">Join My Journey</span>
 ======
 This website, powered by the academicpages template and hosted on GitHub Pages, is more than just a showcase of my work. It's a dynamic, evolving representation of my journey in academia, business, and beyond. Every update, every new experience, and every milestone is captured here.
 
