@@ -80,10 +80,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Huang Jiongtao"
+  name             : "  Jiongtao Huang  "
   avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
-  location         : "chengdu, China"
+  bio              : "SWJTU-Leeds Joint School, Year 4"
+  location         : "Chengdu, China"
   employer         :
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "http://yourfullgooglescholarurl.com"
@@ -94,15 +94,15 @@ author:
   codepen          :
   dribbble         :
   flickr           :
-  facebook         :
+  facebook         : "https://weibo.com/u/5217974261"
   foursquare       :
   github           : "academicpages"
-  google_plus      :
+  google_plus      : "https://weibo.com/u/5217974261"
   keybase          :
-  instagram        :
+  instagram        : "https://weibo.com/u/5217974261"
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
+  linkedin         : "https://weibo.com/u/5217974261"
   orcid            : "http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       :
@@ -111,10 +111,10 @@ author:
   tumblr           :
   twitter          : "replacethistwitterhandle"
   vine             :
-  weibo            : "-Kantrum-"
+  weibo            : "https://weibo.com/u/5217974261"
   xing             :
-  youtube          :
-  wikipedia        :
+  youtube          : "https://weibo.com/u/5217974261"
+  wikipedia        : "https://weibo.com/u/5217974261"
 
 
 # Reading Files
