@@ -84,35 +84,36 @@ author:
   avatar           : "profile.png"
   bio              : "SWJTU-Leeds Joint School, Year 4"
   location         : "Chengdu, China"
-  employer         :
+  employer         : "/u/5217974261"
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "http://yourfullgooglescholarurl.com"
   email            : "kantrum@163.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              :
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
+  uri              : "/u/5217974261"
+  bitbucket        : "/u/5217974261"
+  codepen          : "/u/5217974261"
+  dribbble         : "/u/5217974261"
+  flickr           : "/u/5217974261"
   facebook         : "https://weibo.com/u/5217974261"
-  foursquare       :
+  foursquare       : "/u/5217974261"
   github           : "academicpages"
   google_plus      : "https://weibo.com/u/5217974261"
-  keybase          :
+  keybase          : "/u/5217974261"
   instagram        : "https://weibo.com/u/5217974261"
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
-  lastfm           :
+  lastfm           : "/u/5217974261"
   linkedin         : "https://weibo.com/u/5217974261"
   orcid            : "http://orcid.org/yourorcidurl"
-  pinterest        :
-  soundcloud       :
+  pinterest        : "/u/5217974261"
+  soundcloud       : "/u/5217974261"
   stackoverflow    : # http://stackoverflow.com/users/123456/username
-  steam            :
-  tumblr           :
+  steam            : "/u/5217974261"
+  tumblr           : "/u/5217974261"
   twitter          : "replacethistwitterhandle"
-  vine             :
-  weibo            : "https://weibo.com/u/5217974261"
-  xing             :
+  vine             : "/u/5217974261"
+  weibo            : "/u/5217974261"
+  -kantrum-        : "/u/5217974261"
+  xing             : "/u/5217974261"
   youtube          : "https://weibo.com/u/5217974261"
   wikipedia        : "https://weibo.com/u/5217974261"
 
