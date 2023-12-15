@@ -11,7 +11,7 @@ redirect_from:
 **Welcome to My Personal Space: A Fusion of Academia, Innovation, and Life!**
 
 
-<span style="color: blue;">Embracing Knowledge & Innovation</span>
+<span style="color: red;">Embracing Knowledge & Innovation</span>
 ======
 Welcome to my digital abode, a unique blend of my academic journey, entrepreneurial ventures, and slices of personal life. Here, I share my experiences, achievements, and the myriad of passions that drive me.
 
@@ -30,7 +30,7 @@ There's more to me than academics and entrepreneurship. In this personal section
 
 
 
-<font color="blue">Join My Journey</font>
+<span style="color: red;">Join My Journey</span>
 ======
 This website, powered by the academicpages template and hosted on GitHub Pages, is more than just a showcase of my work. It's a dynamic, evolving representation of my journey in academia, business, and beyond. Every update, every new experience, and every milestone is captured here.
 
