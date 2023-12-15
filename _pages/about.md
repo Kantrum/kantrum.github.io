@@ -11,7 +11,7 @@ redirect_from:
 **Welcome to My Personal Space: A Fusion of Academia, Innovation, and Life!**
 
 
-<font color="blue">Embracing Knowledge & Innovation</font>
+<span style="color: blue;">Embracing Knowledge & Innovation</span>
 ======
 Welcome to my digital abode, a unique blend of my academic journey, entrepreneurial ventures, and slices of personal life. Here, I share my experiences, achievements, and the myriad of passions that drive me.
 
