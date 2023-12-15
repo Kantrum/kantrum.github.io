@@ -15,7 +15,7 @@ redirect_from:
 ======
 Welcome to my digital abode, a unique blend of my academic journey, entrepreneurial ventures, and slices of personal life. Here, I share my experiences, achievements, and the myriad of passions that drive me.
 
-Academic Endeavors
+-Academic Endeavors
 ------
 Dive into my world of academic exploration where I chronicle my journey through rigorous study and research. This section showcases my scholarly achievements, published works, and ongoing projects. It’s a space where I reflect on my learnings and contributions to the field of Electronic and Information Engineering.
 
