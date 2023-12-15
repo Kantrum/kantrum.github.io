@@ -15,7 +15,7 @@ redirect_from:
 ======
 Welcome to my digital abode, a unique blend of my academic journey, entrepreneurial ventures, and slices of personal life. Here, I share my experiences, achievements, and the myriad of passions that drive me.
 
--Academic Endeavors
+Academic Endeavors
 ------
 Dive into my world of academic exploration where I chronicle my journey through rigorous study and research. This section showcases my scholarly achievements, published works, and ongoing projects. It’s a space where I reflect on my learnings and contributions to the field of Electronic and Information Engineering.
 
@@ -27,7 +27,7 @@ Life Beyond Work
 ------
 There's more to me than academics and entrepreneurship. In this personal section, discover the individual behind the accolades. From my athletic pursuits as a record-holding sprinter to my hobbies and travels, this space offers a peek into the diverse interests that enrich my life.
 
-<span style="color: red; margin-top: 20px; display: inline-block;">Join My Journey</span>
+<span style="color: red; margin-top: 60px; display: inline-block;">Join My Journey</span>
 ======
 This website, powered by the academicpages template and hosted on GitHub Pages, is more than just a showcase of my work. It's a dynamic, evolving representation of my journey in academia, business, and beyond. Every update, every new experience, and every milestone is captured here.
 
