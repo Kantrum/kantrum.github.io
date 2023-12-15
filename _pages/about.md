@@ -33,6 +33,7 @@ This website, powered by the academicpages template and hosted on GitHub Pages, 
 
 Engage & Collaborate
 ------
+I believe in the power of collaboration and knowledge sharing. Whether you're a fellow academic, a budding entrepreneur, or just someone who shares similar interests, I'm always open to discussions, projects, and opportunities. Feel free to reach out and connect!
 
 Explore & Discover
 ------
