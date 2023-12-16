@@ -5,6 +5,7 @@ permalink: /publications/
 author_profile: true
 ---
 
+{% include base_path %}
 EDUCATION BACKGROUND
 ======
 * University of Leeds - Southwest Jiaotong University Joint School, 2020-2024
