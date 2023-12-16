@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 {% include base_path %}
-### Personal Information
+## Personal Information
 - **Name (Chinese):** `黄炯涛`
 - **Name (Pinyin):** `Huang Jiongtao`
 - **Name (English):** `Simon`
@@ -15,20 +15,21 @@ author_profile: true
 - **Nationality:** `Chinese`
 - **Contact Address:** `No.999 Xian Rd, Pidu District, Chengdu, 611000, Sichuan, China`
 - **Postal Code:** `611000`
-- **Email:** `kantrum@163.com`
+- **Email:** `[kantrum@163.com](mailto:kantrum@163.com)`
 - **Mobile Number:** `+86-155-8888-8888`
 
-### Academic Background
-- **Current Institution:** `University of Leeds``Southwest Jiaotong University`
+## Academic Background
+- **Current Institution:** `University of Leeds | Southwest Jiaotong University`
 - **Major/Area of Study:** `Electronic and Electrical Engineering`
 - **Expected Graduation Date:** `07/2024`
 
-### Photograph
+## Photograph
 - Attach a recent personal photograph here.
+![Attach a recent personal photograph here](link-to-your-photograph.jpg)
 
 
 
-## Personal Information
+## 📌 Personal Information
 - **Name (Chinese):** 黄炯涛
 - **Name (Pinyin/Passport):** Huang Jiongtao
 - **Name (English):** Simon
@@ -40,13 +41,14 @@ author_profile: true
 - **Email:** [kantrum@163.com](mailto:kantrum@163.com)
 - **Mobile Number:** +86-155-8888-8888
 
-## Academic Background
-- **Current Institution:** University of Leeds | Southwest Jiaotong University
+## 📘 Academic Background
+- **Current Institution:** University of Leeds & Southwest Jiaotong University
 - **Major/Area of Study:** Electronic and Electrical Engineering
 - **Expected Graduation Date:** 07/2024
 
-## Photograph
-![Attach a recent personal photograph here](link-to-your-photograph.jpg)
+## 📸 Photograph
+*Attach a recent personal photograph here.*
+
 
 
 
