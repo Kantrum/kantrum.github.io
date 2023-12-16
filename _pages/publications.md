@@ -26,6 +26,13 @@ author_profile: true
 - **Major/Area of Study:** `Electronic and Electrical Engineering`
 - **Expected Graduation Date:** `07/2024`
 
+## 🔥 Leadership and Social Activities
+---
+- President of the University **Student Campus Self-Management Committee**, May 2023 – Present
+- Most Contributive Volunteer Award in the **31st Chengdu World University Games**, May 2022
+- Class Leader of the **New Youth Global Competency Development Programme**, Mar 2022 – Dec 2022
+- Ministry of the University **Student Campus Self-Management Committee**, May 2021 – Apr 2023
+
 ## 🏆 Personal Honors
 ---
 ### 2023
