@@ -43,6 +43,11 @@ author_profile: true
 - **August:** Engaged in community epidemic prevention volunteer activities and won the title of "Excellent Volunteer".
 - **February:** Completed an internship in translation and won the title of "Excellent Intern".
 
+<p float="left">
+  <img src="huangjiongtao.github.io/images/500x300.png" width="30%" />
+  <img src="huangjiongtao.github.io/images/500x300.png" width="30%" />
+  <img src="huangjiongtao.github.io/images/500x300.png" width="30%" />
+</p>
 
 ## 📸 Photograph
 ---
