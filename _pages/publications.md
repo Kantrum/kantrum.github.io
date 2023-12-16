@@ -7,8 +7,9 @@ author_profile: true
 
 {% include base_path %}
 ### Personal Information
-- **Name (Chinese):** `[您的中文名]`
-- **Name (Pinyin/Passport):** `[您的拼音名，与护照一致]`
+- **Name (Chinese):** `黄炯涛`
+- **Name (Pinyin/Passport):** `Huang Jiongtao`
+- **Name (English):** `Simon`
 - **Former Name (if applicable):** `[曾用名（中文）]` / `[曾用名（拼音）]`
 - **Gender:** `[性别]`
 - **Date of Birth:** `[出生日期]`
