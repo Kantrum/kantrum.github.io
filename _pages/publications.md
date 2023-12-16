@@ -10,35 +10,18 @@ author_profile: true
 - **Name (Chinese):** `黄炯涛`
 - **Name (Pinyin/Passport):** `Huang Jiongtao`
 - **Name (English):** `Simon`
-- **Former Name (if applicable):** `[曾用名（中文）]` / `[曾用名（拼音）]`
-- **Gender:** `[性别]`
-- **Date of Birth:** `[出生日期]`
-- **Place of Birth:** `[出生城市]`, `[出生省份]`
-- **Nationality:** `[国籍]`
-- **Other Nationalities (if any):** `[其他国籍]`
-- **Marital Status:** `[婚姻状态]`
-- **ID Number:** `[身份证号]`
-- **ID Validity Period:** `[身份证有效期]`
-- **Only Child:** `[是否是独生子女]`
-- **Home Address:** `[家庭地址]`
-- **Postal Code:** `[邮编]`
-- **Mailing Address (if different):** `[邮寄地址]`
-- **Email:** `[常用Email]`
-- **Mobile Number:** `[手机号]`
-
-### Passport and Visa Information (If Applicable)
-- **Passport Number:** `[护照号码]`
-- **Passport Issue Place:** `[签发城市]`, `[签发省份]`
-- **Passport Issue Date:** `[签发日期]`
-- **Passport Expiry Date:** `[有效期至]`
-- **Current Visa Type:** `[签证类型]`
-- **Visa Number:** `[签证号]`
-- **Visa Validity Period:** `[签证有效期]`
+- **Gender:** `Male`
+- **Date of Birth:** `10/2001`
+- **Nationality:** `Chinese`
+- **Contact Address:** `No.999 Xian Rd, Pidu District, Chengdu, 611000, Sichuan, China`
+- **Postal Code:** `611000`
+- **Email:** `kantrum@163.com`
+- **Mobile Number:** `+86-155-8888-8888`
 
 ### Academic Background
-- **Current Institution:** `[在读学校]`
-- **Major/Area of Study:** `[主修/研究领域]`
-- **Expected Graduation Date:** `[预计毕业日期]`
+- **Current Institution:** `University of Leeds``Southwest Jiaotong University`
+- **Major/Area of Study:** `Electronic and Electrical Engineering`
+- **Expected Graduation Date:** `07/2024`
 
 ### Photograph
 - Attach a recent personal photograph here.
