@@ -15,19 +15,19 @@ In addition to my academic and entrepreneurial endeavors, I actively contribute 
 If you are interested in any aspect of me, I would love to chat and collaborate, please email me at - kantrum@163.com
 
 
-Publications
+Academic
 ======
   <ul>{% for post in site.publications %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Talks
+Entrepreneurship
 ======
   <ul>{% for post in site.talks %}
     {% include archive-single-talk-cv.html %}
   {% endfor %}</ul>
   
-Teaching
+Entrepreneurship
 ======
   <ul>{% for post in site.teaching %}
     {% include archive-single-cv.html %}
