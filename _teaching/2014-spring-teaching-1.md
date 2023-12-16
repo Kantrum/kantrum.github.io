@@ -12,13 +12,13 @@ The company recently launched two innovative projects: a vehicle health monitori
 
 
 ## 🌐 Founded
-- **Date:** [成立时间]
-  - **Location:** [公司所在地]
-  - **Initial Team Size:** [初始团队规模]
+- **Date:** 25/11/2021
+  - **Location:** Chengdu, China
+  - **Initial Team Size:** 5-15
   - **Story Behind the Inception:** [成立背后的故事]
 
 ## 💼 Business Focus
-- **Industry:** [所处行业]
+- **Industry:** Technology
 - **Core Services/Products:** [核心服务或产品]
   - **Unique Selling Points:** [产品或服务的独特卖点]
 - **Target Market:** [目标市场]
