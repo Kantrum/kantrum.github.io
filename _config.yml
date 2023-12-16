@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : &name "Jiongtao Huang"
-  avatar           : "Huangjiongtao.jpg" #profile.png
+  avatar           : "profile.png"
   bio              : "SWJTU-Leeds, Year 4"
   location         : "Chengdu, China"
   employer         : "Southwest Jiaotong University"
@@ -89,30 +89,30 @@ author:
   googlescholar    : "http://yourfullgooglescholarurl.com"
   email            : "kantrum@163.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              : ""
-  bitbucket        : ""
-  codepen          : ""
-  dribbble         : ""
-  flickr           : ""
+  uri              :
+  bitbucket        :
+  codepen          :
+  dribbble         :
+  flickr           :
   facebook         : "https://weibo.com/u/5217974261"
-  foursquare       : ""
+  foursquare       :
   github           : "academicpages"
   google_plus      : "https://weibo.com/u/5217974261"
-  keybase          : ""
+  keybase          :
   instagram        : "https://weibo.com/u/5217974261"
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
-  lastfm           : ""
+  lastfm           :
   linkedin         : "https://weibo.com/u/5217974261"
   orcid            : "http://orcid.org/yourorcidurl"
   pinterest        : "/u/5217974261"
-  soundcloud       : ""
+  soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
-  steam            : ""
-  tumblr           : ""
+  steam            :
+  tumblr           :
   twitter          : "replacethistwitterhandle"
-  vine             : ""
+  vine             :
   weibo            : "/u/5217974261"
-  xing             : ""
+  xing             :
   youtube          : "https://weibo.com/u/5217974261"
   wikipedia        : "https://weibo.com/u/5217974261"
 
