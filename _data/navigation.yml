@@ -1,21 +1,21 @@
 # main links links
 main:
-  - title: "Home"
+  - title: "About Me"
     url: /publications/
 
-  - title: "About Me"
+  - title: "Academic"
     url: /talks/    
 
-  - title: "Academic"
+  - title: "Entrepreneurship"
     url: /teaching/    
     
-  - title: "Entrepreneurship"
+  - title: "Life"
     url: /portfolio/
         
-  - title: "Life"
+  - title: "Personal Blog"
     url: /year-archive/
     
-  - title: "Personal Blog"
+  - title: "CV"
     url: /cv/
     
   - title: "Guide"
