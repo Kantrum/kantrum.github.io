@@ -51,9 +51,9 @@ author_profile: true
 - **February:** Completed an internship in translation and won the title of "Excellent Intern".
 
 <p float="left">
-  <img src="huangjiongtao.github.io/images/500x300.png" width="30%" />
-  <img src="huangjiongtao.github.io/images/500x300.png" width="30%" />
-  <img src="huangjiongtao.github.io/images/500x300.png" width="30%" />
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/profile.png" width="30%" />
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/profile.png" width="30%" />
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/profile.png" width="30%" />
 </p>
 
 
@@ -105,16 +105,16 @@ author_profile: true
 ---
 *Attach a recent personal photograph here.*
 <p float="left">
-  <img src="huangjiongtao.github.io/images/profile.png" width="30%" />
-  <img src="profile.png" width="30%" />
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/profile.png" width="30%" />
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/profile.png" width="30%" />
   <img src="https://kantrum.github.io/huangjiongtao.github.io/images/profile.png" width="30%" />
 </p>
 
-![Attach a recent personal photograph here](huangjiongtao.github.io/images/profile.png)
+![Attach a recent personal photograph here](https://kantrum.github.io/huangjiongtao.github.io/images/profile.png)
 
-![Attach a recent personal photograph here](huangjiongtao.github.io/images/profile.png)
+![Attach a recent personal photograph here](https://kantrum.github.io/huangjiongtao.github.io/images/profile.png)
 
-![Attach a recent personal photograph here](huangjiongtao.github.io/images/profile.png)
+![Attach a recent personal photograph here](https://kantrum.github.io/huangjiongtao.github.io/images/profile.png)
 
 
 
