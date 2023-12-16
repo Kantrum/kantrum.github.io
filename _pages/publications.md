@@ -1,11 +1,53 @@
 ---
 layout: archive
-title: "About Me"
+title: "About Myself"
 permalink: /publications/
 author_profile: true
 ---
 
 {% include base_path %}
+### Personal Information
+- **Name (Chinese):** `[您的中文名]`
+- **Name (Pinyin/Passport):** `[您的拼音名，与护照一致]`
+- **Former Name (if applicable):** `[曾用名（中文）]` / `[曾用名（拼音）]`
+- **Gender:** `[性别]`
+- **Date of Birth:** `[出生日期]`
+- **Place of Birth:** `[出生城市]`, `[出生省份]`
+- **Nationality:** `[国籍]`
+- **Other Nationalities (if any):** `[其他国籍]`
+- **Marital Status:** `[婚姻状态]`
+- **ID Number:** `[身份证号]`
+- **ID Validity Period:** `[身份证有效期]`
+- **Only Child:** `[是否是独生子女]`
+- **Home Address:** `[家庭地址]`
+- **Postal Code:** `[邮编]`
+- **Mailing Address (if different):** `[邮寄地址]`
+- **Email:** `[常用Email]`
+- **Mobile Number:** `[手机号]`
+
+### Passport and Visa Information (If Applicable)
+- **Passport Number:** `[护照号码]`
+- **Passport Issue Place:** `[签发城市]`, `[签发省份]`
+- **Passport Issue Date:** `[签发日期]`
+- **Passport Expiry Date:** `[有效期至]`
+- **Current Visa Type:** `[签证类型]`
+- **Visa Number:** `[签证号]`
+- **Visa Validity Period:** `[签证有效期]`
+
+### Academic Background
+- **Current Institution:** `[在读学校]`
+- **Major/Area of Study:** `[主修/研究领域]`
+- **Expected Graduation Date:** `[预计毕业日期]`
+
+### Photograph
+- Attach a recent personal photograph here.
+
+
+
+
+
+
+
 Meet Jiongtao Huang (Simon, 黄炯涛), an ambitious and multifaceted individual.
 
 I’m currently pursuing my degree in Electronic and Electrical Engineering at the University of Leeds and Southwest Jiaotong University (SWJTU-Leeds Joint School). My academic journey is complemented by my entrepreneurial spirit, as I am the founder of Sichuan Jie Min Technology Co., Ltd. and Hunan Chuangben Technology Co., Ltd..
