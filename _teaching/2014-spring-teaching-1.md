@@ -12,6 +12,6 @@ The company recently launched two innovative projects: a vehicle health monitori
 
 Experience
 ======
-• Launched a vehicle health monitoring system and an online medical payment platform, directly leading a software team to meet critical industry needs.<br>
-• Initiated and closed strategic partnerships with Chengdu Hikvision Research Institute and Chengdu Extreme Viewpoint Technology, expanding company reach and capability.<br>
-• Streamlined our supply chain by securing a pivotal agreement with Guilin Jingrui Sensor Technology Co., Ltd significantly enhancing the quality and efficiency of our product offerings.<br>
+* Launched a vehicle health monitoring system and an online medical payment platform, directly leading a software team to meet critical industry needs.
+* Initiated and closed strategic partnerships with Chengdu Hikvision Research Institute and Chengdu Extreme Viewpoint Technology, expanding company reach and capability.
+* Streamlined our supply chain by securing a pivotal agreement with Guilin Jingrui Sensor Technology Co., Ltd significantly enhancing the quality and efficiency of our product offerings.
