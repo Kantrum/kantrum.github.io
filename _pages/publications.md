@@ -90,7 +90,6 @@ author_profile: true
 ### 🎯 **Key Dates**
 - **Dec 31:** 🥳 _New Year's Eve Celebration_
 - **Jan 1:** 🎉 _New Year: Office Closed_
----
 
 
 ## 📸 Photograph
