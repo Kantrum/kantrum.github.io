@@ -80,9 +80,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "  Jiongtao Huang  "
+  name             : &name "Jiongtao Huang"
   avatar           : "profile.png"
-  bio              : "SWJTU-Leeds Joint School, Year 4"
+  bio              : "SWJTU-Leeds, Year 4"
   location         : "Chengdu, China"
   employer         : "Southwest Jiaotong University"
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
