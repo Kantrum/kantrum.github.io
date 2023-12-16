@@ -12,10 +12,6 @@ A university-level tutoring enterprise was established, focusing on preparing st
 
 Experience
 ======
-• Pioneered a university competition tutoring enterprise, and aligning services with academic rigor and
-career readiness.
-• Drove the company’s inaugural success by enrolling 70 students in an e-commerce innovation and
-entrepreneurship intensive during the 2023 winter term, reflecting strong student engagement and
-program appeal.
-• Designed an expansion strategy to diversify offerings, paving the way for inclusion of various academic
-competitions and a suite of university-level educational services.
+• Pioneered a university competition tutoring enterprise, and aligning services with academic rigor and career readiness.<br>
+• Drove the company’s inaugural success by enrolling 70 students in an e-commerce innovation and entrepreneurship intensive during the 2023 winter term, reflecting strong student engagement and program appeal.<br>
+• Designed an expansion strategy to diversify offerings, paving the way for inclusion of various academic competitions and a suite of university-level educational services.<br>
