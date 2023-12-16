@@ -62,19 +62,19 @@ author_profile: true
 
 ### 🌟 **Week 14** [Dec 4 - Dec 10]
 > - **Dec 7:**
->   - 📌 **Learning:** _XJEL3030 Assignment 3 DDL_
+>   - 📌 ~~**Learning:** _XJEL3030 Assignment 3 DDL_~~
 > - **Dec 8:**
->   - ⏰ **Learning:** _XJEL3875 Interim Report DDL_
+>   - ⏰ ~~**Learning:** _XJEL3875 Interim Report DDL_~~
 > - **Dec 9:**
->   - 📚 **Learning:** `Report Submission`
+>   - 📚 ~~**Learning:** `Report Submission`~~
 
 ---
 
 ### ✨ **Week 15** [Dec 11 - Dec 17]
 > - **Dec 15:**
->   - 💼 **Learning:** _XJEL3362 Mid Test_
+>   - 💼 ~~**Learning:** _XJEL3362 Mid Test_~~
 > - **Dec 16:**
->   - ❤️ **Learning:** _XJEL3875 Journal 8_
+>   - ❤️ ~~**Learning:** _XJEL3875 Journal 8_~~
 
 ---
 
@@ -99,6 +99,9 @@ author_profile: true
 ### 🎯 **Key Dates**
 - **Dec 31:** 🥳 _New Year's Eve Celebration_
 - **Jan 1:** 🎉 _New Year: Office Closed_
+
+---
+
 
 
 ## 📸 Photograph
