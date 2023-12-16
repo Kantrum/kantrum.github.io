@@ -11,6 +11,7 @@ author_profile: true
 - **Name (Chinese):** `黄炯涛`
 - **Name (Pinyin):** `Huang Jiongtao`
 - **Name (English):** `Simon`
+- **Nickname:** `Kantrum`
 - **Gender:** `Male`
 - **Date of Birth:** `10/2001`
 - **Nationality:** `Chinese`
@@ -28,22 +29,20 @@ author_profile: true
 ## 🏆 Personal Honors
 ---
 ### 2023
-- **December:** Attained the bronze medal at the national level in the China International Student Innovation Competition.
-- **August:** Awarded the provincial gold medal in the Ninth China International "Internet +" Student Innovation and Entrepreneurship Competition.
+- **March:** Served as the Class Officer for the New Youth Class of 2022 in the "New Youth Global Competency Development Programme" with outstanding performance.
+- **February:** Received the "A Grade Certificate of Comprehensive Quality" from Sichuan University Students Union.
 
 ### 2022
-- **June:** Received the Best Research Paper Award at the National Engineering Conference.
-- **April:** Honored with the Outstanding Young Innovator Award by the National Technology Forum.
+- **December:** Awarded the honorary title of "Three Good Students" by Southwest Jiaotong University.
+- **March:** Recognized as an Outstanding Communist Youth League Member by Southwest Jiaotong University.
 
 ### 2021
-- **November:** Won the first prize in the National Student Science and Technology Competition.
-- **March:** Recognized as the Student of the Year by [University/Institution Name].
+- **December** Earned the honorary title of "Three Good Students" by Southwest Jiaotong University.
+- **December:** Distinguished as an Outstanding Youth League Member by Southwest Jiaotong University.
+- **October:** Participated in entrepreneurship training and won the title of "excellent student".
+- **August:** Engaged in community epidemic prevention volunteer activities and won the title of "Excellent Volunteer".
+- **February:** Completed an internship in translation and won the title of "Excellent Intern".
 
-### 2020
-- **September:** Earned the top prize in the Regional Engineering Design Challenge.
-- **February:** Selected for the Prestigious [Scholarship/Award Name].
-
----
 
 ## 📸 Photograph
 ---
