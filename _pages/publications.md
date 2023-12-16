@@ -28,7 +28,18 @@ author_profile: true
 ## 📸 Photograph
 ---
 *Attach a recent personal photograph here.*
-![Attach a recent personal photograph here](link-to-your-photograph.jpg)
+<p float="left">
+  <img src="huangjiongtao.github.io/images/500x300.png" width="30%" />
+  <img src="huangjiongtao.github.io/images/500x300.png" width="30%" />
+  <img src="huangjiongtao.github.io/images/500x300.png" width="30%" />
+</p>
+
+![Attach a recent personal photograph here](huangjiongtao.github.io/images/500x300.png)
+
+![Attach a recent personal photograph here](huangjiongtao.github.io/images/500x300.png)
+
+![Attach a recent personal photograph here](huangjiongtao.github.io/images/500x300.png)
+
 
 
 
