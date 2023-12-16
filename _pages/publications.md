@@ -25,6 +25,26 @@ author_profile: true
 - **Major/Area of Study:** `Electronic and Electrical Engineering`
 - **Expected Graduation Date:** `07/2024`
 
+## 🏆 Personal Honors
+---
+### 2023
+- **December:** Attained the bronze medal at the national level in the China International Student Innovation Competition.
+- **August:** Awarded the provincial gold medal in the Ninth China International "Internet +" Student Innovation and Entrepreneurship Competition.
+
+### 2022
+- **June:** Received the Best Research Paper Award at the National Engineering Conference.
+- **April:** Honored with the Outstanding Young Innovator Award by the National Technology Forum.
+
+### 2021
+- **November:** Won the first prize in the National Student Science and Technology Competition.
+- **March:** Recognized as the Student of the Year by [University/Institution Name].
+
+### 2020
+- **September:** Earned the top prize in the Regional Engineering Design Challenge.
+- **February:** Selected for the Prestigious [Scholarship/Award Name].
+
+---
+
 ## 📸 Photograph
 ---
 *Attach a recent personal photograph here.*
