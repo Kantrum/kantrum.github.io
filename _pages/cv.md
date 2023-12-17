@@ -9,8 +9,8 @@ redirect_from:
 
 {% include base_path %}
 
-- [升学简历](/professional-resume/academic-resume/)
-- [求职简历](/professional-resume/job-resume/)
+- [升学简历](/cv/academic-resume/)
+- [求职简历](/cv/job-resume/)
 
 
 EDUCATION BACKGROUND
