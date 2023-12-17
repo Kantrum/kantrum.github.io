@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: page
 title: "Academic Resumé"
 permalink: /_cv/academic-resume/
 author_profile: true
