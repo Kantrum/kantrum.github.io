@@ -9,8 +9,17 @@ redirect_from:
 
 {% include base_path %}
 
-- [升学简历](/_pages/academic-resume/)
-- [求职简历](/_pages/job-resume/)
+- [Academic Resume](huangjiongtao.github.io/_pages/academic-resume/)
+- [Job Resume](huangjiongtao.github.io/_pages/job-resume/)
+
+
+<h3 style="font-size: 1.5em; margin-top: 20px;">
+  <a href="huangjiongtao.github.io/_pages/academic-resume/" style="color: #007bff; text-decoration: none;">🎓 Academic Resume</a>
+</h3>
+
+<h3 style="font-size: 1.5em; margin-top: 20px;">
+  <a href="huangjiongtao.github.io/_pages/job-resume/" style="color: #28a745; text-decoration: none;">💼 Job Resume</a>
+</h3>
 
 
 EDUCATION BACKGROUND
