@@ -7,10 +7,9 @@ redirect_from:
   - /resume
 ---
 
-{% include base_path %}
 
-- [Academic Resume](huangjiongtao.github.io/_pages/academic-resume/)
-- [Job Resume](huangjiongtao.github.io/_pages/job-resume/)
+- [Academic Resume](kantrum.github.io/huangjiongtao.github.io/_pages/academic-resume/)
+- [Job Resume](kantrum.github.io/huangjiongtao.github.io/_pages/job-resume/)
 
 
 <h3 style="font-size: 1.5em; margin-top: 20px;">
