@@ -72,6 +72,12 @@ author_profile: true
 </p>
 
 
+<p style="float: left;">
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1492.png" style="width: auto; height: 769px; max-width: 30%;" />
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1493.png" style="width: auto; height: 769px; max-width: 30%;" />
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1494.JPG" style="width: auto; height: 769px; max-width: 30%;" />
+</p>
+
 
 ## 🗓️ **My Upcoming Schedule**
 ---
