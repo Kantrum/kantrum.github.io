@@ -9,8 +9,8 @@ redirect_from:
 
 {% include base_path %}
 
-- [Academic Resume222](/_cv/academic-resume/)
-- [Job Resume](/_cv/job-resume/)
+- [Academic Resume222](/huangjiongtao.github.io/_cv/academic-resume/)
+- [Job Resume](/huangjiongtao.github.io/_cv/job-resume/)
 
 
 <h3 style="font-size: 1.5em; margin-top: 20px;">
