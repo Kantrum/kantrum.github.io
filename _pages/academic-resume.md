@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "Academic Resumé"
-permalink: /_pages/academic-resume/
+permalink: huangjiongtao.github.io/_pages/academic-resume/
 author_profile: true
 ---
 
