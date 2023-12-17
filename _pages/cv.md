@@ -9,6 +9,10 @@ redirect_from:
 
 {% include base_path %}
 
+- [升学简历](/professional-resume/academic-resume/)
+- [求职简历](/professional-resume/job-resume/)
+
+
 EDUCATION BACKGROUND
 ======
 * University of Leeds - Southwest Jiaotong University Joint School, 2020-2024
