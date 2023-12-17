@@ -50,6 +50,16 @@ author_profile: true
 - **August:** Engaged in community epidemic prevention volunteer activities and won the title of "Excellent Volunteer".
 - **February:** Completed an internship in translation and won the title of "Excellent Intern".
 
+
+
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1492.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1493.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 5px; margin-right: 5px;" />
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1494.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 10px;" />
+</div>
+
+
+
 <div style="display: flex; justify-content: space-between;">
   <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1492.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto;" />
   <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1493.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto;" />
