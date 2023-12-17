@@ -2,7 +2,7 @@
 title: "Sichuan Jiemin Technology Co., Ltd"
 collection: teaching
 type: "Main Services: Technology"
-permalink: /teaching/2014-spring-teaching-1
+permalink: /entrepreneurship/Jiemin
 venue: "Co-founder, Percentage of shares: 80 %"
 date: 2021-11-25
 location: "Chengdu, China"
