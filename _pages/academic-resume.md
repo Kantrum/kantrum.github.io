@@ -1,12 +1,10 @@
 ---
 layout: archive
 title: "Academic Resumé"
-permalink: huangjiongtao.github.io/_pages/academic-resume/
+permalink: kantrum.github.io/huangjiongtao.github.io/_pages/academic-resume/
 author_profile: true
 ---
 
-
-{% include base_path %}
 
 EDUCATION BACKGROUND
 ======
