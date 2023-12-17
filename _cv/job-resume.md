@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "Job Resumé"
-permalink: /job-resume/
+permalink: /_cv/job-resume/
 author_profile: true
 ---
 
