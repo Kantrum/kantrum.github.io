@@ -50,11 +50,20 @@ author_profile: true
 - **August:** Engaged in community epidemic prevention volunteer activities and won the title of "Excellent Volunteer".
 - **February:** Completed an internship in translation and won the title of "Excellent Intern".
 
+
+
 <div style="display: flex; justify-content: space-between;">
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1492.png" style="width: 996px; height: 769px;" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1493.png" style="width: 996px; height: 769px;" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1494.JPG" style="width: 996px; height: 769px;" />
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1492.png" style="width: 30%; height: auto; max-width: 996px; max-height: 769px;" />
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1493.png" style="width: 30%; height: auto; max-width: 996px; max-height: 769px;" />
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1494.JPG" style="width: 30%; height: auto; max-width: 996px; max-height: 769px;" />
 </div>
+
+
+<p float="left">
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1492.png" width="30%" />
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1493.png" width="30%" />
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1494.JPG" width="30%" />
+</p>
 
 
 
@@ -119,3 +128,12 @@ author_profile: true
 ![Attach a recent personal photograph here](https://kantrum.github.io/huangjiongtao.github.io/images/profile.png)
 
 ![Attach a recent personal photograph here](https://kantrum.github.io/huangjiongtao.github.io/images/profile.png)
+
+
+
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/profile.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto;" />
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/profile.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto;" />
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/profile.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto;" />
+</div>
+
