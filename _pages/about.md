@@ -26,19 +26,19 @@ My personal website serves as a comprehensive digital portfolio, encapsulating a
 ======
 The website is structured into several key sections, each reflecting a different aspect of my life:
 
-**About Myself:** Delve into my background, interests, and the values that drive me. This section paints a picture of my persona beyond just a professional or academic label.
+[**About Myself:**](https://kantrum.github.io/huangjiongtao.github.io//publications/) Delve into my background, interests, and the values that drive me. This section paints a picture of my persona beyond just a professional or academic label.
 
-**Academic Journey:** Explore my academic endeavors, from research projects to scholarly achievements. It's a glimpse into my intellectual pursuits and academic milestones.
+[**Academic Journey:**](https://kantrum.github.io/huangjiongtao.github.io//talks/) Explore my academic endeavors, from research projects to scholarly achievements. It's a glimpse into my intellectual pursuits and academic milestones.
 
-**Entrepreneurial Path:** Discover my ventures in the world of business. This section chronicles my journey as an entrepreneur, highlighting my initiatives and the lessons learned along the way.
+[**Entrepreneurial Path:**](https://kantrum.github.io/huangjiongtao.github.io//entrepreneurship/) Discover my ventures in the world of business. This section chronicles my journey as an entrepreneur, highlighting my initiatives and the lessons learned along the way.
 
-**Life Experiences:** A peek into my life outside the professional sphere. From travel diaries to personal hobbies, this part of the site celebrates the diverse experiences that shape me.
+[**Life Experiences:**](https://kantrum.github.io/huangjiongtao.github.io//portfolio/) A peek into my life outside the professional sphere. From travel diaries to personal hobbies, this part of the site celebrates the diverse experiences that shape me.
 
-**Blog Insights:** My thoughts, insights, and musings shared in a more informal and reflective tone. It's where I engage with broader topics and personal interests.
+[**Blog Insights:**](https://kantrum.github.io/huangjiongtao.github.io//year-archive/) My thoughts, insights, and musings shared in a more informal and reflective tone. It's where I engage with broader topics and personal interests.
 
-**Professional Resumé:** A comprehensive overview of my professional and academic history, providing a detailed account of my skills, experiences, and qualifications.
+[**Professional Resumé:**](https://kantrum.github.io/huangjiongtao.github.io//cv/) A comprehensive overview of my professional and academic history, providing a detailed account of my skills, experiences, and qualifications.
 
-**Navigation Guide:** Navigating the site made easy. This section helps you find what you're looking for quickly and efficiently, ensuring a seamless browsing experience.
+[**Navigation Guide:**](https://kantrum.github.io/huangjiongtao.github.io//markdown/) Navigating the site made easy. This section helps you find what you're looking for quickly and efficiently, ensuring a seamless browsing experience.
 
 <span style="color: gray;">Join Me on My Journey</span>
 ======
