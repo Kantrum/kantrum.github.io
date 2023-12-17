@@ -1,8 +1,8 @@
 ---
-title: "Shu Run Study Abroad Consultancy Service (Sichuan) Co., Ltd"
+title: "Shurun Study Abroad Consultancy Service (Sichuan) Co., Ltd"
 collection: teaching
 type: "Main Services: Technology"
-permalink: /entrepreneurship/Rurun
+permalink: /entrepreneurship/Shurun
 venue: "Co-founder, Percentage of shares: 45 %"
 date: 2023-11-25
 location: "Chengdu, China"
