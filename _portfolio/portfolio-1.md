@@ -1,31 +1,57 @@
 ---
 title: "Sports"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+excerpt: "A showcase of my sports activities and achievements, including sprinting, skiing, horse riding, golf and so on.<br/><img src='/images/profile.png'>"
 collection: portfolio
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+# My Sports Portfolio
+
+Welcome to my sports portfolio where I share my passion and achievements in various sports activities.
+
+## 100m Sprint
+
+![100m Sprint](/images/profile.png)
+
+I have always enjoyed the thrill and challenge of sprinting. Here are some of my notable achievements in 100m sprint:
+
+- **Date**: Achievement 1 (e.g., School Record Holder)
+- **Date**: Achievement 2
+- **Training Regime**: Brief description of your training approach.
+
+## Skiing
+
+![Skiing](/images/profile.png)
+
+Skiing is not just a sport for me; it's an escape into the beauty of nature. Some highlights of my skiing journey:
+
+- **Favorite Ski Resorts**: List of resorts
+- **Memorable Experiences**: Brief description of memorable skiing experiences.
+
+## Horse Riding
+
+![Horse Riding](/images/profile.png)
+
+Horse riding has taught me about balance, strength, and harmony. Some of my experiences include:
+
+- **Competitions**: Any competitions you participated in.
+- **Personal Reflection**: Your thoughts and feelings about horse riding.
+
+## Golf
+
+![Golf](/images/profile.png)
+
+Golf is a game of precision and patience. Here’s a glimpse into my golf journey:
+
+- **Handicap**: Your golf handicap.
+- **Favorite Courses**: List of favorite golf courses and why.
+
+---
+
+Feel free to reach out if you share similar interests or have any questions about my sports journey!
 
 
-# Hobbies
 
-## Swimming & Surfing
 
-<div class="third">
-<img src="/images/Huangjiongtao.jpg">
-<img src="/images/Huangjiongtao.jpg">
-<img src="/images/Huangjiongtao.jpg">
-</div>
-<br>Swimming removes my worries, refreshes my body, and brings me courage to address any challenges. I extremely enjoy the feeling of being immersed in the water. Besides, I am a member of the Swimming Team at Fuzhou University, where I meet many sincere friends. I have reached **China National Second-level athlete Standard** in 50m breaststroke and won **Five Gold Medals** during my 10-year swimming career. Recently, I am also keen on surfing.
-
-## Workshop
-
-<div class="third">
-<img src="/images/Huangjiongtao.jpg">
-<img src="/images/Huangjiongtao.jpg">
-<img src="/images/Huangjiongtao.jpg">
-</div>
-<br>There must be **something truly magical** about standing on stage to give [a fantastic speech], which considerably lifts my spirits and energizes my entire body. If you desire to master a specific knowledge in depth, just give a prelection. If you can explain to others for complete understanding, you are already an expert. I really enjoy the accomplishment of imparting my knowledge to others, so what I strive for is to be **a student's favorite professor** at the [best universities in my hometown].
 
 [a fantastic speech]:https://youtu.be/Dzx84KpGNoE
 [best universities in my hometown]:https://www.fzu.edu.cn/
@@ -34,12 +60,3 @@ This is an item in your portfolio. It can be have images or nice text. If you na
 ## Past Hobbies
 
 I previously enjoyed long-distance running, [vlog making](https://space.bilibili.com/594030035), and computer game developing/playing. However, I have no time to do any of these things recently.
-
-## My Cat
-
-This is my love. Her name is Qbo (Q宝).
-
-<div>
-<img src="/images/Huangjiongtao.jpg">
-</div>
-<br>
