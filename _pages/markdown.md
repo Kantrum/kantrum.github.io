@@ -205,14 +205,6 @@ This allows you to denote <var>variables</var>.
 
 
 
-
-
-
-Academic
-======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
   
 Entrepreneurship
 ======
@@ -262,12 +254,6 @@ Service and leadership
 
 
 
-
-Publications
-======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
   
 Talks
 ======
