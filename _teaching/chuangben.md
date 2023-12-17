@@ -2,7 +2,7 @@
 title: "Hunan Chuangben Technology Co., Ltd."
 collection: teaching
 type: "Main Services: Education"
-permalink: /teaching/2015-spring-teaching-1
+permalink: /entrepreneurship/Chuangben
 venue: "Co-founder, Percentage of shares: 95 %"
 date: 2023-01-10
 location: "Xiangtan, China"
