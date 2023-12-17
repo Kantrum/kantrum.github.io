@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "Academic Resumé"
-permalink: /cv/academic-resume/
+permalink: /_pages/academic-resume/
 author_profile: true
 ---
 
