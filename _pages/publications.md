@@ -51,9 +51,9 @@ author_profile: true
 - **February:** Completed an internship in translation and won the title of "Excellent Intern".
 
 <div style="display: flex; justify-content: space-between;">
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1492.png" style="width: 30%; height: auto; max-width: 996px; max-height: 769px;" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1493.png" style="width: 30%; height: auto; max-width: 996px; max-height: 769px;" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1494.JPG" style="width: 30%; height: auto; max-width: 996px; max-height: 769px;" />
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1492.png" style="width: 996px; height: 769px;" />
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1493.png" style="width: 996px; height: 769px;" />
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1494.JPG" style="width: 996px; height: 769px;" />
 </div>
 
 
