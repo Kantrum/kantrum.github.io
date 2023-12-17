@@ -1,9 +1,11 @@
 ---
 layout: archive
 title: "Academic Resumé"
-permalink: academic-resume/
+permalink: /academic-resume/
 author_profile: true
 ---
+
+{% include base_path %}
 
 
 EDUCATION BACKGROUND
