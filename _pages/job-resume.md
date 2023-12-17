@@ -1,12 +1,10 @@
 ---
 layout: archive
 title: "Job Resumé"
-permalink: huangjiongtao.github.io/_pages/job-resume/
+permalink: kantrum.github.io/huangjiongtao.github.io/_pages/job-resume/
 author_profile: true
 ---
 
-
-{% include base_path %}
 
 参加了不少创新创业比赛，我注意到，很多同学会有些失望，大家有时会觉得这些比赛太过虚幻，有点像在吹牛皮，或者是什么PPT大赛等等。确实，我也问过许多老师、专家和投资人这个问题。下面，就让我分享一下自己的一些看法，为什么这些比赛会这么受关注，同时还能继续保持火热。
 
