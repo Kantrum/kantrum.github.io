@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "Job Resumé"
-permalink: /_pages/job-resume/
+permalink: huangjiongtao.github.io/_pages/job-resume/
 author_profile: true
 ---
 
