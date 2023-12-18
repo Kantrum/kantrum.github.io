@@ -94,6 +94,49 @@ author_profile: true
 
 
 
+
+<div class="schedule-section">
+    <h2>🗓️ <strong>My Upcoming Schedule</strong></h2>
+
+    <table border="1" style="width: 100%; border-collapse: collapse;">
+        <tr>
+            <th>Week 14 [Dec 4 - Dec 10]</th>
+            <th>Week 15 [Dec 11 - Dec 17]</th>
+            <th>Week 16 [Dec 18 - Dec 24]</th>
+            <th>Week 17 [Dec 25 - Dec 31]</th>
+        </tr>
+        <tr>
+            <td>
+                <strong>Dec 7:</strong> 📌 ~~Learning: XJEL3030 Assignment 3 DDL~~<br>
+                <strong>Dec 8:</strong> ⏰ ~~Learning: XJEL3875 Interim Report DDL~~<br>
+                <strong>Dec 9:</strong> 📚 ~~Learning: Report Submission~~
+            </td>
+            <td>
+                <strong>Dec 15:</strong> 💼 ~~Learning: XJEL3362 Mid Test~~<br>
+                <strong>Dec 16:</strong> ❤️ ~~Learning: XJEL3875 Journal 8~~
+            </td>
+            <td>
+                <strong>Dec 20:</strong> 🎳 Learning: XJEL3030 Assignment 4 DDL<br>
+                <strong>Dec 18:</strong> 🗣️ Learning: XJEL3875 Journal 9
+            </td>
+            <td>
+                <strong>Dec 25:</strong> 🎄 Holiday: Christmas Day<br>
+                <strong>Dec 28:</strong> 📅 Planning Session: for Q1<br>
+                <strong>Dec 30:</strong> 📝 Learning: XJEL3875 Journal 10
+            </td>
+        </tr>
+    </table>
+
+    <h3>🎯 <strong>Key Dates</strong></h3>
+    <p><strong>Dec 31:</strong> 🥳 New Year's Eve Celebration<br>
+       <strong>Jan 1:</strong> 🎉 New Year: Office Closed</p>
+</div>
+
+
+
+
+
+
 ## 🗓️ **My Upcoming Schedule**
 ---
 
