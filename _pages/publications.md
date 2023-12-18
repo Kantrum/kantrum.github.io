@@ -34,24 +34,24 @@ author_profile: true
 
 <div class="info-section">
     <h2>🌟 Personal Information</h2>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Name (Chinese):</strong> 黄炯涛</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Name (Pinyin):</strong> Huang Jiongtao</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Name (English):</strong> Simon</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Nickname:</strong> Kantrum</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Gender:</strong> Male</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Date of Birth:</strong> 10/2001</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Nationality:</strong> Chinese</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Contact Address:</strong> No.999 Xian Rd, Pidu District, Chengdu, 611000, Sichuan, China</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Postal Code:</strong> 611000</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Email:</strong> kantrum@163.com ｜ huangjiongtao@gmail.com</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Mobile Number:</strong> +86-155-8888-8888</p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Name (Chinese):</strong> 黄炯涛</p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Name (Pinyin):</strong> Huang Jiongtao</p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Name (English):</strong> Simon</p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Nickname:</strong> Kantrum</p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Gender:</strong> Male</p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Date of Birth:</strong> 10/2001</p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Nationality:</strong> Chinese</p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Contact Address:</strong> No.999 Xian Rd, Pidu District, Chengdu, 611000, Sichuan, China</p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Postal Code:</strong> 611000</p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Email:</strong> kantrum@163.com ｜ huangjiongtao@gmail.com</p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Mobile Number:</strong> +86-155-8888-8888</p>
     <!-- 个人信息的更多内容 -->
 </div>
 
 
 <div class="info-section">
     <h2>📘 Academic Background</h2>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Current Institution:</strong> University of Leeds | Southwest Jiaotong University</p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Current Institution:</strong> University of Leeds | Southwest Jiaotong University</p>
     <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Major/Area of Study:</strong> Electronic and Electrical Engineering</p>
     <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Expected Graduation Date:</strong> 07/2024</p>
     <!-- 学术背景的更多内容 -->
@@ -86,82 +86,6 @@ author_profile: true
     <!-- 个人荣誉的更多内容 -->
 </div>
 
-
-
-
-
-
-<!-- 这部分内容将不会显示在浏览器上，也不会出现在页面的 DOM 中 -->
-<!--
-<div>
-    需要隐藏的内容
-</div>
--->
-
-
-<!-- 这部分内容将不会显示在浏览器上，也不会出现在页面的 DOM 中 -->
-<!--
-<div>
-    需要隐藏的内容
-<div style="background-color: #f4f4f4; padding: 20px; border-radius: 15px; box-shadow: 0 6px 12px rgba(0,0,0,0.1); margin-bottom: 30px;">
-    <h2 style="color: #003366; font-size: 24px; font-weight: bold; margin-bottom: 10px;">🌟 Personal Information</h2>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Name (Chinese):</strong> 黄炯涛</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Name (Pinyin):</strong> Huang Jiongtao</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Name (English):</strong> Simon</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Nickname:</strong> Kantrum</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Gender:</strong> Male</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Date of Birth:</strong> 10/2001</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Nationality:</strong> Chinese</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Contact Address:</strong> No.999 Xian Rd, Pidu District, Chengdu, 611000, Sichuan, China</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Postal Code:</strong> 611000</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Email:</strong> kantrum@163.com ｜ huangjiongtao@gmail.com</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Mobile Number:</strong> +86-155-8888-8888</p>
-    <!-- 更多个人信息 -->
-</div>
-</div>
--->
-
-
-<!-- 这部分内容将不会显示在浏览器上，也不会出现在页面的 DOM 中 -->
-<!--
-<div>
-    需要隐藏的内容
-<div style="background-color: #f4f4f4; padding: 20px; border-radius: 15px; box-shadow: 0 6px 12px rgba(0,0,0,0.1); margin-bottom: 30px;">
-    <h2 style="color: #0056b3; font-size: 24px; font-weight: bold; margin-bottom: 10px;">📘 Academic Background</h2>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Current Institution:</strong> University of Leeds | Southwest Jiaotong University</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Major/Area of Study:</strong> Electronic and Electrical Engineering</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Expected Graduation Date:</strong> 07/2024</p>
-    <!-- 更多学术背景 -->
-</div>
-</div>
--->
-
-
-<!-- 这部分内容将不会显示在浏览器上，也不会出现在页面的 DOM 中 -->
-<!--
-<div>
-    需要隐藏的内容
-<div style="background-color: #f4f4f4; padding: 20px; border-radius: 15px; box-shadow: 0 6px 12px rgba(0,0,0,0.1); margin-bottom: 30px;">
-    <h2 style="color: #28a745; font-size: 24px; font-weight: bold; margin-bottom: 10px;">🔥 Leadership and Social Activities</h2>
-    <ul style="list-style-type: circle; padding-left: 20px;">
-        <li>President of the University Student Campus Self-Management Committee</li>
-        <!-- 更多活动 -->
-    </ul>
-</div>
-</div>
--->
-
-
-<!-- 这部分内容将不会显示在浏览器上，也不会出现在页面的 DOM 中 -->
-<!--
-<div>
-    需要隐藏的内容
-<div style="background-color: #f4f4f4; padding: 20px; border-radius: 15px; box-shadow: 0 6px 12px rgba(0,0,0,0.1); margin-bottom: 30px;">
-    <h2 style="color: #ff9900; font-size: 24px; font-weight: bold; margin-bottom: 10px;">🏆 Personal Honors</h2>
-    <!-- 个人荣誉 -->
-</div>
-</div>
--->
 
 
 
