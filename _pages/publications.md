@@ -9,6 +9,54 @@ author_profile: true
 
 
 
+<style>
+    .info-section {
+        background-color: #f4f4f4;
+        padding: 15px 20px; /* 顶部和底部的内边距减少 */
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        margin: 10px;
+        transition: max-height 0.3s ease;
+        overflow: hidden;
+        max-height: 50px; /* 初始高度仅足以显示标题 */
+        cursor: pointer;
+    }
+
+    .info-section:hover {
+        max-height: 1000px; /* 鼠标悬停时增加高度以显示完整内容 */
+    }
+
+    .info-section h2 {
+        margin-top: 0; /* 移除标题的顶部边距 */
+        margin-bottom: 15px; /* 设置标题到正文的距离 */
+    }
+</style>
+
+<div class="info-section">
+    <h2>🌟 Personal Information</h2>
+    <!-- 个人信息的更多内容 -->
+</div>
+
+<div class="info-section">
+    <h2>📘 Academic Background</h2>
+    <!-- 学术背景的更多内容 -->
+</div>
+
+<div class="info-section">
+    <h2>🔥 Leadership and Social Activities</h2>
+    <!-- 领导和社交活动的更多内容 -->
+</div>
+
+<div class="info-section">
+    <h2>🏆 Personal Honors</h2>
+    <!-- 个人荣誉的更多内容 -->
+</div>
+
+
+
+
+
+
 
 
 <style>
