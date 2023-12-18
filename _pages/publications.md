@@ -95,10 +95,34 @@ author_profile: true
 
 
 
+<style>
+    .schedule-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    .schedule-table th, .schedule-table td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    .schedule-table th {
+        background-color: #f2f2f2;
+        color: #333333;
+    }
+
+    .schedule-table tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+</style>
+
 <div class="schedule-section">
     <h2>🗓️ <strong>My Upcoming Schedule</strong></h2>
 
-    <table border="1" style="width: 100%; border-collapse: collapse;">
+    <table class="schedule-table">
         <tr>
             <th>Week 14 [Dec 4 - Dec 10]</th>
             <th>Week 15 [Dec 11 - Dec 17]</th>
@@ -107,22 +131,22 @@ author_profile: true
         </tr>
         <tr>
             <td>
-                <strong>Dec 7:</strong> 📌 ~~Learning: XJEL3030 Assignment 3 DDL~~<br>
-                <strong>Dec 8:</strong> ⏰ ~~Learning: XJEL3875 Interim Report DDL~~<br>
-                <strong>Dec 9:</strong> 📚 ~~Learning: Report Submission~~
+                <strong>Dec 7:</strong> 📌 XJEL3030 Assignment 3 DDL~~<br>
+                <strong>Dec 8:</strong> ⏰ XJEL3875 Interim Report DDL~~<br>
+                <strong>Dec 9:</strong> 📚 Report Submission~~
             </td>
             <td>
-                <strong>Dec 15:</strong> 💼 ~~Learning: XJEL3362 Mid Test~~<br>
-                <strong>Dec 16:</strong> ❤️ ~~Learning: XJEL3875 Journal 8~~
+                <strong>Dec 15:</strong> 💼 XJEL3362 Mid Test~~<br>
+                <strong>Dec 16:</strong> ❤️ XJEL3875 Journal 8~~
             </td>
             <td>
-                <strong>Dec 20:</strong> 🎳 Learning: XJEL3030 Assignment 4 DDL<br>
-                <strong>Dec 18:</strong> 🗣️ Learning: XJEL3875 Journal 9
+                <strong>Dec 20:</strong> 🎳 XJEL3030 Assignment 4 DDL<br>
+                <strong>Dec 18:</strong> 🗣️ XJEL3875 Journal 9
             </td>
             <td>
-                <strong>Dec 25:</strong> 🎄 Holiday: Christmas Day<br>
-                <strong>Dec 28:</strong> 📅 Planning Session: for Q1<br>
-                <strong>Dec 30:</strong> 📝 Learning: XJEL3875 Journal 10
+                <strong>Dec 25:</strong> 🎄 Christmas Day<br>
+                <strong>Dec 28:</strong> 📅 Planning for Q1<br>
+                <strong>Dec 30:</strong> 📝 XJEL3875 Journal 10
             </td>
         </tr>
     </table>
@@ -134,7 +158,32 @@ author_profile: true
 
 
 
-<iframe src="https://calendar.google.com/calendar/embed?src=huangjiongtao%40gmail.com" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+
+<style>
+    .responsive-iframe-container {
+        position: relative;
+        overflow: hidden;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        max-width: 800px; /* Maximum width of the iframe */
+        margin: auto; /* Center the iframe */
+    }
+
+    .responsive-iframe-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+</style>
+
+<div class="responsive-iframe-container">
+    <iframe src="https://calendar.google.com/calendar/embed?src=huangjiongtao%40gmail.com" frameborder="0" scrolling="no"></iframe>
+</div>
+
+
 
 ## 📸 Photograph
 ---
