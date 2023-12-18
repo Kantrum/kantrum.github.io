@@ -8,44 +8,34 @@ author_profile: true
 {% include base_path %}
 
 
-<div style="display: flex; flex-wrap: wrap; gap: 20px;">
-    <div style="flex-basis: 100%; background: #f8f9fa; padding: 20px; border: 1px solid #ddd;">
-        <h2 style="color: #007bff;">🌟 Personal Information</h2>
-        <p><strong>Name (Chinese):</strong> 黄炯涛</p>
-        <p><strong>Name (Pinyin):</strong> Huang Jiongtao</p>
-        <p><strong>Name (English):</strong> Simon</p>
-        <p><strong>Nickname:</strong> Kantrum</p>
-        <!-- More personal information here -->
-    </div>
 
-    <div style="flex-basis: 100%; background: #f8f9fa; padding: 20px; border: 1px solid #ddd;">
-        <h2 style="color: #007bff;">📘 Academic Background</h2>
-        <p><strong>Current Institution:</strong> University of Leeds | Southwest Jiaotong University</p>
-        <!-- More academic background here -->
-    </div>
 
-    <div style="flex-basis: 100%; background: #f8f9fa; padding: 20px; border: 1px solid #ddd;">
-        <h2 style="color: #007bff;">🔥 Leadership and Social Activities</h2>
-        <ul>
-            <li>President of the University Student Campus Self-Management Committee</li>
-            <!-- More activities here -->
-        </ul>
-    </div>
-
-    <div style="flex-basis: 100%; background: #f8f9fa; padding: 20px; border: 1px solid #ddd;">
-        <h2 style="color: #007bff;">🏆 Personal Honors</h2>
-        <h3 style="color: #28a745;">2023</h3>
-        <ul>
-            <li>March: Served as the Class Officer...</li>
-            <!-- More honors for 2023 here -->
-        </ul>
-        <h3 style="color: #28a745;">2022</h3>
-        <!-- More honors for 2022 here -->
-    </div>
+<div style="background-color: #f8f9fa; padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+    <h2 style="color: #007bff;">🌟 Personal Information</h2>
+    <p><strong>Name (Chinese):</strong> 黄炯涛</p>
+    <p><strong>Name (Pinyin):</strong> Huang Jiongtao</p>
+    <p><strong>Name (English):</strong> Simon</p>
+    <!-- 更多个人信息 -->
 </div>
 
+<div style="background-color: #f8f9fa; padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+    <h2 style="color: #28a745;">📘 Academic Background</h2>
+    <p><strong>Current Institution:</strong> University of Leeds | Southwest Jiaotong University</p>
+    <!-- 更多学术背景 -->
+</div>
 
+<div style="background-color: #f8f9fa; padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+    <h2 style="color: #dc3545;">🔥 Leadership and Social Activities</h2>
+    <ul>
+        <li>President of the University Student Campus Self-Management Committee</li>
+        <!-- 更多领导和社交活动 -->
+    </ul>
+</div>
 
+<div style="background-color: #f8f9fa; padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+    <h2 style="color: #ffc107;">🏆 Personal Honors</h2>
+    <!-- 个人荣誉 -->
+</div>
 
 
 
