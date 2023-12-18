@@ -45,3 +45,63 @@ The website is structured into several key sections, each reflecting a different
 As you explore this website, I invite you to witness the multifaceted nature of my life. Each section represents a thread in the tapestry of my experiences, and together, they tell a story - my story. Welcome, and enjoy the journey!
 
 Welcome to the journey that is my life. Let's explore, learn, and grow together.
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat with Me</title>
+</head>
+<body>
+
+<h2>Chat with me</h2>
+
+<p><strong>Jan 2023:</strong> I have set up the <a href="https://calendly.com/huangjiongtao/30min">online-coffee-time</a> (Inspired by <strong><a href="https://elliottwu.com/">Shangzhe Wu</a></strong>). Welcome to chat with me!</p>
+
+<!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/huangjiongtao/30min" style="min-width:320px;height:630px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+<br>
+
+<h2>Leave a Message</h2>
+
+<br>
+
+<!-- 假设这里是 Disqus 评论系统的嵌入代码 -->
+<div id="disqus_thread"></div>
+<script>
+    (function() { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://YOUR_DISQUS_SHORTNAME.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<br>
+
+<h2>Web Star History</h2>
+
+<a href="https://github.com/GuangLun2000/GuangLun2000.github.io">Leave a star if you like it 🥰</a>
+
+<a href="https://star-history.com/#GuangLun2000/GuangLun2000.github.io&Date">
+    <img src="https://api.star-history.com/svg?repos=GuangLun2000/GuangLun2000.github.io&type=Date" alt="Star History Chart">
+</a>
+
+<br>
