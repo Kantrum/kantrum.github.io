@@ -1,6 +1,6 @@
 ---
 title: "Music"
-excerpt: "A glimpse into my journey in music, encompassing my experiences, performances, and the joy it brings.<br/><img src='/images/500x300.png'>"
+excerpt: "A glimpse into my journey in music, encompassing my experiences, performances, and the joy it brings.<br/><img src='https://kantrum.github.io/huangjiongtao.github.io/images/profile.png'>"
 collection: portfolio
 ---
 
@@ -11,4 +11,4 @@ collection: portfolio
 欢迎大家聆听！
 
 
-![Music Experience](/images/music-experience.png)
+![Music Experience](https://kantrum.github.io/huangjiongtao.github.io/images/profile.png)
