@@ -52,83 +52,46 @@ author_profile: true
 <div class="info-section">
     <h2>📘 Academic Background</h2>
     <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Current Institution:</strong> University of Leeds | Southwest Jiaotong University</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Major/Area of Study:</strong> Electronic and Electrical Engineering</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Expected Graduation Date:</strong> 07/2024</p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Major/Area of Study:</strong> Electronic and Electrical Engineering</p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Expected Graduation Date:</strong> 07/2024</p>
     <!-- 学术背景的更多内容 -->
 </div>
 
 
 <div class="info-section">
     <h2>🔥 Leadership and Social Activities</h2>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>President of the University Student Campus Self-Management Committee</strong>, May 2023 – Present</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Most Contributive Volunteer Award in the 31st Chengdu World University Games</strong>, May 2022</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Class Leader of the New Youth Global Competency Development Programme</strong>, Mar 2022 – Dec 2022</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Ministry of the University Student Campus Self-Management Committee</strong>, May 2021 – Apr 2023</p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; President of the University Student Campus Self-Management Committee</strong>, May 2023 – Present</p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Most Contributive Volunteer Award in the 31st Chengdu World University Games</strong>, May 2022</p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Class Leader of the New Youth Global Competency Development Programme</strong>, Mar 2022 – Dec 2022</p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Ministry of the University Student Campus Self-Management Committee</strong>, May 2021 – Apr 2023</p>
     <!-- 领导和社交活动的更多内容 -->
 </div>
 
 
 <div class="info-section">
     <h2>🏆 Personal Honors</h2>
-<div style="margin-left: 20px;">
-    <h3 style="font-size: 18px; margin-top: 10px;">2023</h3>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>March:</strong> Served as the Class Officer for the New Youth Class of 2022 in the "New Youth Global Competency Development Programme" with outstanding performance.</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>February:</strong> Received the "A Grade Certificate of Comprehensive Quality" from Sichuan University Students Union.</p>
-    <h3 style="font-size: 18px; margin-top: 10px;">2022</h3>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>December:</strong> Awarded the honorary title of "Three Good Students" by Southwest Jiaotong University.</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>March:</strong> Recognized as an Outstanding Communist Youth League Member by Southwest Jiaotong University.</p>
-    <h3 style="font-size: 18px; margin-top: 10px;">2021</h3>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>December:</strong> Earned the honorary title of "Three Good Students" by Southwest Jiaotong University.</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>December:</strong> Distinguished as an Outstanding Youth League Member by Southwest Jiaotong University.</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>October:</strong> Participated in entrepreneurship training and won the title of "excellent student".</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>August:</strong> Engaged in community epidemic prevention volunteer activities and won the title of "Excellent Volunteer".</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>February:</strong> Completed an internship in translation and won the title of "Excellent Intern".</p>
+    <div style="margin-left: 20px;">
+        <h3 style="font-size: 18px; margin-top: 10px;">2023</h3>
+        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; March:</strong> Served as the Class Officer for the New Youth Class of 2022 in the "New Youth Global Competency Development Programme" with outstanding performance.</p>
+        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; February:</strong> Received the "A Grade Certificate of Comprehensive Quality" from Sichuan University Students Union.</p>
+        <h3 style="font-size: 18px; margin-top: 10px;">2022</h3>
+        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; December:</strong> Awarded the honorary title of "Three Good Students" by Southwest Jiaotong University.</p>
+        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; March:</strong> Recognized as an Outstanding Communist Youth League Member by Southwest Jiaotong University.</p>
+        <h3 style="font-size: 18px; margin-top: 10px;">2021</h3>
+        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; December:</strong> Earned the honorary title of "Three Good Students" by Southwest Jiaotong University.</p>
+        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; December:</strong> Distinguished as an Outstanding Youth League Member by Southwest Jiaotong University.</p>
+        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; October:</strong> Participated in entrepreneurship training and won the title of "excellent student".</p>
+        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; August:</strong> Engaged in community epidemic prevention volunteer activities and won the title of "Excellent Volunteer".</p>
+        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; February:</strong> Completed an internship in translation and won the title of "Excellent Intern".</p>
     <!-- 个人荣誉的更多内容 -->
-<div style="display: flex; justify-content: space-between;">
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1492.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1493.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 5px; margin-right: 5px;" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1494.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 10px;" />
-</div>
-</div>
-
-
-
-
-<div style="display: flex; justify-content: space-between;">
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1492.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1493.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 5px; margin-right: 5px;" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1494.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 10px;" />
+        <div style="display: flex; justify-content: space-between;">
+            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1492.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
+            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1493.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 5px; margin-right: 5px;" />
+            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1494.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 10px;" />
+        </div>
+    </div>
 </div>
 
-
-
-<div style="display: flex; justify-content: space-between;">
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1492.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto;" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1493.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto;" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1494.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto;" />
-</div>
-
-
-
-<div style="display: flex; justify-content: space-between;">
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1492.png" style="width: 30%; height: auto; max-width: 996px; max-height: 769px;" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1493.png" style="width: 30%; height: auto; max-width: 996px; max-height: 769px;" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1494.JPG" style="width: 30%; height: auto; max-width: 996px; max-height: 769px;" />
-</div>
-
-
-<p float="left">
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1492.png" width="30%" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1493.png" width="30%" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1494.JPG" width="30%" />
-</p>
-
-
-<p style="float: left;">
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1492.png" style="width: auto; height: 769px; max-width: 30%;" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1493.png" style="width: auto; height: 769px; max-width: 30%;" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1494.JPG" style="width: auto; height: 769px; max-width: 30%;" />
-</p>
 
 
 ## 🗓️ **My Upcoming Schedule**
