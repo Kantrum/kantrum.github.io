@@ -48,6 +48,7 @@ author_profile: true
     <!-- 个人信息的更多内容 -->
 </div>
 
+
 <div class="info-section">
     <h2>📘 Academic Background</h2>
     <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Current Institution:</strong> University of Leeds | Southwest Jiaotong University</p>
@@ -56,13 +57,32 @@ author_profile: true
     <!-- 学术背景的更多内容 -->
 </div>
 
+
 <div class="info-section">
     <h2>🔥 Leadership and Social Activities</h2>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>President of the University Student Campus Self-Management Committee</strong>, May 2023 – Present</p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Most Contributive Volunteer Award in the 31st Chengdu World University Games</strong>, May 2022</p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Class Leader of the New Youth Global Competency Development Programme</strong>, Mar 2022 – Dec 2022</p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>Ministry of the University Student Campus Self-Management Committee</strong>, May 2021 – Apr 2023</p>
     <!-- 领导和社交活动的更多内容 -->
 </div>
 
+
 <div class="info-section">
     <h2>🏆 Personal Honors</h2>
+<div style="margin-left: 20px;">
+    <h3 style="font-size: 18px; margin-top: 10px;">2023</h3>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>March:</strong> Served as the Class Officer for the New Youth Class of 2022 in the "New Youth Global Competency Development Programme" with outstanding performance.</p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>February:</strong> Received the "A Grade Certificate of Comprehensive Quality" from Sichuan University Students Union.</p>
+    <h3 style="font-size: 18px; margin-top: 10px;">2022</h3>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>December:</strong> Awarded the honorary title of "Three Good Students" by Southwest Jiaotong University.</p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>March:</strong> Recognized as an Outstanding Communist Youth League Member by Southwest Jiaotong University.</p>
+    <h3 style="font-size: 18px; margin-top: 10px;">2021</h3>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>December:</strong> Earned the honorary title of "Three Good Students" by Southwest Jiaotong University.</p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>December:</strong> Distinguished as an Outstanding Youth League Member by Southwest Jiaotong University.</p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>October:</strong> Participated in entrepreneurship training and won the title of "excellent student".</p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>August:</strong> Engaged in community epidemic prevention volunteer activities and won the title of "Excellent Volunteer".</p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>February:</strong> Completed an internship in translation and won the title of "Excellent Intern".</p>
     <!-- 个人荣誉的更多内容 -->
 </div>
 
