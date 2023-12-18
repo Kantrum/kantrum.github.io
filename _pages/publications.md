@@ -10,35 +10,35 @@ author_profile: true
 
 
 
-<div style="background-color: #f8f9fa; padding: 15px; border-radius: 10px; margin-bottom: 20px;">
-    <h2 style="color: #007bff;">🌟 Personal Information</h2>
-    <p><strong>Name (Chinese):</strong> 黄炯涛</p>
-    <p><strong>Name (Pinyin):</strong> Huang Jiongtao</p>
-    <p><strong>Name (English):</strong> Simon</p>
-    <!-- 更多个人信息 -->
+<div style="background-color: #eef2f7; padding: 20px; border-radius: 12px; margin-bottom: 25px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    <h2 style="color: #0056b3; margin-bottom: 15px;">🌟 Personal Information</h2>
+    <p><strong>Name (Chinese):</strong> 黄炯涛<br>
+       <strong>Name (Pinyin):</strong> Huang Jiongtao<br>
+       <strong>Name (English):</strong> Simon<br>
+       <strong>Nickname:</strong> Kantrum<br>
+       <!-- More personal information here -->
+    </p>
 </div>
 
-<div style="background-color: #f8f9fa; padding: 15px; border-radius: 10px; margin-bottom: 20px;">
-    <h2 style="color: #28a745;">📘 Academic Background</h2>
-    <p><strong>Current Institution:</strong> University of Leeds | Southwest Jiaotong University</p>
-    <!-- 更多学术背景 -->
+<div style="background-color: #eef2f7; padding: 20px; border-radius: 12px; margin-bottom: 25px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    <h2 style="color: #28a745; margin-bottom: 15px;">📘 Academic Background</h2>
+    <p><strong>Current Institution:</strong> University of Leeds | Southwest Jiaotong University<br>
+       <!-- More academic background here -->
+    </p>
 </div>
 
-<div style="background-color: #f8f9fa; padding: 15px; border-radius: 10px; margin-bottom: 20px;">
-    <h2 style="color: #dc3545;">🔥 Leadership and Social Activities</h2>
+<div style="background-color: #eef2f7; padding: 20px; border-radius: 12px; margin-bottom: 25px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    <h2 style="color: #dc3545; margin-bottom: 15px;">🔥 Leadership and Social Activities</h2>
     <ul>
         <li>President of the University Student Campus Self-Management Committee</li>
-        <!-- 更多领导和社交活动 -->
+        <!-- More activities here -->
     </ul>
 </div>
 
-<div style="background-color: #f8f9fa; padding: 15px; border-radius: 10px; margin-bottom: 20px;">
-    <h2 style="color: #ffc107;">🏆 Personal Honors</h2>
-    <!-- 个人荣誉 -->
+<div style="background-color: #eef2f7; padding: 20px; border-radius: 12px; margin-bottom: 25px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    <h2 style="color: #ffc107; margin-bottom: 15px;">🏆 Personal Honors</h2>
+    <!-- Personal honors here -->
 </div>
-
-
-
 
 
 
