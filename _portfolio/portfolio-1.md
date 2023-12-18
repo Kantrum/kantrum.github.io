@@ -1,6 +1,6 @@
 ---
 title: "Sports"
-excerpt: "A showcase of my sports activities and achievements, including sprinting, skiing, horse riding, golf and so on.<br/><img src='/huangjiongtao.github.io/images/profile.png'>"
+excerpt: "A showcase of my sports activities and achievements, including sprinting, skiing, horse riding, golf and so on.<br/><img src='https://kantrum.github.io/huangjiongtao.github.io/images/profile.png'>"
 collection: portfolio
 ---
 
@@ -10,7 +10,7 @@ Welcome to my sports portfolio where I share my passion and achievements in vari
 
 ## 100m Sprint
 
-![100m Sprint](/huangjiongtao.github.io/images/profile.png)
+![100m Sprint](https://kantrum.github.io/huangjiongtao.github.io/images/profile.png)
 
 I have always enjoyed the thrill and challenge of sprinting. Here are some of my notable achievements in 100m sprint:
 
@@ -20,7 +20,7 @@ I have always enjoyed the thrill and challenge of sprinting. Here are some of my
 
 ## Skiing
 
-![Skiing](/huangjiongtao.github.io/images/profile.png)
+![Skiing](https://kantrum.github.io/huangjiongtao.github.io/images/profile.png)
 
 Skiing is not just a sport for me; it's an escape into the beauty of nature. Some highlights of my skiing journey:
 
@@ -29,7 +29,7 @@ Skiing is not just a sport for me; it's an escape into the beauty of nature. Som
 
 ## Horse Riding
 
-![Horse Riding](/huangjiongtao.github.io/images/profile.png)
+![Horse Riding](https://kantrum.github.io/huangjiongtao.github.io/images/profile.png)
 
 Horse riding has taught me about balance, strength, and harmony. Some of my experiences include:
 
@@ -38,7 +38,7 @@ Horse riding has taught me about balance, strength, and harmony. Some of my expe
 
 ## Golf
 
-![Golf](/huangjiongtao.github.io/images/profile.png)
+![Golf](https://kantrum.github.io/huangjiongtao.github.io/images/profile.png)
 
 Golf is a game of precision and patience. Here’s a glimpse into my golf journey:
 
