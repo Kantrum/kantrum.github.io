@@ -17,10 +17,10 @@ redirect_from:
 
 <div class="justify-text">
     <h2>Welcome to My Personal Space: A Mosaic of My Life and Aspirations!</h2>
-    <p>Meet Jiongtao Huang (Simon, 黄炯涛), an ambitious and multifaceted individual.</p>
-    <p>I’m currently pursuing my degree in Electronic and Electrical Engineering at the University of Leeds and Southwest Jiaotong University (SWJTU-Leeds Joint School). My academic journey is complemented by my entrepreneurial spirit, as I am the founder of Sichuan Jie Min Technology Co., Ltd. and Hunan Chuangben Technology Co., Ltd..</p>
-    <p>In addition to my academic and entrepreneurial endeavors, I actively contribute to student life as a member of the Student Campus Self-Management Committee at SWJTU. I also hold the distinction of being the men’s 100m record holder in the general student group at Southwest Jiaotong University, a testament to my dedication and versatility.</p>
-    <p>If you are interested in any aspect of me, I would love to chat and collaborate, please email me at - <a href="mailto:kantrum@163.com">kantrum@163.com</a></p>
+    <p>Hello there! I'm Jiongtao Huang, but you can call me Simon. I'm navigating the exciting world of Electronic and Electrical Engineering at the University of Leeds and Southwest Jiaotong University (SWJTU-Leeds Joint School). It's a journey that blends my love for technology with an itch to explore and create.</p>
+    <p>My academic path is just one slice of the pie. I've dipped my toes in the waters of entrepreneurship, founding Sichuan Jie Min Technology Co., Ltd. and Hunan Chuangben Technology Co., Ltd. These ventures are my playgrounds for innovation, where I learn, stumble, and grow.</p>
+    <p>But wait, there's more! At SWJTU, I'm not just another face in the crowd. As a member of the Student Campus Self-Management Committee, I dive into enriching student life, bringing a dash of energy and a spoonful of ideas. Oh, and did I mention I sprint? Yep, I'm the guy who set the men’s 100m record in the general student group at Southwest Jiaotong University. It's not just about speed; it's about passion, persistence, and a little bit of playful competition.</p>
+    <p>Curious about any of me? I'm always up for a good chat or a collaborative brainstorm. Reach out to me at <a href="mailto:kantrum@163.com">kantrum@163.com</a>, and let's see what interesting ideas we can cook up together!</p>
 </div>
 
 
