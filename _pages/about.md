@@ -8,6 +8,22 @@ redirect_from:
   - /about.html
 ---
 
+<style>
+    .justify-text {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+</style>
+
+<div class="justify-text">
+    <h2>Welcome to My Personal Space: A Mosaic of My Life and Aspirations!</h2>
+    <p>Meet Jiongtao Huang (Simon, 黄炯涛), an ambitious and multifaceted individual.</p>
+    <p>I’m currently pursuing my degree in Electronic and Electrical Engineering at the University of Leeds and Southwest Jiaotong University (SWJTU-Leeds Joint School). My academic journey is complemented by my entrepreneurial spirit, as I am the founder of Sichuan Jie Min Technology Co., Ltd. and Hunan Chuangben Technology Co., Ltd..</p>
+    <p>In addition to my academic and entrepreneurial endeavors, I actively contribute to student life as a member of the Student Campus Self-Management Committee at SWJTU. I also hold the distinction of being the men’s 100m record holder in the general student group at Southwest Jiaotong University, a testament to my dedication and versatility.</p>
+    <p>If you are interested in any aspect of me, I would love to chat and collaborate, please email me at - <a href="mailto:kantrum@163.com">kantrum@163.com</a></p>
+</div>
+
+
 **Welcome to My Personal Space: A Mosaic of My Life and Aspirations!**
 
 Meet Jiongtao Huang (Simon, 黄炯涛), an ambitious and multifaceted individual.
