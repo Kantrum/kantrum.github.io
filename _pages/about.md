@@ -82,30 +82,4 @@ redirect_from:
 </body>
 </html>
 
-
-<br>
-
-<h2>Leave a Message</h2>
-
-<br>
-
-<!-- 假设这里是 Disqus 评论系统的嵌入代码 -->
-<div id="disqus_thread"></div>
-<script>
-    (function() { 
-        var d = document, s = d.createElement('script');
-        s.src = 'https://YOUR_DISQUS_SHORTNAME.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://huangjiongtao.disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-<br>
-
-<h2>Web Star History</h2>
-<a href="https://github.com/GuangLun2000/GuangLun2000.github.io">Leave a star if you like it 🥰</a>
-<a href="https://star-history.com/#GuangLun2000/GuangLun2000.github.io&Date">
-    <img src="https://api.star-history.com/svg?repos=GuangLun2000/GuangLun2000.github.io&type=Date" alt="Star History Chart">
-</a>
 <br>
