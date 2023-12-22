@@ -87,6 +87,41 @@ redirect_from:
 
 
 
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave your Message</title>
+</head>
+<body>
+    <div id="tawk-chat-container"></div>
+    <!-- Tawk.to Script -->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/65859b0e70c9f2407f8294fd/1hi8ubccg';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+            s1.onload = function() {
+                Tawk_API.onLoad = function(){
+                    console.log('Tawk.to chat loaded');
+                    Tawk_API.maximize();
+                };
+            }
+        })();
+    </script>
+    <!-- End of Tawk.to Script -->
+</body>
+</html>
+
+
+
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
