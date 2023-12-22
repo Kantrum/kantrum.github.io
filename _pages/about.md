@@ -79,7 +79,7 @@ redirect_from:
 <body>
 <h2>Leave your Message</h2>
 <div class="justify-text">
-    <p>Click the <strong><span style="color: green;">Green Message Button</span></strong> on the right and chat with me online!</p>
+    <p>Click the <strong><span style="color: green;">Green Message Button</span></strong> at the bottom right and chat with me online!</p>
 </div>
 
 
