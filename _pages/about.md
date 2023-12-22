@@ -90,7 +90,7 @@ redirect_from:
     <title>Chat with Me</title>
 </head>
 <body>
-<h2>Chat with me</h2>
+<h2>Chat with Me</h2>
 <div class="justify-text">
     <p><strong>Dec 2023:</strong> I have set up the <a href="https://calendly.com/huangjiongtao/30min">online-coffee-time</a> (Inspired by <strong><a href="https://elliottwu.com/">Shangzhe Wu</a></strong>). Welcome to chat with me!</p>
 </div>
