@@ -24,15 +24,31 @@ redirect_from:
 </div>
 
 
-**Welcome to My Personal Space: A Mosaic of My Life and Aspirations!**
 
-Meet Jiongtao Huang (Simon, 黄炯涛), an ambitious and multifaceted individual.
 
-I’m currently pursuing my degree in Electronic and Electrical Engineering at the University of Leeds and Southwest Jiaotong University (SWJTU-Leeds Joint School). My academic journey is complemented by my entrepreneurial spirit, as I am the founder of Sichuan Jie Min Technology Co., Ltd. and Hunan Chuangben Technology Co., Ltd..
 
-In addition to my academic and entrepreneurial endeavors, I actively contribute to student life as a member of the Student Campus Self-Management Committee at SWJTU. I also hold the distinction of being the men’s 100m record holder in the general student group at Southwest Jiaotong University, a testament to my dedication and versatility.
 
-If you are interested in any aspect of me, I would love to chat and collaborate, please email me at - [kantrum@163.com](mailto:kantrum@163.com)
+
+
+<style>
+    .justify-text {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+</style>
+
+
+<span style="color: gray;">Why This Website?</span>
+======
+<div class="justify-text">
+    <p>The primary purpose of creating this personal website was to establish a centralized platform to gather and showcase my experiences in academia, life, entrepreneurship, and career. Through this site, I aim to provide a panoramic view that allows you to comprehensively understand me, from my academic pursuits to entrepreneurial ventures, and to the everyday nuances of my life. This place is more than just a display of my personal achievements and milestones; it's a space for documenting and sharing my journey of growth.</p>
+    <p>Here, you can find my academic papers, project works, entrepreneurial stories, and my reflections on life. I hope this website serves as a bridge for communication, connecting me with people around the world who share similar interests and dreams. Whether you are a teacher, student, colleague, or just someone curious about my work and life, I welcome you to share your thoughts, experiences, and insights with me.</p>
+    <p>Through this website, I aim not only to showcase who I was but also to explore who I might become. It is a constantly evolving platform, reflecting my journey of change and growth. I look forward to meeting you on this journey and sharing, learning, and growing together.</p>
+</div>
+
+
+
+
 
 <span style="color: gray;">Why This Website?</span>
 ======
