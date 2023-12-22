@@ -70,6 +70,21 @@ redirect_from:
 
 
 
+
+
+<html>
+<head>
+    <title>Leave your Message</title>
+</head>
+<body>
+<h2>Leave your Message</h2>
+<div class="justify-text">
+    <p><strong>Click the <span style="color: green;">green message button</span> on the right and chat with me online!</strong></p>
+</div>
+
+
+
+
 <html>
 <head>
     <title>Chat with Me</title>
@@ -84,19 +99,6 @@ redirect_from:
 </body>
 </html>
 
-
-
-
-
-<html>
-<head>
-    <title>Leave your Message</title>
-</head>
-<body>
-<h2>Leave your Message</h2>
-<div class="justify-text">
-    <p><strong>Click the <span style="color: green;">green message button</span> on the right and chat with me online!</strong></p>
-</div>
 
 
 
