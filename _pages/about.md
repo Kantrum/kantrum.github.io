@@ -27,17 +27,6 @@ redirect_from:
 
 
 
-
-
-
-<style>
-    .justify-text {
-        text-align: justify;
-        text-justify: inter-word;
-    }
-</style>
-
-
 <span style="color: gray;">Why This Website?</span>
 ======
 <div class="justify-text">
@@ -51,7 +40,8 @@ redirect_from:
 
 
 
-
+<span style="color: gray;">What to Expect?</span>
+======
 <div class="justify-text">
     <p>The website is structured into several key sections, each reflecting a different aspect of my life:</p>
     <ul>
@@ -69,38 +59,12 @@ redirect_from:
 
 
 
-
-
-<span style="color: gray;">What to Expect?</span>
-======
-The website is structured into several key sections, each reflecting a different aspect of my life:
-
-[**About Myself:**](https://kantrum.github.io/huangjiongtao.github.io//publications/) Delve into my background, interests, and the values that drive me. This section paints a picture of my persona beyond just a professional or academic label.
-
-[**Academic Journey:**](https://kantrum.github.io/huangjiongtao.github.io//talks/) Explore my academic endeavors, from research projects to scholarly achievements. It's a glimpse into my intellectual pursuits and academic milestones.
-
-[**Entrepreneurial Path:**](https://kantrum.github.io/huangjiongtao.github.io//entrepreneurship/) Discover my ventures in the world of business. This section chronicles my journey as an entrepreneur, highlighting my initiatives and the lessons learned along the way.
-
-[**Life Experiences:**](https://kantrum.github.io/huangjiongtao.github.io//portfolio/) A peek into my life outside the professional sphere. From travel diaries to personal hobbies, this part of the site celebrates the diverse experiences that shape me.
-
-[**Blog Insights:**](https://kantrum.github.io/huangjiongtao.github.io//year-archive/) My thoughts, insights, and musings shared in a more informal and reflective tone. It's where I engage with broader topics and personal interests.
-
-[**Professional Resumé:**](https://kantrum.github.io/huangjiongtao.github.io//cv/) A comprehensive overview of my professional and academic history, providing a detailed account of my skills, experiences, and qualifications.
-
-[**Navigation Guide:**](https://kantrum.github.io/huangjiongtao.github.io//markdown/) Navigating the site made easy. This section helps you find what you're looking for quickly and efficiently, ensuring a seamless browsing experience.
-
 <span style="color: gray;">Join Me on My Journey</span>
 ======
-
 <div class="justify-text">
-    <p>As you explore this website, I invite you to witness the multifaceted nature of my life. Each section represents a thread in the tapestry of my experiences, and together, they tell a story - my story. Welcome, and enjoy the journey!</p>
-    <p>Welcome to the journey that is my life. Let's explore, learn, and grow together.</p>
+    <p> warmly welcome you to journey through this website, a reflection of the diverse tapestry that is my life. Each section here is a unique thread, intricately woven to share my story with you. As you navigate through these pages, we embark on an exploration of learning and growth. Enjoy the adventure and insights into my world!</p>
+    <p>Together, let's explore the depths of my experiences, uncover new insights, and celebrate the milestones that have shaped me. Welcome aboard this adventure into my world, a tapestry of dreams, aspirations, and achievements. Enjoy the exploration and the many revelations that await!</p>
 </div>
-
-
-As you explore this website, I invite you to witness the multifaceted nature of my life. Each section represents a thread in the tapestry of my experiences, and together, they tell a story - my story. Welcome, and enjoy the journey!
-
-Welcome to the journey that is my life. Let's explore, learn, and grow together.
 
 
 
