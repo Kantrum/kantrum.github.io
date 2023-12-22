@@ -62,7 +62,7 @@ redirect_from:
 <span style="color: gray;">Join Me on My Journey</span>
 ======
 <div class="justify-text">
-    <p> warmly welcome you to journey through this website, a reflection of the diverse tapestry that is my life. Each section here is a unique thread, intricately woven to share my story with you. As you navigate through these pages, we embark on an exploration of learning and growth. Enjoy the adventure and insights into my world!</p>
+    <p> Warmly welcome you to journey through this website, a reflection of the diverse tapestry that is my life. Each section here is a unique thread, intricately woven to share my story with you. As you navigate through these pages, we embark on an exploration of learning and growth. Enjoy the adventure and insights into my world!</p>
     <p>Together, let's explore the depths of my experiences, uncover new insights, and celebrate the milestones that have shaped me. Welcome aboard this adventure into my world, a tapestry of dreams, aspirations, and achievements. Enjoy the exploration and the many revelations that await!</p>
 </div>
 
@@ -82,4 +82,27 @@ redirect_from:
 </body>
 </html>
 
-<br>
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave your Message</title>
+</head>
+<body>
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/65859b0e70c9f2407f8294fd/1hi8ubccg';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+</body>
+</html>
+
