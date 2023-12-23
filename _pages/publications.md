@@ -166,37 +166,50 @@ author_profile: true
 
 
 
+
 <head>
     <style>
         .schedule-container {
             max-width: 800px; /* 设置最大宽度 */
             margin: 20px auto; /* 居中显示 */
             padding: 20px;
-            border-radius: 10px; /* 圆角边框 */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 简单的阴影效果 */
-            background-color: #ffffff; /* 背景颜色 */
+            background: linear-gradient(145deg, #e6e6e6, #ffffff); /* 渐变背景 */
+            border-radius: 15px; /* 圆角边框 */
+            box-shadow: 5px 5px 10px #d1d1d1, -5px -5px 10px #ffffff; /* 浮雕效果 */
         }
+
         .schedule-title {
             text-align: center; /* 标题居中对齐 */
-            margin-bottom: 10px; /* 和内容之间的距离 */
-            color: #333333; /* 标题颜色 */
-            font-size: 24px; /* 字体大小 */
+            color: #333; /* 标题颜色 */
+            font-size: 22px; /* 字体大小 */
+            margin-bottom: 15px; /* 和内容之间的距离 */
         }
+
         .schedule-table {
             width: 100%; /* 表格宽度 */
             border-collapse: collapse; /* 边框合并 */
         }
+
         .schedule-table th, .schedule-table td {
-            border: 1px solid #dddddd; /* 单元格边框 */
-            padding: 8px; /* 单元格内边距 */
-            text-align: left; /* 文字左对齐 */
+            padding: 10px; /* 单元格内边距 */
+            text-align: center; /* 文字居中对齐 */
+            border-bottom: 1px solid #ddd; /* 单元格底部边框 */
         }
+
         .schedule-table th {
             background-color: #4a89dc; /* 表头背景色 */
             color: white; /* 表头字体颜色 */
+            font-size: 18px; /* 表头字体大小 */
         }
-        .schedule-table tr:nth-child(even) {
-            background-color: #f2f2f2; /* 隔行换色 */
+
+        .schedule-table tr:hover {
+            background-color: #f1f1f1; /* 鼠标悬停行的背景色 */
+        }
+
+        @media (max-width: 768px) {
+            .schedule-table, .schedule-table th, .schedule-table td {
+                font-size: 14px; /* 移动设备字体大小调整 */
+            }
         }
     </style>
 </head>
@@ -204,6 +217,7 @@ author_profile: true
     <div class="schedule-container">
         <h2 class="schedule-title">🗓️ My Upcoming Schedule</h2>
         <table class="schedule-table">
+            <!-- Table content here -->
             <tr>
             <th>Week 14 [Dec 4 - Dec 10]</th>
             <th>Week 15 [Dec 11 - Dec 17]</th>
