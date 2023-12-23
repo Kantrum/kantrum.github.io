@@ -257,7 +257,7 @@ author_profile: true
 
 ## 📸 Photograph
 ---
-*Attach a recent personal photograph here.*
+> Here is my personal photograph.
 <div style="display: flex; justify-content: space-between; margin-top: 20px;"> <!-- 添加了上边距 margin-top: 20px; -->
   <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1561.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;"/>
   <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1558.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
