@@ -166,58 +166,43 @@ author_profile: true
 
 
 
-
-
 <head>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f5f5f5; /* 轻微的背景色 */
+        .schedule-container {
+            max-width: 800px; /* 设置最大宽度 */
+            margin: 20px auto; /* 居中显示 */
             padding: 20px;
+            border-radius: 10px; /* 圆角边框 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 简单的阴影效果 */
+            background-color: #ffffff; /* 背景颜色 */
         }
-        .schedule-section {
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 1000px;
-            overflow-x: auto; /* 添加水平滚动 */
+        .schedule-title {
+            text-align: center; /* 标题居中对齐 */
+            margin-bottom: 10px; /* 和内容之间的距离 */
+            color: #333333; /* 标题颜色 */
+            font-size: 24px; /* 字体大小 */
         }
         .schedule-table {
-            width: 100%;
-            border-collapse: collapse;
-            border-radius: 15px;
+            width: 100%; /* 表格宽度 */
+            border-collapse: collapse; /* 边框合并 */
         }
         .schedule-table th, .schedule-table td {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 10px 15px;
+            border: 1px solid #dddddd; /* 单元格边框 */
+            padding: 8px; /* 单元格内边距 */
+            text-align: left; /* 文字左对齐 */
         }
         .schedule-table th {
-            background-color: #4a89dc;
-            color: white;
-            font-size: 18px;
+            background-color: #4a89dc; /* 表头背景色 */
+            color: white; /* 表头字体颜色 */
         }
         .schedule-table tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        .schedule-table td {
-            font-size: 16px;
-            color: #555555;
-        }
-        @media (max-width: 768px) {
-            .schedule-table, .schedule-table th, .schedule-table td {
-                font-size: 14px;
-            }
+            background-color: #f2f2f2; /* 隔行换色 */
         }
     </style>
 </head>
 <body>
-    <div class="schedule-section">
-        <h2 style="text-align: center; margin-bottom: 10px;">🗓️ My Upcoming Schedule</h2>
+    <div class="schedule-container">
+        <h2 class="schedule-title">🗓️ My Upcoming Schedule</h2>
         <table class="schedule-table">
             <tr>
             <th>Week 14 [Dec 4 - Dec 10]</th>
@@ -248,6 +233,7 @@ author_profile: true
         </table>
     </div>
 </body>
+
 
 
 
