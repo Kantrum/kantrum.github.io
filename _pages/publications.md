@@ -56,6 +56,7 @@ author_profile: true
 
 <div class="info-section">
     <h2>🌟 Personal Information</h2>
+    <div style="margin-left: 20px;">
     <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Name (Chinese):</strong> 黄炯涛</p>
     <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Name (Pinyin):</strong> Huang Jiongtao</p>
     <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Name (English):</strong> Simon</p>
@@ -68,25 +69,30 @@ author_profile: true
     <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Email:</strong> kantrum@163.com ｜ huangjiongtao@gmail.com</p>
     <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Mobile Number:</strong> +86-155-8888-8888</p>
     <!-- 个人信息的更多内容 -->
+    </div>
 </div>
 
 
 <div class="info-section">
     <h2>📘 Academic Background</h2>
+    <div style="margin-left: 20px;">
     <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Current Institution:</strong> University of Leeds | Southwest Jiaotong University</p>
     <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Major/Area of Study:</strong> Electronic and Electrical Engineering</p>
     <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Expected Graduation Date:</strong> 07/2024</p>
     <!-- 学术背景的更多内容 -->
+    </div>
 </div>
 
 
 <div class="info-section">
     <h2>🔥 Leadership and Social Activities</h2>
+    <div style="margin-left: 20px;">
     <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; President of the University Student Campus Self-Management Committee</strong>, May 2023 – Present</p>
     <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Most Contributive Volunteer Award in the 31st Chengdu World University Games</strong>, May 2022</p>
     <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Class Leader of the New Youth Global Competency Development Programme</strong>, Mar 2022 – Dec 2022</p>
     <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Ministry of the University Student Campus Self-Management Committee</strong>, May 2021 – Apr 2023</p>
     <!-- 领导和社交活动的更多内容 -->
+    </div>
 </div>
 
 
