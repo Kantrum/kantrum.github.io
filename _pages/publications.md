@@ -99,10 +99,10 @@ author_profile: true
 <div class="info-section">
     <h2>🔥 Leadership and Social Activities</h2>
     <div style="margin-left: 20px;">
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; President of the University Student Campus Self-Management Committee</strong>, May 2023 – Present</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Most Contributive Volunteer Award in the 31st Chengdu World University Games</strong>, May 2022</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Class Leader of the New Youth Global Competency Development Programme</strong>, Mar 2022 – Dec 2022</p>
-    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Ministry of the University Student Campus Self-Management Committee</strong>, May 2021 – Apr 2023</p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;">&bull; President of the University Student Campus Self-Management Committee, <strong>May 2023 – Present</strong></p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;">&bull; Most Contributive Volunteer Award in the 31st Chengdu World University Games, <strong>May 2022</strong></p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;">&bull; Class Leader of the New Youth Global Competency Development Programme, <strong>Mar 2022 – Dec 2022</strong></p>
+    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;">&bull; Ministry of the University Student Campus Self-Management Committee, <strong>May 2021 – Apr 2023</strong></p>
     <!-- 领导和社交活动的更多内容 -->
     </div>
 </div>
