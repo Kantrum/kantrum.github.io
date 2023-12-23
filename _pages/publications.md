@@ -259,16 +259,40 @@ author_profile: true
 ---
 > Here is my personal photograph.
 
-<div style="display: flex; justify-content: space-between; margin-top: 20px;"> <!-- 添加了上边距 margin-top: 20px; -->
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1556.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;"/>
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1562.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1563.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
+<style>
+    .image-row {
+        display: flex; 
+        justify-content: space-between; 
+        margin-top: 20px; 
+    }
+
+    .image-row img {
+        flex: 1; 
+        max-width: 996px; 
+        max-height: 769px; 
+        width: 30%; 
+        height: auto; 
+        margin-right: 10px;
+        border-radius: 15px; /* 添加圆角 */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 添加阴影效果 */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加过渡效果 */
+    }
+
+    .image-row img:hover {
+        transform: scale(1.05); /* 鼠标悬停时图片稍微放大 */
+        box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* 鼠标悬停时阴影增强 */
+    }
+</style>
+
+<div class="image-row">
+    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1556.JPG" />
+    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1562.JPG" />
+    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1563.JPG" />
 </div>
 
-<div style="display: flex; justify-content: space-between; margin-top: 20px;"> <!-- 添加了上边距 margin-top: 20px; -->
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1561.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;"/>
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1558.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1560.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
+<div class="image-row">
+    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1561.JPG" />
+    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1558.JPG" />
+    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1560.JPG" />
 </div>
-
 
