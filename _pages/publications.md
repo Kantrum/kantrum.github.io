@@ -15,8 +15,6 @@ author_profile: true
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            text-align: justify;
-            text-justify: inter-word;
         }
         .info-section {
             background-color: #f9f9f9;
