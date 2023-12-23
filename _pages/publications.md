@@ -179,43 +179,56 @@ author_profile: true
 
 
 
+
+
 <head>
     <style>
         .schedule-container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
             background: #f9f9f9;
             border-radius: 15px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         }
+
         .schedule-title {
             text-align: center;
             color: #333;
             font-size: 24px;
             margin-bottom: 20px;
         }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
         .event-card {
             background: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
             padding: 15px;
-            margin-bottom: 15px;
             transition: all 0.3s ease;
         }
+
         .event-card:hover {
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
             transform: scale(1.05);
         }
+
         .event-date {
             color: #4a89dc;
             font-weight: bold;
             margin-bottom: 10px;
         }
+
         .event-description {
             color: #555;
             font-size: 16px;
         }
+
         @media (max-width: 768px) {
             .event-description {
                 font-size: 14px;
@@ -226,49 +239,57 @@ author_profile: true
 <body>
     <div class="schedule-container">
         <h2 class="schedule-title">🗓️ My Upcoming Schedule</h2>
-        <div class="event-card">
-            <div class="event-date">Dec 7</div>
-            <div class="event-description">📌 XJEL3030 Assignment 3 DDL</div>
+        <div class="events-grid">
+            <div class="event-card">
+                <div class="event-date">Dec 7</div>
+                <div class="event-description">📌 XJEL3030 Assignment 3 DDL</div>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Dec 8</div>
+                <div class="event-description">⏰ XJEL3875 Interim Report DDL</div>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Dec 9</div>
+                <div class="event-description">📚 Report Submission</div>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Dec 15</div>
+                <div class="event-description">💼 XJEL3362 Mid Test</div>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Dec 16</div>
+                <div class="event-description">❤️ XJEL3875 Journal 8</div>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Dec 18</div>
+                <div class="event-description">🗣️ XJEL3875 Journal 9</div>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Dec 20</div>
+                <div class="event-description">🎳 XJEL3030 Assignment 4 DDL</div>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Dec 25</div>
+                <div class="event-description">🎄 Christmas Day</div>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Dec 28</div>
+                <div class="event-description">📅 Planning for Q1</div>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Dec 30</div>
+                <div class="event-description">📝 XJEL3875 Journal 10</div>
+            </div>
+            <!-- 更多活动卡片... -->
+            <!-- 可以添加更多的卡片，它们将自动排列 -->
         </div>
-        <div class="event-card">
-            <div class="event-date">Dec 8</div>
-            <div class="event-description">⏰ XJEL3875 Interim Report DDL</div>
-        </div>
-        <div class="event-card">
-            <div class="event-date">Dec 9</div>
-            <div class="event-description">📚 Report Submission</div>
-        </div>
-        <div class="event-card">
-            <div class="event-date">Dec 15</div>
-            <div class="event-description">💼 XJEL3362 Mid Test</div>
-        </div>
-        <div class="event-card">
-            <div class="event-date">Dec 16</div>
-            <div class="event-description">❤️ XJEL3875 Journal 8</div>
-        </div>
-        <div class="event-card">
-            <div class="event-date">Dec 18</div>
-            <div class="event-description">🗣️ XJEL3875 Journal 9</div>
-        </div>
-        <div class="event-card">
-            <div class="event-date">Dec 20</div>
-            <div class="event-description">🎳 XJEL3030 Assignment 4 DDL</div>
-        </div>
-        <div class="event-card">
-            <div class="event-date">Dec 25</div>
-            <div class="event-description">🎄 Christmas Day</div>
-        </div>
-        <div class="event-card">
-            <div class="event-date">Dec 28</div>
-            <div class="event-description">📅 Planning for Q1</div>
-        </div>
-        <div class="event-card">
-            <div class="event-date">Dec 30</div>
-            <div class="event-description">📝 XJEL3875 Journal 10</div>
-        </div>
-        <!-- 更多活动卡片... -->
     </div>
 </body>
+
+
+
+
+
 
 
 
