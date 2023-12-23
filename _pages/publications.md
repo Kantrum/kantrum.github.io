@@ -15,6 +15,8 @@ author_profile: true
     <style>
         body {
             font-family: 'Roboto', sans-serif;
+            text-align: justify;
+            text-justify: inter-word;
         }
         .info-section {
             background-color: #f9f9f9;
@@ -29,7 +31,7 @@ author_profile: true
             border: 1px solid #e0e0e0;
         }
         .info-section:hover {
-            max-height: 1000px;
+            max-height: 1800px;
             background-color: #ffffff;
             box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         }
