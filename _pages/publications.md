@@ -165,66 +165,89 @@ author_profile: true
 
 
 
-<style>
-    .schedule-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
-
-    .schedule-table th, .schedule-table td {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-    }
-
-    .schedule-table th {
-        background-color: #f2f2f2;
-        color: #333333;
-    }
-
-    .schedule-table tr:nth-child(even) {
-        background-color: #f9f9f9;
-    }
-</style>
-
-<div class="schedule-section">
-    <h2>🗓️ <strong>My Upcoming Schedule</strong></h2>
-
-    <table class="schedule-table">
-        <tr>
+<head>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .schedule-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .schedule-section h2 {
+            font-size: 24px;
+            color: #2a2a2a;
+            margin-bottom: 20px;
+        }
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        .schedule-table th, .schedule-table td {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 12px;
+        }
+        .schedule-table th {
+            background-color: #4a89dc;
+            color: white;
+            font-size: 18px;
+        }
+        .schedule-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .schedule-table td {
+            font-size: 16px;
+            color: #555555;
+        }
+        .schedule-table td strong {
+            color: #4a89dc;
+        }
+        @media (max-width: 768px) {
+            .schedule-table, .schedule-table th, .schedule-table td {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="schedule-section">
+        <h2>🗓️ <strong>My Upcoming Schedule</strong></h2>
+        <table class="schedule-table">
+            <tr>
             <th>Week 14 [Dec 4 - Dec 10]</th>
             <th>Week 15 [Dec 11 - Dec 17]</th>
             <th>Week 16 [Dec 18 - Dec 24]</th>
             <th>Week 17 [Dec 25 - Dec 31]</th>
-        </tr>
-        <tr>
-            <td>
-                <strong>Dec 7:</strong> 📌 XJEL3030 Assignment 3 DDL~~<br>
-                <strong>Dec 8:</strong> ⏰ XJEL3875 Interim Report DDL~~<br>
-                <strong>Dec 9:</strong> 📚 Report Submission~~
-            </td>
-            <td>
-                <strong>Dec 15:</strong> 💼 XJEL3362 Mid Test~~<br>
-                <strong>Dec 16:</strong> ❤️ XJEL3875 Journal 8~~
-            </td>
-            <td>
+            </tr>
+            <tr>
+                <td>
+                <strong>Dec 7:</strong> 📌 XJEL3030 Assignment 3 DDL<br>
+                <strong>Dec 8:</strong> ⏰ XJEL3875 Interim Report DDL<br>
+                <strong>Dec 9:</strong> 📚 Report Submission
+                </td>
+                <td>
+                <strong>Dec 15:</strong> 💼 XJEL3362 Mid Test<br>
+                <strong>Dec 16:</strong> ❤️ XJEL3875 Journal 8
+                </td>
+                <td>
                 <strong>Dec 20:</strong> 🎳 XJEL3030 Assignment 4 DDL<br>
                 <strong>Dec 18:</strong> 🗣️ XJEL3875 Journal 9
-            </td>
-            <td>
+                </td>
+                <td>
                 <strong>Dec 25:</strong> 🎄 Christmas Day<br>
                 <strong>Dec 28:</strong> 📅 Planning for Q1<br>
                 <strong>Dec 30:</strong> 📝 XJEL3875 Journal 10
-            </td>
-        </tr>
-    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
 
-    <h3>🎯 <strong>Key Dates</strong></h3>
-    <p><strong>Dec 31:</strong> 🥳 New Year's Eve Celebration<br>
-       <strong>Jan 1:</strong> 🎉 New Year: Office Closed</p>
-</div>
 
 
 
