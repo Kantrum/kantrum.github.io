@@ -29,7 +29,7 @@ author_profile: true
             border: 1px solid #e0e0e0;
         }
         .info-section:hover {
-            max-height: 1800px;
+            max-height: 4800px;
             background-color: #ffffff;
             box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         }
