@@ -12,25 +12,47 @@ author_profile: true
 <style>
     .info-section {
         background-color: #f4f4f4;
-        padding: 15px 20px; /* 顶部和底部的内边距减少 */
+        padding: 15px 20px;
         border-radius: 15px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        margin: 10px;
-        transition: max-height 0.3s ease;
+        margin: 10px 0;
+        transition: all 0.5s ease; /* Smoother transition for all properties */
         overflow: hidden;
-        max-height: 50px; /* 初始高度仅足以显示标题 */
+        max-height: 50px;
         cursor: pointer;
+        border: 1px solid #d3d3d3; /* Subtle border for better definition */
     }
 
     .info-section:hover {
-        max-height: 1000px; /* 鼠标悬停时增加高度以显示完整内容 */
+        max-height: 1000px;
+        background-color: #ffffff; /* Light color shift on hover */
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Enhanced shadow for depth */
     }
 
     .info-section h2 {
-        margin-top: 0; /* 移除标题的顶部边距 */
-        margin-bottom: 15px; /* 设置标题到正文的距离 */
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-size: 22px; /* Slightly larger font for headers */
+        color: #333333; /* Darker color for better readability */
+        transition: color 0.3s ease; /* Smooth color transition */
+    }
+
+    .info-section p {
+        font-size: 16px; /* Consistent font size for body text */
+        line-height: 1.6;
+        color: #555555; /* Slightly lighter text for a modern look */
+        transition: transform 0.3s ease-out; /* Animate text appearance */
+        transform: translateY(-10px);
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .info-section:hover p {
+        transform: translateY(0);
+        opacity: 1;
     }
 </style>
+
 
 <div class="info-section">
     <h2>🌟 Personal Information</h2>
