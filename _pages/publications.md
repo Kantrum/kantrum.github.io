@@ -9,49 +9,61 @@ author_profile: true
 
 
 
-<style>
-    .info-section {
-        background-color: #f4f4f4;
-        padding: 15px 20px;
-        border-radius: 15px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        margin: 10px 0;
-        transition: all 0.5s ease; /* Smoother transition for all properties */
-        overflow: hidden;
-        max-height: 50px;
-        cursor: pointer;
-        border: 1px solid #d3d3d3; /* Subtle border for better definition */
-    }
+<head>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .info-section {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 10px 0;
+            transition: all 0.4s ease;
+            overflow: hidden;
+            max-height: 60px; /* Adjusted for better initial visibility */
+            cursor: pointer;
+            border: 1px solid #e0e0e0;
+        }
+        .info-section:hover {
+            max-height: 1000px;
+            background-color: #ffffff;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .info-section h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #2a2a2a;
+            transition: color 0.3s ease;
+        }
+        .info-section p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #4a4a4a;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+        .info-section:hover p {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .info-section {
+                padding: 15px;
+            }
+            .info-section h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
 
-    .info-section:hover {
-        max-height: 1000px;
-        background-color: #ffffff; /* Light color shift on hover */
-        box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Enhanced shadow for depth */
-    }
-
-    .info-section h2 {
-        margin-top: 0;
-        margin-bottom: 15px;
-        font-size: 22px; /* Slightly larger font for headers */
-        color: #333333; /* Darker color for better readability */
-        transition: color 0.3s ease; /* Smooth color transition */
-    }
-
-    .info-section p {
-        font-size: 16px; /* Consistent font size for body text */
-        line-height: 1.6;
-        color: #555555; /* Slightly lighter text for a modern look */
-        transition: transform 0.3s ease-out; /* Animate text appearance */
-        transform: translateY(-10px);
-        opacity: 0;
-        transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-
-    .info-section:hover p {
-        transform: translateY(0);
-        opacity: 1;
-    }
-</style>
 
 
 <div class="info-section">
