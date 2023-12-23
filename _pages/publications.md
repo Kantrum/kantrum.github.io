@@ -216,6 +216,7 @@ author_profile: true
 </head>
 <body>
     <div class="schedule-section">
+        <h2>🗓️ <strong>My Upcoming Schedule</strong></h2>
         <table class="schedule-table">
             <tr>
             <th>Week 14 [Dec 4 - Dec 10]</th>
