@@ -8,6 +8,7 @@ author_profile: true
 {% include base_path %}
 
 
+"About Myself" offers a comprehensive glimpse into my life. This section encapsulates personal details, academic pursuits, involvement in social activities, personal achievements, upcoming plans, and a visual representation through photographs. It's a blend of my identity, intellectual journeys, contributions to community and campus life, recognition of my efforts, and a sneak peek into my future endeavors. This space is dedicated to portraying the multifaceted dimensions of my life and aspirations.
 
 <head>
     <!-- Google Fonts -->
