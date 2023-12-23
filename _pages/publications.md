@@ -111,18 +111,18 @@ author_profile: true
 <div class="info-section">
     <h2>🏆 Personal Honors</h2>
     <div style="margin-left: 20px;">
-        <h3 style="font-size: 18px; margin-top: 15px;">2023</h3>
-        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; March:</strong> Served as the Class Officer for the New Youth Class of 2022 in the "New Youth Global Competency Development Programme" with outstanding performance.</p>
-        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; February:</strong> Received the "A Grade Certificate of Comprehensive Quality" from Sichuan University Students Union.</p>
-        <h3 style="font-size: 18px; margin-top: 15px;">2022</h3>
-        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; December:</strong> Awarded the honorary title of "Three Good Students" by Southwest Jiaotong University.</p>
-        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; March:</strong> Recognized as an Outstanding Communist Youth League Member by Southwest Jiaotong University.</p>
-        <h3 style="font-size: 18px; margin-top: 15px;">2021</h3>
-        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; December:</strong> Earned the honorary title of "Three Good Students" by Southwest Jiaotong University.</p>
-        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; December:</strong> Distinguished as an Outstanding Youth League Member by Southwest Jiaotong University.</p>
-        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; October:</strong> Participated in entrepreneurship training and won the title of "excellent student".</p>
-        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; August:</strong> Engaged in community epidemic prevention volunteer activities and won the title of "Excellent Volunteer".</p>
-        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; February:</strong> Completed an internship in translation and won the title of "Excellent Intern".</p>
+        <h3 style="font-size: 18px; margin-top: 25px;">2023</h3>
+        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 3px;"><strong>&bull; March:</strong> Served as the Class Officer for the New Youth Class of 2022 in the "New Youth Global Competency Development Programme" with outstanding performance.</p>
+        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 3px;"><strong>&bull; February:</strong> Received the "A Grade Certificate of Comprehensive Quality" from Sichuan University Students Union.</p>
+        <h3 style="font-size: 18px; margin-top: 25px;">2022</h3>
+        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 3px;"><strong>&bull; December:</strong> Awarded the honorary title of "Three Good Students" by Southwest Jiaotong University.</p>
+        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 3px;"><strong>&bull; March:</strong> Recognized as an Outstanding Communist Youth League Member by Southwest Jiaotong University.</p>
+        <h3 style="font-size: 18px; margin-top: 25px;">2021</h3>
+        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 3px;"><strong>&bull; December:</strong> Earned the honorary title of "Three Good Students" by Southwest Jiaotong University.</p>
+        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 3px;"><strong>&bull; December:</strong> Distinguished as an Outstanding Youth League Member by Southwest Jiaotong University.</p>
+        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 3px;"><strong>&bull; October:</strong> Participated in entrepreneurship training and won the title of "excellent student".</p>
+        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 3px;"><strong>&bull; August:</strong> Engaged in community epidemic prevention volunteer activities and won the title of "Excellent Volunteer".</p>
+        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 3px;"><strong>&bull; February:</strong> Completed an internship in translation and won the title of "Excellent Intern".</p>
     <!-- 个人荣誉的更多内容 -->
         <div style="display: flex; justify-content: space-between;">
             <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1492.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
