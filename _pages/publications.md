@@ -130,33 +130,33 @@ author_profile: true
             <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1494.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 10px;" />
         </div>
         <div style="display: flex; justify-content: space-between; margin-top: 20px;"> <!-- 添加了上边距 margin-top: 20px; 以分隔两排图片 -->
-            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1495.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
-            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1580.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 5px; margin-right: 5px;" />
+            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1495.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
+            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1580.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 5px; margin-right: 5px;" />
             <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1581.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 10px;" />
         </div>
         <div style="display: flex; justify-content: space-between; margin-top: 20px;"> <!-- 添加了上边距 margin-top: 20px; 以分隔两排图片 -->
-            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1584.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
-            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1585.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 5px; margin-right: 5px;" />
+            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1584.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
+            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1585.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 5px; margin-right: 5px;" />
             <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1586.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 10px;" />
         </div>
         <div style="display: flex; justify-content: space-between; margin-top: 20px;"> <!-- 添加了上边距 margin-top: 20px; 以分隔两排图片 -->
-            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1590.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
-            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1592.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 5px; margin-right: 5px;" />
+            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1590.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
+            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1592.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 5px; margin-right: 5px;" />
             <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1593.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 10px;" />
         </div>
         <div style="display: flex; justify-content: space-between; margin-top: 20px;"> <!-- 添加了上边距 margin-top: 20px; 以分隔两排图片 -->
-            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1594.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
-            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1595.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 5px; margin-right: 5px;" />
+            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1594.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
+            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1595.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 5px; margin-right: 5px;" />
             <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1586.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 10px;" />
         </div>
         <div style="display: flex; justify-content: space-between; margin-top: 20px;"> <!-- 添加了上边距 margin-top: 20px; 以分隔两排图片 -->
-            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1587.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
-            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1588.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 5px; margin-right: 5px;" />
+            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1587.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
+            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1588.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 5px; margin-right: 5px;" />
             <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1589.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 10px;" />
         </div>
         <div style="display: flex; justify-content: space-between; margin-top: 20px;"> <!-- 添加了上边距 margin-top: 20px; 以分隔两排图片 -->
-            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1591.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
-            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1582.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 5px; margin-right: 5px;" />
+            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1591.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
+            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1582.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 5px; margin-right: 5px;" />
             <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1583.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 10px;" />
         </div>
     </div>
@@ -259,14 +259,14 @@ author_profile: true
 ---
 *Attach a recent personal photograph here.*
 <div style="display: flex; justify-content: space-between; margin-top: 20px;"> <!-- 添加了上边距 margin-top: 20px; -->
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1561.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;"/>
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1558.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1560.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1561.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;"/>
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1558.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1560.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
 </div>
 
 <div style="display: flex; justify-content: space-between; margin-top: 20px;"> <!-- 添加了上边距 margin-top: 20px; -->
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1556.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;"/>
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1562.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1563.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1556.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;"/>
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1562.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1563.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
 </div>
 
