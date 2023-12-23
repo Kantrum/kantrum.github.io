@@ -419,3 +419,24 @@ Teaching
 - **Jan 1:** 🎉 _New Year: Office Closed_
 
 ---
+
+
+
+
+
+
+
+
+
+
+<p float="left">
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/profile.png" width="30%" />
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/profile.png" width="30%" />
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/profile.png" width="30%" />
+</p>
+
+![Attach a recent personal photograph here](https://kantrum.github.io/huangjiongtao.github.io/images/profile.png)
+
+![Attach a recent personal photograph here](https://kantrum.github.io/huangjiongtao.github.io/images/profile.png)
+
+![Attach a recent personal photograph here](https://kantrum.github.io/huangjiongtao.github.io/images/profile.png)
