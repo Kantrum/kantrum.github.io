@@ -111,13 +111,13 @@ author_profile: true
 <div class="info-section">
     <h2>🏆 Personal Honors</h2>
     <div style="margin-left: 20px;">
-        <h3 style="font-size: 18px; margin-top: 10px;">2023</h3>
+        <h3 style="font-size: 22px; margin-top: 10px;">2023</h3>
         <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; March:</strong> Served as the Class Officer for the New Youth Class of 2022 in the "New Youth Global Competency Development Programme" with outstanding performance.</p>
         <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; February:</strong> Received the "A Grade Certificate of Comprehensive Quality" from Sichuan University Students Union.</p>
-        <h3 style="font-size: 18px; margin-top: 10px;">2022</h3>
+        <h3 style="font-size: 22px; margin-top: 10px;">2022</h3>
         <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; December:</strong> Awarded the honorary title of "Three Good Students" by Southwest Jiaotong University.</p>
         <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; March:</strong> Recognized as an Outstanding Communist Youth League Member by Southwest Jiaotong University.</p>
-        <h3 style="font-size: 18px; margin-top: 10px;">2021</h3>
+        <h3 style="font-size: 22px; margin-top: 10px;">2021</h3>
         <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; December:</strong> Earned the honorary title of "Three Good Students" by Southwest Jiaotong University.</p>
         <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; December:</strong> Distinguished as an Outstanding Youth League Member by Southwest Jiaotong University.</p>
         <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; October:</strong> Participated in entrepreneurship training and won the title of "excellent student".</p>
