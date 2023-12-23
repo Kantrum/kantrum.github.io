@@ -165,32 +165,35 @@ author_profile: true
 
 
 
+
+
 <head>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5; /* 轻微的背景色 */
+            padding: 20px;
         }
         .schedule-section {
-            text-align: center;
-            margin-top: 30px;
-        }
-        .schedule-section h2 {
-            font-size: 24px;
-            color: #2a2a2a;
-            margin-bottom: 20px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1000px;
         }
         .schedule-table {
             width: 100%;
             border-collapse: collapse;
-            margin: auto;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            border-radius: 15px;
+            overflow: hidden;
         }
         .schedule-table th, .schedule-table td {
             border: 1px solid #dddddd;
-            text-align: center;
-            padding: 12px;
+            text-align: left;
+            padding: 10px 15px;
         }
         .schedule-table th {
             background-color: #4a89dc;
@@ -204,9 +207,6 @@ author_profile: true
             font-size: 16px;
             color: #555555;
         }
-        .schedule-table td strong {
-            color: #4a89dc;
-        }
         @media (max-width: 768px) {
             .schedule-table, .schedule-table th, .schedule-table td {
                 font-size: 14px;
@@ -216,7 +216,6 @@ author_profile: true
 </head>
 <body>
     <div class="schedule-section">
-        <h2>🗓️ <strong>My Upcoming Schedule</strong></h2>
         <table class="schedule-table">
             <tr>
             <th>Week 14 [Dec 4 - Dec 10]</th>
@@ -247,6 +246,10 @@ author_profile: true
         </table>
     </div>
 </body>
+
+
+
+
 
 
 
