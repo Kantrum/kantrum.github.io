@@ -258,23 +258,15 @@ author_profile: true
 ## 📸 Photograph
 ---
 *Attach a recent personal photograph here.*
-<p float="left">
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/profile.png" width="30%" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/profile.png" width="30%" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/profile.png" width="30%" />
-</p>
+<div style="display: flex; justify-content: space-between; margin-top: 20px;"> <!-- 添加了上边距 margin-top: 20px; -->
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1561.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;"/>
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1558.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1560.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
+</div>
 
-![Attach a recent personal photograph here](https://kantrum.github.io/huangjiongtao.github.io/images/profile.png)
-
-![Attach a recent personal photograph here](https://kantrum.github.io/huangjiongtao.github.io/images/profile.png)
-
-![Attach a recent personal photograph here](https://kantrum.github.io/huangjiongtao.github.io/images/profile.png)
-
-
-
-<div style="display: flex; justify-content: space-between;">
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/profile.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto;" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/profile.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto;" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/profile.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto;" />
+<div style="display: flex; justify-content: space-between; margin-top: 20px;"> <!-- 添加了上边距 margin-top: 20px; -->
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1556.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;"/>
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1562.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
+  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1563.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
 </div>
 
