@@ -179,8 +179,8 @@ author_profile: true
 
 
 
-
-
+🗓️ My Upcoming Schedule
+---
 <head>
     <style>
         .schedule-container {
@@ -238,7 +238,6 @@ author_profile: true
 </head>
 <body>
     <div class="schedule-container">
-        <h2 class="schedule-title">🗓️ My Upcoming Schedule</h2>
         <div class="events-grid">
             <div class="event-card">
                 <div class="event-date">Dec 7</div>
