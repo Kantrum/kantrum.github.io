@@ -179,6 +179,68 @@ author_profile: true
 
 
 
+<head>
+    <style>
+        .schedule-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+        .schedule-title {
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .event-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            padding: 15px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+        .event-card:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transform: scale(1.05);
+        }
+        .event-date {
+            color: #4a89dc;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .event-description {
+            color: #555;
+            font-size: 16px;
+        }
+        @media (max-width: 768px) {
+            .event-description {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="schedule-container">
+        <h2 class="schedule-title">🗓️ My Upcoming Schedule</h2>
+        <div class="event-card">
+            <div class="event-date">Dec 7</div>
+            <div class="event-description">📌 XJEL3030 Assignment 3 DDL</div>
+        </div>
+        <div class="event-card">
+            <div class="event-date">Dec 8</div>
+            <div class="event-description">⏰ XJEL3875 Interim Report DDL</div>
+        </div>
+        <!-- 更多活动卡片... -->
+    </div>
+</body>
+
+
+
+
 
 <head>
     <style>
