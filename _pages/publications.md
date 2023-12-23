@@ -181,6 +181,8 @@ author_profile: true
 
 🗓️ My Upcoming Schedule
 ---
+> Here is my personal schedule.
+
 <head>
     <style>
         .schedule-container {
