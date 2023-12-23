@@ -124,7 +124,7 @@ author_profile: true
         <p style="font-size: 16px; line-height: 1.6; margin-bottom: 3px;"><strong>&bull; August:</strong> Engaged in community epidemic prevention volunteer activities and won the title of "Excellent Volunteer".</p>
         <p style="font-size: 16px; line-height: 1.6; margin-bottom: 3px;"><strong>&bull; February:</strong> Completed an internship in translation and won the title of "Excellent Intern".</p>
     <!-- 个人荣誉的更多内容 -->
-        <div style="display: flex; justify-content: space-between; margin-top: 20px;"> <!-- 添加了上边距 margin-top: 20px; 以分隔两排图片 -->
+        <div style="display: flex; justify-content: space-between; margin-top: 20px;"> <!-- 添加了上边距 margin-top: 20px; -->
             <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1492.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
             <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1493.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 5px; margin-right: 5px;" />
             <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1494.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 10px;" />
