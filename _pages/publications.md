@@ -234,100 +234,41 @@ author_profile: true
             <div class="event-date">Dec 8</div>
             <div class="event-description">⏰ XJEL3875 Interim Report DDL</div>
         </div>
+        <div class="event-card">
+            <div class="event-date">Dec 9</div>
+            <div class="event-description">📚 Report Submission</div>
+        </div>
+        <div class="event-card">
+            <div class="event-date">Dec 15</div>
+            <div class="event-description">💼 XJEL3362 Mid Test</div>
+        </div>
+        <div class="event-card">
+            <div class="event-date">Dec 16</div>
+            <div class="event-description">❤️ XJEL3875 Journal 8</div>
+        </div>
+        <div class="event-card">
+            <div class="event-date">Dec 18</div>
+            <div class="event-description">🗣️ XJEL3875 Journal 9</div>
+        </div>
+        <div class="event-card">
+            <div class="event-date">Dec 20</div>
+            <div class="event-description">🎳 XJEL3030 Assignment 4 DDL</div>
+        </div>
+        <div class="event-card">
+            <div class="event-date">Dec 25</div>
+            <div class="event-description">🎄 Christmas Day</div>
+        </div>
+        <div class="event-card">
+            <div class="event-date">Dec 28</div>
+            <div class="event-description">📅 Planning for Q1</div>
+        </div>
+        <div class="event-card">
+            <div class="event-date">Dec 30</div>
+            <div class="event-description">📝 XJEL3875 Journal 10</div>
+        </div>
         <!-- 更多活动卡片... -->
     </div>
 </body>
-
-
-
-
-
-<head>
-    <style>
-        .schedule-container {
-            max-width: 800px; /* 设置最大宽度 */
-            margin: 20px auto; /* 居中显示 */
-            padding: 20px;
-            background: linear-gradient(145deg, #e6e6e6, #ffffff); /* 渐变背景 */
-            border-radius: 15px; /* 圆角边框 */
-            box-shadow: 5px 5px 10px #d1d1d1, -5px -5px 10px #ffffff; /* 浮雕效果 */
-        }
-
-        .schedule-title {
-            text-align: center; /* 标题居中对齐 */
-            color: #333; /* 标题颜色 */
-            font-size: 22px; /* 字体大小 */
-            margin-bottom: 15px; /* 和内容之间的距离 */
-        }
-
-        .schedule-table {
-            width: 100%; /* 表格宽度 */
-            border-collapse: collapse; /* 边框合并 */
-        }
-
-        .schedule-table th, .schedule-table td {
-            padding: 10px; /* 单元格内边距 */
-            text-align: center; /* 文字居中对齐 */
-            border-bottom: 1px solid #ddd; /* 单元格底部边框 */
-        }
-
-        .schedule-table th {
-            background-color: #4a89dc; /* 表头背景色 */
-            color: white; /* 表头字体颜色 */
-            font-size: 18px; /* 表头字体大小 */
-        }
-
-        .schedule-table tr:hover {
-            background-color: #f1f1f1; /* 鼠标悬停行的背景色 */
-        }
-
-        @media (max-width: 768px) {
-            .schedule-table, .schedule-table th, .schedule-table td {
-                font-size: 14px; /* 移动设备字体大小调整 */
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="schedule-container">
-        <h2 class="schedule-title">🗓️ My Upcoming Schedule</h2>
-        <table class="schedule-table">
-            <!-- Table content here -->
-            <tr>
-            <th>Week 14 [Dec 4 - Dec 10]</th>
-            <th>Week 15 [Dec 11 - Dec 17]</th>
-            <th>Week 16 [Dec 18 - Dec 24]</th>
-            <th>Week 17 [Dec 25 - Dec 31]</th>
-            </tr>
-            <tr>
-                <td>
-                <strong>Dec 7:</strong> 📌 XJEL3030 Assignment 3 DDL<br>
-                <strong>Dec 8:</strong> ⏰ XJEL3875 Interim Report DDL<br>
-                <strong>Dec 9:</strong> 📚 Report Submission
-                </td>
-                <td>
-                <strong>Dec 15:</strong> 💼 XJEL3362 Mid Test<br>
-                <strong>Dec 16:</strong> ❤️ XJEL3875 Journal 8
-                </td>
-                <td>
-                <strong>Dec 20:</strong> 🎳 XJEL3030 Assignment 4 DDL<br>
-                <strong>Dec 18:</strong> 🗣️ XJEL3875 Journal 9
-                </td>
-                <td>
-                <strong>Dec 25:</strong> 🎄 Christmas Day<br>
-                <strong>Dec 28:</strong> 📅 Planning for Q1<br>
-                <strong>Dec 30:</strong> 📝 XJEL3875 Journal 10
-                </td>
-            </tr>
-        </table>
-    </div>
-</body>
-
-
-
-
-
-
 
 
 
