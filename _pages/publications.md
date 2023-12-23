@@ -168,6 +168,90 @@ author_profile: true
 
 
 
+<head>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5; /* 轻微的背景色 */
+            padding: 20px;
+        }
+        .schedule-section {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1000px;
+            overflow-x: auto; /* 添加水平滚动 */
+        }
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 15px;
+        }
+        .schedule-table th, .schedule-table td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 10px 15px;
+        }
+        .schedule-table th {
+            background-color: #4a89dc;
+            color: white;
+            font-size: 18px;
+        }
+        .schedule-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .schedule-table td {
+            font-size: 16px;
+            color: #555555;
+        }
+        @media (max-width: 768px) {
+            .schedule-table, .schedule-table th, .schedule-table td {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="schedule-section">
+        <h2 style="text-align: center; margin-bottom: 10px;">🗓️ My Upcoming Schedule</h2>
+        <table class="schedule-table">
+            <tr>
+            <th>Week 14 [Dec 4 - Dec 10]</th>
+            <th>Week 15 [Dec 11 - Dec 17]</th>
+            <th>Week 16 [Dec 18 - Dec 24]</th>
+            <th>Week 17 [Dec 25 - Dec 31]</th>
+            </tr>
+            <tr>
+                <td>
+                <strong>Dec 7:</strong> 📌 XJEL3030 Assignment 3 DDL<br>
+                <strong>Dec 8:</strong> ⏰ XJEL3875 Interim Report DDL<br>
+                <strong>Dec 9:</strong> 📚 Report Submission
+                </td>
+                <td>
+                <strong>Dec 15:</strong> 💼 XJEL3362 Mid Test<br>
+                <strong>Dec 16:</strong> ❤️ XJEL3875 Journal 8
+                </td>
+                <td>
+                <strong>Dec 20:</strong> 🎳 XJEL3030 Assignment 4 DDL<br>
+                <strong>Dec 18:</strong> 🗣️ XJEL3875 Journal 9
+                </td>
+                <td>
+                <strong>Dec 25:</strong> 🎄 Christmas Day<br>
+                <strong>Dec 28:</strong> 📅 Planning for Q1<br>
+                <strong>Dec 30:</strong> 📝 XJEL3875 Journal 10
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+
+
+
 
 
 
