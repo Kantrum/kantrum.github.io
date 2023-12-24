@@ -478,3 +478,57 @@ Teaching
     <iframe src="https://calendar.google.com/calendar/embed?src=huangjiongtao%40gmail.com" frameborder="0" scrolling="no"></iframe>
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>RESEARCH PROJECTS</h2>
+  <strong>
+    <a href="https://kantrum.github.io/huangjiongtao.github.io/publication/2023-01-10-patent-1">
+      Recognition and reconstruction of the elements in scanned page
+    </a>
+  </strong><strong>, Jan 2023 – Mar 2023</strong><br>
+<em>Team Leader; Advisor: Prof. José Miguel Hernández-Lobato, University of Cambridge</em>
+<ul>
+  <li>Utilized the PaddleOCR library, employing the DBnet model for text detection with a precision of <strong>96%</strong> and a recall of <strong>94%</strong>.</li>
+  <li>Applied the Mask R-CNN model and LayoutParser toolkit for layout analysis, successfully identifying and classifying page elements with <strong>95%</strong> accuracy across <strong>1,500</strong> multi-format documents.</li>
+  <li>This approach was tested on a dataset of <strong>10,000</strong> images containing distorted and low-resolution text, where it maintained an accuracy rate of <strong>97%</strong>.</li>
+</ul>
+
+<p><strong>Recognition and reconstruction of the elements in scanned page, Jan 2023 – Mar 2023</strong><br>
+<em>Team Leader; Advisor: Prof. José Miguel Hernández-Lobato, University of Cambridge</em>
+<ul>
+  <li>Utilized the PaddleOCR library, employing the DBnet model for text detection with a precision of <strong>96%</strong> and a recall of <strong>94%</strong>.</li>
+  <li>Applied the Mask R-CNN model and LayoutParser toolkit for layout analysis, successfully identifying and classifying page elements with <strong>95%</strong> accuracy across <strong>1,500</strong> multi-format documents.</li>
+  <li>This approach was tested on a dataset of <strong>10,000</strong> images containing distorted and low-resolution text, where it maintained an accuracy rate of <strong>97%</strong>.</li>
+</ul>
+
+<p><strong>Recognition and reconstruction of the elements in scanned page, Jan 2023 – Mar 2023</strong><br>
+<em>Team Leader; Advisor: Prof. José Miguel Hernández-Lobato, University of Cambridge</em>
+<ul>
+  <li>Utilized the PaddleOCR library, employing the DBnet model for text detection with a precision of <strong>96%</strong> and a recall of <strong>94%</strong>.</li>
+  <li>Applied the Mask R-CNN model and LayoutParser toolkit for layout analysis, successfully identifying and classifying page elements with <strong>95%</strong> accuracy across <strong>1,500</strong> multi-format documents.</li>
+  <li>This approach was tested on a dataset of <strong>10,000</strong> images containing distorted and low-resolution text, where it maintained an accuracy rate of <strong>97%</strong>.</li>
+</ul>
+
+<p><strong>Recognition and reconstruction of the elements in scanned page, Jan 2023 – Mar 2023</strong><br>
+<em>Team Leader; Advisor: Prof. José Miguel Hernández-Lobato, University of Cambridge</em>
+<ul>
+  <li>Utilized the PaddleOCR library, employing the DBnet model for text detection with a precision of <strong>96%</strong> and a recall of <strong>94%</strong>.</li>
+  <li>Applied the Mask R-CNN model and LayoutParser toolkit for layout analysis, successfully identifying and classifying page elements with <strong>95%</strong> accuracy across <strong>1,500</strong> multi-format documents.</li>
+  <li>This approach was tested on a dataset of <strong>10,000</strong> images containing distorted and low-resolution text, where it maintained an accuracy rate of <strong>97%</strong>.</li>
+</ul>
+
+<!-- Repeat the above structure for each research project -->
+
+
