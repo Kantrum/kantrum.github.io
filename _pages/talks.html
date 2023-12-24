@@ -22,9 +22,6 @@ author_profile: true
 
 
 
-
-
-
 <h2>EDUCATION BACKGROUND</h2>
 <ul>
   <li><a href="http://jwc.swjtu.edu.cn/vatuu/WebAction?setAction=leedsIndex&ivk_sa=1024320u" target="_blank">University of Leeds - Southwest Jiaotong University Joint School</a>, 2020-2024
@@ -41,6 +38,7 @@ author_profile: true
 
 
 
+
 <h2>RESEARCH INTERESTS</h2>
 <ul>
   <li>Electronic and Electrical Engineering
@@ -51,6 +49,77 @@ author_profile: true
     </ul>
   </li>
 </ul>
+
+
+<style>
+    .image-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px; /* 控制图片间的空间 */
+        justify-content: space-around; /* 在容器两端留出一些空间 */
+        margin-top: 20px;
+    }
+
+    .image-card {
+        width: 30%; /* 设置卡片宽度 */
+        max-width: 996px;
+        max-height: 769px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 添加阴影效果 */
+        border-radius: 15px; /* 圆角效果 */
+        overflow: hidden; /* 防止图片溢出卡片 */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加过渡效果 */
+    }
+
+    .image-card img {
+        width: 100%; /* 使图片宽度填满卡片 */
+        height: auto; /* 自动调整图片高度以保持比例 */
+        transition: transform 0.3s ease; /* 平滑放大效果 */
+    }
+
+    .image-card img:hover {
+        transform: scale(1.05); /* 鼠标悬停时图片稍微放大 */
+    }
+
+    .image-title {
+        text-align: center; /* 标题居中 */
+        font-size: 16px; /* 字体大小 */
+        padding: 10px; /* 标题内边距 */
+        background: rgba(0, 0, 0, 0.7); /* 半透明背景 */
+        color: white; /* 白色字体 */
+        margin: 0; /* 移除默认的外边距 */
+        transform: translateY(-100%); /* 上移标题，覆盖图片底部 */
+        transition: transform 0.3s ease; /* 平滑移动效果 */
+    }
+
+    .image-card:hover .image-title {
+        transform: translateY(0); /* 当鼠标悬停在卡片上时，标题回到原位 */
+    }
+
+    @media (max-width: 768px) {
+        .image-container {
+            flex-direction: column; /* 在较小屏幕上垂直排列 */
+        }
+        .image-card {
+            width: 100%; /* 卡片宽度自适应 */
+        }
+    }
+</style>
+
+<div class="image-container">
+    <div class="image-card">
+        <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1556.JPG" alt="Title 1">
+        <p class="image-title">Title 1</p>
+    </div>
+    <div class="image-card">
+        <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1562.JPG" alt="Title 2">
+        <p class="image-title">Title 2</p>
+    </div>
+    <div class="image-card">
+        <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1563.JPG" alt="Title 3">
+        <p class="image-title">Title 3</p>
+    </div>
+</div>
+
 
 
 
