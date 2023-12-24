@@ -51,11 +51,11 @@ author_profile: true
         }
 
         .education-list li {
-            margin-bottom: 10px;
+            margin-bottom: 30px; /* 增加底部间距以容纳箭头 */
         }
 
         .education-item {
-            background-color: #f9f9f9;
+            background-color: #eef2f7; /* 淡蓝色背景 */
             padding: 15px;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -80,8 +80,13 @@ author_profile: true
         /* 箭头样式 */
         .arrow {
             text-align: center;
-            color: #0275d8;
-            font-size: 24px;
+            margin-bottom: -10px; /* 调整箭头位置 */
+        }
+
+        .arrow svg {
+            fill: #0275d8; /* 箭头颜色 */
+            height: 24px;
+            width: 24px;
         }
     </style>
 </head>
@@ -95,7 +100,12 @@ author_profile: true
                     <li>M.Eng. in Electronic and Computer Engineering Degree from <a href="#" target="_blank">GitHub University</a> Expected June 2024</li>
                 </ul>
             </div>
-            <div class="arrow">&#x2191;</div> <!-- 向上箭头符号 -->
+            <div class="arrow">
+                <!-- 向上箭头SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 19V5M5 12l7-7 7 7"></path>
+                </svg>
+            </div>
         </li>
         <li>
             <div class="education-item">
