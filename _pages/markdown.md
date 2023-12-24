@@ -537,3 +537,31 @@ Teaching
 <!-- Repeat the above structure for each research project -->
 
 
+
+
+
+
+
+
+
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+    <div style="flex: 1; min-width: 300px; border: 2px solid #007BFF; border-radius: 10px; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
+        <a href="https://kantrum.github.io/huangjiongtao.github.io//portfolio/portfolio-1/" style="text-decoration: none; color: inherit;">
+            <h2>Sports</h2>
+            <p>A showcase of my sports activities and achievements, including sprinting, skiing, horse riding, golf, and so on.</p>
+        </a>
+    </div>
+    <div style="flex: 1; min-width: 300px; border: 2px solid #28A745; border-radius: 10px; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
+        <a href="https://kantrum.github.io/huangjiongtao.github.io//portfolio/portfolio-2/" style="text-decoration: none; color: inherit;">
+            <h2>Movie</h2>
+            <p>Exploring the world of cinema through my eyes – reviews, insights, and personal favorites.</p>
+        </a>
+    </div>
+    <div style="flex: 1; min-width: 300px; border: 2px solid #FFC107; border-radius: 10px; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
+        <a href="https://kantrum.github.io/huangjiongtao.github.io//portfolio/portfolio-3/" style="text-decoration: none; color: inherit;">
+            <h2>Music</h2>
+            <p>Delving into my musical journey – from learning instruments to performing on stage.</p>
+        </a>
+    </div>
+</div>
