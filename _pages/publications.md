@@ -222,34 +222,6 @@ author_profile: true
     <div class="schedule-container">
         <div class="events-grid">
             <div class="event-card">
-                <div class="event-date">Dec 7</div>
-                <div class="event-description">📌 XJEL3030 Assignment 3 DDL</div>
-            </div>
-            <div class="event-card">
-                <div class="event-date">Dec 8</div>
-                <div class="event-description">⏰ XJEL3875 Interim Report DDL</div>
-            </div>
-            <div class="event-card">
-                <div class="event-date">Dec 9</div>
-                <div class="event-description">📚 Report Submission</div>
-            </div>
-            <div class="event-card">
-                <div class="event-date">Dec 15</div>
-                <div class="event-description">💼 XJEL3362 Mid Test</div>
-            </div>
-            <div class="event-card">
-                <div class="event-date">Dec 16</div>
-                <div class="event-description">❤️ XJEL3875 Journal 8</div>
-            </div>
-            <div class="event-card">
-                <div class="event-date">Dec 18</div>
-                <div class="event-description">🗣️ XJEL3875 Journal 9</div>
-            </div>
-            <div class="event-card">
-                <div class="event-date">Dec 20</div>
-                <div class="event-description">🎳 XJEL3030 Assignment 4 DDL</div>
-            </div>
-            <div class="event-card">
                 <div class="event-date">Dec 25</div>
                 <div class="event-description">🎄 Christmas Day</div>
             </div>
@@ -260,6 +232,22 @@ author_profile: true
             <div class="event-card">
                 <div class="event-date">Dec 30</div>
                 <div class="event-description">📝 XJEL3875 Journal 10</div>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Jau 5</div>
+                <div class="event-description">📌 SWJTU Interim Presentation</div>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Jau 19</div>
+                <div class="event-description">⏰ XJEL3662 Mini Project DDL</div>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Jau 22</div>
+                <div class="event-description">📚 XJEL3360 Exam</div>
+            </div>
+            <div class="event-card">
+                <div class="event-date">Jau 23</div>
+                <div class="event-description">💼 Go Home</div>
             </div>
             <!-- 更多活动卡片... -->
             <!-- 可以添加更多的卡片，它们将自动排列 -->
