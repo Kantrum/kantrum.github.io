@@ -57,31 +57,27 @@ author_profile: true
 
 
 
-
-
-
 <head>
     <style>
         .projects-container {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            padding: 20px;
-            justify-content: center; /* 居中对齐项目卡片 */
+            justify-content: center;
         }
 
         .project-card {
-            display: flex;
-            align-items: center;
             background: #ffffff;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-decoration: none; /* 移除链接的下划线 */
-            color: inherit; /* 保持文字颜色不变 */
-            width: 100%; /* 调整项目卡片宽度 */
-            max-width: 800px; /* 最大宽度限制 */
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column; /* 在电脑上也使用垂直布局 */
+            width: 100%;
+            max-width: 300px; /* 调整项目卡片最大宽度 */
         }
 
         .project-card:hover {
@@ -90,57 +86,41 @@ author_profile: true
         }
 
         .project-image {
-            width: 150px; /* 调整图片宽度 */
-            height: 150px; /* 调整图片高度 */
+            width: 100%;
+            height: 150px;
             object-fit: cover;
-            border-radius: 10px 0 0 10px; /* 圆角调整 */
+            border-radius: 10px 10px 0 0;
         }
 
         .project-content {
-            flex: 1;
             padding: 15px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            flex-grow: 1;
         }
 
         .project-title {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
             margin-bottom: 10px;
         }
 
         .project-details {
-            font-size: 16px;
+            font-size: 14px;
             color: #555;
         }
 
         .project-list {
             margin-top: 10px;
-            list-style-type: disc; /* 列表项目标记 */
+            list-style-type: disc;
             margin-left: 20px;
         }
 
         @media (max-width: 768px) {
             .project-card {
-                flex-direction: column; /* 在小屏幕上堆叠布局 */
+                max-width: none; /* 在小屏幕上取消最大宽度限制 */
             }
 
-            .project-image {
-                width: 100%; /* 图片宽度自适应 */
-                height: auto; /* 高度自动 */
-            }
-
-            .project-content {
-                padding: 10px;
-            }
-
-            .project-title {
-                font-size: 18px; /* 调整标题字体大小 */
-            }
-
-            .project-details, .project-list {
-                font-size: 14px; /* 调整细节和列表字体大小 */
+            .project-title, .project-details, .project-list {
+                font-size: 16px; /* 调整小屏幕字体大小 */
             }
         }
     </style>
@@ -228,10 +208,25 @@ author_profile: true
             </div>
         </a>
         <!-- 其他项目卡片 -->
+        <a href="项目链接" class="project-card">
+            <img class="project-image" src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1584.JPG" alt="Project Image">
+            <div class="project-content">
+                <div class="project-title">Recognition and Reconstruction of Elements in Scanned Page</div>
+                <div class="project-details">
+                    <em>Jan 2023 – Mar 2023, Team Leader; Advisor: Prof. José Miguel Hernández-Lobato</em>
+                    <ul class="project-list">
+                        <li>Utilized the PaddleOCR library, employing the DBnet model for text detection with a precision of <strong>96%</strong> and a recall of <strong>94%</strong>.</li>
+                        <li>Applied the Mask R-CNN model and LayoutParser toolkit for layout analysis, successfully identifying and classifying page elements with <strong>95%</strong> accuracy across <strong>1,500</strong> multi-format documents.</li>
+                        <li>This approach was tested on a dataset of <strong>10,000</strong> images containing distorted and low-resolution text, where it maintained an accuracy rate of <strong>97%</strong>.</li>
+                        <!-- 项目详情 -->
+                    </ul>
+                </div>
+            </div>
+        </a>
+        <!-- 其他项目卡片 -->
         <!-- ... -->
     </div>
 </body>
-
 
 
 
