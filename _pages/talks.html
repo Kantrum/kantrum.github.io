@@ -58,6 +58,109 @@ author_profile: true
 
 
 
+
+
+
+<head>
+    <style>
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .project-card {
+            background: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .project-content {
+            padding: 15px;
+        }
+
+        .project-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .project-details {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .project-list {
+            margin: 0;
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .project-content {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="projects-container">
+        <!-- 项目卡片 -->
+        <a href="项目链接" class="project-card" style="text-decoration: none; color: inherit;">
+            <img class="project-image" src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1584.JPG" alt="Project Image">
+            <div class="project-content">
+                <div class="project-title">Recognition and Reconstruction of Elements in Scanned Page</div>
+                <div class="project-details">
+                    <em>Jan 2023 – Mar 2023, Team Leader; Advisor: Prof. José Miguel Hernández-Lobato</em>
+                    <ul class="project-list">
+                        <li>Utilized the PaddleOCR library...</li>
+                        <!-- 项目详情 -->
+                    </ul>
+                </div>
+            </div>
+        </a>
+        <!-- 其他项目卡片 -->
+        <!-- ... -->
+    </div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <head>
     <style>
         .projects-container {
