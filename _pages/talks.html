@@ -25,11 +25,6 @@ author_profile: true
 
 
 
-
-
-
-
-
 <h2>EDUCATION BACKGROUND</h2>
 <ul>
   <li><a href="http://jwc.swjtu.edu.cn/vatuu/WebAction?setAction=leedsIndex&ivk_sa=1024320u" target="_blank">University of Leeds - Southwest Jiaotong University Joint School</a>, 2020-2024
@@ -69,21 +64,24 @@ author_profile: true
     <style>
         .projects-container {
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
             gap: 20px;
             padding: 20px;
+            justify-content: center; /* 居中对齐项目卡片 */
         }
 
         .project-card {
             display: flex;
             align-items: center;
-            background: #f9f9f9;
+            background: #ffffff;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-decoration: none; /* 移除链接的下划线 */
             color: inherit; /* 保持文字颜色不变 */
+            width: 100%; /* 调整项目卡片宽度 */
+            max-width: 800px; /* 最大宽度限制 */
         }
 
         .project-card:hover {
@@ -92,14 +90,18 @@ author_profile: true
         }
 
         .project-image {
-            width: 30%;
-            height: auto;
+            width: 150px; /* 调整图片宽度 */
+            height: 150px; /* 调整图片高度 */
             object-fit: cover;
+            border-radius: 10px 0 0 10px; /* 圆角调整 */
         }
 
         .project-content {
             flex: 1;
             padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .project-title {
@@ -114,7 +116,32 @@ author_profile: true
         }
 
         .project-list {
-            padding-left: 20px;
+            margin-top: 10px;
+            list-style-type: disc; /* 列表项目标记 */
+            margin-left: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .project-card {
+                flex-direction: column; /* 在小屏幕上堆叠布局 */
+            }
+
+            .project-image {
+                width: 100%; /* 图片宽度自适应 */
+                height: auto; /* 高度自动 */
+            }
+
+            .project-content {
+                padding: 10px;
+            }
+
+            .project-title {
+                font-size: 18px; /* 调整标题字体大小 */
+            }
+
+            .project-details, .project-list {
+                font-size: 14px; /* 调整细节和列表字体大小 */
+            }
         }
     </style>
 </head>
@@ -204,11 +231,6 @@ author_profile: true
         <!-- ... -->
     </div>
 </body>
-
-
-
-
-
 
 
 
