@@ -57,13 +57,14 @@ author_profile: true
 
 
 
+
 <head>
     <style>
         .projects-container {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             gap: 20px;
-            justify-content: center;
+            align-items: center;
         }
 
         .project-card {
@@ -75,9 +76,8 @@ author_profile: true
             text-decoration: none;
             color: inherit;
             display: flex;
-            flex-direction: column; /* 在电脑上也使用垂直布局 */
-            width: 100%;
-            max-width: 300px; /* 调整项目卡片最大宽度 */
+            flex-direction: row;
+            max-width: 800px; /* 控制项目卡片的最大宽度 */
         }
 
         .project-card:hover {
@@ -86,10 +86,10 @@ author_profile: true
         }
 
         .project-image {
-            width: 100%;
+            width: 150px;
             height: 150px;
             object-fit: cover;
-            border-radius: 10px 10px 0 0;
+            border-radius: 10px 0 0 10px;
         }
 
         .project-content {
@@ -114,9 +114,21 @@ author_profile: true
             margin-left: 20px;
         }
 
+        .project-link {
+            text-decoration: none; /* 移除下划线 */
+            color: inherit; /* 继承字体颜色 */
+        }
+
         @media (max-width: 768px) {
             .project-card {
-                max-width: none; /* 在小屏幕上取消最大宽度限制 */
+                flex-direction: column; /* 在小屏幕上采用垂直布局 */
+                align-items: center;
+            }
+
+            .project-image {
+                width: 100%; /* 在小屏幕上图片宽度为100% */
+                height: auto; /* 自动调整高度 */
+                border-radius: 10px 10px 0 0; /* 调整圆角 */
             }
 
             .project-title, .project-details, .project-list {
@@ -128,7 +140,7 @@ author_profile: true
 <body>
     <div class="projects-container">
         <!-- 项目卡片 -->
-        <a href="项目链接" class="project-card">
+        <a href="项目链接" class="project-card project-link">
             <img class="project-image" src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1584.JPG" alt="Project Image">
             <div class="project-content">
                 <div class="project-title">Recognition and Reconstruction of Elements in Scanned Page</div>
@@ -144,7 +156,7 @@ author_profile: true
             </div>
         </a>
         <!-- 其他项目卡片 -->
-        <a href="项目链接" class="project-card">
+        <a href="项目链接" class="project-card project-link">
             <img class="project-image" src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1584.JPG" alt="Project Image">
             <div class="project-content">
                 <div class="project-title">Recognition and Reconstruction of Elements in Scanned Page</div>
@@ -160,7 +172,7 @@ author_profile: true
             </div>
         </a>
         <!-- 其他项目卡片 -->
-        <a href="项目链接" class="project-card">
+        <a href="项目链接" class="project-card project-link">
             <img class="project-image" src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1584.JPG" alt="Project Image">
             <div class="project-content">
                 <div class="project-title">Recognition and Reconstruction of Elements in Scanned Page</div>
@@ -176,7 +188,7 @@ author_profile: true
             </div>
         </a>
         <!-- 其他项目卡片 -->
-        <a href="项目链接" class="project-card">
+        <a href="项目链接" class="project-card project-link">
             <img class="project-image" src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1584.JPG" alt="Project Image">
             <div class="project-content">
                 <div class="project-title">Recognition and Reconstruction of Elements in Scanned Page</div>
@@ -192,23 +204,7 @@ author_profile: true
             </div>
         </a>
         <!-- 其他项目卡片 -->
-        <a href="项目链接" class="project-card">
-            <img class="project-image" src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1584.JPG" alt="Project Image">
-            <div class="project-content">
-                <div class="project-title">Recognition and Reconstruction of Elements in Scanned Page</div>
-                <div class="project-details">
-                    <em>Jan 2023 – Mar 2023, Team Leader; Advisor: Prof. José Miguel Hernández-Lobato</em>
-                    <ul class="project-list">
-                        <li>Utilized the PaddleOCR library, employing the DBnet model for text detection with a precision of <strong>96%</strong> and a recall of <strong>94%</strong>.</li>
-                        <li>Applied the Mask R-CNN model and LayoutParser toolkit for layout analysis, successfully identifying and classifying page elements with <strong>95%</strong> accuracy across <strong>1,500</strong> multi-format documents.</li>
-                        <li>This approach was tested on a dataset of <strong>10,000</strong> images containing distorted and low-resolution text, where it maintained an accuracy rate of <strong>97%</strong>.</li>
-                        <!-- 项目详情 -->
-                    </ul>
-                </div>
-            </div>
-        </a>
-        <!-- 其他项目卡片 -->
-        <a href="项目链接" class="project-card">
+        <a href="项目链接" class="project-card project-link">
             <img class="project-image" src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1584.JPG" alt="Project Image">
             <div class="project-content">
                 <div class="project-title">Recognition and Reconstruction of Elements in Scanned Page</div>
@@ -227,6 +223,10 @@ author_profile: true
         <!-- ... -->
     </div>
 </body>
+
+
+
+
 
 
 
