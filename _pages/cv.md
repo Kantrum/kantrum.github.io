@@ -11,7 +11,7 @@ redirect_from:
 
 
 <h3 style="font-size: 1.5em; margin-top: 20px;">
-  <a href="/huangjiongtao.github.io/_cv/academic-resume/" style="color: #007bff; text-decoration: none;">🎓 Academic Resume</a>
+  <a href="/_cv/academic-resume/" style="color: #007bff; text-decoration: none;">🎓 Academic Resume</a>
 </h3>
 
 <h3 style="font-size: 1.5em; margin-top: 20px;">
