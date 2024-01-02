@@ -74,6 +74,79 @@ LEADERSHIP AND SOCIAL ACTIVITIES
 * Class Leader of the New Youth Global Competency Development Programme, Mar 2022 – Dec 2022
 * Ministry of the University Student Campus Self-Management Committee, May 2021 – Apr 2023
 
+RESERCH AND PROJECT COMPETENCIES
+======
+* **Programming Languages:**
+  * **Python with TensorFlow and PyTorch** (Machine learning)
+  * **MATLAB** (Simulations of signal processing)
+  * **VHDL** (Designing digital circuits)
+  * **C++** (Programming on microcontrollers)
+  * **Quartus** (Circuit simulation)
+  * **Java** (General-purpose programming, particularly useful for Android app development)
+  * **R** (Data analysis and statistical computing)
+  * **JavaScript** (Web development, including front-end frameworks like React or Angular)
+
+* **Hardware:**
+  * **Mbed on STM32 boards**
+  * **Arduino and Raspberry Pi** (For DIY projects and IoT applications)
+  * **FPGA boards** (For advanced digital design and prototyping)
+  * **Oscilloscopes and Logic Analyzers** (For hardware debugging and analysis)
+
+* **Writing Tools:**
+  * **LaTeX** and **Markdown**
+  * **Microsoft Office Suite** (Word, Excel, PowerPoint for professional document preparation)
+  * **Jupyter Notebooks** (For interactive coding and data visualization)
+  * **Git and GitHub** (Version control and code repository management)
+
+* **Software Development:**
+  * **Docker and Kubernetes** (Containerization and orchestration for software deployment)
+  * **CI/CD pipelines** (Continuous Integration and Continuous Deployment)
+  * **Unit Testing and Test-Driven Development** (For software quality and reliability)
+  * **Agile and Scrum methodologies** (For efficient project management)
+
+* **Data Science and Analysis:**
+  * **SQL and NoSQL databases** (Data storage and retrieval)
+  * **Data visualization tools** (like Tableau and PowerBI)
+  * **Machine Learning algorithms and Data Preprocessing techniques**
+  * **Big Data technologies** (like Hadoop and Spark)
+
+
+
+CERTIFICATES AND SKILLS
+======
+* **Certificates:**
+  * Intermediate Level of Certificate for E-Commerce Professionals (E-Commerce Big Data Analysis and App Development)
+  * National 2nd-Class Athlete Certificate (China)
+  * Certified Data Analyst (Focus on data mining and visualization techniques)
+  * Project Management Professional (PMP)® (Effective project management and leadership)
+
+* **Languages:**
+  * Native Mandarin
+  * Fluent in English
+
+* **Computer Skills:**
+  * Proficient with Microsoft Office Suite (Word, Excel, PowerPoint, Outlook)
+  * Advanced Excel skills (Data analysis, PivotTables, VBA)
+  * Basic knowledge of database management (SQL)
+
+* **Design and Editing Skills:**
+  * Advanced level in Adobe Photoshop (Image editing and graphic design)
+  * Proficient in Adobe Premier (Video editing and post-production)
+  * Skilled in using X-Mind (Mind mapping and brainstorming tool)
+  * Familiar with Adobe Illustrator (Vector graphic design)
+
+* **Digital Marketing:**
+  * Knowledge of SEO and SEM strategies
+  * Experience with digital marketing tools like Google Analytics and AdWords
+  * Social media management and marketing (Platforms like Weibo, TikTok, Facebook, Instagram)
+
+* **Soft Skills:**
+  * Strong communication and interpersonal skills
+  * Effective team collaboration and leadership abilities
+  * Problem-solving and critical thinking
+  * Time management and organizational skills
+
+
 <h3 style="font-size: 1.5em; margin-top: 20px;">
   <a href="https://kantrum.github.io/huangjiongtao.github.io/cv/academic-resume" style="color: #007bff; text-decoration: none;">🎓 Academic Resume</a>
 </h3>
