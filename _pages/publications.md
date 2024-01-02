@@ -308,3 +308,15 @@ author_profile: true
     <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1882.JPG" />
 </div>
 
+<div class="image-row">
+    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1888.JPG" />
+    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1889.JPG" />
+    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1890.JPG" />
+</div>
+
+<div class="image-row">
+    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1893.JPG" />
+    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1892.JPG" />
+    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1891.JPG" />
+</div>
+
