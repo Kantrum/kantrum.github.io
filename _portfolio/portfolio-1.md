@@ -27,14 +27,14 @@ This document highlights my journey and key achievements in 100M running.
 ## [2022] - [Nov]
 
 - **Second in Sichuan Provincial Athletics Championships**
-  - Description: Won 2nd place in the Campus Division (non-high level/specialty group).
-  - Location: [Southwest Jiaotong University]
+  - **Description:** Won 2nd place in the Campus Division (non-high level/specialty group).
+  - **Location:** [Southwest Jiaotong University]
 
 ## [2024] - [Apr]
 
 - **Future Goals and Aspirations**
-  - Description: Breaking my own record in the school sports meeting.
-  - Training Plan: [My upcoming training plan or strategy]
+  - **Description:** Breaking my own record in the school sports meeting.
+  - **Training Plan:** [My upcoming training plan or strategy]
 
 ---
 
