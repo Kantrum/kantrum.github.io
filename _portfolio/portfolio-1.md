@@ -18,6 +18,12 @@ This document highlights my journey and key achievements in 100M running.
   - Overcoming Challenges: A brief story of any challenges or injuries faced and overcome.
   - Recovery Process: [Details about your recovery and comeback]
 
+![100M Running Achievement](./images/IMG_1871.JPG)
+![100M Running Achievement](./images/IMG_1872.JPG)
+![100M Running Achievement](./images/IMG_1868.JPG)
+![100M Running Achievement](./images/IMG_1869.JPG)
+![100M Running Achievement](./images/IMG_1870.JPG)
+
 ## [2022] - [November]
 
 - **Second in Sichuan Provincial Athletics Championships**
