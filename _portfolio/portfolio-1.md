@@ -21,31 +21,31 @@ This document highlights my journey and key achievements in 100M running.
 
 <div align="center">
     <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1871.JPG" alt="100M Running Achievement" style="border: 2px solid #004080;"/>
-    <p>100M Running Achievement</p>
+    <p>4X100m Relay Sprint Capture</p>
 </div>
 <br/>
 <!-- 重复上面的代码块来添加更多图片 -->
 <div align="center">
     <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1872.JPG" alt="100M Running Achievement" style="border: 2px solid #004080;"/>
-    <p>100M Running Achievement</p>
+    <p>The 100m Run Video</p>
 </div>
 <br/>
 <!-- 重复上面的代码块来添加更多图片 -->
 <div align="center">
     <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1868.JPG" alt="100M Running Achievement" style="border: 2px solid #004080;"/>
-    <p>100M Running Achievement</p>
+    <p>SWJTU-Leeds Joint School's WeChat public number titled "Congratulations to Huang Jiongtao for setting a new SWJTU Men's 100m Record".</p>
 </div>
 <br/>
 <!-- 重复上面的代码块来添加更多图片 -->
 <div align="center">
     <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1869.JPG" alt="100M Running Achievement" style="border: 2px solid #004080;"/>
-    <p>100M Running Achievement</p>
+    <p>Interview and Report by Southwest Jiaotong University's Student Working Department</p>
 </div>
 <br/>
 <!-- 重复上面的代码块来添加更多图片 -->
 <div align="center">
     <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1870.JPG" alt="100M Running Achievement" style="border: 2px solid #004080;"/>
-    <p>100M Running Achievement</p>
+    <p>Interviews and Reports by Southwest Jiaotong University Labour Union</p>
 </div>
 <br/>
 <!-- 重复上面的代码块来添加更多图片 -->
