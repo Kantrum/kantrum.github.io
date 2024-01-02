@@ -1,9 +1,15 @@
 ---
 layout: default
 title: "Academic Resumé"
-permalink: /_publication/academic-cv/
+collection: cv
+permalink: /publication/academic-cv
+excerpt: 'This cv is Academic Resumé'
+date: 2024-01-02
+venue: 'cv 1'
+paperurl: 'http://academicpages.github.io/files/paper2.pdf'
 author_profile: true
 ---
+
 
 {% include base_path %}
 
