@@ -1,15 +1,12 @@
 ---
-layout: default
-title: "Academic Resumé"
-collection: cv
+title: "Academic Resume"
+collection: publications
 permalink: /publication/academic-cv
-excerpt: 'This cv is Academic Resumé'
+excerpt: 'This cv is Academic Resume'
 date: 2024-01-02
-venue: 'cv 1'
-paperurl: 'http://academicpages.github.io/files/paper2.pdf'
-author_profile: true
+venue: 'CV 1'
+citation: 'Huang Jiongtao. (2023). &quot;An in-vehicle driver health monitoring and alarming system.&quot; <i>Patent 1</i>. 1(1).'
 ---
-
 
 {% include base_path %}
 
