@@ -33,7 +33,6 @@ This document highlights my journey and key achievements in 100M running.
     <p><strong>The 100m Run Video</strong></p>
     <p>Click on the image to view the video</p>
 </div>
-<iframe width="560" height="315" src="https://mp.weixin.qq.com/s/UlcByneaNp1psBWVki0HVA" frameborder="0" allowfullscreen></iframe>
 <br/>
 <!-- 重复上面的代码块来添加更多图片 -->
 <div align="center">
