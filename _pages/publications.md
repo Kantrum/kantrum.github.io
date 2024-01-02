@@ -302,3 +302,9 @@ author_profile: true
     <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1560.JPG" />
 </div>
 
+<div class="image-row">
+    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1879.JPG" />
+    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1881.JPG" />
+    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1882.JPG" />
+</div>
+
