@@ -1,19 +1,23 @@
 ---
 layout: archive
-title: "Professional Resumé"
+title: "Professional Resume"
 permalink: /cv/
 author_profile: true
-redirect_from:
-  - /resume
 ---
+
+
 
 {% include base_path %}
 
 
 <h3 style="font-size: 1.5em; margin-top: 20px;">
-  <a href="https://kantrum.github.io/huangjiongtao.github.io/publication/academic-cv" style="color: #007bff; text-decoration: none;">🎓 Academic Resume</a>
+  <a href="/publication/academic-cv" style="color: #007bff; text-decoration: none;">🎓 Academic Resume</a>
 </h3>
 
 <h3 style="font-size: 1.5em; margin-top: 20px;">
-  <a href="/huangjiongtao.github.io/_cv/academic-resume/" style="color: #28a745; text-decoration: none;">💼 Job Resume</a>
+  <a href="https://kantrum.github.io/huangjiongtao.github.io/cv/academic-resume" style="color: #007bff; text-decoration: none;">🎓 Academic Resume</a>
+</h3>
+
+<h3 style="font-size: 1.5em; margin-top: 20px;">
+  <a href="/huangjiongtao.github.io/cv/academic-resume/" style="color: #28a745; text-decoration: none;">💼 Job Resume</a>
 </h3>
