@@ -20,27 +20,32 @@ This document highlights my journey and key achievements in 100M running.
 
 
 <div align="center">
-    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1871.JPG" alt="100M Running Achievement" style="border: 2px solid black;"/>
+    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1871.JPG" alt="100M Running Achievement" style="border: 2px solid #004080;"/>
+    <p>100M Running Achievement</p>
 </div>
 <br/>
 <!-- 重复上面的代码块来添加更多图片 -->
 <div align="center">
-    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1872.JPG" alt="100M Running Achievement" style="border: 2px solid black;"/>
+    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1872.JPG" alt="100M Running Achievement" style="border: 2px solid #004080;"/>
+    <p>100M Running Achievement</p>
 </div>
 <br/>
 <!-- 重复上面的代码块来添加更多图片 -->
 <div align="center">
-    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1868.JPG" alt="100M Running Achievement" style="border: 2px solid black;"/>
+    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1868.JPG" alt="100M Running Achievement" style="border: 2px solid #004080;"/>
+    <p>100M Running Achievement</p>
 </div>
 <br/>
 <!-- 重复上面的代码块来添加更多图片 -->
 <div align="center">
-    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1869.JPG" alt="100M Running Achievement" style="border: 2px solid black;"/>
+    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1869.JPG" alt="100M Running Achievement" style="border: 2px solid #004080;"/>
+    <p>100M Running Achievement</p>
 </div>
 <br/>
 <!-- 重复上面的代码块来添加更多图片 -->
 <div align="center">
-    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1870.JPG" alt="100M Running Achievement" style="border: 2px solid black;"/>
+    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1870.JPG" alt="100M Running Achievement" style="border: 2px solid #004080;"/>
+    <p>100M Running Achievement</p>
 </div>
 <br/>
 <!-- 重复上面的代码块来添加更多图片 -->
