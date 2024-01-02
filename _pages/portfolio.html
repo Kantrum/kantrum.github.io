@@ -189,62 +189,96 @@ author_profile: true
 
 
 
-<!-- 社交账号二维码部分 -->
-<div class="social-media-grid">
-  <div class="social-media-block">
-    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1903.jpg" alt="Social Media 1"/>
-    <p>欢迎关注我的微博</p>
-  </div>
 
-  <div class="social-media-block">
-    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1906.jpg" alt="Social Media 2"/>
-    <p>欢迎关注我的小红书</p>
-  </div>
 
-  <div class="social-media-block">
-    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1912.JPG" alt="Social Media 3"/>
-    <p>欢迎关注我的bilibili</p>
-  </div>
 
-  <div class="social-media-block">
-    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1911.JPG" alt="Social Media 4"/>
-    <p>欢迎关注我的知乎</p>
-  </div>
 
-  <div class="social-media-block">
-    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1913.JPG" alt="Social Media 5"/>
-    <p>欢迎关注我的抖音</p>
-  </div>
+    <style>
+        .qr-code-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr); /* 一排放5个 */
+            gap: 20px;
+            padding: 20px;
+        }
 
-  <div class="social-media-block">
-    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1915.jpg" alt="Social Media 6"/>
-    <p>欢迎关注我的twitter</p>
-  </div>
+        .qr-code-item {
+            text-align: center;
+        }
 
-  <div class="social-media-block">
-    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1914.JPG" alt="Social Media 7"/>
-    <p>欢迎关注我的instagram</p>
-  </div>
+        .qr-code-item img {
+            max-width: 100%; /* 使二维码适应容器宽度 */
+            height: auto;
+            border-radius: 5px; /* 轻微圆角 */
+        }
 
-  <div class="social-media-block">
-    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1903.jpg" alt="Social Media 8"/>
-    <p>欢迎关注我的Facebook</p>
-  </div>
+        @media (max-width: 768px) {
+            .qr-code-grid {
+                grid-template-columns: repeat(3, 1fr); /* 小屏幕上每排3个 */
+            }
+        }
 
-  <div class="social-media-block">
-    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1918.JPG" alt="Social Media 9"/>
-    <p>欢迎关注我的Telegram</p>
-  </div>
-
-  <div class="social-media-block">
-    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1903.jpg" alt="Social Media 10"/>
-    <p>欢迎关注我的Messenger</p>
-  </div>
-
-  <div class="social-media-block">
-    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1916.JPG" alt="Social Media 11"/>
-    <p>欢迎关注我的WhatsApp</p>
-  </div>
-
-  <!-- 重复以上块，以添加更多社交媒体账号 -->
-</div>
+        @media (max-width: 480px) {
+            .qr-code-grid {
+                grid-template-columns: repeat(2, 1fr); /* 更小屏幕上每排2个 */
+            }
+        }
+    </style>
+    <div class="qr-code-grid">
+        <!-- 二维码项 -->
+        <div class="qr-code-item">
+            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1903.jpg" alt="Social Media 1">
+            <p><strong>欢迎关注我的微博</strong></p>
+        </div>
+        <!-- 重复以上代码块添加更多二维码项 -->
+        <div class="qr-code-item">
+            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1906.jpg" alt="Social Media 2">
+            <p><strong>欢迎关注我的小红书</strong></p>
+        </div>
+        <!-- 重复以上代码块添加更多二维码项 -->
+        <div class="qr-code-item">
+            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1912.JPG" alt="Social Media 3">
+            <p><strong>欢迎关注我的bilibili</strong></p>
+        </div>
+        <!-- 重复以上代码块添加更多二维码项 -->
+        <div class="qr-code-item">
+            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1911.JPG" alt="Social Media 4">
+            <p><strong>欢迎关注我的知乎</strong></p>
+        </div>
+        <!-- 重复以上代码块添加更多二维码项 -->
+        <div class="qr-code-item">
+            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1913.JPG" alt="Social Media 5">
+            <p><strong>欢迎关注我的抖音</strong></p>
+        </div>
+        <!-- 重复以上代码块添加更多二维码项 -->
+        <div class="qr-code-item">
+            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1915.JPG" alt="Social Media 6">
+            <p><strong>欢迎关注我的twitter</strong></p>
+        </div>
+        <!-- 重复以上代码块添加更多二维码项 -->
+        <div class="qr-code-item">
+            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1914.JPG" alt="Social Media 7">
+            <p><strong>欢迎关注我的instagram</strong></p>
+        </div>
+        <!-- 重复以上代码块添加更多二维码项 -->
+        <div class="qr-code-item">
+            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1903.jpg" alt="Social Media 8">
+            <p><strong>欢迎关注我的Facebook</strong></p>
+        </div>
+        <!-- 重复以上代码块添加更多二维码项 -->
+        <div class="qr-code-item">
+            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1918.JPG" alt="Social Media 9">
+            <p><strong>欢迎关注我的Telegram</strong></p>
+        </div>
+        <!-- 重复以上代码块添加更多二维码项 -->
+        <div class="qr-code-item">
+            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1903.jpg" alt="Social Media 10">
+            <p><strong>欢迎关注我的Messenger</strong></p>
+        </div>
+        <!-- 重复以上代码块添加更多二维码项 -->
+        <div class="qr-code-item">
+            <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1916.JPG" alt="Social Media 11">
+            <p><strong>欢迎关注我的WhatsApp</strong></p>
+        </div>
+        <!-- 重复以上代码块添加更多二维码项 -->
+        
+    </div>
