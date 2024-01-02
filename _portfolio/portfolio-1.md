@@ -1,62 +1,35 @@
 ---
-title: "Sports"
-excerpt: "A showcase of my sports activities and achievements, including sprinting, skiing, horse riding, golf and so on.<br/><img src='https://kantrum.github.io/huangjiongtao.github.io/images/profile.png'>"
+title: "100M Running Achievements Timeline"
+excerpt: "A showcase of my 100M Running and achievements.<br/><img src='https://kantrum.github.io/huangjiongtao.github.io/images/profile.png'>"
 collection: portfolio
 ---
 
-# My Sports Portfolio
-
-Welcome to my sports portfolio where I share my passion and achievements in various sports activities.
-
-## 100m Sprint
-
-![100m Sprint](https://kantrum.github.io/huangjiongtao.github.io/images/profile.png)
-
-I have always enjoyed the thrill and challenge of sprinting. Here are some of my notable achievements in 100m sprint:
-
-- **Date**: Achievement 1 (e.g., School Record Holder)
-- **Date**: Achievement 2
-- **Training Regime**: Brief description of your training approach.
-
-## Skiing
-
-![Skiing](https://kantrum.github.io/huangjiongtao.github.io/images/profile.png)
-
-Skiing is not just a sport for me; it's an escape into the beauty of nature. Some highlights of my skiing journey:
-
-- **Favorite Ski Resorts**: List of resorts
-- **Memorable Experiences**: Brief description of memorable skiing experiences.
-
-## Horse Riding
-
-![Horse Riding](https://kantrum.github.io/huangjiongtao.github.io/images/profile.png)
-
-Horse riding has taught me about balance, strength, and harmony. Some of my experiences include:
-
-- **Competitions**: Any competitions you participated in.
-- **Personal Reflection**: Your thoughts and feelings about horse riding.
-
-## Golf
-
-![Golf](https://kantrum.github.io/huangjiongtao.github.io/images/profile.png)
-
-Golf is a game of precision and patience. Here’s a glimpse into my golf journey:
-
-- **Handicap**: Your golf handicap.
-- **Favorite Courses**: List of favorite golf courses and why.
+This document highlights my journey and key achievements in 100M running.
 
 ---
 
-Feel free to reach out if you share similar interests or have any questions about my sports journey!
+## [2021] - [April]
 
+- **First in the School Sports Meeting**
+  - Description: Broke the 38-year school record of Southwest Jiaotong University with 11.10s.
+  - Location: [Southwest Jiaotong University]
+  - Coach's Comment: [If applicable, include a brief comment from your coach]
+  - Experience Gained: [Discuss the experience and learning gained]
+  - Overcoming Challenges: A brief story of any challenges or injuries faced and overcome.
+  - Recovery Process: [Details about your recovery and comeback]
 
+## [2022] - [November]
 
+- **Second in Sichuan Provincial Athletics Championships**
+  - Description: Won 2nd place in the Campus Division (non-high level/specialty group).
+  - Location: [Southwest Jiaotong University]
 
+## [2024] - [April]
 
-[a fantastic speech]:https://youtu.be/Dzx84KpGNoE
-[best universities in my hometown]:https://www.fzu.edu.cn/
+- **Future Goals and Aspirations**
+  - Description: Breaking my own record in the school sports meeting.
+  - Training Plan: [My upcoming training plan or strategy]
 
+---
 
-## Past Hobbies
-
-I previously enjoyed long-distance running, [vlog making](https://space.bilibili.com/594030035), and computer game developing/playing. However, I have no time to do any of these things recently.
+This timeline will be updated with future achievements and milestones in my 100M running career.
