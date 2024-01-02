@@ -8,33 +8,51 @@ This document highlights my journey and key achievements in 100M running.
 
 ---
 
-## [2021] - [Apr]
+## 2021 - Apr
 
 - **First in the School Sports Meeting**
   - **Description:** Broke the 38-year school record of Southwest Jiaotong University with 11.10s.
-  - **Location:** [Southwest Jiaotong University]
+  - **Location:** Southwest Jiaotong University
   - **Coach's Comment:** [If applicable, include a brief comment from your coach]
   - **Experience Gained:** [Discuss the experience and learning gained]
   - **Overcoming Challenges:** A brief story of any challenges or injuries faced and overcome.
   - **Recovery Process:** [Details about your recovery and comeback]
 
-![100M Running Achievement](/images/IMG_1871.JPG)
-![100M Running Achievement](/images/IMG_1872.JPG)
-![100M Running Achievement](/images/IMG_1868.JPG)
-![100M Running Achievement](/images/IMG_1869.JPG)
-![100M Running Achievement](https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1871.JPG)
-![100M Running Achievement](https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1872.JPG)
-![100M Running Achievement](https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1868.JPG)
-![100M Running Achievement](https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1869.JPG)
-![100M Running Achievement](https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1870.JPG)
 
-## [2022] - [Nov]
+<div align="center">
+    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1871.JPG" alt="100M Running Achievement" style="border: 2px solid black;"/>
+</div>
+<br/>
+<!-- 重复上面的代码块来添加更多图片 -->
+<div align="center">
+    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1872.JPG" alt="100M Running Achievement" style="border: 2px solid black;"/>
+</div>
+<br/>
+<!-- 重复上面的代码块来添加更多图片 -->
+<div align="center">
+    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1868.JPG" alt="100M Running Achievement" style="border: 2px solid black;"/>
+</div>
+<br/>
+<!-- 重复上面的代码块来添加更多图片 -->
+<div align="center">
+    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1869.JPG" alt="100M Running Achievement" style="border: 2px solid black;"/>
+</div>
+<br/>
+<!-- 重复上面的代码块来添加更多图片 -->
+<div align="center">
+    <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1870.JPG" alt="100M Running Achievement" style="border: 2px solid black;"/>
+</div>
+<br/>
+<!-- 重复上面的代码块来添加更多图片 -->
+
+
+## 2022 - Nov
 
 - **Second in Sichuan Provincial Athletics Championships**
   - **Description:** Won 2nd place in the Campus Division (non-high level/specialty group).
-  - **Location:** [Southwest Jiaotong University]
+  - **Location:** Southwest Jiaotong University
 
-## [2024] - [Apr]
+## 2024 - Apr
 
 - **Future Goals and Aspirations**
   - **Description:** Breaking my own record in the school sports meeting.
