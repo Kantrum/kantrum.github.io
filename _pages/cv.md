@@ -12,6 +12,18 @@ author_profile: true
 
 
 
+<style>
+    .justify-text {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+</style>
+
+<div class="justify-text">
+    <p>In my meticulously crafted Professional Resume, you will find two distinct yet complementary facets: the Academic Resume, which delves into my extensive scholarly endeavors, detailing my academic achievements and intellectual pursuits; and the Job Resume, a comprehensive showcase of my professional experiences and skill sets tailored for the dynamic workplace. Together, they present a holistic picture of my journey and capabilities, reflecting both my academic acumen and practical, industry-relevant expertise.</p>
+</div>
+
+
 
 <div style="text-align: center; padding: 20px;">
 
