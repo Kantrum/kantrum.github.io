@@ -12,6 +12,7 @@ venue: 'CV 1'
 
 EDUCATION BACKGROUND
 ======
+------
 * University of Leeds - Southwest Jiaotong University Joint School, 2020-2024
   * B.Eng. in Electronic and Electrical Engineering Degree from University of Leeds Expected June 2024
   * B.Eng. in Electronic and Electrical Engineering Degree from SWJTU Expected June 2024
