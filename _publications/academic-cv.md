@@ -5,7 +5,6 @@ permalink: /publication/academic-cv
 excerpt: 'This cv is Academic Resume'
 date: 2024-01-02
 venue: 'CV 1'
-citation: 'Huang Jiongtao. (2023). &quot;An in-vehicle driver health monitoring and alarming system.&quot; <i>Patent 1</i>. 1(1).'
 ---
 
 {% include base_path %}
