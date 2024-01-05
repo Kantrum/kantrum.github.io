@@ -9,13 +9,6 @@ date: 2024-01-02
 
 {% include base_path %}
 
-**Jiongtao Huang** | kantrum@163.com | 86-155-8888-8888
-
-No.999 Xian Rd, Pidu District, Chengdu, 611000, Sichuan, China
-
-
-
-
 EDUCATION BACKGROUND
 ======
 <hr style="border: 2px solid black;"/>
@@ -27,8 +20,16 @@ EDUCATION BACKGROUND
                     UoL: 3.94/4, First Class Honors Expected**
 * Major Modules: Algorithms and Numerical Mathematics, Digital Electronics and Microcontrollers, Circuit Analysis and Design, Embedded Systems Project, Microprocessors and Programmable Logic.
 
+PATENTS AND PUBLICATIONS
+======
+<hr style="border: 2px solid black;"/>
+
+
+
 RESEARCH PROJECTS
 ======
+<hr style="border: 2px solid black;"/>
+
 Recognition and reconstruction of the elements in scanned page, Jan 2023 – Mar 2023
 _Team Leader; Advisor: Prof. José Miguel Hernández-Lobato, University of Cambridge_
   * Utilized the PaddleOCR library, employing the DBnet model for text detection with a precision of **96%** and a recall of **94%**.
