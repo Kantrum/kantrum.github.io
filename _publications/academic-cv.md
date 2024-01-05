@@ -1,4 +1,4 @@
----
+![image](https://github.com/Kantrum/huangjiongtao.github.io/assets/95701501/826387a0-7e8f-4efe-9755-225fe63e048d)---
 title: "Academic Resume"
 collection: publications
 permalink: /publication/academic-cv
@@ -9,6 +9,8 @@ venue: 'CV 1'
 
 {% include base_path %}
 
+Jiongtao Huang | kantrum@163.com | 86-155-8888-8888
+No.999 Xian Rd, Pidu District, Chengdu, 611000, Sichuan, China
 
 EDUCATION BACKGROUND
 ======
