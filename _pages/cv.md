@@ -17,32 +17,6 @@ author_profile: true
 
 
 
-
-
-<a href="https://kantrum.github.io/huangjiongtao.github.io/publication/2023-01-10-patent-1" class="project-card" style="text-decoration: none; color: inherit;">
-            <img class="project-image" src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1610.JPG" alt="Project Image">
-            <div class="project-content">
-                <div class="project-title">Recognition and Reconstruction of Elements in Scanned Page</div>
-                <div class="project-details">
-                    <em><strong>Jan 2023 – Mar 2023</strong>, Team Leader; Advisor: Prof. José Miguel Hernández-Lobato, University of Cambridge</em>
-                    <ul class="project-list">
-                        <li>Utilized the PaddleOCR library, employing the DBnet model for text detection with a precision of <strong>96%</strong> and a recall of <strong>94%</strong>.</li>
-                        <li>Applied the Mask R-CNN model and LayoutParser toolkit for layout analysis, successfully identifying and classifying page elements with <strong>95%</strong> accuracy across <strong>1,500</strong> multi-format documents.</li>
-                        <li>This approach was tested on a dataset of <strong>10,000</strong> images containing distorted and low-resolution text, where it maintained an accuracy rate of <strong>97%</strong>.</li>
-                        <!-- 项目详情 -->
-                    </ul>
-                </div>
-            </div>
-        </a>
-
-
-
-
-
-
-
-
-
 EDUCATION BACKGROUND
 ======
 * University of Leeds - Southwest Jiaotong University Joint School, 2020-2024
