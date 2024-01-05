@@ -10,6 +10,7 @@ date: 2024-01-02
 {% include base_path %}
 
 **Jiongtao Huang** | kantrum@163.com | 86-155-8888-8888
+
 No.999 Xian Rd, Pidu District, Chengdu, 611000, Sichuan, China
 
 
