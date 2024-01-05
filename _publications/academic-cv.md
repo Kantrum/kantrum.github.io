@@ -9,6 +9,22 @@ date: 2024-01-02
 
 {% include base_path %}
 
+<a href="http://academicpages.github.io/files/paper1.pdf" target="_blank">
+  <button style="background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;">
+    Download My Academic Resume (PDF)
+  </button>
+</a>
+
+
 📄 **[Download My Academic Resume (PDF)](http://academicpages.github.io/files/JiongtaoHuang_AcademicResume_240106)**
 
 EDUCATION BACKGROUND
