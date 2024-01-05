@@ -565,3 +565,29 @@ Teaching
         </a>
     </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+- **December 2023:** Attained the bronze medal at the national level in the China International Student Innovation Competition (2023).
+- **August 2023:** Attained the provincial gold medal in the Ninth China International "Internet +" Student Innovation and Entrepreneurship Competition.
+- **August 2023:** Attained the provincial silver prize in the Ninth China International 'Internet +' Innovation and Entrepreneurship Competition for College Students.
+- **August 2023:** Attained the provincial bronze prize in the 9th China International 'Internet +' Innovation and Entrepreneurship Competition for College Students.
+- **August 2023:** Attained the third prize at the national level in the Sixth China University Intelligent Robot Creativity Competition.
+- **July 2023:** Attained the first prize at the national level in the 16th China University Student Computer Design Competition.
+- **July 2023:** Attained the second prize at the provincial level in the Second China University Intelligent Robot Creativity Competition in Sichuan Province.
+- **July 2023:** Attained the gold prize at the university level in the Ninth China International 'Internet +' Innovation and Entrepreneurship Competition for College Students.
+- **July 2023:** Attained the gold Medal at the university level in the Ninth China International 'Internet +' Innovation and Entrepreneurship Competition for College Students.
+- **July 2023:** Attained the gold prize at the university level in the Ninth China International 'Internet +' Innovation and Entrepreneurship Competition for College Students.
+- **July 2023:** Attained the silver prize at the school level in the Ninth China International 'Internet +' Innovation and Entrepreneurship Competition for College Students.
+- **May 2023:** Attained the First Prize in the 14th National University Students' Market Research and Analysis Competition, "Zhengda Cup".
+- **May 2023:** Attained the second Prize at the Provincial Level in the 16th China University Student Computer Design Competition.
+- **May 2023:** Attained the third prize at the Provincial Level in the 16th China University Student Computer Design Competition.
+- **May 2023:** Attained the third prize at the Provincial Level in the 17th 'Challenge Cup' Extracurricular Academic and Technological Works Competition for College Students.
+- **April 2023:** Attained the Bronze Prize in the 18th Challenge Cup Extracurricular Academic and Scientific and Technological Works Competition for Undergraduates of Southwest Jiaotong University.
