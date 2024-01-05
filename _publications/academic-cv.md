@@ -12,13 +12,13 @@ venue: 'CV 1'
 
 EDUCATION BACKGROUND
 ======
-------
-* University of Leeds - Southwest Jiaotong University Joint School, 2020-2024
-  * B.Eng. in Electronic and Electrical Engineering Degree from University of Leeds Expected June 2024
-  * B.Eng. in Electronic and Electrical Engineering Degree from SWJTU Expected June 2024
-  * Cumulative GPA: SWJTU: 91.52/100; UoL: 3.94/4, First Class Honors Expected
+<hr style="border: 2px solid black;"/>
+**University of Leeds - Southwest Jiaotong University Joint School**, 2020-2024
+* B.Eng. in Electronic and Electrical Engineering Degree from **University of Leeds** Expected June 2024
+* B.Eng. in Electronic and Electrical Engineering Degree from **SWJTU** Expected June 2024
+* **Cumulative GPA: SWJTU: 91.52/100;
+                    UoL: 3.94/4, First Class Honors Expected**
 * Major Modules: Algorithms and Numerical Mathematics, Digital Electronics and Microcontrollers, Circuit Analysis and Design, Embedded Systems Project, Microprocessors and Programmable Logic.
-* M.S. in Jekyll, GitHub University, 2024-2025 (expected)
 
 RESEARCH PROJECTS
 ======
