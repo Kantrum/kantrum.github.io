@@ -46,16 +46,36 @@ author_profile: true
 
 
 
+<div style="text-align: center; padding: 20px;">
+
+  <a href="https://kantrum.github.io/huangjiongtao.github.io/publication/academic-cv" 
+     style="background-color: #f8f9fa; /* Very Light Grey */
+            color: #007bff; /* Blue */
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block;
+            border: 2px solid #007bff; /* Blue Border */
+            border-radius: 8px;
+            transition: background-color 0.3s, color 0.3s;">
+    🎓 Academic Resume
+  </a>
+
+  <a href="https://kantrum.github.io/huangjiongtao.github.io/publication/job-cv" 
+     style="background-color: #f8f9fa; /* Very Light Grey */
+            color: #28a745; /* Green */
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block;
+            border: 2px solid #28a745; /* Green Border */
+            border-radius: 8px;
+            transition: background-color 0.3s, color 0.3s;">
+    💼 Job Resume
+  </a>
+
+</div>
 
 
-
-
-<h3 style="font-size: 1.5em; margin-top: 20px;">
-  <a href="https://kantrum.github.io/huangjiongtao.github.io/publication/academic-cv" style="color: #007bff; text-decoration: none;">🎓 Academic Resume</a>
-</h3>
-
-
-
-<h3 style="font-size: 1.5em; margin-top: 20px;">
-  <a href="https://kantrum.github.io/huangjiongtao.github.io/publication/job-cv" style="color: #28a745; text-decoration: none;">💼 Job Resume</a>
-</h3>
