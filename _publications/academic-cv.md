@@ -81,29 +81,29 @@ HONORS AND AWARDS
 <hr style="border: 2px solid black;"/>
 
 -	**National** 1st Prize, The 16th National University Computer Programming Competition of China  
-  **Project name:** Intelligent loading and unloading solutions for urban logistics   **Jul 2023** 
--	**Provincial** Comprehensive Quality Level A Award, Sichuan Province Student Federation   **Feb 2023** 
+  **Project name:** Intelligent loading and unloading solutions for urban logistics, **Jul 2023** 
+-	**Provincial** Comprehensive Quality Level A Award, Sichuan Province Student Federation, **Feb 2023** 
 -	**District** 3rd Prize and 8000 RMB Award, Pidu District Elite Entrepreneurship Competition  
-  **Project name:** In-vehicle Human Health Monitoring Leader in the Internet of Things Era   **Dec 2022**
+  **Project name:** In-vehicle Human Health Monitoring Leader in the Internet of Things Era, **Dec 2022**
 -	**National** Bronze Award, The 8th National "Internet+" Student Entrepreneurship Competition  
-  **Project name:** In-vehicle Human Health Monitoring Leader in the Internet of Things Era   **Dec 2022**
+  **Project name:** In-vehicle Human Health Monitoring Leader in the Internet of Things Era, **Dec 2022**
 -	**National** 2nd Prize, National College E-Commerce Entrepreneurship and Innovation Challenge  
-  **Project name:** In-vehicle Human Health Monitoring Leader in the Internet of Things Era   **Jul 2022**
--	**School** Level 1st Prize and 6000 RMB Award, Double Excellence Fund Scholarship   **Sep 2021**
--	**School** Record Holder in 100 m, Southwest Jiaotong University for general student (11’10s)   **Apr 2021**
+  **Project name:** In-vehicle Human Health Monitoring Leader in the Internet of Things Era, **Jul 2022**
+-	**School** Level 1st Prize and 6000 RMB Award, Double Excellence Fund Scholarship, **Sep 2021**
+-	**School** Record Holder in 100 m, Southwest Jiaotong University for general student (11’10s), **Apr 2021**
 
 
 ENTREPRENEURIAL EXPERIENCE
 ======
 <hr style="border: 2px solid black;"/>
 
-**Sichuan Jiemin Technology Co.,Ltd** - Chengdu, China   Nov 2021  
+**Sichuan Jiemin Technology Co.,Ltd** - Chengdu, China, Nov 2021  
 *Co-founder, Percentage of shares: 80 %*
 * Launched a vehicle health monitoring system and an online medical payment platform, directly leading a software team to meet critical industry needs.
 * Initiated and closed strategic partnerships with Chengdu Hikvision Research Institute and Chengdu Extreme Viewpoint Technology, expanding company reach and capability.
 * Streamlined our supply chain by securing a pivotal agreement with Guilin Jingrui Sensor Technology Co., significantly enhancing the quality and efficiency of our product offerings.
 
-**Hunan Chuangben Technology Co.,Ltd** - Xiangtan, China   Jan 2023  
+**Hunan Chuangben Technology Co.,Ltd** - Xiangtan, China, Jan 2023  
 *Co-founder, Percentage of shares: 95 %*
 * Pioneered a university competition tutoring enterprise, and aligning services with academic rigor and career readiness.
 * Drove the company’s inaugural success by enrolling 70 students in an e-commerce innovation and entrepreneurship intensive during the 2023 winter term, reflecting strong student engagement and program appeal.
