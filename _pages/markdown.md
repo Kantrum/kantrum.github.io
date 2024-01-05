@@ -339,43 +339,6 @@ Teaching
 - **February:** Completed an internship in translation and won the title of "Excellent Intern".
 
 
-<div style="display: flex; justify-content: space-between;">
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1492.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-right: 10px;" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1493.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 5px; margin-right: 5px;" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1494.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto; margin-left: 10px;" />
-</div>
-
-
-
-<div style="display: flex; justify-content: space-between;">
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1492.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto;" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1493.png" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto;" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1494.JPG" style="flex: 1; max-width: 996px; max-height: 769px; width: 30%; height: auto;" />
-</div>
-
-
-
-<div style="display: flex; justify-content: space-between;">
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1492.png" style="width: 30%; height: auto; max-width: 996px; max-height: 769px;" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1493.png" style="width: 30%; height: auto; max-width: 996px; max-height: 769px;" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1494.JPG" style="width: 30%; height: auto; max-width: 996px; max-height: 769px;" />
-</div>
-
-
-<p float="left">
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1492.png" width="30%" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1493.png" width="30%" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1494.JPG" width="30%" />
-</p>
-
-
-<p style="float: left;">
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1492.png" style="width: auto; height: 769px; max-width: 30%;" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1493.png" style="width: auto; height: 769px; max-width: 30%;" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/IMG_1494.JPG" style="width: auto; height: 769px; max-width: 30%;" />
-</p>
-
-
 
 
 
@@ -424,33 +387,6 @@ Teaching
 - **Jan 1:** 🎉 _New Year: Office Closed_
 
 ---
-
-
-
-
-
-
-
-
-
-
-<p float="left">
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/profile.png" width="30%" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/profile.png" width="30%" />
-  <img src="https://kantrum.github.io/huangjiongtao.github.io/images/profile.png" width="30%" />
-</p>
-
-![Attach a recent personal photograph here](https://kantrum.github.io/huangjiongtao.github.io/images/profile.png)
-
-![Attach a recent personal photograph here](https://kantrum.github.io/huangjiongtao.github.io/images/profile.png)
-
-![Attach a recent personal photograph here](https://kantrum.github.io/huangjiongtao.github.io/images/profile.png)
-
-
-
-
-
-
 
 
 
@@ -518,22 +454,6 @@ Teaching
   <li>This approach was tested on a dataset of <strong>10,000</strong> images containing distorted and low-resolution text, where it maintained an accuracy rate of <strong>97%</strong>.</li>
 </ul>
 
-<p><strong>Recognition and reconstruction of the elements in scanned page, Jan 2023 – Mar 2023</strong><br>
-<em>Team Leader; Advisor: Prof. José Miguel Hernández-Lobato, University of Cambridge</em>
-<ul>
-  <li>Utilized the PaddleOCR library, employing the DBnet model for text detection with a precision of <strong>96%</strong> and a recall of <strong>94%</strong>.</li>
-  <li>Applied the Mask R-CNN model and LayoutParser toolkit for layout analysis, successfully identifying and classifying page elements with <strong>95%</strong> accuracy across <strong>1,500</strong> multi-format documents.</li>
-  <li>This approach was tested on a dataset of <strong>10,000</strong> images containing distorted and low-resolution text, where it maintained an accuracy rate of <strong>97%</strong>.</li>
-</ul>
-
-<p><strong>Recognition and reconstruction of the elements in scanned page, Jan 2023 – Mar 2023</strong><br>
-<em>Team Leader; Advisor: Prof. José Miguel Hernández-Lobato, University of Cambridge</em>
-<ul>
-  <li>Utilized the PaddleOCR library, employing the DBnet model for text detection with a precision of <strong>96%</strong> and a recall of <strong>94%</strong>.</li>
-  <li>Applied the Mask R-CNN model and LayoutParser toolkit for layout analysis, successfully identifying and classifying page elements with <strong>95%</strong> accuracy across <strong>1,500</strong> multi-format documents.</li>
-  <li>This approach was tested on a dataset of <strong>10,000</strong> images containing distorted and low-resolution text, where it maintained an accuracy rate of <strong>97%</strong>.</li>
-</ul>
-
 <!-- Repeat the above structure for each research project -->
 
 
@@ -565,7 +485,6 @@ Teaching
         </a>
     </div>
 </div>
-
 
 
 
