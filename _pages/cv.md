@@ -94,3 +94,39 @@ author_profile: true
 
 
 
+
+<div style="padding: 30px; text-align: left;">
+
+  <a href="https://kantrum.github.io/huangjiongtao.github.io/publication/academic-cv"
+     style="display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 50px;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            background-image: linear-gradient(135deg, #89CFF0, #5D9B9B); /* Harmonious Blue-Green Gradient */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease, box-shadow 0.3s ease;">
+    🎓 Academic Resume
+  </a>
+
+  <a href="https://kantrum.github.io/huangjiongtao.github.io/publication/job-cv"
+     style="display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 50px;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            background-image: linear-gradient(135deg, #FFD700, #E6E6FA); /* Soft Yellow-Lavender Gradient */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease, box-shadow 0.3s ease;">
+    💼 Job Resume
+  </a>
+
+</div>
+
+
+
+
