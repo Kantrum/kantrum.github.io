@@ -25,8 +25,6 @@ date: 2024-01-02
 </a>
 
 
-📄 **[Download My Academic Resume (PDF)](http://academicpages.github.io/files/JiongtaoHuang_AcademicResume_240106.pdf)**
-
 EDUCATION BACKGROUND
 ======
 <hr style="border: 2px solid black;"/>
