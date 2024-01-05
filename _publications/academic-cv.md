@@ -9,7 +9,7 @@ date: 2024-01-02
 
 {% include base_path %}
 
-<a href="http://academicpages.github.io/files/JiongtaoHuang_AcademicResume_240106.pdf" target="_blank">
+<a href="https://kantrum.github.io/huangjiongtao.github.io/files/JiongtaoHuang_AcademicResume_240106.pdf" target="_blank">
   <button style="background-color: #4CAF50; /* Green */
     border: none;
     color: white;
