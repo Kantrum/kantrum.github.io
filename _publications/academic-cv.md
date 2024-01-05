@@ -28,23 +28,22 @@ _Team Leader; Advisor: Prof. José Miguel Hernández-Lobato, University of Cambr
   * Applied the Mask R-CNN model and LayoutParser toolkit for layout analysis, successfully identifying and classifying page elements with **95%** accuracy across **1,500** multi-format documents.
   * This approach was tested on a dataset of **10,000** images containing distorted and low-resolution text, where it maintained an accuracy rate of **97%**.
 
-Recognition and reconstruction of the elements in scanned page, Jan 2023 – Mar 2023
-_Team Leader; Advisor: Prof. José Miguel Hernández-Lobato, University of Cambridge_
-  * Utilized the PaddleOCR library, employing the DBnet model for text detection with a precision of **96%** and a recall of **94%**.
-  * Applied the Mask R-CNN model and LayoutParser toolkit for layout analysis, successfully identifying and classifying page elements with **95%** accuracy across **1,500** multi-format documents.
-  * This approach was tested on a dataset of **10,000** images containing distorted and low-resolution text, where it maintained an accuracy rate of **97%**.
+Research on Driver fatigue monitoring System based on machine learning, Aug 2022 – Jun 2023
+_Individual Project; Advisor: Prof. Yi Zhang, Southwest Jiaotong University_
+  * Developed a comprehensive machine learning system, employing **10+** algorithms which were rigorously tested, resulting in a system performance enhancement of **15%** over baseline models.
+  * Engineered and integrated four robust functional modules handling over **500 GB** of data across the pipeline stages of data collection, preprocessing (achieving **99.5%** data integrity), feature extraction (isolating **50+** key features with a selection accuracy rate of **98%**), and machine learning.
+  * Executed over **200** experiments on driver fatigue detection, reaching **95%** accuracy and outperforming previous models by **20%**.
 
-Recognition and reconstruction of the elements in scanned page, Jan 2023 – Mar 2023
-_Team Leader; Advisor: Prof. José Miguel Hernández-Lobato, University of Cambridge_
-  * Utilized the PaddleOCR library, employing the DBnet model for text detection with a precision of **96%** and a recall of **94%**.
-  * Applied the Mask R-CNN model and LayoutParser toolkit for layout analysis, successfully identifying and classifying page elements with **95%** accuracy across **1,500** multi-format documents.
-  * This approach was tested on a dataset of **10,000** images containing distorted and low-resolution text, where it maintained an accuracy rate of **97%**.
+In-vehicle driver health monitoring and alarming system (National Project), Apr 2022 – may 2023
+_Team Leader; Advisor: Prof. Yi Zhang, Southwest Jiaotong University_
+  * Implemented real-time transmitters that monitor in-vehicle temperature and CO2 levels, maintainingenvironmental parameters within **5%** of optimal conditions to ensure driver alertness.
+  * Developed non-contact fabric electrodes for ECG signal collection, capturing cardiac activity with a signal fidelity of **97%**, enabling the detection of subtle physiological changes indicative of fatigue.
 
-Recognition and reconstruction of the elements in scanned page, Jan 2023 – Mar 2023
-_Team Leader; Advisor: Prof. José Miguel Hernández-Lobato, University of Cambridge_
-  * Utilized the PaddleOCR library, employing the DBnet model for text detection with a precision of **96%** and a recall of **94%**.
-  * Applied the Mask R-CNN model and LayoutParser toolkit for layout analysis, successfully identifying and classifying page elements with **95%** accuracy across **1,500** multi-format documents.
-  * This approach was tested on a dataset of **10,000** images containing distorted and low-resolution text, where it maintained an accuracy rate of **97%**.
+Data collection and processing based on Python and Wi-Fi, Apr 2021 – May 2022
+_Team Leader; Advisor: Prof. Yongzhi Jing, Southwest Jiaotong University_
+  * Directed a specialized team of three, leading to the successful completion of the project **20%** ahead ofschedule, with a track record of **100%** adherence to progress milestones.
+  * Implemented a Python-based TCP interactive data collection system, achieving a data transmission reliability of **99.5%** between senders and receivers.
+  * Enhanced voice signal clarity using a Deep Clustering algorithm, resulting in a **30%** improvement in the segregation of overlapping speech signals and boosting the accuracy of voice frequency extraction.
 
 HONORS AND AWARDS
 ======
@@ -71,3 +70,75 @@ LEADERSHIP AND SOCIAL ACTIVITIES
 * Most Contributive Volunteer Award in the 31st Chengdu World University Games, May 2022
 * Class Leader of the New Youth Global Competency Development Programme, Mar 2022 – Dec 2022
 * Ministry of the University Student Campus Self-Management Committee, May 2021 – Apr 2023
+
+RESERCH AND PROJECT COMPETENCIES
+======
+* **Programming Languages:**
+  * **Python with TensorFlow and PyTorch** (Machine learning)
+  * **MATLAB** (Simulations of signal processing)
+  * **VHDL** (Designing digital circuits)
+  * **C++** (Programming on microcontrollers)
+  * **Quartus** (Circuit simulation)
+  * **Java** (General-purpose programming, particularly useful for Android app development)
+  * **R** (Data analysis and statistical computing)
+  * **JavaScript** (Web development, including front-end frameworks like React or Angular)
+
+* **Hardware:**
+  * **Mbed on STM32 boards**
+  * **Arduino and Raspberry Pi** (For DIY projects and IoT applications)
+  * **FPGA boards** (For advanced digital design and prototyping)
+  * **Oscilloscopes and Logic Analyzers** (For hardware debugging and analysis)
+
+* **Writing Tools:**
+  * **LaTeX** and **Markdown**
+  * **Microsoft Office Suite** (Word, Excel, PowerPoint for professional document preparation)
+  * **Jupyter Notebooks** (For interactive coding and data visualization)
+  * **Git and GitHub** (Version control and code repository management)
+
+* **Software Development:**
+  * **Docker and Kubernetes** (Containerization and orchestration for software deployment)
+  * **CI/CD pipelines** (Continuous Integration and Continuous Deployment)
+  * **Unit Testing and Test-Driven Development** (For software quality and reliability)
+  * **Agile and Scrum methodologies** (For efficient project management)
+
+* **Data Science and Analysis:**
+  * **SQL and NoSQL databases** (Data storage and retrieval)
+  * **Data visualization tools** (like Tableau and PowerBI)
+  * **Machine Learning algorithms and Data Preprocessing techniques**
+  * **Big Data technologies** (like Hadoop and Spark)
+
+
+
+CERTIFICATES AND SKILLS
+======
+* **Certificates:**
+  * Intermediate Level of Certificate for E-Commerce Professionals (E-Commerce Big Data Analysis and App Development)
+  * National 2nd-Class Athlete Certificate (China)
+  * Certified Data Analyst (Focus on data mining and visualization techniques)
+  * Project Management Professional (PMP)® (Effective project management and leadership)
+
+* **Languages:**
+  * Native Mandarin
+  * Fluent in English
+
+* **Computer Skills:**
+  * Proficient with Microsoft Office Suite (Word, Excel, PowerPoint, Outlook)
+  * Advanced Excel skills (Data analysis, PivotTables, VBA)
+  * Basic knowledge of database management (SQL)
+
+* **Design and Editing Skills:**
+  * Advanced level in Adobe Photoshop (Image editing and graphic design)
+  * Proficient in Adobe Premier (Video editing and post-production)
+  * Skilled in using X-Mind (Mind mapping and brainstorming tool)
+  * Familiar with Adobe Illustrator (Vector graphic design)
+
+* **Digital Marketing:**
+  * Knowledge of SEO and SEM strategies
+  * Experience with digital marketing tools like Google Analytics and AdWords
+  * Social media management and marketing (Platforms like Weibo, TikTok, Facebook, Instagram)
+
+* **Soft Skills:**
+  * Strong communication and interpersonal skills
+  * Effective team collaboration and leadership abilities
+  * Problem-solving and critical thinking
+  * Time management and organizational skills
