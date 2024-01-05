@@ -17,7 +17,7 @@ EDUCATION BACKGROUND
 * B.Eng. in Electronic and Electrical Engineering Degree from **University of Leeds** Expected June 2024
 * B.Eng. in Electronic and Electrical Engineering Degree from **SWJTU** Expected June 2024
 * **Cumulative GPA: SWJTU: 91.52/100;  
-                    UoL: 3.94/4, First Class Honors Expected**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UoL: 3.94/4, First Class Honors Expected**
 * Major Modules: Algorithms and Numerical Mathematics, Digital Electronics and Microcontrollers, Circuit Analysis and Design, Embedded Systems Project, Microprocessors and Programmable Logic.
 
 PATENTS AND PUBLICATIONS
