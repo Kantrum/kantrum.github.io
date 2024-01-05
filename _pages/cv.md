@@ -12,39 +12,6 @@ author_profile: true
 
 
 
-<div style="text-align: center; padding: 20px;">
-
-  <a href="https://kantrum.github.io/huangjiongtao.github.io/publication/academic-cv" 
-     style="background-color: #0056b3; /* Darker Blue */
-            color: white;
-            padding: 15px 30px;
-            margin: 10px;
-            font-size: 18px;
-            text-decoration: none;
-            display: inline-block;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;">
-    🎓 Academic Resume
-  </a>
-
-  <a href="https://kantrum.github.io/huangjiongtao.github.io/publication/job-cv" 
-     style="background-color: #218838; /* Darker Green */
-            color: white;
-            padding: 15px 30px;
-            margin: 10px;
-            font-size: 18px;
-            text-decoration: none;
-            display: inline-block;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;">
-    💼 Job Resume
-  </a>
-
-</div>
-
-
 
 <div style="text-align: center; padding: 20px;">
 
@@ -77,5 +44,41 @@ author_profile: true
   </a>
 
 </div>
+
+
+
+
+<div style="text-align: center; padding: 30px;">
+
+  <a href="https://kantrum.github.io/huangjiongtao.github.io/publication/academic-cv"
+     style="display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 50px;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            background-image: linear-gradient(135deg, #6e8efb, #a777e3);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease, box-shadow 0.3s ease;">
+    🎓 Academic Resume
+  </a>
+
+  <a href="https://kantrum.github.io/huangjiongtao.github.io/publication/job-cv"
+     style="display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 50px;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            background-image: linear-gradient(135deg, #fa8b8b, #f47e60);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease, box-shadow 0.3s ease;">
+    💼 Job Resume
+  </a>
+
+</div>
+
 
 
