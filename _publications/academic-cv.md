@@ -9,7 +9,7 @@ date: 2024-01-02
 
 {% include base_path %}
 
-📄 **[Download My Academic Resume (PDF)](http://academicpages.github.io/files/Jiongtao_Huang_Academic_Resume(24_1_6))**
+📄 **[Download My Academic Resume (PDF)](http://academicpages.github.io/files/JiongtaoHuang_AcademicResume_24_1_6)**
 
 EDUCATION BACKGROUND
 ======
