@@ -11,7 +11,7 @@ author_profile: true
 
 
 <h3 style="font-size: 1.5em; margin-top: 20px;">
-  <a href="/publication/academic-cv" style="color: #007bff; text-decoration: none;">🎓 Academic Resume</a>
+  <a href="https://kantrum.github.io/huangjiongtao.github.io/publication/academic-cv" style="color: #007bff; text-decoration: none;">🎓 Academic Resume</a>
 </h3>
 
 
