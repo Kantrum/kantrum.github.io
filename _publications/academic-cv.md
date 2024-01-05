@@ -4,7 +4,6 @@ collection: publications
 permalink: /publication/academic-cv
 excerpt: 'This cv is Academic Resume'
 date: 2024-01-02
-venue: 'CV 1'
 ---
 
 {% include base_path %}
@@ -15,6 +14,7 @@ No.999 Xian Rd, Pidu District, Chengdu, 611000, Sichuan, China
 EDUCATION BACKGROUND
 ======
 <hr style="border: 2px solid black;"/>
+
 **University of Leeds - Southwest Jiaotong University Joint School**, 2020-2024
 * B.Eng. in Electronic and Electrical Engineering Degree from **University of Leeds** Expected June 2024
 * B.Eng. in Electronic and Electrical Engineering Degree from **SWJTU** Expected June 2024
