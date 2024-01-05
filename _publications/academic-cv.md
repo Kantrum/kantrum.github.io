@@ -3,6 +3,7 @@ collection: publications
 permalink: /publication/academic-cv
 excerpt: 'This cv is Academic Resume'
 date: 2024-01-02
+venue: 'Patent 1'
 ---
 
 {% include base_path %}
