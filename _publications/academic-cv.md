@@ -9,6 +9,8 @@ date: 2024-01-02
 
 {% include base_path %}
 
+[Download My "Academic Resume" here](http://academicpages.github.io/files/paper1.pdf)
+
 EDUCATION BACKGROUND
 ======
 <hr style="border: 2px solid black;"/>
