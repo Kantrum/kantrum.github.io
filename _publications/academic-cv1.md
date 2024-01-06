@@ -1,7 +1,7 @@
 ---
 title: "Academic Resume"
 collection: publications
-permalink: /publication/academic-cv
+permalink: /publication/academic-cv1
 excerpt: 'This cv is Academic Resume'
 date: 2024-01-06
 ---
