@@ -3,7 +3,7 @@ title: "Job Resume"
 collection: publications
 permalink: /publication/job-cv
 excerpt: 'This cv is Job Resume'
-date: 2024-01-06
+date: 2024-01-05
 ---
 
 
