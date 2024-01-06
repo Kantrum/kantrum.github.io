@@ -85,8 +85,8 @@ author:
   bio              : "SWJTU-Leeds, Year 4"
   location         : "Chengdu, China"
   employer         : "Southwest Jiaotong University"
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://yourfullgooglescholarurl.com"
+  pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  googlescholar    : # "http://yourfullgooglescholarurl.com"
   email            : "kantrum@163.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
@@ -97,14 +97,14 @@ author:
   facebook         : "profile.php?id=100074729113799&mibextid=LQQJ4d"
   foursquare       :
   github           : "Kantrum"
-  google_plus      : "https://weibo.com/u/5217974261"
+  google_plus      : 
   keybase          :
   instagram        : "kantrums/?igsh=YzAwZjE1ZTI0Zg%3D%3D"
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "https://weibo.com/u/5217974261"
-  orcid            : "http://orcid.org/yourorcidurl"
-  pinterest        : "/u/5217974261"
+  linkedin         : 
+  orcid            : 
+  pinterest        : 
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
@@ -114,7 +114,7 @@ author:
   weibo            : "u/5217974261?featurecode=profile_qrcode&uid=5217974261&t=userinfo"
   xing             :
   youtube          : "@jiongtaohuang8199"
-  wikipedia        : "https://weibo.com/u/5217974261"
+  wikipedia        : 
 
 
 # Reading Files
