@@ -29,7 +29,7 @@ author_profile: true
 
 <div style="padding: 30px; text-align: left;">
 
-  <a href="https://kantrum.github.io/huangjiongtao.github.io/publication/2010-10-01-paper-title-number-2"
+  <a href="https://kantrum.github.io/huangjiongtao.github.io/publication/academic-cv"
      style="display: inline-block;
             padding: 15px 30px;
             margin: 10px;
