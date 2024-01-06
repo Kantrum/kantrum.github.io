@@ -22,20 +22,30 @@ redirect_from:
             color: #333;
         }
 
-        .hero {
-            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+        .slider {
+            width: 100%;
             height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #fff;
+            overflow: hidden;
         }
 
-        .hero h1 {
-            font-size: 3rem;
-            margin: 0;
+        .slides {
+            display: flex;
+            width: 300%;
+            height: 100%;
+            transition: all 4s ease;
         }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            flex-shrink: 0;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide:nth-child(1) { background-image: url('https://via.placeholder.com/1920x1080?text=First+Image'); }
+        .slide:nth-child(2) { background-image: url('https://via.placeholder.com/1920x1080?text=Second+Image'); }
+        .slide:nth-child(3) { background-image: url('https://via.placeholder.com/1920x1080?text=Third+Image'); }
 
         .content {
             padding: 20px;
@@ -46,77 +56,60 @@ redirect_from:
             text-justify: inter-word;
         }
 
-        .navbar {
-            background: #333;
-            color: #fff;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .section {
+            margin-bottom: 40px;
         }
 
-        .navbar a {
-            color: #fff;
-            margin-left: 20px;
-            text-decoration: none;
+        .section h2 {
+            color: #0275d8;
+            margin-bottom: 10px;
         }
 
-        .navbar a:hover {
-            text-decoration: underline;
-        }
-
-        .navbar-brand {
-            font-weight: bold;
-            font-size: 1.5rem;
+        .section p {
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <div class="navbar-brand">Huang Jiongtao</div>
-        <div>
-            <a href="#welcome">Welcome</a>
-            <a href="#purpose">Purpose</a>
-            <a href="#expectations">Expectations</a>
-            <a href="#journey">Journey</a>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
         </div>
-    </div>
-
-    <div class="hero">
-        <h1>Welcome to My World!</h1>
     </div>
 
     <div class="content">
-        <!-- Original Content Starts Here -->
-        <div id="welcome" class="justify-text">
-            <h2>Welcome to My Personal Space: A Mosaic of My Life and Aspirations!</h2>
-            <p>Hello there! I'm Jiongtao Huang, but you can call me Simon. I'm navigating the exciting world of Electronic and Electrical Engineering...</p>
-            <!-- ... other original content ... -->
+        <!-- Original Content -->
+        <div id="welcome" class="section justify-text">
+            <!-- Welcome content -->
         </div>
-
-        <div id="purpose" class="justify-text">
-            <span style="color: gray;">Why This Website?</span>
-            <p>The primary purpose of creating this personal website was to establish a centralized platform...</p>
-            <!-- ... other original content ... -->
+        <div id="purpose" class="section justify-text">
+            <!-- Purpose content -->
         </div>
-
-        <div id="expectations" class="justify-text">
-            <span style="color: gray;">What to Expect?</span>
-            <p>The website is structured into several key sections, each reflecting a different aspect of my life...</p>
-            <!-- ... other original content ... -->
+        <div id="expectations" class="section justify-text">
+            <!-- Expectations content -->
         </div>
-
-        <div id="journey" class="justify-text">
-            <span style="color: gray;">Join Me on My Journey</span>
-            <p>Warmly welcome you to journey through this website, a reflection of the diverse tapestry that is my life...</p>
-            <!-- ... other original content ... -->
+        <div id="journey" class="section justify-text">
+            <!-- Journey content -->
         </div>
-
-        <!-- Original Content Ends Here -->
+        <!-- End of Original Content -->
     </div>
 
-    <!-- Add other HTML elements as needed -->
-
+    <script>
+        let slideIndex = 0;
+        const showSlides = () => {
+            const slides = document.querySelectorAll('.slide');
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = 'block';
+            setTimeout(showSlides, 4000); // Change image every 4 seconds
+        };
+        showSlides();
+    </script>
 </body>
 </html>
 
