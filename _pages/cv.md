@@ -43,7 +43,7 @@ author_profile: true
     🎓 Academic Resume
   </a>
 
-  <a href="https://kantrum.github.io/huangjiongtao.github.io/publication/job-cv"
+  <a href="https://kantrum.github.io/huangjiongtao.github.io/publication/2023-01-10-patent-1"
      style="display: inline-block;
             padding: 15px 30px;
             margin: 10px;
