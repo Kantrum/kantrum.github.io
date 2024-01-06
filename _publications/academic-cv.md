@@ -3,7 +3,7 @@ title: "Academic Resume"
 collection: publications
 permalink: /publication/academic-cv
 excerpt: 'This cv is Academic Resume'
-date: 2015-01-06
+date: 2024-01-05
 ---
 
 
