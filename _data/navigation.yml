@@ -1,22 +1,22 @@
 # main links links
 main:
-  - title: "About Myself"
+  - title: "About"
     url: /publications/
 
-  - title: "Academic Journey"
+  - title: "Academic"
     url: /talks/    
 
-  - title: "Entrepreneurial Path"
+  - title: "Entrepreneurial"
     url: /entrepreneurship/    
     
-  - title: "Life Experiences"
+  - title: "Life"
     url: /portfolio/
         
-  - title: "Blog Insights"
+  - title: "Blog"
     url: /year-archive/
     
-  - title: "Professional Resume"
+  - title: "Resume"
     url: /cv/
     
-  - title: "Navigation Guide"
+  - title: "Guide"
     url: /markdown/
