@@ -8,7 +8,12 @@ redirect_from:
   - /about.html
 ---
 
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huang Jiongtao's Personal Website</title>
     <style>
         body {
             margin: 0;
@@ -16,19 +21,20 @@ redirect_from:
             background: #f4f4f4;
             color: #333;
         }
-        
+
         .hero {
-            background: url('header-background.jpg') no-repeat center center/cover;
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
+            color: #fff;
         }
 
         .hero h1 {
-            color: #fff;
             font-size: 3rem;
+            margin: 0;
         }
 
         .content {
@@ -38,15 +44,6 @@ redirect_from:
         .justify-text {
             text-align: justify;
             text-justify: inter-word;
-        }
-
-        a {
-            color: #0275d8;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
         }
 
         .navbar {
@@ -61,6 +58,11 @@ redirect_from:
         .navbar a {
             color: #fff;
             margin-left: 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
         }
 
         .navbar-brand {
@@ -68,15 +70,15 @@ redirect_from:
             font-size: 1.5rem;
         }
     </style>
-    
+</head>
 <body>
     <div class="navbar">
         <div class="navbar-brand">Huang Jiongtao</div>
         <div>
-            <a href="#about">About</a>
-            <a href="#academia">Academia</a>
-            <a href="#entrepreneurship">Entrepreneurship</a>
-            <a href="#contact">Contact</a>
+            <a href="#welcome">Welcome</a>
+            <a href="#purpose">Purpose</a>
+            <a href="#expectations">Expectations</a>
+            <a href="#journey">Journey</a>
         </div>
     </div>
 
@@ -85,17 +87,36 @@ redirect_from:
     </div>
 
     <div class="content">
-        <div id="about" class="justify-text">
-            <!-- About content goes here -->
+        <!-- Original Content Starts Here -->
+        <div id="welcome" class="justify-text">
+            <h2>Welcome to My Personal Space: A Mosaic of My Life and Aspirations!</h2>
+            <p>Hello there! I'm Jiongtao Huang, but you can call me Simon. I'm navigating the exciting world of Electronic and Electrical Engineering...</p>
+            <!-- ... other original content ... -->
         </div>
-        <div id="academia" class="justify-text">
-            <!-- Academia content goes here -->
+
+        <div id="purpose" class="justify-text">
+            <span style="color: gray;">Why This Website?</span>
+            <p>The primary purpose of creating this personal website was to establish a centralized platform...</p>
+            <!-- ... other original content ... -->
         </div>
-        <div id="entrepreneurship" class="justify-text">
-            <!-- Entrepreneurship content goes here -->
+
+        <div id="expectations" class="justify-text">
+            <span style="color: gray;">What to Expect?</span>
+            <p>The website is structured into several key sections, each reflecting a different aspect of my life...</p>
+            <!-- ... other original content ... -->
         </div>
-        <div id="contact" class="justify-text">
-            <!-- Contact content goes here -->
+
+        <div id="journey" class="justify-text">
+            <span style="color: gray;">Join Me on My Journey</span>
+            <p>Warmly welcome you to journey through this website, a reflection of the diverse tapestry that is my life...</p>
+            <!-- ... other original content ... -->
         </div>
+
+        <!-- Original Content Ends Here -->
     </div>
+
+    <!-- Add other HTML elements as needed -->
+
 </body>
+</html>
+
