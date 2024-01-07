@@ -10,7 +10,7 @@ date: 2023-12-31
 **Aim:** The practical aim of this project is for you to build a balsa wood glider which will fly the furthest distance. It is designed to give you practice in carrying out a small-scale experiment in a similar style to those which you will do on your Engineering courses.
 
 
-<a href="https://kantrum.github.io/huangjiongtao.github.io/files/JiongtaoHuang_AcademicResume_240106.pdf" target="_blank">
+<a href="https://kantrum.github.io/huangjiongtao.github.io/files/Instructions _for_Building_the_Glider.pdf" target="_blank">
   <button style="background-color: #4CAF50; /* Green */
     border: none;
     color: white;
