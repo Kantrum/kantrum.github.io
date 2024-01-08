@@ -31,3 +31,19 @@ Here's a recording of a Glider we made at Group!
 <div style="position: relative; padding-bottom: 56.25%; padding-top: 25px; height: 0;">
   <iframe src="//player.bilibili.com/player.html?aid=965975747&bvid=BV18W4y1N7gr&cid=1397731000&p=1" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
 </div>
+
+
+<a href="https://kantrum.github.io/huangjiongtao.github.io/files/Glider_Group_Presentation.pdf" target="_blank">
+  <button style="background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;">
+    Group Presentation PPT after the competition (PDF)
+  </button>
+</a>
