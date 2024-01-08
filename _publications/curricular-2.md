@@ -8,8 +8,8 @@ date: 2023-12-31
 
 **TASK:  
 Discuss, with reference to examples, the importance of innovation to Engineering. Choose one innovation in your engineering discipline and:**  
-     * i. evaluate to what extent it could contribute towards a sustainable future  
-     * ii. explain how the innovation has taken ethical considerations into account
+i. evaluate to what extent it could contribute towards a sustainable future  
+ii. explain how the innovation has taken ethical considerations into account
 
 Here's a recording of my presentation!
 ---
