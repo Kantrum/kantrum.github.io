@@ -34,7 +34,6 @@ Here's a recording of a Glider we made at Group!
 
 <br>
 <br>
-<br>
 
 <a href="https://kantrum.github.io/huangjiongtao.github.io/files/Glider_Group_Presentation.pdf" target="_blank">
   <button style="background-color: #4CAF50; /* Green */
