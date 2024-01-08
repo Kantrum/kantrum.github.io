@@ -12,5 +12,5 @@ Here's a recording of our Buggy!
 ---
 
 <div style="position: relative; padding-bottom: 56.25%; padding-top: 25px; height: 0;">
-  <iframe src="//player.bilibili.com/player.html?aid=965975747&bvid=BV18W4y1N7gr&cid=1397731000&p=1" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
+  <iframe src="//player.bilibili.com/player.html?bvid=BV16e411U7q8&page=1" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
 </div>
