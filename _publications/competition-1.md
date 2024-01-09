@@ -7,11 +7,8 @@ date: 2023-08-27
 ---
 
 
-**Aim:** The practical aim of this project is for you to build a balsa wood glider which will fly the furthest distance. It is designed to give you practice in carrying out a small-scale experiment in a similar style to those which you will do on your Engineering courses.
 
-
-
-***I. Project overview**  
+**I. Project overview**  
 "P.A.T.H. is an innovative health management solution designed to provide comprehensive health monitoring solutions for B-end customers such as passenger and freight transport companies. The core of the project lies in the use of P.A.T.H - a highly integrated and user-friendly product that not only monitors the basic physiological data of the driver, but also performs long-term analyses of fatigue and psychological conditions through advanced algorithms. The project upholds the goal of improving operational safety and reducing health risks, and is committed to promoting a full-cycle health management strategy in the enterprise.  
 **II. Project Operation Model or Practice**  
 "Through the integrated P.A.T.H platform, the project breaks the fragmentation of health data on different platforms and systems, realises unified data collection, storage and analysis, and provides all-round health monitoring from immediate monitoring to long-term tracking, and from physiological to psychological. In addition, the project places special emphasis on integrated data processing and industry adaptability, which is not only applicable to the transport industry, but can also be extended to other industries as needed.  
