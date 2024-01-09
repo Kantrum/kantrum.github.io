@@ -100,6 +100,8 @@ author_profile: true
 ## 🐒 Basic Information
 ---
 
+<h2>🐒 Basic Information</h2>
+
 <div class="info-section">
     <h3>🌟 Personal Information</h2>
     <div style="margin-left: 20px;">
