@@ -32,7 +32,7 @@ author_profile: true
 
 <style>
         h2 {
-            background-color: #FFA500;
+            background-color: #FFC069;
             color: white;
             text-align: center;
             padding: 10px 0;
@@ -97,9 +97,11 @@ author_profile: true
 </head>
 
 
+## 🐒 Basic Information
+---
 
 <div class="info-section">
-    <h2>🌟 Personal Information</h2>
+    <h3>🌟 Personal Information</h2>
     <div style="margin-left: 20px;">
     <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Name (Chinese):</strong> 黄炯涛</p>
     <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Name (Pinyin):</strong> Huang Jiongtao</p>
@@ -118,7 +120,7 @@ author_profile: true
 
 
 <div class="info-section">
-    <h2>📘 Academic Background</h2>
+    <h3>📘 Academic Background</h2>
     <div style="margin-left: 20px;">
     <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Current Institution:</strong> University of Leeds | Southwest Jiaotong University</p>
     <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;"><strong>&bull; Major/Area of Study:</strong> Electronic and Electrical Engineering</p>
@@ -129,7 +131,7 @@ author_profile: true
 
 
 <div class="info-section">
-    <h2>🔥 Social Activities</h2>
+    <h3>🔥 Social Activities</h2>
     <div style="margin-left: 20px;">
     <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;">&bull; President of the University Student Campus Self-Management Committee, <strong>May 2023 – Present</strong></p>
     <p style="font-size: 16px; line-height: 1.6; margin-bottom: 5px;">&bull; Most Contributive Volunteer Award in the 31st Chengdu World University Games, <strong>May 2022</strong></p>
@@ -141,7 +143,7 @@ author_profile: true
 
 
 <div class="info-section">
-    <h2>🏆 Personal Honors</h2>
+    <h3>🏆 Personal Honors</h2>
     <div style="margin-left: 20px;">
         <h3 style="font-size: 18px; margin-top: 25px;">2023</h3>
         <p style="font-size: 16px; line-height: 1.6; margin-bottom: 3px;"><strong>&bull; March:</strong> Served as the Class Officer for the New Youth Class of 2022 in the "New Youth Global Competency Development Programme" with outstanding performance.</p>
