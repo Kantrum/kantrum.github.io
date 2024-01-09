@@ -97,10 +97,7 @@ author_profile: true
 </head>
 
 
-## 🐒 Basic Information
----
-
-<h2>🐒 Basic Information</h2>
+<h2>🐒 BASIC INFORMATION</h2>
 
 <div class="info-section">
     <h3>🌟 Personal Information</h2>
@@ -180,10 +177,8 @@ author_profile: true
 
 
 
+<h2>🗓️ MY UPCOMING SCHEDULE</h2>
 
-
-## 🗓️ My Upcoming Schedule
----
 > Here is my personal schedule.
 
 <head>
@@ -282,10 +277,8 @@ author_profile: true
 
 
 
+<h2>📸 PHOTOGRAPH</h2>
 
-
-## 📸 Photograph
----
 > Here is my personal photograph.
 
 <style>
