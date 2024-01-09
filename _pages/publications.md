@@ -20,6 +20,15 @@ author_profile: true
 </div>
 
 
+<style>
+        h2 {
+            background-color: #FFA500;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-bottom: 30px;
+        }
+</style>
 
 
 <head>
