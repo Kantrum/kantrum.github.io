@@ -1,11 +1,21 @@
 ---
 layout: archive
-title: "About Myself"
+title: ""
 permalink: /publications/
 author_profile: true
 ---
 
 {% include base_path %}
+
+<style>
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+</style>
+
+
+<h1>ABOUT MYSELF</h2>
 
 
 <style>
