@@ -15,7 +15,7 @@ author_profile: true
 </style>
 
 
-<h1>ABOUT MYSELF</h2>
+<h1>ABOUT MYSELF</h1>
 
 
 <style>
