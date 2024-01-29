@@ -7,23 +7,9 @@ date: 2023-12-31
 ---
 
 **Task:**  
-In this final unit assessment, you are required to design and implement the control panel of a washing machine using your STM32L476RG Nucleo-64 microcontroller development board. You will be expected to configure and make use of the various components that you have been using within the module so far (LEDs, buttons, sensors etc.), along with C++ software development (in either Mbed Studio or Keil Studio), to create a simulated washing machine control panel capable of the following functions: 
-* **Power function** *(switch the washing machine on/off).*  
-* **Wash cycle selection function** *(switch between a minimum of 2 cycle modes, indicate selected cycle).* 
-* **Parameter check function** *(check and make decisions based on a measured input parameter, e.g. water temperature).*  
-* **Run function** *(start cycle, complete required selected cycle, notify when cycle complete).* 
-* **Status interface function** *(monitor the status of the washing machine via serial).*  
+Unit 4 is the final step in the module and is an individual mini-project that will run over a period of 8 weeks (including the Easter Holiday). You will be able to apply your enhanced C++ skills to create an embedded systems-based game that, as a minimum requirement, must use the ST Nucleo-L476RG development board, joystick and LCD. However, you may extend the range of peripheral devices you use by adding devices like switches, LEDs, etc., or you might even be more ambitious and use I2C or SPI-based modules such as an accelerometer. Please note that if you choose to use peripheral devices that are not supported in the labs, you will have to purchase them yourself, as there is no budget allocated for the mini-project. Additionally, you will be responsible for coding and porting any required drivers onto the ST development board - lab tutors will have very limited time to provide assistance with this, other than to provide guidance. Furthermore, you can use 'CoolTerm' or the built-in serial communications monitor in Mbed Studio as an input/output i.e. a terminal to enable further interaction with your game through a PC/laptop keyboard/monitor.
 
-**You can extend the required functions beyond their identified basic requirements, and can also add your own extra functions to enhance your washing machine control panel.**  
- 
-With any project, it is a good idea to start small and build up step-by-step. The project might seem daunting at first, however, you have plenty of time to plan, implement and refine.  
-Key advice: 
-* Think carefully before you start your project and try to match your skills/experience to how far you plan to take the project. If you are too ambitious you might not finish the project on time. Conversely, choosing a project that is too simple won't achieve high marks. 
-* Start simple and add features incrementally and test them for correct operation before integrating them into the larger program - this will keep the project progressing and ensures that you have known, stable versions of your program to refer to. 
-* Keep regular backups of your program. 
-* If you go down the wrong path and get stuck developing a feature, do not be afraid to delete the code and tackle the problem in a different way. This is a much better approach than to keep adding more code to fix issues. 
-* Keep thinking and experimenting as you go, and you will develop your own style and approach to solving problems. 
-* Make sure you insert comments as often as possible in your code, as they help you and other programmers reading your code understand what the various variables, functions and classes etc. do in the program.
+Apart from the need to utilise the ST development board, joystick, and LCD, the game specification is open and driven by your area of interest and your skill level. In the past, students have created basic Arcade games such as Snake, Asteroids, Breakout, and Copter, which were built on the Pong game engine (example code provided). Some went even further and developed complex 3D games such as dungeon crawlers and a Star Wars-inspired X-Wing missing game, which is still one of the most impressive games submitted in the module.
 
 
 
