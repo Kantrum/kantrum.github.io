@@ -27,7 +27,7 @@ Key advice:
 
 
 
-**My Project:** 
+**My Project:**  
 My project involves the development of a washing machine control panel with two primary control modes: fully automatic and manual adjustment. The panel is designed with various components including buttons, indicators, a timer display window, sensors, a thermistor, and a buzzer. The buttons are for power, start, confirmation, and return, while the indicators show the process status. The panel also includes a pressure sensor, water temperature sensor, and a photoresistor.
 
 In the fully automatic mode, the washing machine operates through a sequence of steps starting from powering on, checking sensor readings, selecting the wash cycle, and executing the wash process. This mode automates the washing process, including water inlet, washing, draining, and spinning, and employs various sensors to ensure safe operation. If the machine detects an overload or high temperature, it pauses and alerts the user with the buzzer. The user can also pause the machine manually during the process.
@@ -40,7 +40,7 @@ The presentation of the project demonstrates the functionality of the washing ma
 
 Reflecting on the project, the developer discusses the learning experience, emphasizing the importance of programming skills, especially in C++. The project required a comprehensive understanding of microcontroller inputs and outputs, as well as effective use of programming constructs like loops and conditionals. Challenges faced during development, such as debugging and code optimization, provided valuable lessons in problem-solving and programming proficiency.
 
-Here's our recording!
+Here's my recording!
 ---
 
 <div style="position: relative; padding-bottom: 56.25%; padding-top: 25px; height: 0;">
