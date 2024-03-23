@@ -1,4 +1,4 @@
-![image](https://github.com/Kantrum/huangjiongtao.github.io/assets/95701501/6d8d0fe7-4ab1-4dc2-a418-9e73d4e52f16)---
+---
 title: "Academic Resume"
 collection: cvs
 permalink: /publication/academic-cv
