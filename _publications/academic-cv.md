@@ -29,14 +29,17 @@ EDUCATION BACKGROUND
 
 **Cornell University (QS: 13)**, Aug 2024 – May 2026
 * Major: Electrical and Computer Engineering, M.Eng.
+
 **University of Leeds (QS: 76)**, Sep 2020 – Jun 2024
 * Major: Electronic Information Engineering, B.Eng.
 * Overall GPA: **3.94/4.0 (Level 1 and Level 2)**
 * Predicted Degree Classification: **First Class Distinction**
+
 **Southwest Jiaotong University, SWJTU**, Sep 2020 – Jun 2024
 * Major: Electronic and Electrical Engineering, B.Eng.
 * Overall GPA: 3.71/4.0; Average Grade: **91.52/100; Rank 2/73**
 * All Specialized Core Courses GPA: **3.94/4.0**
+
 **Main Modules:** *Mathematics 2 (98.3), Further Engineering Mathematics (98), Control Systems (98), Digital Electronics and Microcontrollers (98), Circuit Analysis and Design (96), Embedded Systems Project (94), Microprocessors and Programmable Logic (94), Physical Electronics 2 (97.02), Power Electronics (95)*
 
 
