@@ -25,16 +25,21 @@ date: 2024-01-05
 </a>
 
 
-EDUCATION BACKGROUND
+教育背景 
 ======
 <hr style="border: 2px solid black;"/>
 
-**University of Leeds - Southwest Jiaotong University Joint School**, 2020-2024
-* B.Eng. in Electronic and Electrical Engineering Degree from **University of Leeds** Expected June 2024
-* B.Eng. in Electronic and Electrical Engineering Degree from **SWJTU** Expected June 2024
-* **Cumulative GPA: SWJTU: 91.52/100;  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UoL: 3.94/4, First Class Honors Expected**
-* Major Modules: Algorithms and Numerical Mathematics, Digital Electronics and Microcontrollers, Circuit Analysis and Design, Embedded Systems Project, Microprocessors and Programmable Logic.
+**康奈尔大学（QS世界排名13）**, **美国，纽约**
+电气与计算机工程专业，硕士 2024.08-2026.01
+
+**利兹大学（QS世界排名76）**, **英国，利兹**
+电子信息工程专业，学士 2020.09-2024.06
+* **成绩荣誉：** GPA：3.94/4.00，预计获得一等荣誉学位（Distinction）
+
+**西南交通大学（211/双一流高校）**, **中国，成都**
+电子信息工程专业，学士 2020.09-2024.06
+* **主修课程：** 高数2（98.3分），高级工程数学（98分），控制系统（98分），数字电子与微控制器（98分）等。
+* **成绩荣誉：** 平均分：91.52/100、年级排名：2/73；获得中国国际大学生创新大赛（2023）国家级铜奖、第16届中国大学生计算机设计大赛国家级一等奖、西南交通大学“三好学生”荣誉称号等46项荣誉。
 
 
 PATENTS AND PUBLICATIONS
