@@ -6,41 +6,23 @@ excerpt: 'This paper is about the number 3. The number 4 is left for future work
 date: 2023-12-27
 ---
 
-**Task:**  
-In this final unit assessment, you are required to design and implement the control panel of a washing machine using your STM32L476RG Nucleo-64 microcontroller development board. You will be expected to configure and make use of the various components that you have been using within the module so far (LEDs, buttons, sensors etc.), along with C++ software development (in either Mbed Studio or Keil Studio), to create a simulated washing machine control panel capable of the following functions: 
-* **Power function** *(switch the washing machine on/off).*  
-* **Wash cycle selection function** *(switch between a minimum of 2 cycle modes, indicate selected cycle).* 
-* **Parameter check function** *(check and make decisions based on a measured input parameter, e.g. water temperature).*  
-* **Run function** *(start cycle, complete required selected cycle, notify when cycle complete).* 
-* **Status interface function** *(monitor the status of the washing machine via serial).*  
+**Introduction:**  
+In the not-too-distant future, "Isotope" unfolds a riveting tale set against the stark, desolate backdrop of a lunar base. Sam Bell, a dedicated worker for the Bridge Corporation, is nearing the end of his three-year stint on the Moon, harvesting helium-3—a vital resource for Earth's energy needs. His only company is Garry, a biosynthetic humanoid, and the endless expanse of space. But as Sam's return to Earth approaches, a startling discovery shatters his solitude: he finds an injured clone of himself, revealing the company's secret cloning facility on the Moon. This clone, Sam Clone, was meant to replace him after his term, unbeknownst to the original Sam.
 
-**You can extend the required functions beyond their identified basic requirements, and can also add your own extra functions to enhance your washing machine control panel.**  
- 
-With any project, it is a good idea to start small and build up step-by-step. The project might seem daunting at first, however, you have plenty of time to plan, implement and refine.  
-Key advice: 
-* Think carefully before you start your project and try to match your skills/experience to how far you plan to take the project. If you are too ambitious you might not finish the project on time. Conversely, choosing a project that is too simple won't achieve high marks. 
-* Start simple and add features incrementally and test them for correct operation before integrating them into the larger program - this will keep the project progressing and ensures that you have known, stable versions of your program to refer to. 
-* Keep regular backups of your program. 
-* If you go down the wrong path and get stuck developing a feature, do not be afraid to delete the code and tackle the problem in a different way. This is a much better approach than to keep adding more code to fix issues. 
-* Keep thinking and experimenting as you go, and you will develop your own style and approach to solving problems. 
-* Make sure you insert comments as often as possible in your code, as they help you and other programmers reading your code understand what the various variables, functions and classes etc. do in the program.
+Faced with the undeniable reality of his existence and the grim fate awaiting clones at the end of their service, Sam and his clone confront the ethical dilemmas of cloning, identity, and corporate disregard for individual life. As the narrative unfolds, "Isotope" delves deep into themes of human rights, the sacrifices made in the name of progress, and the quest for autonomy against the backdrop of technological domination.
+
+In its essence, "Isotope" is a poignant exploration of what it means to be human in an age where the boundaries between man and machine, ethical and unethical, are increasingly blurred. It challenges viewers to contemplate the value of individual life in the vast expanse of the universe and the moral compass necessary to navigate the future of technological advancement.
 
 
+**Story Features:**  
+Our script was inspired by the film Moon, but very different from it. In the original film, the astronauts were unable to communicate with Earth, a key plot element. However, in our script we explored scenarios where real-time communication is possible. This change was a creative decision to extend the narrative of Moon after the signal jamming station was destroyed in the original film. Our story can be seen as a sequel of sorts, adding new ethical considerations while reflecting on the original film.
 
-**My Project:**  
-My project involves the development of a washing machine control panel with two primary control modes: fully automatic and manual adjustment. The panel is designed with various components including buttons, indicators, a timer display window, sensors, a thermistor, and a buzzer. The buttons are for power, start, confirmation, and return, while the indicators show the process status. The panel also includes a pressure sensor, water temperature sensor, and a photoresistor.
+Our aim is not just to memorialise Moon, but to use it as a springboard for discussing wider ethical issues in light of our mission objectives. We introduced the concept of clones having their own choices and agency, culminating in the clones' decision to stay on the Moon while the original Sam returns to Earth. This departure from the Moon allowed us to explore in greater depth the themes of human rights and choice in the context of cloning.
 
-In the fully automatic mode, the washing machine operates through a sequence of steps starting from powering on, checking sensor readings, selecting the wash cycle, and executing the wash process. This mode automates the washing process, including water inlet, washing, draining, and spinning, and employs various sensors to ensure safe operation. If the machine detects an overload or high temperature, it pauses and alerts the user with the buzzer. The user can also pause the machine manually during the process.
+We believe that our project offers a unique and innovative perspective on the ethics of human cloning. Our carefully crafted narrative aims to engage the audience in a thought-provoking way, prompting them to rethink the original film and its themes in light of the ethical considerations in our script.
 
-The manual adjustment mode allows more control over the washing process. After starting up and sensor checks, users can manually select the wash cycle and the specific operation they want the machine to perform, such as water inlet, washing, draining, or spinning. This mode also incorporates safety features similar to the automatic mode and allows for manual pausing of the wash cycle.
 
-The design of the control panel involves programming and microcontroller utilization. Key programming concepts applied include the use of loops, conditional statements, and functions in C++. The project integrates knowledge of digital signal outputs, potentiometer use, and serial outputs to control various components of the washing machine, like LEDs and sensors. A significant part of the design process involved troubleshooting and debugging to ensure smooth operation of the control interface.
-
-The presentation of the project demonstrates the functionality of the washing machine panel, including mode selection, process execution, and sensor operations. It highlights the interaction between different components and the overall user experience. Additionally, the project includes a status interface that communicates parameters and button presses to a computer.
-
-Reflecting on the project, the developer discusses the learning experience, emphasizing the importance of programming skills, especially in C++. The project required a comprehensive understanding of microcontroller inputs and outputs, as well as effective use of programming constructs like loops and conditionals. Challenges faced during development, such as debugging and code optimization, provided valuable lessons in problem-solving and programming proficiency.
-
-Here's my recording!
+Here's our recording!
 ---
 
 <div style="position: relative; padding-bottom: 56.25%; padding-top: 25px; height: 0;">
