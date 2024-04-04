@@ -22,13 +22,14 @@ After the learning in Unit 4, I hope you all have got a further understanding of
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;">
-    Download the Instructions for Building the Glider (PDF)
+    Download the ELEC2665 Unit 4 Project Brief (PDF)
   </button>
 </a>
 
 
 
 **My Project:**  
+---
 1.Introduction of FPGA  
 Field-Programmable Gate Arrays (FPGAs) are semiconductor devices, based around a matrix of configurable logic blocks (CLBs) connected via programmable interconnects. These devices can be reprogrammed to desired application or functionality requirements after manufacturing, hence the name "field-programmable". They are a powerful tool in digital system design because they bridge the gap between expensive custom hardware (ASICs) and flexible but slower software solutions.
 
