@@ -7,7 +7,8 @@ date: 2023-05-12
 ---
 
 
-**Task:**  
+**Task:**
+---
 After the learning in Unit 4, I hope you all have got a further understanding of FPGA as well as practical experience in coding the FPGA board. So now, for the Unit 4 assessment, you will be invited to show your learning outcome by designing a Stopwatch based on the MAX10 FPGA architecture that you have been working with this semester. A template Quartus project that forms the foundation of your design is provided. It is up to you to edit and create new modules to achieve as much of the specified function as you can within the assessment time frame. In addition to the practical work, you will also be submitting a design report with which the template has been provided. You should answer all the sessions to the best of your ability, using diagrams and figures where appropriate to illustrate your answers.
 
 
@@ -30,10 +31,10 @@ After the learning in Unit 4, I hope you all have got a further understanding of
 
 **My Project:**  
 ---
-1.Introduction of FPGA  
+**1.Introduction of FPGA**
 Field-Programmable Gate Arrays (FPGAs) are semiconductor devices, based around a matrix of configurable logic blocks (CLBs) connected via programmable interconnects. These devices can be reprogrammed to desired application or functionality requirements after manufacturing, hence the name "field-programmable". They are a powerful tool in digital system design because they bridge the gap between expensive custom hardware (ASICs) and flexible but slower software solutions.
 
-2.Introduction of the project  
+**2.Introduction of the project**  
 This project's primary objective is to design a digital stopwatch on an FPGA board, specifically the MAX10 FPGA architecture. The stopwatch is intended to be a multifunctional timekeeper, capable of starting, stopping, resetting, and holding time. It is designed to present the elapsed time with a precision of up to one-hundredth of a second, using the seven-segment displays available on the board for visualization.
 
 The project is divided into several main components, each serving a specific purpose in the overall design:  
@@ -42,12 +43,6 @@ The project is divided into several main components, each serving a specific pur
 **·Binary to Seven Segment Encoder:** This module takes the binary outputs from the Stopwatch Logic module and converts them into signals that can be displayed on the seven-segment displays.  
 **·Stopwatch:** This is the top-level module. It ties all the other modules together, takes inputs from the external world (such as control signals from the user), and outputs the appropriate signals to the seven-segment displays.  
 
-3.My learning outcome  
+**3.My learning outcome**
 Through the process of designing, coding, and testing each of these modules, and integrating them into a complete system, I have deepened my understanding of digital system design with FPGAs. I have learned how to handle clock signals, develop complex control logic, convert between different data representations, and create hierarchical designs. This project has allowed me to apply theoretical concepts from digital system design in a practical context, and it has demonstrated the power and flexibility of FPGAs for implementing custom digital systems.
 
-Here's my recording!
----
-
-<div style="position: relative; padding-bottom: 56.25%; padding-top: 25px; height: 0;">
-  <iframe src="//player.bilibili.com/player.html?bvid=BV1iV411S7Ki&page=1" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
-</div>
