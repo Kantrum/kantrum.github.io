@@ -31,7 +31,7 @@ After the learning in Unit 4, I hope you all have got a further understanding of
 
 **My Project:**  
 ---
-**1.Introduction of FPGA**
+**1.Introduction of FPGA**  
 Field-Programmable Gate Arrays (FPGAs) are semiconductor devices, based around a matrix of configurable logic blocks (CLBs) connected via programmable interconnects. These devices can be reprogrammed to desired application or functionality requirements after manufacturing, hence the name "field-programmable". They are a powerful tool in digital system design because they bridge the gap between expensive custom hardware (ASICs) and flexible but slower software solutions.
 
 **2.Introduction of the project**  
@@ -43,6 +43,6 @@ The project is divided into several main components, each serving a specific pur
 **·Binary to Seven Segment Encoder:** This module takes the binary outputs from the Stopwatch Logic module and converts them into signals that can be displayed on the seven-segment displays.  
 **·Stopwatch:** This is the top-level module. It ties all the other modules together, takes inputs from the external world (such as control signals from the user), and outputs the appropriate signals to the seven-segment displays.  
 
-**3.My learning outcome**
+**3.My learning outcome**  
 Through the process of designing, coding, and testing each of these modules, and integrating them into a complete system, I have deepened my understanding of digital system design with FPGAs. I have learned how to handle clock signals, develop complex control logic, convert between different data representations, and create hierarchical designs. This project has allowed me to apply theoretical concepts from digital system design in a practical context, and it has demonstrated the power and flexibility of FPGAs for implementing custom digital systems.
 
