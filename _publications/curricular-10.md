@@ -11,6 +11,22 @@ date: 2023-05-12
 After the learning in Unit 4, I hope you all have got a further understanding of FPGA as well as practical experience in coding the FPGA board. So now, for the Unit 4 assessment, you will be invited to show your learning outcome by designing a Stopwatch based on the MAX10 FPGA architecture that you have been working with this semester. A template Quartus project that forms the foundation of your design is provided. It is up to you to edit and create new modules to achieve as much of the specified function as you can within the assessment time frame. In addition to the practical work, you will also be submitting a design report with which the template has been provided. You should answer all the sessions to the best of your ability, using diagrams and figures where appropriate to illustrate your answers.
 
 
+<a href="https://kantrum.github.io/huangjiongtao.github.io/files/Instructions _for_Building_the_Glider.pdf" target="_blank">
+  <button style="background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;">
+    Download the Instructions for Building the Glider (PDF)
+  </button>
+</a>
+
+
 
 **My Project:**  
 1.Introduction of FPGA  
