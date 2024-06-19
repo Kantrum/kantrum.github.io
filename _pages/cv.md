@@ -29,7 +29,7 @@ author_profile: true
 
 <div style="padding: 30px; text-align: left;">
 
-  <a href="https://kantrum.github.io/huangjiongtao.github.io/publication/academic-cv"
+  <a href="https://kantrum.github.io/huangjiongtao.github.io/publication/academic-cv111"
      style="display: inline-block;
             padding: 15px 30px;
             margin: 10px;
@@ -43,7 +43,7 @@ author_profile: true
     🎓 Academic Resume
   </a>
 
-  <a href="https://kantrum.github.io/huangjiongtao.github.io/publication/job-cv"
+  <a href="https://kantrum.github.io/huangjiongtao.github.io/publication/job-cv111"
      style="display: inline-block;
             padding: 15px 30px;
             margin: 10px;
