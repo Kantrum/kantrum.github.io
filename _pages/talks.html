@@ -40,20 +40,22 @@ author_profile: true
 
 
 <h2>EDUCATION BACKGROUND</h2>
-<style>
+    <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Times New Roman', Times, serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: #f4f4f4;
             color: #333;
+            line-height: 1.6;
         }
 
         h2 {
             text-align: center;
             font-size: 2rem;
-            margin: 20px 0;
+            margin: 30px 0;
             color: #444;
+            text-transform: uppercase;
         }
 
         .education-container {
@@ -66,85 +68,48 @@ author_profile: true
         }
 
         .education-card {
-            background: linear-gradient(145deg, #ffffff, #f0f0f0);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .education-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .rank-label {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: linear-gradient(90deg, #ff5722, #ff9800);
-            color: white;
-            font-size: 14px;
-            font-weight: bold;
-            padding: 5px 15px;
-            border-radius: 20px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         .card-header {
             display: flex;
             align-items: center;
-            padding: 15px;
-            background: linear-gradient(90deg, #0275d8, #5bc0de);
-            color: white;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 15px;
         }
 
         .card-header img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
             margin-right: 15px;
-            border: 2px solid white;
         }
 
         .card-header h3 {
             margin: 0;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: bold;
+            color: #222;
+        }
+
+        .rank-label {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #0077b6;
+            text-transform: uppercase;
         }
 
         .card-content {
-            padding: 15px 20px;
-        }
-
-        .gpa-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .gpa-circle {
-            width: 100px;
-            height: 100px;
-            background: conic-gradient(#0275d8 0% calc(var(--gpa) * 100%), #eaeaea calc(var(--gpa) * 100%) 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #333;
-            font-weight: bold;
-            font-size: 1.2rem;
-            position: relative;
-        }
-
-        .gpa-circle span {
-            position: absolute;
-            bottom: -20px;
-            font-size: 0.9rem;
-            color: #555;
+            margin-top: 15px;
         }
 
         .details ul {
@@ -155,12 +120,40 @@ author_profile: true
 
         .details ul li {
             margin-bottom: 10px;
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: #555;
         }
 
         .details ul li strong {
-            color: #444;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .gpa-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .gpa-bar {
+            width: 100%;
+            height: 20px;
+            border-radius: 10px;
+            background: #eaeaea;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gpa-bar-fill {
+            height: 100%;
+            background: linear-gradient(to right, #0077b6, #0096c7);
+            width: calc(var(--gpa) * 100%);
+            transition: width 0.3s ease;
+        }
+
+        .gpa-text {
+            font-size: 0.9rem;
+            margin-top: 5px;
+            color: #555;
         }
 
         @media (max-width: 768px) {
@@ -179,73 +172,66 @@ author_profile: true
     <div class="education-container">
         <!-- Cornell University -->
         <div class="education-card">
-            <div class="rank-label">QS: 13</div>
             <div class="card-header">
-                <img src="https://kantrum.github.io/huangjiongtao.github.io/images/cornell-logo.png" alt="Cornell University Logo">
-                <h3>Cornell University</h3>
+                <img src="https://kantrum.github.io/huangjiongtao.github.io/images/cornell-logo.png" alt="Cornell Logo">
+                <div>
+                    <h3>Cornell University</h3>
+                    <span class="rank-label">QS Rank: 13</span>
+                </div>
             </div>
             <div class="card-content">
+                <p><strong>Program:</strong> M.Eng. in Electrical and Computer Engineering</p>
+                <p><strong>Duration:</strong> 2024 - 2026</p>
                 <div class="gpa-container">
-                    <div class="gpa-circle" style="--gpa: 0.98;">
-                        3.91
-                        <span>GPA</span>
+                    <div class="gpa-bar">
+                        <div class="gpa-bar-fill" style="--gpa: 0.98;"></div>
                     </div>
-                </div>
-                <div class="details">
-                    <ul>
-                        <li><strong>Program:</strong> M.Eng. in Electrical and Computer Engineering</li>
-                        <li><strong>Duration:</strong> 2024 - 2026</li>
-                    </ul>
+                    <div class="gpa-text">GPA: 3.91 / 4.0</div>
                 </div>
             </div>
         </div>
 
         <!-- University of Leeds -->
         <div class="education-card">
-            <div class="rank-label">QS: 76</div>
             <div class="card-header">
-                <img src="https://kantrum.github.io/huangjiongtao.github.io/images/leeds-logo.png" alt="University of Leeds Logo">
-                <h3>University of Leeds</h3>
+                <img src="https://kantrum.github.io/huangjiongtao.github.io/images/leeds-logo.png" alt="Leeds Logo">
+                <div>
+                    <h3>University of Leeds</h3>
+                    <span class="rank-label">QS Rank: 76</span>
+                </div>
             </div>
             <div class="card-content">
+                <p><strong>Program:</strong> B.Eng. in Electronic and Electrical Engineering</p>
+                <p><strong>Duration:</strong> 2020 - 2024</p>
+                <p><strong>Degree:</strong> Honours Class I</p>
                 <div class="gpa-container">
-                    <div class="gpa-circle" style="--gpa: 0.98;">
-                        3.91
-                        <span>GPA</span>
+                    <div class="gpa-bar">
+                        <div class="gpa-bar-fill" style="--gpa: 0.98;"></div>
                     </div>
-                </div>
-                <div class="details">
-                    <ul>
-                        <li><strong>Program:</strong> B.Eng. in Electronic and Electrical Engineering</li>
-                        <li><strong>Duration:</strong> 2020 - 2024</li>
-                        <li><strong>Honours:</strong> Class I</li>
-                    </ul>
+                    <div class="gpa-text">GPA: 3.91 / 4.0</div>
                 </div>
             </div>
         </div>
 
         <!-- Southwest Jiaotong University -->
         <div class="education-card">
-            <div class="rank-label">QS: N/A</div>
             <div class="card-header">
-                <img src="https://kantrum.github.io/huangjiongtao.github.io/images/swjt-logo.png" alt="Southwest Jiaotong University Logo">
-                <h3>Southwest Jiaotong University</h3>
+                <img src="https://kantrum.github.io/huangjiongtao.github.io/images/swjt-logo.png" alt="SWJTU Logo">
+                <div>
+                    <h3>Southwest Jiaotong University</h3>
+                    <span class="rank-label">Nationally Recognized</span>
+                </div>
             </div>
             <div class="card-content">
+                <p><strong>Program:</strong> B.Eng. in Electronic Information Engineering</p>
+                <p><strong>Duration:</strong> 2020 - 2024</p>
                 <div class="gpa-container">
-                    <div class="gpa-circle" style="--gpa: 0.94;">
-                        3.73
-                        <span>GPA</span>
+                    <div class="gpa-bar">
+                        <div class="gpa-bar-fill" style="--gpa: 0.94;"></div>
                     </div>
+                    <div class="gpa-text">GPA: 3.73 / 4.0</div>
                 </div>
-                <div class="details">
-                    <ul>
-                        <li><strong>Program:</strong> B.Eng. in Electronic Information Engineering</li>
-                        <li><strong>Duration:</strong> 2020 - 2024</li>
-                        <li><strong>Specialized GPA:</strong> 3.94</li>
-                        <li><strong>Key Modules:</strong> Control Systems, Embedded Systems</li>
-                    </ul>
-                </div>
+                <p><strong>Key Modules:</strong> Control Systems, Embedded Systems</p>
             </div>
         </div>
     </div>
