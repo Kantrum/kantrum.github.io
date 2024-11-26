@@ -40,130 +40,121 @@ author_profile: true
 
 
 <h2>EDUCATION BACKGROUND</h2>
-    <style>
+<style>
         body {
-            font-family: 'Times New Roman', Times, serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
             color: #333;
-            line-height: 1.6;
         }
 
         h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin: 30px 0;
-            color: #444;
-            text-transform: uppercase;
+            text-align: left;
+            font-size: 1.8rem;
+            margin: 20px 40px;
+            font-weight: bold;
+            color: #1d2d64;
         }
 
         .education-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            display: flex;
+            flex-direction: column;
             gap: 20px;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+            padding: 0 40px 40px;
         }
 
         .education-card {
-            background: #fff;
-            border: 1px solid #ddd;
+            background-color: #fff;
+            border: 1px solid #e3e3e3;
             border-radius: 8px;
-            padding: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .education-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .card-header {
+            padding: 20px;
             display: flex;
-            align-items: center;
-            margin-bottom: 15px;
+            justify-content: space-between;
+            align-items: flex-start;
         }
 
-        .card-header img {
-            width: 60px;
-            height: 60px;
-            border-radius: 8px;
-            margin-right: 15px;
+        .education-info {
+            max-width: 70%;
         }
 
-        .card-header h3 {
-            margin: 0;
+        .university-name {
             font-size: 1.4rem;
             font-weight: bold;
-            color: #222;
-        }
-
-        .rank-label {
-            font-size: 1rem;
-            font-weight: bold;
-            color: #0077b6;
-            text-transform: uppercase;
-        }
-
-        .card-content {
-            margin-top: 15px;
-        }
-
-        .details ul {
-            list-style: none;
-            padding: 0;
             margin: 0;
+            color: #1d2d64;
         }
 
-        .details ul li {
-            margin-bottom: 10px;
-            font-size: 0.9rem;
-            color: #555;
-        }
-
-        .details ul li strong {
-            font-weight: bold;
-            color: #333;
-        }
-
-        .gpa-container {
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .gpa-bar {
-            width: 100%;
-            height: 20px;
-            border-radius: 10px;
-            background: #eaeaea;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .gpa-bar-fill {
-            height: 100%;
-            background: linear-gradient(to right, #0077b6, #0096c7);
-            width: calc(var(--gpa) * 100%);
-            transition: width 0.3s ease;
-        }
-
-        .gpa-text {
+        .qs-ranking {
             font-size: 0.9rem;
             margin-top: 5px;
-            color: #555;
+            color: #666;
         }
 
-        @media (max-width: 768px) {
-            .education-container {
-                grid-template-columns: 1fr;
-            }
+        .program-title {
+            margin: 15px 0 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #1d2d64;
+        }
 
-            .card-header h3 {
-                font-size: 1.2rem;
-            }
+        .program-details {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .location {
+            font-size: 0.95rem;
+            margin-top: 5px;
+            color: #3a87cc;
+        }
+
+        .gpa-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .gpa-box {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #e3e3e3;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .date {
+            font-size: 0.95rem;
+            font-weight: bold;
+            color: #1d2d64;
+        }
+
+        .key-courses {
+            margin-top: 10px;
+        }
+
+        .course-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .course-item {
+            background-color: #f5f5f5;
+            padding: 5px 10px;
+            font-size: 0.9rem;
+            color: #555;
+            border-radius: 5px;
+            border: 1px solid #e3e3e3;
         }
     </style>
 </head>
@@ -172,67 +163,68 @@ author_profile: true
     <div class="education-container">
         <!-- Cornell University -->
         <div class="education-card">
-            <div class="card-header">
-                <img src="https://kantrum.github.io/huangjiongtao.github.io/images/cornell-logo.png" alt="Cornell Logo">
-                <div>
-                    <h3>Cornell University</h3>
-                    <span class="rank-label">QS Rank: 13</span>
-                </div>
+            <div class="education-info">
+                <p class="university-name">Cornell University</p>
+                <p class="qs-ranking">QS World Ranking: #13</p>
+                <p class="program-title">Master of Engineering (M.Eng.)</p>
+                <p class="program-details">Electrical and Computer Engineering</p>
+                <p class="location">Ithaca, New York, USA</p>
             </div>
-            <div class="card-content">
-                <p><strong>Program:</strong> M.Eng. in Electrical and Computer Engineering</p>
-                <p><strong>Duration:</strong> 2024 - 2026</p>
-                <div class="gpa-container">
-                    <div class="gpa-bar">
-                        <div class="gpa-bar-fill" style="--gpa: 0.98;"></div>
-                    </div>
-                    <div class="gpa-text">GPA: 3.91 / 4.0</div>
-                </div>
+            <p class="date">2024.08 – Present</p>
+        </div>
+
+        <!-- Peking University -->
+        <div class="education-card">
+            <div class="education-info">
+                <p class="university-name">Peking University</p>
+                <p class="qs-ranking">QS World Ranking: #14</p>
+                <p class="program-title">Summer School</p>
+                <p class="program-details">Frontiers of Artificial Intelligence</p>
+                <p class="location">Beijing, China</p>
             </div>
+            <p class="date">2024.07 – 2024.08</p>
         </div>
 
         <!-- University of Leeds -->
         <div class="education-card">
-            <div class="card-header">
-                <img src="https://kantrum.github.io/huangjiongtao.github.io/images/leeds-logo.png" alt="Leeds Logo">
-                <div>
-                    <h3>University of Leeds</h3>
-                    <span class="rank-label">QS Rank: 76</span>
+            <div class="education-info">
+                <p class="university-name">University of Leeds</p>
+                <p class="qs-ranking">QS World Ranking: #76</p>
+                <p class="program-title">Bachelor of Engineering (B.Eng.)</p>
+                <p class="program-details">Electronic and Electrical Engineering</p>
+                <p class="location">Leeds, United Kingdom</p>
+                <div class="gpa-section">
+                    <div class="gpa-box">Overall GPA: 3.91 / 4.0</div>
+                    <div class="gpa-box">Honours: First Class</div>
                 </div>
             </div>
-            <div class="card-content">
-                <p><strong>Program:</strong> B.Eng. in Electronic and Electrical Engineering</p>
-                <p><strong>Duration:</strong> 2020 - 2024</p>
-                <p><strong>Degree:</strong> Honours Class I</p>
-                <div class="gpa-container">
-                    <div class="gpa-bar">
-                        <div class="gpa-bar-fill" style="--gpa: 0.98;"></div>
-                    </div>
-                    <div class="gpa-text">GPA: 3.91 / 4.0</div>
-                </div>
-            </div>
+            <p class="date">2020.09 – 2024.07</p>
         </div>
 
         <!-- Southwest Jiaotong University -->
         <div class="education-card">
-            <div class="card-header">
-                <img src="https://kantrum.github.io/huangjiongtao.github.io/images/swjt-logo.png" alt="SWJTU Logo">
-                <div>
-                    <h3>Southwest Jiaotong University</h3>
-                    <span class="rank-label">Nationally Recognized</span>
+            <div class="education-info">
+                <p class="university-name">Southwest Jiaotong University</p>
+                <p class="qs-ranking">Nationally Recognized</p>
+                <p class="program-title">Bachelor of Engineering (B.Eng.)</p>
+                <p class="program-details">Electronic Information Engineering</p>
+                <p class="location">Chengdu, China</p>
+                <div class="gpa-section">
+                    <div class="gpa-box">Overall GPA: 3.73 / 4.0</div>
+                    <div class="gpa-box">Core Courses GPA: 3.94 / 4.0</div>
                 </div>
-            </div>
-            <div class="card-content">
-                <p><strong>Program:</strong> B.Eng. in Electronic Information Engineering</p>
-                <p><strong>Duration:</strong> 2020 - 2024</p>
-                <div class="gpa-container">
-                    <div class="gpa-bar">
-                        <div class="gpa-bar-fill" style="--gpa: 0.94;"></div>
+                <div class="key-courses">
+                    <p><strong>Key Courses:</strong></p>
+                    <div class="course-list">
+                        <div class="course-item">Mathematics 2 (98.3)</div>
+                        <div class="course-item">Further Engineering Mathematics (98)</div>
+                        <div class="course-item">Control Systems (98)</div>
+                        <div class="course-item">Digital Electronics (98)</div>
+                        <div class="course-item">Circuit Analysis (96)</div>
                     </div>
-                    <div class="gpa-text">GPA: 3.73 / 4.0</div>
                 </div>
-                <p><strong>Key Modules:</strong> Control Systems, Embedded Systems</p>
             </div>
+            <p class="date">2020.09 – 2024.07</p>
         </div>
     </div>
 </body>
