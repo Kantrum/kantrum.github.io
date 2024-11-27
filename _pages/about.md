@@ -202,7 +202,7 @@ body {
 }
 
 .hero-text h1 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 5vw, 2.5rem);
     font-weight: 600;
     margin-bottom: 1rem;
     background: linear-gradient(45deg, var(--text), var(--accent));
@@ -213,13 +213,13 @@ body {
 }
 
 .title {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
     color: var(--accent);
     margin-bottom: 1rem;
 }
 
 .description {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     color: var(--text-secondary);
     max-width: 600px;
 }
@@ -258,7 +258,7 @@ body {
 
 .footer {
     width: 100%;
-    padding: 15px 0;
+    padding: clamp(10px, 2vh, 15px) 0;
     background-color: rgba(20, 20, 20, 0.9);
     backdrop-filter: blur(10px);
     margin-top: auto;
@@ -268,7 +268,7 @@ body {
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 clamp(10px, 3vw, 15px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -277,17 +277,17 @@ body {
 .footer-info p {
     margin: 0;
     color: #ffffff;
-    font-size: 0.8rem;
+    font-size: clamp(0.7rem, 2vw, 0.8rem);
     opacity: 0.8;
 }
 
 .footer-links a {
     color: #ffffff;
     text-decoration: none;
-    margin-left: 15px;
+    margin-left: clamp(10px, 2vw, 15px);
     transition: all 0.3s ease;
     opacity: 0.8;
-    font-size: 0.8rem;
+    font-size: clamp(0.7rem, 2vw, 0.8rem);
 }
 
 .footer-links a:hover {
@@ -297,7 +297,7 @@ body {
 }
 
 .hero .position {
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
     color: #ffffff;
     margin: 10px 0;
     font-weight: 500;
@@ -539,6 +539,18 @@ body {
         font-size: 0.7rem;
     }
 }
+
+/* 大屏幕优化 */
+@media (min-width: 1200px) {
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .footer-info p,
+    .footer-links a {
+        font-size: 0.8rem;
+    }
+}
 </style>
 
 <head>
@@ -680,7 +692,7 @@ const particlesGeometry = new THREE.BufferGeometry();
 const particlesCount = 5000;
 const posArray = new Float32Array(particlesCount * 3);
 
-// 随机���成粒子位置
+// 随机成粒子位置
 for(let i = 0; i < particlesCount * 3; i++) {
     posArray[i] = (Math.random() - 0.5) * 100;
 }
