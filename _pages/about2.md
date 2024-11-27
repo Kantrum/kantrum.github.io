@@ -4,8 +4,8 @@ title: "Huang Jiongtao's personal websites"
 excerpt: "Home"
 author_profile: true
 redirect_from: 
-  - /home/
-  - /home.html
+  - /about/
+  - /about.html
 ---
 
 <style>
