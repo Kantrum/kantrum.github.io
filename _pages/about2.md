@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "Huang Jiongtao's personal websites"
-excerpt: "About me"
+excerpt: "Home"
 author_profile: true
 redirect_from: 
   - /home/
