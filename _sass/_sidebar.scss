@@ -3,72 +3,64 @@
    ========================================================================== */
 
 /*
-   Default
+   Default Styles
    ========================================================================== */
 
 .sidebar {
-  margin-bottom: 1em;
+  position: fixed;
+  top: 100px;
+  left: 20px;
+  width: 300px; /* 固定宽度，避免占正文空间 */
+  height: calc(100vh - 120px); /* 限制高度，保持与视口适配 */
   padding: 20px;
-  border-radius: 20px;
-  background: linear-gradient(145deg, #1e1e2f, #252535);
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5), -10px -10px 30px rgba(50, 50, 70, 0.3);
+  border-radius: 15px;
+  background: #ffffff; /* 纯白背景，体现简洁风格 */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* 支持滚动内容 */
+  z-index: 100;
+
+  /* 添加一个优雅的边框渐变 */
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  border-image: linear-gradient(45deg, #007acc, #5bc6ff) 1;
+
+  /* 动态交互效果 */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-  @include clearfix();
-
   @include breakpoint($large) {
+    width: 260px; /* 大屏设备稍微缩小宽度 */
     &:hover {
-      transform: translateY(-5px);
-      box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.6), -15px -15px 40px rgba(60, 60, 90, 0.4);
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
     }
   }
 
   h2, h3, h4, h5, h6 {
-    margin-bottom: 0.5em;
-    font-family: 'Roboto', sans-serif;
-    color: #00d8ff;
-    text-transform: uppercase;
-    font-weight: 600;
-  }
-
-  h3, h4 {
-    font-size: $type-size-5;
-    letter-spacing: 1.2px;
+    margin-bottom: 1em;
+    font-family: 'Georgia', serif;
+    color: #333;
+    text-transform: none;
+    font-weight: bold;
+    border-bottom: 2px solid #007acc; /* 增加学术感的分割线 */
+    padding-bottom: 5px;
   }
 
   p, li {
-    font-family: 'Roboto Mono', monospace;
-    font-size: $type-size-6;
-    line-height: 1.8;
-    color: #a3a3b5;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
   }
 
   img {
     width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
-      transform: scale(1.1);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+      transform: scale(1.05);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
     }
-  }
-}
-
-.sidebar__right {
-  margin-bottom: 1em;
-
-  @include breakpoint($large) {
-    position: relative;
-    float: right;
-    width: $right-sidebar-width-narrow;
-    margin-left: span(0.5 of 12);
-    z-index: 10;
-  }
-
-  @include breakpoint($x-large) {
-    width: $right-sidebar-width;
   }
 }
 
@@ -77,163 +69,76 @@
    ========================================================================== */
 
 .author__avatar {
-  display: table-cell;
-  vertical-align: top;
-  width: 50px;
-
-  @include breakpoint($large) {
-    display: block;
-    width: auto;
-    height: auto;
-  }
+  width: 100px;
+  margin: 0 auto;
+  margin-bottom: 20px;
 
   img {
-    max-width: 175px;
+    max-width: 100%;
     border-radius: 50%;
-    border: 3px solid rgba(0, 216, 255, 0.6);
-    background: radial-gradient(circle, rgba(0, 216, 255, 0.2), transparent 70%);
-    box-shadow: 0 8px 20px rgba(0, 216, 255, 0.4);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 2px solid #007acc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 
     &:hover {
-      transform: scale(1.15) rotate(3deg);
-      box-shadow: 0 12px 30px rgba(0, 216, 255, 0.6);
+      transform: scale(1.1);
     }
   }
 }
 
 .author__content {
-  display: table-cell;
-  vertical-align: top;
-  padding-left: 20px;
-  padding-right: 25px;
-  line-height: 1.5;
+  text-align: center;
 
-  @include breakpoint($large) {
-    display: block;
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
+  .author__name {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #007acc;
   }
 
-  p {
-    color: #b0b0c3;
-    font-size: $type-size-5;
-  }
-}
-
-.author__name {
-  margin: 0;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: $type-size-4;
-  text-transform: uppercase;
-
-  @include breakpoint($large) {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-}
-.sidebar .author__name {
-  font-family: 'Roboto', sans-serif;
-  letter-spacing: 2px;
-  text-shadow: 2px 2px 5px rgba(0, 216, 255, 0.5);
-}
-
-.author__bio {
-  margin: 0;
-  font-style: italic;
-  color: #9a9ab0;
-  font-size: $type-size-6;
-
-  @include breakpoint($large) {
-    margin-top: 10px;
-    margin-bottom: 20px;
-  }
-}
-
-.author__urls-wrapper {
-  position: relative;
-  display: table-cell;
-  vertical-align: middle;
-  font-family: 'Roboto Mono', monospace;
-  z-index: 10;
-  position: relative;
-  cursor: pointer;
-
-  li:last-child {
-    a {
-      margin-bottom: 0;
-    }
-  }
-
-  @include breakpoint($large) {
-    display: block;
-  }
-
-  button {
-    margin-bottom: 0;
-
-    @include breakpoint($large) {
-      display: none;
-    }
+  .author__bio {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
   }
 }
 
 .author__urls {
-  display: none;
-  position: absolute;
-  right: 0;
-  margin-top: 15px;
-  padding: 15px;
-  list-style-type: none;
-  border: 1px solid rgba(0, 216, 255, 0.2);
-  border-radius: 10px;
-  background: #1e1e2f;
-  z-index: 99;
-  box-shadow: 0 8px 20px rgba(0, 216, 255, 0.2);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  transform: translateY(-10px);
-  opacity: 0;
-
-  @include breakpoint($large) {
-    display: block;
-    position: relative;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    box-shadow: none;
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  &:hover {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  li {
-    white-space: nowrap;
-    margin-bottom: 10px;
-  }
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
 
   a {
-    display: block;
-    margin-bottom: 5px;
-    padding: 10px;
-    border-radius: 5px;
-    background: #292940;
-    color: #00d8ff;
-    font-size: $type-size-5;
+    display: inline-block;
+    font-size: 16px;
+    color: #555;
     text-decoration: none;
-    text-align: center;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
 
     &:hover {
-      background: #00d8ff;
-      color: #1e1e2f;
-      box-shadow: 0 0 10px rgba(0, 216, 255, 0.8), 0 0 20px rgba(0, 216, 255, 0.5);
+      color: #007acc;
+    }
+
+    i {
+      margin-right: 5px;
     }
   }
+}
+
+/*
+   Scrollbar Styling for Sidebar
+   ========================================================================== */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #007acc;
+  border-radius: 5px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #f0f0f0;
 }
