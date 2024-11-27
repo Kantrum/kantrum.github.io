@@ -193,7 +193,7 @@ collections:
 defaults:
   # 特例配置（专用于 index 页面）
   - scope:
-      path: "about.md" # 仅对 about.md 生效
+      path: "_pages/about.md" # 仅对 about.md 生效
     values:
       layout: none # 不使用任何布局
       title: "Huang Jiongtao's Homepage"
