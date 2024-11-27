@@ -183,7 +183,7 @@ body {
 /* 主要内容区域 */
 .main-content {
     min-height: 100vh;
-    padding: 0 4rem;
+    padding: 0 1rem;
 }
 
 .hero {
@@ -191,8 +191,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 1000px;
+    align-items: center;
+    max-width: 100%;
     margin: 0 auto;
+    text-align: center;
 }
 
 .hero-text {
@@ -200,12 +202,14 @@ body {
 }
 
 .hero-text h1 {
-    font-size: 5rem;
+    font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 1rem;
     background: linear-gradient(45deg, var(--text), var(--accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 .title {
@@ -254,7 +258,7 @@ body {
 
 .footer {
     width: 100%;
-    padding: 25px 0;
+    padding: 15px 0;
     background-color: rgba(20, 20, 20, 0.9);
     backdrop-filter: blur(10px);
     margin-top: auto;
@@ -264,7 +268,7 @@ body {
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -273,16 +277,17 @@ body {
 .footer-info p {
     margin: 0;
     color: #ffffff;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     opacity: 0.8;
 }
 
 .footer-links a {
     color: #ffffff;
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: 15px;
     transition: all 0.3s ease;
     opacity: 0.8;
+    font-size: 0.8rem;
 }
 
 .footer-links a:hover {
@@ -514,6 +519,26 @@ body {
 .lang-text:not(.active) {
     opacity: 0.6;
 }
+
+/* 移动端响应式调整 */
+@media (max-width: 768px) {
+    .footer {
+        padding: 10px 0;
+    }
+    
+    .footer-content {
+        padding: 0 10px;
+    }
+    
+    .footer-info p {
+        font-size: 0.7rem;
+    }
+    
+    .footer-links a {
+        margin-left: 10px;
+        font-size: 0.7rem;
+    }
+}
 </style>
 
 <head>
@@ -655,7 +680,7 @@ const particlesGeometry = new THREE.BufferGeometry();
 const particlesCount = 5000;
 const posArray = new Float32Array(particlesCount * 3);
 
-// 随机生成粒子位置
+// 随机���成粒子位置
 for(let i = 0; i < particlesCount * 3; i++) {
     posArray[i] = (Math.random() - 0.5) * 100;
 }
