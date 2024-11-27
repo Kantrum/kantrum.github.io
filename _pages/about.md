@@ -516,7 +516,7 @@ body {
                 <ul class="nav-links">
                     <li><a href="publications/" data-en="About" data-zh="关于">About</a></li>
                     <li><a href="talks/" data-en="Academic" data-zh="学术">Academic</a></li>
-                    <li><a href="entrepreneurial/" data-en="Entrepreneurial" data-zh="创业">Entrepreneurial</a></li>
+                    <li><a href="entrepreneurship/" data-en="Entrepreneurial" data-zh="创业">Entrepreneurial</a></li>
                     <li><a href="portfolio/" data-en="Life" data-zh="生活">Life</a></li>
                     <li><a href="year-archive/" data-en="Blog" data-zh="博客">Blog</a></li>
                     <li><a href="cv/" data-en="Resume" data-zh="简历">Resume</a></li>
