@@ -497,7 +497,7 @@ body {
         <!-- 导航栏 -->
         <nav class="navbar">
             <div class="nav-brand">
-                <a href="index.html" data-en="Jiongtao Huang" data-zh="黄炯涛">Jiongtao Huang</a>
+                <a href="" data-en="Jiongtao Huang" data-zh="黄炯涛">Jiongtao Huang</a>
             </div>
             <div class="nav-right">
                 <!-- 语言切换按钮 -->
