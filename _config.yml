@@ -206,7 +206,7 @@ defaults:
   - scope:
       path: "about.md" # 仅对 about.md 生效
     values:
-      layout: null # 不使用任何布局
+      layout: none # 不使用任何布局
       title: "Huang Jiongtao's Homepage"
       permalink: /
   # _pages
