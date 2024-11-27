@@ -6,52 +6,59 @@
   position: fixed;
   top: 100px;
   left: 20px;
-  width: 280px; /* 固定宽度，避免影响正文 */
+  width: 280px; /* 固定宽度 */
   height: calc(100vh - 120px);
   padding: 20px;
   border-radius: 15px;
-  background: #f9f9f9; /* 浅灰背景，简洁风格 */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* 浮起来的阴影效果 */
-  overflow-y: auto; /* 支持滚动内容 */
-  z-index: 200; /* 设置较高 z-index，避免被导航栏覆盖 */
-
-  /* 动态交互效果 */
+  background: #ffffff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  overflow-y: auto;
+  z-index: 200; /* 保证不会被正文或导航覆盖 */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   @include breakpoint($large) {
-    width: 260px; /* 在大屏幕适当缩小宽度 */
+    width: 260px;
     &:hover {
       box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
     }
   }
 
-  h2, h3, h4, h5, h6 {
-    margin-bottom: 1em;
-    font-family: 'Georgia', serif;
-    color: #333;
-    text-transform: none;
-    font-weight: bold;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1); /* 学术风格分割线 */
-    padding-bottom: 5px;
-  }
-
-  p, li {
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    line-height: 1.6;
-    color: #555;
-  }
-
-  img {
+  /* 移动端处理：隐藏侧边栏 */
+  @include breakpoint($small) {
+    position: static;
     width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: auto;
+    margin-bottom: 20px;
+    box-shadow: none;
+  }
+}
 
-    &:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-    }
+h2, h3, h4, h5, h6 {
+  margin-bottom: 1em;
+  font-family: 'Georgia', serif;
+  color: #333;
+  text-transform: none;
+  font-weight: bold;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 5px;
+}
+
+p, li {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
   }
 }
 
@@ -67,7 +74,7 @@
   img {
     max-width: 100%;
     border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 阴影增强头像的科技感 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 
     &:hover {
@@ -105,37 +112,39 @@
 
   .follow-btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    color: #333;
-    background: #ffffff;
-    border-radius: 10px;
+    color: #ffffff;
+    background: #007acc;
+    border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all 0.3s ease;
 
     &:hover {
-      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+      background: #005f99;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
       transform: translateY(-2px);
     }
 
     &:active {
+      background: #004e80;
       box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
-      transform: translateY(2px); /* 按下时的视觉反馈 */
+      transform: translateY(2px);
     }
   }
 
-  /* 动态展示个人信息，竖向排列 */
+  /* 动态展示个人信息 */
   .dynamic-info {
     display: none; /* 默认隐藏 */
     margin-top: 20px;
-    text-align: left;
-    padding: 15px;
-    border-radius: 10px;
-    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 15px;
+    background: #f9f9f9;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
 
     p {
       margin: 10px 0;
@@ -143,11 +152,33 @@
       line-height: 1.5;
       color: #555;
     }
+
+    /* 样式优化，分隔信息 */
+    .info-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+
+      i {
+        margin-right: 10px;
+        color: #007acc;
+      }
+
+      a {
+        font-size: 14px;
+        color: #007acc;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 
-  /* Follow 按钮触发动态展示 */
+  /* Follow 按钮触发展示 */
   .follow-btn:active ~ .dynamic-info {
-    display: block; /* 点击后显示动态信息 */
+    display: block; /* 点击后显示 */
     animation: fadeIn 0.3s ease;
   }
 }
@@ -179,29 +210,4 @@
 
 .sidebar::-webkit-scrollbar-track {
   background: #f9f9f9;
-}
-
-/* ==========================================================================
-   Navigation Bar and Footer Fix
-   ========================================================================== */
-
-/* 保证导航栏始终在侧边栏和页脚之上 */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 300; /* 设置更高的 z-index */
-  background: #ffffff;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* 添加阴影分割导航栏和内容 */
-}
-
-/* 页脚不会覆盖内容，保持页面清晰 */
-.footer {
-  position: relative;
-  z-index: 100;
-  background: #f9f9f9;
-  padding: 20px 0;
-  text-align: center;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
