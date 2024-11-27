@@ -109,7 +109,8 @@ body {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0;
+    padding: 10px;
+    z-index: 1001;
 }
 
 .mobile-menu-btn span {
@@ -121,6 +122,19 @@ body {
     transition: all 0.3s ease;
 }
 
+/* 添加汉堡菜单动画效果 */
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
     .mobile-menu-btn {
@@ -129,18 +143,40 @@ body {
     
     .nav-links {
         display: none;
-        position: absolute;
-        top: 100%;
+        position: fixed;
+        top: 0;
         left: 0;
         width: 100%;
-        background: rgba(0, 0, 0, 0.9);
+        height: 100vh;
+        background: rgba(10, 25, 47, 0.95);
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         padding: 20px;
-        gap: 15px;
+        gap: 25px;
+        z-index: 1000;
     }
     
     .nav-links.active {
         display: flex;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+    
+    /* 调整其他元素在移动端的布局 */
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+    
+    .main-content {
+        padding: 0 1.5rem;
+    }
+    
+    .navbar {
+        padding: 15px 20px;
     }
 }
 
@@ -749,5 +785,41 @@ document.addEventListener('DOMContentLoaded', () => {
         updateLanguage();
     }
 }); 
+</script>
+
+<script>
+// 移动端菜单功能
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        
+        // 切换body滚动
+        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+    });
+    
+    // 点击导航链接时关闭菜单
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenuBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+    
+    // 点击菜单外区域关闭菜单
+    document.addEventListener('click', (e) => {
+        if (navLinks.classList.contains('active') && 
+            !navLinks.contains(e.target) && 
+            !mobileMenuBtn.contains(e.target)) {
+            mobileMenuBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+});
 </script>
 </html>
