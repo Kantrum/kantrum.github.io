@@ -2,35 +2,26 @@
    SIDEBAR
    ========================================================================== */
 
-/*
-   Default Styles
-   ========================================================================== */
-
 .sidebar {
   position: fixed;
   top: 100px;
   left: 20px;
-  width: 300px; /* 固定宽度，避免占正文空间 */
-  height: calc(100vh - 120px); /* 限制高度，保持与视口适配 */
+  width: 280px; /* 固定宽度，避免影响正文 */
+  height: calc(100vh - 120px);
   padding: 20px;
   border-radius: 15px;
-  background: #ffffff; /* 纯白背景，体现简洁风格 */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  overflow-y: auto; /* 支持滚动内容 */
+  background: #f9f9f9; /* 浅灰背景，简洁风格 */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* 浮起来的阴影效果 */
+  overflow-y: auto;
   z-index: 100;
-
-  /* 添加一个优雅的边框渐变 */
-  border: 1px solid transparent;
-  background-clip: padding-box;
-  border-image: linear-gradient(45deg, #007acc, #5bc6ff) 1;
 
   /* 动态交互效果 */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   @include breakpoint($large) {
-    width: 260px; /* 大屏设备稍微缩小宽度 */
+    width: 260px; /* 在大屏幕适当缩小宽度 */
     &:hover {
-      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
     }
   }
 
@@ -40,7 +31,7 @@
     color: #333;
     text-transform: none;
     font-weight: bold;
-    border-bottom: 2px solid #007acc; /* 增加学术感的分割线 */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1); /* 学术风格分割线 */
     padding-bottom: 5px;
   }
 
@@ -64,8 +55,8 @@
   }
 }
 
-/*
-   Author profile and links
+/* ==========================================================================
+   Author Profile
    ========================================================================== */
 
 .author__avatar {
@@ -76,8 +67,7 @@
   img {
     max-width: 100%;
     border-radius: 50%;
-    border: 2px solid #007acc;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 阴影增强头像的科技感 */
     transition: transform 0.3s ease;
 
     &:hover {
@@ -94,7 +84,7 @@
     font-family: 'Georgia', serif;
     font-size: 18px;
     font-weight: bold;
-    color: #007acc;
+    color: #333;
   }
 
   .author__bio {
@@ -105,6 +95,43 @@
   }
 }
 
+/* ==========================================================================
+   Follow Button
+   ========================================================================== */
+
+.author__urls-wrapper {
+  text-align: center;
+  margin-top: 20px;
+
+  .follow-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #333;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+      transform: translateY(2px); /* 按下时的视觉反馈 */
+    }
+  }
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
 .author__urls {
   margin-top: 20px;
   display: flex;
@@ -113,7 +140,7 @@
   a {
     display: inline-block;
     font-size: 16px;
-    color: #555;
+    color: #333;
     text-decoration: none;
     transition: color 0.3s ease;
 
@@ -127,18 +154,19 @@
   }
 }
 
-/*
+/* ==========================================================================
    Scrollbar Styling for Sidebar
    ========================================================================== */
+
 .sidebar::-webkit-scrollbar {
   width: 8px;
 }
 
 .sidebar::-webkit-scrollbar-thumb {
-  background: #007acc;
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
 
 .sidebar::-webkit-scrollbar-track {
-  background: #f0f0f0;
+  background: #f9f9f9;
 }
