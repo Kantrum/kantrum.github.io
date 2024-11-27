@@ -12,6 +12,10 @@
 
   @include clearfix();
   margin-bottom: 1em;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
   @include breakpoint($large) {
     @include span(2 of 12);
@@ -20,18 +24,20 @@
             transition: opacity 0.2s ease-in-out;
 
     &:hover {
-      opacity: 1;
+      opacity: 0.95;
+      transform: scale(1.02);
     }
   }
-
 
   @include breakpoint($x-large) {
     padding-right: 0;
   }
 
   h2, h3, h4, h5, h6 {
-    margin-bottom: 0;
+    margin-bottom: 0.5em;
     font-family: $sans-serif-narrow;
+    color: #333;
+    text-transform: uppercase;
   }
 
   h3, h4 {
@@ -41,11 +47,14 @@
   p, li {
     font-family: $sans-serif;
     font-size: $type-size-6;
-    line-height: 1.5;
+    line-height: 1.6;
+    color: #555;
   }
 
   img {
     width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -73,8 +82,6 @@
   display: table-cell;
   vertical-align: top;
   width: 36px;
-  // set width only, for non-square avatars
-  // height: 36px;
 
   @include breakpoint($large) {
     display: block;
@@ -85,10 +92,16 @@
   img {
     max-width: 175px;
     border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     @include breakpoint($large) {
       padding: 5px;
       border: 1px solid $border-color;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     }
   }
 }
@@ -98,7 +111,7 @@
   vertical-align: top;
   padding-left: 15px;
   padding-right: 25px;
-  line-height: 1;
+  line-height: 1.2;
 
   @include breakpoint($large) {
     display: block;
@@ -106,10 +119,16 @@
     padding-left: 0;
     padding-right: 0;
   }
+
+  p {
+    color: #666;
+  }
 }
 
 .author__name {
   margin: 0;
+  font-weight: bold;
+  color: #222;
 
   @include breakpoint($large) {
     margin-top: 10px;
@@ -118,11 +137,13 @@
 }
 .sidebar .author__name {
   font-family: $sans-serif;
-  font-size: $type-size-5;
+  font-size: $type-size-4;
 }
 
 .author__bio {
   margin: 0;
+  font-style: italic;
+  color: #444;
 
   @include breakpoint($large) {
     margin-top: 10px;
@@ -169,7 +190,7 @@
   border-radius: $border-radius;
   background: #fff;
   z-index: -1;
-  box-shadow: 0 0 10px rgba(#000, 0.25);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   cursor: default;
 
   @include breakpoint($large) {
@@ -182,56 +203,30 @@
     box-shadow: none;
   }
 
-  &:before {
-    display: block;
-    content: "";
-    position: absolute;
-    top: -11px;
-    left: calc(50% - 10px);
-    width: 0;
-    border-style: solid;
-    border-width: 0 10px 10px;
-    border-color: $border-color transparent;
-    z-index: 0;
-
-    @include breakpoint($large) {
-      display: none;
-    }
-  }
-
-  &:after {
-    display: block;
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: calc(50% - 10px);
-    width: 0;
-    border-style: solid;
-    border-width: 0 10px 10px;
-    border-color: #fff transparent;
-    z-index: 1;
-
-    @include breakpoint($large) {
-      display: none;
-    }
+  &:before, &:after {
+    display: none;
   }
 
   li {
     white-space: nowrap;
+    margin-bottom: 10px;
   }
 
   a {
     display: block;
     margin-bottom: 5px;
-    padding-right: 5px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    color: inherit;
+    padding: 8px 10px;
+    border-radius: 5px;
+    background: #f5f5f5;
+    color: #333;
     font-size: $type-size-5;
     text-decoration: none;
+    transition: all 0.3s ease;
 
     &:hover {
-      text-decoration: underline;
+      text-decoration: none;
+      background: #007acc;
+      color: #fff;
     }
   }
 }
