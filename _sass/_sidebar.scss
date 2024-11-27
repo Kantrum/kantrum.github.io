@@ -6,59 +6,56 @@
   position: fixed;
   top: 100px;
   left: 20px;
-  width: 280px; /* 固定宽度 */
+  width: 280px;
   height: calc(100vh - 120px);
   padding: 20px;
   border-radius: 15px;
   background: #ffffff;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
-  z-index: 200; /* 保证不会被正文或导航覆盖 */
+  z-index: 200;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   @include breakpoint($large) {
     width: 260px;
+
     &:hover {
       box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
     }
   }
 
-  /* 移动端处理：隐藏侧边栏 */
+  /* 隐藏侧边栏在小屏幕上显示 */
   @include breakpoint($small) {
-    position: static;
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    box-shadow: none;
+    display: none;
   }
-}
 
-h2, h3, h4, h5, h6 {
-  margin-bottom: 1em;
-  font-family: 'Georgia', serif;
-  color: #333;
-  text-transform: none;
-  font-weight: bold;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-  padding-bottom: 5px;
-}
+  h2, h3, h4, h5, h6 {
+    margin-bottom: 1em;
+    font-family: 'Georgia', serif;
+    color: #333;
+    text-transform: none;
+    font-weight: bold;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 5px;
+  }
 
-p, li {
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  line-height: 1.6;
-  color: #555;
-}
+  p, li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+  }
 
-img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    }
   }
 }
 
@@ -107,7 +104,6 @@ img {
    ========================================================================== */
 
 .author__urls-wrapper {
-  text-align: center;
   margin-top: 20px;
 
   .follow-btn {
@@ -140,10 +136,12 @@ img {
   .dynamic-info {
     display: none; /* 默认隐藏 */
     margin-top: 20px;
-    padding: 20px;
-    border-radius: 15px;
+    padding: 10px;
+    border-left: 3px solid #007acc; /* 左侧蓝色条，突出视觉 */
     background: #f9f9f9;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+    /* 居左对齐样式 */
     text-align: left;
 
     p {
@@ -153,7 +151,6 @@ img {
       color: #555;
     }
 
-    /* 样式优化，分隔信息 */
     .info-item {
       display: flex;
       align-items: center;
@@ -176,7 +173,7 @@ img {
     }
   }
 
-  /* Follow 按钮触发展示 */
+  /* Follow 按钮触发动态展示 */
   .follow-btn:active ~ .dynamic-info {
     display: block; /* 点击后显示 */
     animation: fadeIn 0.3s ease;
@@ -187,11 +184,11 @@ img {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateX(-10px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
