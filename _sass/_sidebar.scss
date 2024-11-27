@@ -2,178 +2,177 @@
    SIDEBAR
    ========================================================================== */
 
+/* Default Styles */
 .sidebar {
-  position: fixed;
-  top: 100px;
-  left: 20px;
-  width: 280px;
-  height: calc(100vh - 120px);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+
+  @include clearfix();
+  margin-bottom: 1em;
   padding: 20px;
-  border-radius: 15px;
   background: #ffffff;
+  border-radius: 10px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
-  z-index: 200;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   @include breakpoint($large) {
-    width: 260px;
+    @include span(2 of 12);
+    opacity: 1;
+    -webkit-transition: opacity 0.2s ease-in-out;
+            transition: opacity 0.2s ease-in-out;
 
     &:hover {
-      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+      opacity: 1;
     }
   }
 
-  /* 隐藏侧边栏在小屏幕上显示 */
+  @include breakpoint($x-large) {
+    padding-right: 0;
+  }
+
   @include breakpoint($small) {
-    display: none;
+    display: none; /* 隐藏在小屏幕上 */
   }
 
   h2, h3, h4, h5, h6 {
-    margin-bottom: 1em;
-    font-family: 'Georgia', serif;
-    color: #333;
-    text-transform: none;
+    margin-bottom: 0.5em;
+    font-family: $sans-serif-narrow;
     font-weight: bold;
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
     padding-bottom: 5px;
   }
 
+  h3, h4 {
+    font-size: $type-size-5;
+  }
+
   p, li {
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    line-height: 1.6;
-    color: #555;
+    font-family: $sans-serif;
+    font-size: $type-size-6;
+    line-height: 1.5;
   }
 
   img {
     width: 100%;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
       transform: scale(1.05);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
     }
   }
 }
 
-/* ==========================================================================
-   Author Profile
-   ========================================================================== */
-
+/* Author Profile */
 .author__avatar {
-  width: 100px;
-  margin: 0 auto;
-  margin-bottom: 20px;
+  display: table-cell;
+  vertical-align: top;
+  width: 36px;
+
+  @include breakpoint($large) {
+    display: block;
+    width: auto;
+    height: auto;
+  }
 
   img {
-    max-width: 100%;
+    max-width: 175px;
     border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 
-    &:hover {
-      transform: scale(1.1);
+    @include breakpoint($large) {
+      padding: 5px;
+      border: 1px solid $border-color;
     }
   }
 }
 
 .author__content {
-  text-align: center;
+  display: table-cell;
+  vertical-align: top;
+  padding-left: 15px;
+  padding-right: 25px;
+  line-height: 1;
 
-  .author__name {
-    margin: 0;
-    font-family: 'Georgia', serif;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-  }
-
-  .author__bio {
-    margin: 10px 0;
-    font-size: 14px;
-    color: #666;
-    font-style: italic;
+  @include breakpoint($large) {
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
-/* ==========================================================================
-   Follow Button and Dynamic Info Display
-   ========================================================================== */
+.author__name {
+  margin: 0;
 
+  @include breakpoint($large) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+.sidebar .author__name {
+  font-family: $sans-serif;
+  font-size: $type-size-5;
+}
+
+.author__bio {
+  margin: 0;
+
+  @include breakpoint($large) {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Follow Button and Dynamic Info */
 .author__urls-wrapper {
   margin-top: 20px;
+  text-align: left;
 
   .follow-btn {
     display: inline-block;
-    padding: 12px 24px;
-    font-size: 14px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+    padding: 10px 20px;
+    font-size: $type-size-6;
     color: #ffffff;
     background: #007acc;
     border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all 0.3s ease;
 
     &:hover {
       background: #005f99;
-      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
-      transform: translateY(-2px);
     }
 
     &:active {
       background: #004e80;
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
-      transform: translateY(2px);
     }
   }
 
-  /* 动态展示个人信息 */
   .dynamic-info {
     display: none; /* 默认隐藏 */
-    margin-top: 20px;
+    margin-top: 15px;
     padding: 10px;
-    border-left: 3px solid #007acc; /* 左侧蓝色条，突出视觉 */
+    border-left: 3px solid #007acc;
     background: #f9f9f9;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 
-    /* 居左对齐样式 */
-    text-align: left;
-
     p {
-      margin: 10px 0;
-      font-size: 14px;
-      line-height: 1.5;
-      color: #555;
+      margin: 0 0 10px;
+      font-size: $type-size-6;
     }
 
-    .info-item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 15px;
+    a {
+      color: #007acc;
+      text-decoration: none;
 
-      i {
-        margin-right: 10px;
-        color: #007acc;
-      }
-
-      a {
-        font-size: 14px;
-        color: #007acc;
-        text-decoration: none;
-
-        &:hover {
-          text-decoration: underline;
-        }
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
 
-  /* Follow 按钮触发动态展示 */
   .follow-btn:active ~ .dynamic-info {
     display: block; /* 点击后显示 */
     animation: fadeIn 0.3s ease;
@@ -192,19 +191,19 @@
   }
 }
 
-/* ==========================================================================
-   Scrollbar Styling for Sidebar
-   ========================================================================== */
+/* Right Sidebar */
+.sidebar__right {
+  margin-bottom: 1em;
 
-.sidebar::-webkit-scrollbar {
-  width: 8px;
-}
+  @include breakpoint($large) {
+    position: relative;
+    float: right;
+    width: $right-sidebar-width-narrow;
+    margin-left: span(0.5 of 12);
+    z-index: 10;
+  }
 
-.sidebar::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-}
-
-.sidebar::-webkit-scrollbar-track {
-  background: #f9f9f9;
+  @include breakpoint($x-large) {
+    width: $right-sidebar-width;
+  }
 }
