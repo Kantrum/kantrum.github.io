@@ -687,7 +687,6 @@ body {
                 </div>
                 <div class="footer-links">
                     <a href="https://www.linkedin.com/in/jiongtao-huang-150709203/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/Kantrum" target="_blank">GitHub</a>
                     <a href="mailto:jh2877@cornell.edu">Email</a>
                 </div>
             </div>
