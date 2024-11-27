@@ -202,26 +202,28 @@ body {
 }
 
 .hero-text h1 {
-    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-size: clamp(2rem, 8vw, 4rem);
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: clamp(1rem, 3vw, 2rem);
     background: linear-gradient(45deg, var(--text), var(--accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     word-wrap: break-word;
     hyphens: auto;
+    line-height: 1.2;
 }
 
 .title {
-    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-size: clamp(1.2rem, 4vw, 2rem);
     color: var(--accent);
-    margin-bottom: 1rem;
+    margin-bottom: clamp(0.8rem, 2vw, 1.2rem);
 }
 
 .description {
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
     color: var(--text-secondary);
-    max-width: 600px;
+    max-width: clamp(300px, 80vw, 800px);
+    margin: 0 auto;
 }
 
 .cta-buttons {
@@ -258,7 +260,7 @@ body {
 
 .footer {
     width: 100%;
-    padding: clamp(10px, 2vh, 15px) 0;
+    padding: clamp(12px, 2vh, 20px) 0;
     background-color: rgba(20, 20, 20, 0.9);
     backdrop-filter: blur(10px);
     margin-top: auto;
@@ -266,9 +268,9 @@ body {
 }
 
 .footer-content {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 clamp(10px, 3vw, 15px);
+    padding: 0 clamp(15px, 3vw, 40px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -277,17 +279,24 @@ body {
 .footer-info p {
     margin: 0;
     color: #ffffff;
-    font-size: clamp(0.7rem, 2vw, 0.8rem);
+    font-size: clamp(0.7rem, 1.5vw, 1.1rem);
     opacity: 0.8;
+    white-space: nowrap;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: clamp(10px, 2vw, 30px);
 }
 
 .footer-links a {
     color: #ffffff;
     text-decoration: none;
-    margin-left: clamp(10px, 2vw, 15px);
     transition: all 0.3s ease;
     opacity: 0.8;
-    font-size: clamp(0.7rem, 2vw, 0.8rem);
+    font-size: clamp(0.7rem, 1.5vw, 1.1rem);
+    white-space: nowrap;
 }
 
 .footer-links a:hover {
@@ -297,9 +306,9 @@ body {
 }
 
 .hero .position {
-    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    font-size: clamp(1rem, 3vw, 1.6rem);
     color: #ffffff;
-    margin: 10px 0;
+    margin: clamp(10px, 2vw, 20px) 0;
     font-weight: 500;
     opacity: 0.9;
     background: linear-gradient(90deg, #4a90e2, #63b3ed);
@@ -541,14 +550,26 @@ body {
 }
 
 /* 大屏幕优化 */
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
     .hero-text h1 {
-        font-size: 2.5rem;
+        font-size: 4rem;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .position {
+        font-size: 1.6rem;
+    }
+    
+    .description {
+        font-size: 1.4rem;
     }
     
     .footer-info p,
     .footer-links a {
-        font-size: 0.8rem;
+        font-size: 1.1rem;
     }
 }
 </style>
