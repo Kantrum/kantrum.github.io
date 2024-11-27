@@ -2,54 +2,48 @@
    SIDEBAR
    ========================================================================== */
 
-/* Default Styles */
 .sidebar {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
-
-  @include clearfix();
   margin-bottom: 1em;
   padding: 20px;
   background: #ffffff;
   border-radius: 10px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
+  z-index: 100; /* 确保在正文之上 */
 
+  /* 在桌面端始终显示 */
   @include breakpoint($large) {
+    display: block; /* 确保桌面端显示 */
     @include span(2 of 12);
     opacity: 1;
-    -webkit-transition: opacity 0.2s ease-in-out;
-            transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
 
     &:hover {
       opacity: 1;
     }
   }
 
-  @include breakpoint($x-large) {
-    padding-right: 0;
-  }
-
+  /* 移动端隐藏 */
   @include breakpoint($small) {
-    display: none; /* 隐藏在小屏幕上 */
+    display: none; /* 小屏幕完全隐藏 */
   }
 
   h2, h3, h4, h5, h6 {
-    margin-bottom: 0.5em;
-    font-family: $sans-serif-narrow;
+    margin-bottom: 1em;
+    font-family: 'Georgia', serif;
     font-weight: bold;
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
     padding-bottom: 5px;
-  }
-
-  h3, h4 {
-    font-size: $type-size-5;
+    color: #333;
   }
 
   p, li {
-    font-family: $sans-serif;
-    font-size: $type-size-6;
-    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
   }
 
   img {
@@ -65,68 +59,45 @@
   }
 }
 
-/* Author Profile */
-.author__avatar {
-  display: table-cell;
-  vertical-align: top;
-  width: 36px;
+/* ==========================================================================
+   AUTHOR PROFILE
+   ========================================================================== */
 
-  @include breakpoint($large) {
-    display: block;
-    width: auto;
-    height: auto;
-  }
+.author__avatar {
+  display: block;
+  width: 100px;
+  margin: 0 auto 20px;
 
   img {
-    max-width: 175px;
+    max-width: 100%;
     border-radius: 50%;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-
-    @include breakpoint($large) {
-      padding: 5px;
-      border: 1px solid $border-color;
-    }
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   }
 }
 
 .author__content {
-  display: table-cell;
-  vertical-align: top;
-  padding-left: 15px;
-  padding-right: 25px;
-  line-height: 1;
+  text-align: center;
 
-  @include breakpoint($large) {
-    display: block;
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
+  .author__name {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .author__bio {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
   }
 }
 
-.author__name {
-  margin: 0;
+/* ==========================================================================
+   FOLLOW BUTTON AND INFO
+   ========================================================================== */
 
-  @include breakpoint($large) {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-}
-.sidebar .author__name {
-  font-family: $sans-serif;
-  font-size: $type-size-5;
-}
-
-.author__bio {
-  margin: 0;
-
-  @include breakpoint($large) {
-    margin-top: 10px;
-    margin-bottom: 20px;
-  }
-}
-
-/* Follow Button and Dynamic Info */
 .author__urls-wrapper {
   margin-top: 20px;
   text-align: left;
@@ -134,7 +105,9 @@
   .follow-btn {
     display: inline-block;
     padding: 10px 20px;
-    font-size: $type-size-6;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
     color: #ffffff;
     background: #007acc;
     border-radius: 8px;
@@ -160,7 +133,7 @@
 
     p {
       margin: 0 0 10px;
-      font-size: $type-size-6;
+      font-size: 14px;
     }
 
     a {
@@ -188,22 +161,3 @@
   to {
     opacity: 1;
     transform: translateX(0);
-  }
-}
-
-/* Right Sidebar */
-.sidebar__right {
-  margin-bottom: 1em;
-
-  @include breakpoint($large) {
-    position: relative;
-    float: right;
-    width: $right-sidebar-width-narrow;
-    margin-left: span(0.5 of 12);
-    z-index: 10;
-  }
-
-  @include breakpoint($x-large) {
-    width: $right-sidebar-width;
-  }
-}
