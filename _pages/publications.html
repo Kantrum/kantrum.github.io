@@ -1,1 +1,2174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Jiongtao Huang</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
 
+<style>
+/* 添加在文件开头，用于测试CSS是否正确加载 */
+body {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+:root {
+    --primary-color: #2C3E50;
+    --secondary-color: #E74C3C;
+    --accent-color: #3498DB;
+    --bg-color: #FFFFFF;
+    --text-color: #2C3E50;
+    --light-gray: #F8F9FA;
+    --border-color: #E9ECEF;
+    --gradient-start: #f8f9fa;
+    --gradient-end: #e9ecef;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+    --border-radius-sm: 8px;
+    --border-radius-md: 15px;
+    --border-radius-lg: 30px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* 导航栏样式 */
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1.2rem 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: var(--secondary-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a.active {
+    color: var(--secondary-color);
+}
+
+/* 英雄区域样式 */
+.hero-section {
+    padding: 5rem 0 2rem 0;
+    background: none;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-image-container {
+    flex-shrink: 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.social-links {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-icon {
+    color: #333;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.social-icon:hover {
+    color: #666;
+}
+
+.profile-info {
+    flex-grow: 1;
+}
+
+.profile-info h1 {
+    margin-bottom: 0.5rem;
+}
+
+.bio {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* 技能矩阵样式 */
+.skills-matrix {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.skill-tag {
+    background: var(--light-gray);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin: 0.5rem;
+    display: inline-block;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: var(--secondary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* 动画类 */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 导航栏动画 */
+.nav-bar {
+    transition: all 0.3s ease;
+}
+
+.nav-bar.scrolled {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: rgba(255, 255, 255, 0.98);
+}
+
+/* 卡片悬停效果 */
+.experience-card {
+    transition: all 0.3s ease;
+}
+
+.card-hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* 社交图标悬停效果 */
+.social-icon {
+    transition: all 0.3s ease;
+}
+
+.icon-hover {
+    transform: translateY(-3px) scale(1.1);
+    color: var(--secondary-color);
+}
+
+/* 技能标签动画 */
+.skill-tag {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.skill-tag.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-tag.active {
+    background: var(--secondary-color);
+    color: white;
+}
+
+/* 经验卡片样式优化 */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.experience-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--secondary-color);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+}
+
+.experience-card:hover::before {
+    transform: scaleY(1);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.card-header i {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-right: 1rem;
+}
+
+/* 育时间线样式 */
+.education-timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.education-item {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.education-date {
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.education-content {
+    position: relative;
+    padding-left: 2rem;
+    border-left: 2px solid var(--border-color);
+}
+
+.education-content::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+}
+
+/* 技能标签样式优化 */
+.skill-category {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.skill-tag {
+    background: var(--light-gray);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.skill-tag:hover {
+    background: var(--secondary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.2);
+}
+
+/* 添加响应式设计 */
+@media (max-width: 768px) {
+    .profile-card {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+        margin: 0 1rem;
+        flex-direction: column;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-bar {
+        padding: 1rem 1rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    main {
+        padding: 0 1rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* 添加动条样式 */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light-gray);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 4px;
+}
+
+/* 社交媒体图标样式 */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: var(--secondary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* 动画效果 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* 主要内容区域样式 */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-md) var(--spacing-md);
+    box-sizing: border-box;
+    margin-top: 60px;
+}
+
+/* 修改 footer 样式 */
+footer {
+    width: 100%;
+    padding: 1.5rem 0;
+    background: var(--light-gray);
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.copyright {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--secondary-color);
+}
+
+.footer-separator {
+    color: var(--border-color);
+    font-size: 0.9rem;
+}
+
+/* 响应式处理 */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-links {
+        justify-content: center;
+    }
+}
+
+/* 修改 bio 样式，移除打字机效果相关的样式 */
+.bio {
+    /* 删除以下属性 */
+    /* border-right: 2px solid var(--secondary-color); */
+    /* white-space: nowrap; */
+    /* overflow: hidden; */
+    /* animation: cursor-blink 1s step-end infinite; */
+    
+    /* 添加新的样式 */
+    max-width: 600px;
+    line-height: 1.8;
+    margin: 1.5rem 0;
+}
+
+/* 删除这个动画 */
+/* @keyframes cursor-blink {
+    from, to { border-color: transparent }
+    50% { border-color: var(--secondary-color); }
+} */
+
+/* 优化主要内容区域 */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-md) var(--spacing-md);
+}
+
+/* 优化section间距 */
+section {
+    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-lg) 0;
+}
+
+/* 优化section标题样式 */
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.section-subtitle {
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-xs);
+    display: block;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin: var(--spacing-xs) 0 var(--spacing-md);
+    position: relative;
+}
+
+/* 优化卡片布局 */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    padding: 0;
+}
+
+.experience-card {
+    background: white;
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-md);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+    height: 100%; /* 确保卡片等高 */
+}
+
+/* 优化技能矩阵 */
+.skills-matrix {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.skill-category {
+    background: white;
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-md);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* 优化教育时间线 */
+.education-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-md) 0;
+}
+
+.education-item {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+    :root {
+        /* 移动端减小间距 */
+        --spacing-lg: 3rem;
+        --spacing-xl: 4rem;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .education-item {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+}
+
+/* 添加渐变背景和视觉效果 */
+.hero-section {
+    background: linear-gradient(135deg, 
+        var(--gradient-start) 0%, 
+        var(--gradient-end) 100%
+    );
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        circle at top right,
+        rgba(231, 76, 60, 0.1),
+        transparent 70%
+    );
+}
+
+/* 优化按钮样式 */
+.btn {
+    padding: 1rem 2.5rem;
+    border-radius: var(--border-radius-lg);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.btn.primary {
+    background: var(--secondary-color);
+    color: white;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.btn.secondary {
+    background: transparent;
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.personal-info-section {
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+}
+
+.info-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.info-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.info-group {
+    margin-bottom: 2rem;
+}
+
+.info-group:last-child {
+    margin-bottom: 0;
+}
+
+.info-group h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
+}
+
+.info-group h3.with-border {
+    border-bottom: 2px solid #eee;
+}
+
+.info-group ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-group li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.info-label {
+    font-weight: 600;
+    color: #666;
+    margin-right: 0.5rem;
+}
+
+.info-group a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.info-group a:hover {
+    text-decoration: underline;
+}
+
+.info-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.contact-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.info-row {
+    padding: 2rem;
+    background: white;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
+    border: 1px solid var(--border-color);
+}
+
+.info-row:last-child {
+    margin-bottom: 0;
+}
+
+.info-group h3 {
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.info-group h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 70%;
+    background: var(--secondary-color);
+    border-radius: 2px;
+}
+
+.personal-details-grid {
+    padding: 0.5rem 1rem;
+}
+
+.email-container .email-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.info-label {
+    font-weight: 600;
+    color: #555;
+    margin-right: 0.5rem;
+}
+
+.awards-gallery {
+    margin-top: 2rem;
+    padding: 2rem 0;
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.award-item {
+    position: relative;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.award-item:hover {
+    transform: scale(1.02);
+}
+
+.award-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.award-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 8px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+.modal-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.photo-grid img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.photo-grid img:hover {
+    transform: scale(1.05);
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: #333;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* ���罩层 */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+/* 添加遮罩层 */
+.modal::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* 添加汉堡菜单按钮样式 */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+/* 汉堡菜单打开时的动画效果 */
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 250px;
+        background-color: white;
+        flex-direction: column;
+        padding: 80px 20px 20px;
+        transition: right 0.3s ease;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-bar {
+        padding: 1rem 1.5rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+}
+
+/* 添加遮罩层样式 */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.personal-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+
+.detail-item {
+    background: #f8f9fa;
+    padding: 1.2rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.detail-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-color: #e9ecef;
+}
+
+.detail-label {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.detail-value {
+    font-size: 1.1rem;
+    color: #212529;
+}
+
+.chinese-name {
+    font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+}
+
+.photography-posts-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.photography-post-item>a {
+    position: relative;
+    background: var(--border-gradient-onyx);
+    height: 100%;
+    box-shadow: var(--shadow-4);
+    border-radius: 16px;
+    z-index: 1;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.photography-post-item>a:hover {
+    transform: translateY(-5px);
+}
+
+.photography-banner-box {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.photography-banner-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.photography-post-item>a:hover .photography-banner-box img {
+    transform: scale(1.1);
+}
+
+.photography-content {
+    padding: 15px;
+}
+
+.photography-meta {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 10px;
+}
+
+.photography-meta :is(.photography-category, time) {
+    color: var(--light-gray-70);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-300);
+}
+
+.photography-meta .dot {
+    background: var(--light-gray-70);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+}
+
+.photography-item-title {
+    margin-bottom: 10px;
+    line-height: 1.3;
+    transition: color 0.3s ease;
+}
+
+.photography-post-item>a:hover .photography-item-title {
+    color: var(--orange-yellow-crayola);
+}
+
+.photography-text {
+    color: var(--light-gray);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-300);
+    line-height: 1.6;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* 相册网格布局 */
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.album-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.album-card:hover {
+    transform: translateY(-5px);
+}
+
+.album-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.album-card h3 {
+    padding: 1rem 1rem 0.5rem;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.album-card p {
+    padding: 0 1rem 1rem;
+    margin: 0;
+    color: #666;
+}
+
+/* 模态框样式 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 8px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.close-modal {
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    color: #fff;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.photo-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.photo-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* 社交活动样式 */
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.activity-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.activity-icon {
+    font-size: 2rem;
+    color: #4a90e2;
+    margin-bottom: 1rem;
+}
+
+/* 荣誉和日程时间线样式 */
+.honors-timeline,
+.schedule-timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.honor-item,
+.schedule-item {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.honor-date,
+.schedule-date {
+    min-width: 120px;
+    font-weight: bold;
+    color: #4a90e2;
+}
+
+.honor-content,
+.schedule-content {
+    padding-left: 2rem;
+    border-left: 2px solid #4a90e2;
+}
+
+.honor-content h3,
+.schedule-content h3 {
+    margin: 0 0 0.5rem 0;
+}
+
+.honor-content p,
+.schedule-content p {
+    margin: 0;
+    color: #666;
+} 
+</style>
+
+
+
+
+
+
+
+
+<body>
+    <nav class="nav-bar">
+        <a href="index.html" class="logo">JIONGTAO HUANG</a>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links">
+            <a href="about.html" class="active">About</a>
+            <a href="academic.html">Academic</a>
+            <a href="entrepreneurial.html">Entrepreneurial</a>
+            <a href="life.html">Life</a>
+            <a href="blog.html">Blog</a>
+            <a href="resume.html">Resume</a>
+        </div>
+    </nav>
+
+    <div class="overlay"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="profile-card">
+                    <div class="profile-image-container">
+                        <img src="assets/profile.jpg" alt="Jiongtao Huang" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                        <div class="social-links">
+                            <a href="https://github.com/jiongtao-huang" target="_blank" class="social-icon" aria-label="GitHub" style="color: #333; transition: color 0.3s ease;">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/jiongtao-huang" target="_blank" class="social-icon" aria-label="LinkedIn" style="color: #0077b5; transition: color 0.3s ease;">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="mailto:jh2296@cornell.edu" class="social-icon" aria-label="Email" style="color: #ea4335; transition: color 0.3s ease;">
+                                <i class="far fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="profile-info">
+                        <h1 style="margin-bottom: 0.5rem;">Jiongtao Huang</h1>
+                        <p class="bio" style="line-height: 1.6; color: #666;">M.Eng. student in Electrical and Computer Engineering at Cornell University, focusing on software development and machine learning.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Information Section -->
+        <section class="personal-info-section">
+            <div class="section-header">
+                <span class="section-subtitle">BIOGRAPHY</span>
+                <h2>Personal Details</h2>
+            </div>
+            <div class="info-card">
+                <!-- Personal Information -->
+                <div class="info-row">
+                    <div class="info-group">
+                        <h3>Personal Information</h3>
+                        <div class="personal-details-grid">
+                            <div class="detail-item">
+                                <div class="detail-label">Name (Chinese)</div>
+                                <div class="detail-value chinese-name">黄炯涛</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Name (English)</div>
+                                <div class="detail-value">Kaden</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Nickname</div>
+                                <div class="detail-value">Kantrum</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact Information -->
+                <div class="info-row">
+                    <div class="info-group">
+                        <h3>Contact Information</h3>
+                        <div class="contact-grid">
+                            <p>
+                                <span class="info-label">Address:</span>
+                                <span class="address">210 Lake Street, Ithaca, NY, USA</span>
+                            </p>
+                            <div class="email-container">
+                                <span class="info-label">Email:</span>
+                                <div class="email-links">
+                                    <a href="mailto:kantrum@163.com"><i class="far fa-envelope"></i> kantrum@163.com</a>
+                                    <a href="mailto:huangjiongtao@gmail.com"><i class="far fa-envelope"></i> huangjiongtao@gmail.com</a>
+                                </div>
+                            </div>
+                            <p><span class="info-label">Phone:</span> +1 (607)-262-4666</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section class="experience-section">
+            <div class="section-header">
+                <span class="section-subtitle">EXPERIENCE</span>
+                <h2>Professional Journey</h2>
+            </div>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="card-header">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Software Development</h3>
+                    </div>
+                    <ul class="experience-list">
+                        <li>Full-stack web application development</li>
+                        <li>Cloud architecture and deployment</li>
+                        <li>API design and implementation</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <div class="card-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>Machine Learning</h3>
+                    </div>
+                    <ul class="experience-list">
+                        <li>Deep learning model development</li>
+                        <li>Computer vision applications</li>
+                        <li>Data analysis and visualization</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <div class="card-header">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile Development</h3>
+                    </div>
+                    <ul class="experience-list">
+                        <li>Cross-platform app development</li>
+                        <li>Native iOS/Android development</li>
+                        <li>Progressive Web Apps (PWA)</li>
+                    </ul>
+                </div>
+                <!-- Add more experience cards -->
+            </div>
+        </section>
+
+        <!-- Skills Matrix -->
+        <section class="skills-section">
+            <div class="section-header">
+                <span class="section-subtitle">EXPERTISE</span>
+                <h2>Technical Proficiency</h2>
+            </div>
+            <div class="skills-matrix">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C++</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">HTML5/CSS3</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">GraphQL</span>
+                    </div>
+                </div>
+                <!-- Add more skill categories -->
+            </div>
+        </section>
+
+        <!-- Education Background -->
+        <section class="education-section">
+            <div class="section-header">
+                <span class="section-subtitle">EDUCATION</span>
+                <h2>Academic Background</h2>
+            </div>
+            <div class="education-timeline">
+                <div class="education-item">
+                    <div class="education-date">2023 - Present</div>
+                    <div class="education-content">
+                        <h3>Cornell University</h3>
+                        <p class="degree">Master of Engineering in ECE</p>
+                        <ul class="education-details">
+                            <li>GPA: 3.9/4.0</li>
+                            <li>Research Focus: Deep Learning & Computer Vision</li>
+                            <li>Teaching Assistant for Advanced Programming</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-date">2019 - 2023</div>
+                    <div class="education-content">
+                        <h3>Previous University</h3>
+                        <p class="degree">Bachelor of Engineering in EE</p>
+                        <ul class="education-details">
+                            <li>GPA: 3.8/4.0</li>
+                            <li>Major: Electrical Engineering</li>
+                            <li>Minor: Computer Science</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="social-activities-section">
+            <div class="section-header">
+                <span class="section-subtitle">SOCIAL ACTIVITIES</span>
+                <h2>Community Engagement</h2>
+            </div>
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>University Student Campus Self-Management Committee</h3>
+                    <p>President, May 2023 - Present</p>
+                    <p>Ministry Member, May 2021 - Apr 2023</p>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>31st Chengdu World University Games</h3>
+                    <p>Most Contributive Volunteer Award, May 2022</p>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>New Youth Global Competency Development Programme</h3>
+                    <p>Class Leader, Mar 2022 - Dec 2022</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="honors-section">
+            <div class="section-header">
+                <span class="section-subtitle">PERSONAL HONORS</span>
+                <h2>Awards & Achievements</h2>
+            </div>
+            <div class="honors-timeline">
+                <!-- Academic Excellence -->
+                <div class="honor-category">
+                    <h3 class="category-title">Academic Excellence</h3>
+                    <div class="honor-item">
+                        <div class="honor-date">Jun 2022</div>
+                        <div class="honor-content">
+                            <h3>"Three Good Students" Award</h3>
+                            <p>Southwest Jiaotong University</p>
+                            <span class="honor-type">Academic Achievement</span>
+                        </div>
+                    </div>
+                    <div class="honor-item">
+                        <div class="honor-date">Jun 2021</div>
+                        <div class="honor-content">
+                            <h3>"Three Good Students" Award</h3>
+                            <p>Southwest Jiaotong University</p>
+                            <span class="honor-type">Academic Achievement</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leadership & Service -->
+                <div class="honor-category">
+                    <h3 class="category-title">Leadership & Service</h3>
+                    <div class="honor-item">
+                        <div class="honor-date">May 2023</div>
+                        <div class="honor-content">
+                            <h3>Outstanding Class Officer</h3>
+                            <p>New Youth Global Competency Development Programme</p>
+                            <span class="honor-type">Leadership Excellence</span>
+                        </div>
+                    </div>
+                    <div class="honor-item">
+                        <div class="honor-date">Mar 2023</div>
+                        <div class="honor-content">
+                            <h3>A Grade Certificate of Comprehensive Quality</h3>
+                            <p>Sichuan University Students Union</p>
+                            <span class="honor-type">Student Leadership</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Community Service & Volunteering -->
+                <div class="honor-category">
+                    <h3 class="category-title">Community Service & Volunteering</h3>
+                    <div class="honor-item">
+                        <div class="honor-date">Dec 2022</div>
+                        <div class="honor-content">
+                            <h3>Outstanding Communist Youth League Member</h3>
+                            <p>Southwest Jiaotong University</p>
+                            <span class="honor-type">Service Excellence</span>
+                        </div>
+                    </div>
+                    <div class="honor-item">
+                        <div class="honor-date">Sep 2021</div>
+                        <div class="honor-content">
+                            <h3>Outstanding Youth League Member</h3>
+                            <p>Southwest Jiaotong University</p>
+                            <span class="honor-type">Service Excellence</span>
+                        </div>
+                    </div>
+                    <div class="honor-item">
+                        <div class="honor-date">Mar 2021</div>
+                        <div class="honor-content">
+                            <h3>Excellent Volunteer</h3>
+                            <p>Community Epidemic Prevention Activities</p>
+                            <span class="honor-type">Volunteer Service</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Development -->
+                <div class="honor-category">
+                    <h3 class="category-title">Professional Development</h3>
+                    <div class="honor-item">
+                        <div class="honor-date">Jul 2021</div>
+                        <div class="honor-content">
+                            <h3>Excellent Student</h3>
+                            <p>Entrepreneurship Training Program</p>
+                            <span class="honor-type">Professional Training</span>
+                        </div>
+                    </div>
+                    <div class="honor-item">
+                        <div class="honor-date">Aug 2021</div>
+                        <div class="honor-content">
+                            <h3>Excellent Intern</h3>
+                            <p>Translation Internship Program</p>
+                            <span class="honor-type">Professional Experience</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Awards Gallery -->
+            <div class="section-header">
+                <span class="section-subtitle">CERTIFICATES & RECOGNITION</span>
+                <h2>获奖证书</h2>
+            </div>
+            <div class="awards-gallery">
+                <!-- 第一行图片 -->
+                <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+                    <div style="flex: 1; text-align: center; margin-right: 10px;">
+                        <h4 style="margin-bottom: 10px; color: #333;">学术优秀奖 2024</h4>
+                        <img src="assets/profile.jpg" style="max-width: 996px; max-height: 769px; width: 100%; height: auto;" alt="Academic Excellence Award 2024" />
+                    </div>
+                    <div style="flex: 1; text-align: center; margin: 0 5px;">
+                        <h4 style="margin-bottom: 10px; color: #333;">杰出研究奖 2023</h4>
+                        <img src="assets/certificates/research-award.jpg" style="max-width: 996px; max-height: 769px; width: 100%; height: auto;" alt="Outstanding Research Award 2023" />
+                    </div>
+                    <div style="flex: 1; text-align: center; margin-left: 10px;">
+                        <h4 style="margin-bottom: 10px; color: #333;">技术创新挑战赛奖 2023</h4>
+                        <img src="assets/certificates/hackathon.jpg" style="max-width: 996px; max-height: 769px; width: 100%; height: auto;" alt="Tech Innovation Challenge 2023" />
+                    </div>
+                </div>
+
+                <!-- 第二行图片 -->
+                <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+                    <div style="flex: 1; text-align: center; margin-right: 10px;">
+                        <h4 style="margin-bottom: 10px; color: #333;">优秀学生干部 2023</h4>
+                        <img src="assets/profile.jpg" style="max-width: 996px; max-height: 769px; width: 100%; height: auto;" alt="Outstanding Student Leader 2023" />
+                    </div>
+                    <div style="flex: 1; text-align: center; margin: 0 5px;">
+                        <h4 style="margin-bottom: 10px; color: #333;">志愿服务优秀奖 2023</h4>
+                        <img src="assets/certificates/research-award.jpg" style="max-width: 996px; max-height: 769px; width: 100%; height: auto;" alt="Volunteer Service Award 2023" />
+                    </div>
+                    <div style="flex: 1; text-align: center; margin-left: 10px;">
+                        <h4 style="margin-bottom: 10px; color: #333;">创新创业大赛奖 2022</h4>
+                        <img src="assets/certificates/hackathon.jpg" style="max-width: 996px; max-height: 769px; width: 100%; height: auto;" alt="Innovation Competition Award 2022" />
+                    </div>
+                </div>
+
+                <!-- 第三行图片 -->
+                <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+                    <div style="flex: 1; text-align: center; margin-right: 10px;">
+                        <h4 style="margin-bottom: 10px; color: #333;">三好学生 2022</h4>
+                        <img src="assets/profile.jpg" style="max-width: 996px; max-height: 769px; width: 100%; height: auto;" alt="Outstanding Student Award 2022" />
+                    </div>
+                    <div style="flex: 1; text-align: center; margin: 0 5px;">
+                        <h4 style="margin-bottom: 10px; color: #333;">优秀共青团员 2022</h4>
+                        <img src="assets/certificates/research-award.jpg" style="max-width: 996px; max-height: 769px; width: 100%; height: auto;" alt="Outstanding Youth League Member 2022" />
+                    </div>
+                    <div style="flex: 1; text-align: center; margin-left: 10px;">
+                        <h4 style="margin-bottom: 10px; color: #333;">社会实践优秀奖 2021</h4>
+                        <img src="assets/certificates/hackathon.jpg" style="max-width: 996px; max-height: 769px; width: 100%; height: auto;" alt="Social Practice Award 2021" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="schedule-section">
+            <div class="section-header">
+                <span class="section-subtitle">MY UPCOMING SCHEDULE</span>
+                <h2>What's Next</h2>
+            </div>
+            <div class="schedule-timeline">
+                <div class="schedule-item">
+                    <div class="schedule-date">MAR 2024</div>
+                    <div class="schedule-content">
+                        <h3>Tech Conference</h3>
+                        <p>Speaking at Cornell Tech Summit</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-date">APR 2024</div>
+                    <div class="schedule-content">
+                        <h3>Research Symposium</h3>
+                        <p>Presenting ML Research at IEEE Conference</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-date">MAY 2024</div>
+                    <div class="schedule-content">
+                        <h3>Hackathon</h3>
+                        <p>Organizing Cornell Spring Hackathon</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-date">JUN 2024</div>
+                    <div class="schedule-content">
+                        <h3>Workshop Series</h3>
+                        <p>Leading AI/ML Workshop for Undergraduates</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-date">JUL 2024</div>
+                    <div class="schedule-content">
+                        <h3>Summer Internship</h3>
+                        <p>Starting at Google - Software Engineering</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="photography-section">
+            <div class="section-header">
+                <span class="section-subtitle">PHOTOGRAPHY</span>
+                <h2>My Gallery</h2>
+            </div>
+            <div class="album-grid">
+                <div class="album-card" onclick="openAlbum('travel')">
+                    <img src="assets/albums/travel/5.jpg" alt="Travel">
+                    <h3>Travel</h3>
+                    <p>12 photos</p>
+                </div>
+                <div class="album-card" onclick="openAlbum('nature')">
+                    <img src="assets/albums/nature/cover.jpg" alt="Nature">
+                    <h3>Nature</h3>
+                    <p>8 photos</p>
+                </div>
+                <div class="album-card" onclick="openAlbum('campus')">
+                    <img src="assets/albums/campus/cover.jpg" alt="Campus Life">
+                    <h3>Campus Life</h3>
+                    <p>15 photos</p>
+                </div>
+                <div class="album-card" onclick="openAlbum('events')">
+                    <img src="assets/albums/events/cover.jpg" alt="Events">
+                    <h3>Events & Activities</h3>
+                    <p>10 photos</p>
+                </div>
+                <div class="album-card" onclick="openAlbum('architecture')">
+                    <img src="assets/albums/architecture/cover.jpg" alt="Architecture">
+                    <h3>Architecture</h3>
+                    <p>6 photos</p>
+                </div>
+                <div class="album-card" onclick="openAlbum('food')">
+                    <img src="assets/albums/food/cover.jpg" alt="Food">
+                    <h3>Food & Cuisine</h3>
+                    <p>9 photos</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 添加相册模态框 -->
+        <div id="albumModal" class="modal">
+            <span class="close-modal">&times;</span>
+            <div class="modal-content">
+                <div class="photo-grid"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p class="copyright">&copy; 2024 Jiongtao Huang. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://linkedin.com/in/yourusername" target="_blank" class="footer-link">LinkedIn</a>
+                <span class="footer-separator">|</span>
+                <a href="https://github.com/yourusername" target="_blank" class="footer-link">GitHub</a>
+                <span class="footer-separator">|</span>
+                <a href="mailto:your.email@cornell.edu" class="footer-link">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/about.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+
+<script>
+// 添加在文件开头，用于测试JS是否正确加载
+console.log('About page JavaScript loaded successfully');
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM fully loaded');
+    // 初始化所有动画和效果
+    initializeScrollAnimations();
+    initializeHoverEffects();
+    initializeSkillTags();
+    initializeNavbar();
+    addParallaxEffect();
+    animateNumbers();
+    animateSkillBars();
+
+    // 打开相册模态框
+    document.querySelectorAll('.photography-post-item > a').forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            openAlbumModal();
+        });
+    });
+
+    // 关闭模态框
+    document.querySelector('.close-modal').onclick = function() {
+        document.getElementById("albumModal").style.display = "none";
+    };
+
+    // 点击模态框外部关闭
+    window.onclick = function(event) {
+        const modal = document.getElementById("albumModal");
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    };
+});
+
+// 滚动动画效果
+function initializeScrollAnimations() {
+    const sections = document.querySelectorAll('section');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+                // 如果是技能部分，触发技能标签动画
+                if (entry.target.classList.contains('skills-section')) {
+                    animateSkillTags();
+                }
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    sections.forEach(section => {
+        section.classList.add('hidden');
+        observer.observe(section);
+    });
+}
+
+// 技能标签动画
+function animateSkillTags() {
+    const tags = document.querySelectorAll('.skill-tag');
+    tags.forEach((tag, index) => {
+        setTimeout(() => {
+            tag.classList.add('visible');
+        }, index * 100);
+    });
+}
+
+// 导航栏效果
+function initializeNavbar() {
+    const navbar = document.querySelector('.nav-bar');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const overlay = document.querySelector('.overlay');
+
+    // 滚动效果
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // 汉堡菜单点击事件
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        overlay.classList.toggle('active');
+        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+    });
+
+    // 遮罩层点击关闭菜单
+    overlay.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    // 点击导航链接时关闭菜单
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+}
+
+// 悬停效果
+function initializeHoverEffects() {
+    // 经验卡片悬停效果
+    const cards = document.querySelectorAll('.experience-card');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.classList.add('card-hover');
+        });
+        card.addEventListener('mouseleave', () => {
+            card.classList.remove('card-hover');
+        });
+    });
+
+    // 社交图标悬停效果
+    const socialIcons = document.querySelectorAll('.social-icon');
+    socialIcons.forEach(icon => {
+        icon.addEventListener('mouseenter', () => {
+            icon.classList.add('icon-hover');
+        });
+        icon.addEventListener('mouseleave', () => {
+            icon.classList.remove('icon-hover');
+        });
+    });
+}
+
+// 技能标签初始化
+function initializeSkillTags() {
+    const skillTags = document.querySelectorAll('.skill-tag');
+    skillTags.forEach(tag => {
+        tag.addEventListener('click', () => {
+            tag.classList.toggle('active');
+        });
+    });
+}
+
+// 平滑滚动
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// 修改打字机效果函数
+function typeWriter(element, text, speed = 50) {
+    let i = 0;
+    element.innerHTML = '';
+    element.style.opacity = '0';
+    
+    // 先显示全部文本
+    element.innerHTML = text;
+    // 然后使用淡入效果
+    element.style.transition = 'opacity 0.5s ease';
+    element.style.opacity = '1';
+}
+
+// 初始化打字机效果
+const bioText = document.querySelector('.bio');
+if (bioText) {
+    const originalText = bioText.textContent;
+    typeWriter(bioText, originalText, 50);
+}
+
+// 添加新的动画效果
+function addParallaxEffect() {
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        document.querySelectorAll('.parallax').forEach(element => {
+            const speed = element.dataset.speed || 0.5;
+            element.style.transform = `translateY(${scrolled * speed}px)`;
+        });
+    });
+}
+
+// 添加数字计数动画
+function animateNumbers() {
+    const numbers = document.querySelectorAll('.animate-number');
+    numbers.forEach(num => {
+        const target = parseInt(num.dataset.target);
+        let current = 0;
+        const increment = target / 50;
+        const updateNumber = () => {
+            if(current < target) {
+                current += increment;
+                num.textContent = Math.round(current);
+                requestAnimationFrame(updateNumber);
+            } else {
+                num.textContent = target;
+            }
+        };
+        updateNumber();
+    });
+}
+
+// 添加技能进度条
+function animateSkillBars() {
+    const skillBars = document.querySelectorAll('.skill-progress');
+    skillBars.forEach(bar => {
+        const percentage = bar.dataset.percentage;
+        bar.style.width = percentage + '%';
+    });
+}
+
+function openCertificate(element) {
+    const modal = document.getElementById("certificateModal");
+    const modalImg = document.getElementById("certificateImage");
+    const captionText = document.getElementById("certificateCaption");
+    const overlay = document.querySelector('.modal-overlay');
+    
+    modal.style.display = "block";
+    overlay.style.display = "block";
+    modalImg.src = element.querySelector('img').src;
+    captionText.innerHTML = element.querySelector('.award-overlay span').textContent;
+}
+
+// Close modal
+document.querySelector('.close-modal').onclick = function() {
+    document.getElementById("certificateModal").style.display = "none";
+    document.querySelector('.modal-overlay').style.display = "none";
+}
+
+// 点击遮罩层也可以关闭
+document.querySelector('.modal-overlay').onclick = function() {
+    document.getElementById("certificateModal").style.display = "none";
+    this.style.display = "none";
+}
+
+function openAlbumModal() {
+    const modal = document.getElementById("albumModal");
+    const photoGrid = modal.querySelector('.photo-grid');
+    photoGrid.innerHTML = ''; // 清空之前的内容
+
+    const photos = [
+        { src: 'assets/albums/travel/5.jpg', alt: 'Travel' },
+        { src: 'assets/albums/nature/cover.jpg', alt: 'Nature' },
+        // 添加更多相片
+    ];
+
+    photos.forEach(photo => {
+        const img = document.createElement('img');
+        img.src = photo.src;
+        img.alt = photo.alt;
+        img.style.width = '100%'; // 确保图片宽度适应容器
+        img.onclick = () => openImageInModal(photo.src, photo.alt);
+        photoGrid.appendChild(img);
+    });
+
+    modal.style.display = "block";
+}
+
+function openImageInModal(src, alt) {
+    const modal = document.getElementById("albumModal");
+    const modalContent = modal.querySelector('.modal-content');
+    modalContent.innerHTML = `<img src="${src}" alt="${alt}" style="width: 100%; height: auto;">`;
+}
+</script>
+
+
+<script>
+// 相册数据
+const albums = {
+    'travel': {
+        title: 'Travel',
+        photos: [
+            'assets/albums/travel/1.jpg',
+            'assets/albums/travel/2.jpg',
+            'assets/albums/travel/3.jpg',
+            'assets/albums/travel/4.jpg',
+            'assets/albums/travel/5.jpg',
+            'assets/albums/travel/6.jpg',
+            'assets/albums/travel/7.jpg',
+            // 添加更多照片路径
+        ]
+    }
+    // 可以添加更多相册
+};
+
+// 打开相册
+function openAlbum(albumId) {
+    const modal = document.getElementById('albumModal');
+    const photoGrid = modal.querySelector('.photo-grid');
+    
+    // 清空现有内容
+    photoGrid.innerHTML = '';
+    
+    // 添加相册中的照片
+    albums[albumId].photos.forEach(photoSrc => {
+        const img = document.createElement('img');
+        img.src = photoSrc;
+        img.onclick = () => openFullscreen(photoSrc);
+        photoGrid.appendChild(img);
+    });
+    
+    // 确保模态框居中显示
+    modal.style.display = 'block';
+    modal.style.top = '50%';
+    modal.style.left = '50%';
+    modal.style.transform = 'translate(-50%, -50%)';
+}
+
+// 关闭相册
+document.querySelector('.close-modal').onclick = function() {
+    document.getElementById('albumModal').style.display = 'none';
+};
+
+// 点击模态框外部关闭
+window.onclick = function(event) {
+    const modal = document.getElementById('albumModal');
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+};
+
+// 全屏显示照片
+function openFullscreen(photoSrc) {
+    const fullscreenModal = document.createElement('div');
+    fullscreenModal.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1001;
+    `;
+    
+    const img = document.createElement('img');
+    img.src = photoSrc;
+    img.style.cssText = `
+        max-width: 90%;
+        max-height: 90vh;
+        object-fit: contain;
+    `;
+    
+    fullscreenModal.appendChild(img);
+    document.body.appendChild(fullscreenModal);
+    
+    fullscreenModal.onclick = () => {
+        document.body.removeChild(fullscreenModal);
+    };
+}
+</script>
+</html>
