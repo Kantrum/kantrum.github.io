@@ -1149,7 +1149,6 @@ section {
     height: auto;
 }
 
-
 /* 相册网格布局 */
 .album-grid {
     display: grid;
@@ -1266,6 +1265,81 @@ section {
 
 body.no-scroll {
     overflow: hidden;
+}
+
+/* 仅影响模态框的样式 */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f0f0f0;
+    padding: 20px;
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 8px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    max-height: 80vh;
+    overflow-x: hidden;
+}
+
+.modal .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+.modal .photo-grid img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.modal .photo-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* 恢复板块样式 */
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.section-subtitle {
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-xs);
+    display: block;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin: var(--spacing-xs) 0 var(--spacing-md);
+    position: relative;
 }
 </style>
 
@@ -2086,7 +2160,7 @@ function openAlbum(albumId) {
     const modal = document.getElementById('albumModal');
     const photoGrid = modal.querySelector('.photo-grid');
     
-    // 清空现有内容
+    // 清空现有���容
     photoGrid.innerHTML = '';
     
     // 添加相册中的照片
