@@ -885,6 +885,7 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow-y: auto; /* 仅允许垂直滚动 */
     max-height: 80vh; /* 限制模态框的最大高度 */
+    overflow-x: hidden; /* 隐藏水平滚动条 */
 }
 
 .modal-content {
@@ -895,13 +896,17 @@ section {
 
 .photo-grid img {
     width: 100%;
-    height: auto;
+    height: auto; /* 确保图片高度自适应 */
+    aspect-ratio: 1 / 1; /* 保持图片为正方形 */
+    object-fit: cover; /* 确保图片适应容器 */
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    transition: transform 0.3s ease;
 }
 
 .photo-grid img:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .close-modal {
@@ -1619,7 +1624,7 @@ section {
                         <img src="../images/IMG_1492.png" style="max-width: 996px; max-height: 769px; width: 100%; height: auto;" alt="Academic Excellence Award 2024" />
                     </div>
                     <div style="flex: 1; text-align: center; margin: 0 5px;">
-                        <h4 style="margin-bottom: 10px; color: #333;">杰出研究奖 2023</h4>
+                        <h4 style="margin-bottom: 10px; color: #333;">杰出研���奖 2023</h4>
                         <img src="../images/IMG_1493.png" style="max-width: 996px; max-height: 769px; width: 100%; height: auto;" alt="Outstanding Research Award 2023" />
                     </div>
                     <div style="flex: 1; text-align: center; margin-left: 10px;">
@@ -2096,7 +2101,7 @@ document.querySelector('.close-modal').onclick = function() {
 // 点击模态框外部关闭
 window.onclick = function(event) {
     const modal = document.getElementById('albumModal');
-    if (event.target == modal) {
+    if (event.target === modal) {
         modal.style.display = 'none';
     }
 };
