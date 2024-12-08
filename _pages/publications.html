@@ -643,7 +643,7 @@ section {
 /* 响应式优化 */
 @media (max-width: 768px) {
     :root {
-        /* 移动端减小间�� */
+        /* 移动端减小间 */
         --spacing-lg: 3rem;
         --spacing-xl: 4rem;
     }
@@ -876,15 +876,15 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-color: #f0f0f0; /* 设置相框背景为灰色 */
     padding: 20px;
     width: 80%;
     max-width: 1000px;
     border-radius: 8px;
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow-y: auto;
-    max-height: 80vh;
+    overflow-y: auto; /* 仅允许垂直滚动 */
+    max-height: 80vh; /* 限制模态框的最大高度 */
 }
 
 .modal-content {
@@ -1221,7 +1221,7 @@ section {
 
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 1fr); /* 一行四张图片 */
     gap: 15px;
     padding: 20px;
 }
@@ -1342,7 +1342,7 @@ section {
 
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 1fr); /* 一行四张图片 */
     gap: 15px;
     padding: 20px;
 }
@@ -1897,7 +1897,7 @@ console.log('About page JavaScript loaded successfully');
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded');
-    // 初始化所有动画和���果
+    // 初始化所有动画和效果
     initializeScrollAnimations();
     initializeHoverEffects();
     initializeSkillTags();
@@ -2062,7 +2062,7 @@ function typeWriter(element, text, speed = 50) {
     
     // 先显示全部文本
     element.innerHTML = text;
-    // 然后使用淡入��果
+    // 然后使用淡入效果
     element.style.transition = 'opacity 0.5s ease';
     element.style.opacity = '1';
 }
@@ -2105,7 +2105,7 @@ function animateNumbers() {
     });
 }
 
-// 添加技能进度条
+// 添加技能���度条
 function animateSkillBars() {
     const skillBars = document.querySelectorAll('.skill-progress');
     skillBars.forEach(bar => {
@@ -2141,7 +2141,7 @@ document.querySelector('.modal-overlay').onclick = function() {
 function openAlbumModal() {
     const modal = document.getElementById("albumModal");
     const photoGrid = modal.querySelector('.photo-grid');
-    photoGrid.innerHTML = ''; // 清空之前的���容
+    photoGrid.innerHTML = ''; // 清空之前的图片
 
     const photos = [
         { src: '../images/IMG_1556.JPG', alt: 'Travel' },
@@ -2206,9 +2206,6 @@ function openAlbum(albumId) {
     
     // 确保模态框居中显示
     modal.style.display = 'block';
-    modal.style.top = '50%';
-    modal.style.left = '50%';
-    modal.style.transform = 'translate(-50%, -50%)';
 }
 
 // 关闭相册
