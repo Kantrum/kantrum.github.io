@@ -643,7 +643,7 @@ section {
 /* 响应式优化 */
 @media (max-width: 768px) {
     :root {
-        /* 移动端减小间距 */
+        /* 移动端减小间�� */
         --spacing-lg: 3rem;
         --spacing-xl: 4rem;
     }
@@ -914,7 +914,7 @@ section {
     z-index: 1001;
 }
 
-/* ���罩层 */
+/* 罩层 */
 .modal-overlay {
     display: none;
     position: fixed;
@@ -1296,6 +1296,39 @@ section {
     margin: 0;
     color: #666;
 } 
+
+/* 新增相册模态框样式 */
+.photo-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.photo-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.modal-content img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
 </style>
 
 
@@ -2068,7 +2101,7 @@ function openAlbumModal() {
     const photos = [
         { src: '../images/IMG_1556.JPG', alt: 'Travel' },
         { src: 'assets/albums/nature/cover.jpg', alt: 'Nature' },
-        // 添加更多相片
+        // 添加更多相���
     ];
 
     photos.forEach(photo => {
