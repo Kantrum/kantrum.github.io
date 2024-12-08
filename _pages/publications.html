@@ -1189,75 +1189,9 @@ section {
     color: #666;
 }
 
-/* 模态框样式 */
-.modal {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    width: 80%;
-    max-width: 1000px;
-    border-radius: 8px;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow-y: auto;
-    max-height: 80vh;
-}
-
-.modal-content {
-    position: relative;
-    width: 90%;
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
-}
-
-.close-modal {
-    position: absolute;
-    right: 25px;
-    top: 10px;
-    color: #fff;
-    font-size: 35px;
-    cursor: pointer;
-}
-
-.photo-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 一行四张图片 */
-    gap: 15px;
-    padding: 20px;
-}
-
-.photo-grid img {
-    width: 100%;
-    height: auto; /* 确保图片高度自适应 */
-    aspect-ratio: 1 / 1; /* 保持图片为正方形 */
-    object-fit: cover; /* 确保图片适应容器 */
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-
-.photo-grid img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* 隐藏水平滚动条 */
-.modal-content::-webkit-scrollbar {
-    width: 8px; /* 仅显示垂直滚动条 */
-}
-
-.modal-content::-webkit-scrollbar-track {
-    background: #f0f0f0;
-}
-
-.modal-content::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 4px;
+/* 禁用滚动 */
+body.no-scroll {
+    overflow: hidden;
 }
 </style>
 
@@ -1945,7 +1879,7 @@ function typeWriter(element, text, speed = 50) {
     element.innerHTML = '';
     element.style.opacity = '0';
     
-    // 先显示全部文���
+    // 先显示全部文字
     element.innerHTML = text;
     // 然后使用淡入效果
     element.style.transition = 'opacity 0.5s ease';
@@ -1990,7 +1924,7 @@ function animateNumbers() {
     });
 }
 
-// 添加技能���度条
+// 添加技能进度条
 function animateSkillBars() {
     const skillBars = document.querySelectorAll('.skill-progress');
     skillBars.forEach(bar => {
@@ -2093,6 +2027,9 @@ function openAlbum(albumId) {
     // 显示模态框和覆盖层
     modal.style.display = 'block';
     overlay.style.display = 'block';
+    
+    // 禁用页面滚动
+    document.body.classList.add('no-scroll');
 }
 
 // 点击模态框外部关闭
@@ -2101,6 +2038,9 @@ document.getElementById('modalOverlay').addEventListener('click', function() {
     const overlay = document.getElementById('modalOverlay');
     modal.style.display = 'none';
     overlay.style.display = 'none';
+    
+    // 恢复页面滚动
+    document.body.classList.remove('no-scroll');
 });
 
 // 全屏显示照片
