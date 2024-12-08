@@ -204,7 +204,7 @@ defaults:
     values:
       layout: none # 不使用任何布局
       title: "Huang Jiongtao's Homepage"
-      permalink: publications
+      permalink: /publications
   # _posts
   - scope:
       path: ""
