@@ -1624,7 +1624,7 @@ section {
                         <img src="../images/IMG_1492.png" style="max-width: 996px; max-height: 769px; width: 100%; height: auto;" alt="Academic Excellence Award 2024" />
                     </div>
                     <div style="flex: 1; text-align: center; margin: 0 5px;">
-                        <h4 style="margin-bottom: 10px; color: #333;">杰出研���奖 2023</h4>
+                        <h4 style="margin-bottom: 10px; color: #333;">杰出研究奖 2023</h4>
                         <img src="../images/IMG_1493.png" style="max-width: 996px; max-height: 769px; width: 100%; height: auto;" alt="Outstanding Research Award 2023" />
                     </div>
                     <div style="flex: 1; text-align: center; margin-left: 10px;">
@@ -1656,7 +1656,7 @@ section {
                         <img src="../images/IMG_1587.JPG" style="max-width: 996px; max-height: 769px; width: 100%; height: auto;" alt="Outstanding Student Award 2022" />
                     </div>
                     <div style="flex: 1; text-align: center; margin: 0 5px;">
-                        <h4 style="margin-bottom: 10px; color: #333;">优秀共青团员 2022</h4>
+                        <h4 style="margin-bottom: 10px; color: #333;">���秀共青团员 2022</h4>
                         <img src="../images/IMG_1582.JPG" style="max-width: 996px; max-height: 769px; width: 100%; height: auto;" alt="Outstanding Youth League Member 2022" />
                     </div>
                     <div style="flex: 1; text-align: center; margin-left: 10px;">
@@ -1805,12 +1805,12 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // 点击模态框外部关闭
-    window.onclick = function(event) {
-        const modal = document.getElementById("albumModal");
+    window.addEventListener('click', function(event) {
+        const modal = document.getElementById('albumModal');
         if (event.target === modal) {
-            modal.style.display = "none";
+            modal.style.display = 'none';
         }
-    };
+    });
 });
 
 // 滚动动画效果
@@ -2099,12 +2099,12 @@ document.querySelector('.close-modal').onclick = function() {
 };
 
 // 点击模态框外部关闭
-window.onclick = function(event) {
+window.addEventListener('click', function(event) {
     const modal = document.getElementById('albumModal');
     if (event.target === modal) {
         modal.style.display = 'none';
     }
-};
+});
 
 // 全屏显示照片
 function openFullscreen(photoSrc) {
