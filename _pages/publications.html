@@ -927,7 +927,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
     z-index: 999;
 }
 
@@ -1656,7 +1656,7 @@ section {
                         <img src="../images/IMG_1587.JPG" style="max-width: 996px; max-height: 769px; width: 100%; height: auto;" alt="Outstanding Student Award 2022" />
                     </div>
                     <div style="flex: 1; text-align: center; margin: 0 5px;">
-                        <h4 style="margin-bottom: 10px; color: #333;">���秀共青团员 2022</h4>
+                        <h4 style="margin-bottom: 10px; color: #333;">优秀共青团员 2022</h4>
                         <img src="../images/IMG_1582.JPG" style="max-width: 996px; max-height: 769px; width: 100%; height: auto;" alt="Outstanding Youth League Member 2022" />
                     </div>
                     <div style="flex: 1; text-align: center; margin-left: 10px;">
@@ -1945,7 +1945,7 @@ function typeWriter(element, text, speed = 50) {
     element.innerHTML = '';
     element.style.opacity = '0';
     
-    // 先显示全部文本
+    // 先显示全部文���
     element.innerHTML = text;
     // 然后使用淡入效果
     element.style.transition = 'opacity 0.5s ease';
@@ -1990,7 +1990,7 @@ function animateNumbers() {
     });
 }
 
-// 添加技能进度条
+// 添加技能���度条
 function animateSkillBars() {
     const skillBars = document.querySelectorAll('.skill-progress');
     skillBars.forEach(bar => {
@@ -2076,6 +2076,7 @@ const albums = {
 // 打开相册
 function openAlbum(albumId) {
     const modal = document.getElementById('albumModal');
+    const overlay = document.getElementById('modalOverlay');
     const photoGrid = modal.querySelector('.photo-grid');
     
     // 清空现有内容
@@ -2089,21 +2090,17 @@ function openAlbum(albumId) {
         photoGrid.appendChild(img);
     });
     
-    // 确保模态框居中显示
+    // 显示模态框和覆盖层
     modal.style.display = 'block';
+    overlay.style.display = 'block';
 }
 
-// 关闭相册
-document.querySelector('.close-modal').onclick = function() {
-    document.getElementById('albumModal').style.display = 'none';
-};
-
 // 点击模态框外部关闭
-window.addEventListener('click', function(event) {
+document.getElementById('modalOverlay').addEventListener('click', function() {
     const modal = document.getElementById('albumModal');
-    if (event.target === modal) {
-        modal.style.display = 'none';
-    }
+    const overlay = document.getElementById('modalOverlay');
+    modal.style.display = 'none';
+    overlay.style.display = 'none';
 });
 
 // 全屏显示照片
