@@ -643,7 +643,7 @@ section {
 /* 响应式优化 */
 @media (max-width: 768px) {
     :root {
-        /* 移动端减小间距 */
+        /* 移动端减小间�� */
         --spacing-lg: 3rem;
         --spacing-xl: 4rem;
     }
@@ -1330,6 +1330,50 @@ section {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
+
+/* 更新相册模态框样式 */
+.modal-content {
+    background-color: #f0f0f0; /* 设置相框背景为灰色 */
+    padding: 20px;
+    border-radius: 8px;
+    overflow-y: auto; /* 仅允许垂直滚动 */
+    max-height: 80vh; /* 限制模态框的最大高度 */
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.photo-grid img {
+    width: 100%;
+    height: 150px; /* 统一设置图片高度 */
+    object-fit: cover; /* 确保图片适应容器 */
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.photo-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 隐藏水平滚动条 */
+.modal-content::-webkit-scrollbar {
+    width: 8px; /* 仅显示垂直滚动条 */
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
 </style>
 
 
@@ -1853,7 +1897,7 @@ console.log('About page JavaScript loaded successfully');
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded');
-    // 初始化所有动画和效果
+    // 初始化所有动画和���果
     initializeScrollAnimations();
     initializeHoverEffects();
     initializeSkillTags();
@@ -1934,7 +1978,7 @@ function initializeNavbar() {
         }
     });
 
-    // 汉堡���单点击事件
+    // 汉堡单点击事件
     menuToggle.addEventListener('click', () => {
         menuToggle.classList.toggle('active');
         navLinks.classList.toggle('active');
@@ -2018,7 +2062,7 @@ function typeWriter(element, text, speed = 50) {
     
     // 先显示全部文本
     element.innerHTML = text;
-    // 然后使用淡入效果
+    // 然后使用淡入��果
     element.style.transition = 'opacity 0.5s ease';
     element.style.opacity = '1';
 }
@@ -2097,7 +2141,7 @@ document.querySelector('.modal-overlay').onclick = function() {
 function openAlbumModal() {
     const modal = document.getElementById("albumModal");
     const photoGrid = modal.querySelector('.photo-grid');
-    photoGrid.innerHTML = ''; // 清空之前的内容
+    photoGrid.innerHTML = ''; // 清空之前的���容
 
     const photos = [
         { src: '../images/IMG_1556.JPG', alt: 'Travel' },
