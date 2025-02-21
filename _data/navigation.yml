@@ -4,7 +4,7 @@ main:
     url: publications
 
   - title: "Academic"
-    url: talks    
+    url: academic    
 
   - title: "Entrepreneurial"
     url: entrepreneurship    
