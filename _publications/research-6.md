@@ -1616,7 +1616,7 @@ body {
                 </p>
                 <div class="authors">
                     <div class="author">
-                        <img src="avatar1.jpg" alt="Wenji Zuo">
+                        <img src="../images/Matrix_Project/avatar1.jpg" alt="Wenji Zuo">
                         <span>Wenji Zuo (wz464)</span>
                     </div>
                     <div class="author">
