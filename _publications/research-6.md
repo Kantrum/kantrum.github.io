@@ -1620,7 +1620,7 @@ body {
                         <span>Wenji Zuo (wz464)</span>
                     </div>
                     <div class="author">
-                        <img src="avatar2.jpg" alt="Jiongtao Huang">
+                        <img src="../images/Matrix_Project/avatar2.jpg" alt="Jiongtao Huang">
                         <span>Jiongtao Huang (jh2877)</span>
                     </div>
                 </div>
@@ -1636,7 +1636,7 @@ body {
                 </div>
             </div>
             <div class="hero-image" data-aos="fade-left">
-                <img src="screenshoot.jpg" alt="Digital Sand Flow Device">
+                <img src="../images/Matrix_Project/screenshoot.jpg" alt="Digital Sand Flow Device">
             </div>
         </div>
     </header>
@@ -1836,7 +1836,7 @@ body {
                                 </div>
                                 <div class="workflow-images single">
                                     <div class="workflow-image-container">
-                                        <img src="init.jpg" alt="System Initialization">
+                                        <img src="../images/Matrix_Project/init.jpg" alt="System Initialization">
                                     </div>
                                 </div>
                                 <div class="workflow-arrow">
@@ -1861,16 +1861,16 @@ body {
                                 </div>
                                 <div class="workflow-images triple">
                                     <div class="workflow-image-container">
-                                        <img src="demo-snow.jpg" alt="White Snow Demo">
+                                        <img src="../images/Matrix_Project/demo-snow.jpg" alt="White Snow Demo">
                                     </div>
                                     <div class="workflow-image-container">
-                                        <img src="demo-hourglass.jpg" alt="Traditional Hourglass">
+                                        <img src="../images/Matrix_Project/demo-hourglass.jpg" alt="Traditional Hourglass">
                                     </div>
                                     <div class="workflow-image-container">
-                                        <img src="demo-ece.jpg" alt="ECE Logo Demo">
+                                        <img src="../images/Matrix_Project/demo-ece.jpg" alt="ECE Logo Demo">
                                     </div>
                                     <div class="workflow-image-container">
-                                        <img src="demo-cu.jpg" alt="CU Logo Demo">
+                                        <img src="../images/Matrix_Project/demo-cu.jpg" alt="CU Logo Demo">
                                     </div>
                                 </div>
                                 <div class="workflow-arrow">
@@ -1894,13 +1894,13 @@ body {
                                 </div>
                                 <div class="workflow-images double">
                                     <div class="workflow-image-container">
-                                        <img src="timer-5min.jpg" alt="5-Minute Timer">
+                                        <img src="../images/Matrix_Project/timer-5min.jpg" alt="5-Minute Timer">
                                     </div>
                                     <div class="workflow-image-container">
-                                        <img src="timer-1min.jpg" alt="1-Minute Timer">
+                                        <img src="../images/Matrix_Project/timer-1min.jpg" alt="1-Minute Timer">
                                     </div>
                                     <div class="workflow-image-container">
-                                        <img src="timer-30sec.jpg" alt="30-sec Timer">
+                                        <img src="../images/Matrix_Project/timer-30sec.jpg" alt="30-sec Timer">
                                     </div>
                                 </div>
                                 <div class="workflow-arrow">
@@ -1923,10 +1923,10 @@ body {
                                 </div>
                                 <div class="workflow-images single">
                                     <div class="workflow-image-container">
-                                        <img src="flash.jpg" alt="flash">
+                                        <img src="../images/Matrix_Project/flash.jpg" alt="flash">
                                     </div>
                                     <div class="workflow-image-container">
-                                        <img src="completion.jpg" alt="Demo Completion">
+                                        <img src="../images/Matrix_Project/completion.jpg" alt="Demo Completion">
                                     </div>
                                 </div>
                             </div>
