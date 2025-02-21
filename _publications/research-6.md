@@ -1,3 +1,11 @@
+---
+layout: none
+collection: research
+permalink: /publication/research-6
+date: 2024-01-31
+---
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
