@@ -8,7 +8,7 @@
 # Site Settings
 locale                   : "en-US"
 title                    : "Huang Jiongtao"
-title_separator          : "|"
+title_separator          : "-"
 name                     : &name "Huang Jiongtao"
 description              : &description "A blog about technology, academic research, and personal growth."
 url                      : https://kantrum.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -198,9 +198,9 @@ defaults:
       layout: none # 不使用任何布局
       title: "Huang Jiongtao's Homepage"
       permalink: /
-  # 特例配置（专用于 about 页面）
+  # 特例配置（专用于 introduction 页面）
   - scope:
-      path: "_pages/about.html" # 仅对 publications.html 生效
+      path: "_pages/introduction.html" # 仅对 publications.html 生效
     values:
       layout: none # 不使用任何布局
       title: "Huang Jiongtao's Homepage"
