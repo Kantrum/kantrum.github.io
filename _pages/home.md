@@ -608,7 +608,7 @@ body {
                     <span></span>
                 </button>
                 <ul class="nav-links">
-                    <li><a href="introduction/" data-en="Introduction" data-zh="关于">Introduction</a></li>
+                    <li><a href="introduction/" data-en="Introduction" data-zh="简介">Introduction</a></li>
                     <li><a href="academic/" data-en="Academic" data-zh="学术">Academic</a></li>
                     <li><a href="entrepreneurship/" data-en="Entrepreneurial" data-zh="创业">Entrepreneurial</a></li>
                     <li><a href="portfolio/" data-en="Life" data-zh="生活">Life</a></li>
