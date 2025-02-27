@@ -629,7 +629,7 @@ body {
                 </div>
                 <div class="cta-buttons">
                     <a href="cv/" class="cta-primary" data-en="Get in Touch" data-zh="联系我">Get in Touch</a>
-                    <a href="publications/" class="cta-secondary" data-en="Learn More" data-zh="了解更多">Learn More</a>
+                    <a href="introduction/" class="cta-secondary" data-en="Learn More" data-zh="了解更多">Learn More</a>
                 </div>
             </section>
 
