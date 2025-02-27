@@ -682,8 +682,8 @@ body {
         <footer class="footer">
             <div class="footer-content">
                 <div class="footer-info">
-                    <p data-en="&copy; 2024 Jiongtao Huang. All rights reserved." 
-                       data-zh="&copy; 2024 黄炯涛。保留所有权利。">&copy; 2024 Jiongtao Huang. All rights reserved.</p>
+                    <p data-en="&copy; 2025 Jiongtao Huang. All rights reserved." 
+                       data-zh="&copy; 2025 黄炯涛。保留所有权利。">&copy; 2025 Jiongtao Huang. All rights reserved.</p>
                 </div>
                 <div class="footer-links">
                     <a href="https://www.linkedin.com/in/jiongtao-huang-150709203/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a>
