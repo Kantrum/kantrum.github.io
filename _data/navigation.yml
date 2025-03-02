@@ -3,10 +3,10 @@ main:
   - title: "Introduction"
     url: introduction
 
-  - title: "Academic"
-    url: academic    
+  - title: "Education"
+    url: Education    
 
-  - title: "Entrepreneurial"
+  - title: "Entrepreneurship"
     url: entrepreneurship    
     
   - title: "Life"
