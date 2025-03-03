@@ -11,52 +11,3381 @@ location: "Chengdu, China"
 A university-level tutoring enterprise was established, focusing on preparing students for various competitions and enhancing career readiness. In its inaugural phase during the winter term of 2023, the enterprise successfully enrolled 70 students in a program concentrated on e-commerce innovation and entrepreneurship. Building on its initial success, the company is expanding its services to cover a broader range of academic competitions and educational services, aiming to accommodate a diverse array of student academic interests and career aspirations.
 
 
-### Founding Story
-- **Date of Establishment:** [成立时间]
-  - **Location of Headquarters:** [公司所在地]
-  - **Team at Inception:** [初始团队规模]
-  - **Genesis of the Company:** [成立背后的故事]
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>四川孑民科技有限责任公司</title>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Satisfy&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'ByteSans-Regular';
+            src: url('//lf3-static.bytednsdoc.com/obj/eden-cn/ptlz_zlp/ljhwZthlaukjlkulzlp/font/ByteSans-Regular.ttf');
+        }
 
-### Business Model Overview
-- **Industry Sector:** [所处行业]
-- **Key Services and Products:** [核心服务或产品]
-  - **Distinguishing Features:** [产品或服务的独特卖点]
-- **Primary Market Focus:** [目标市场]
-  - **Comprehensive Market Analysis:** [市场分析]
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-### Executive Leadership
-- **Role within the Company:** [您在公司中的角色]
-- **Scope of Responsibilities:** [主要职责]
-- **Approach to Leadership:** [您的领导风格]
-  - **Team Development Practices:** [团队建设经验]
-  - **Philosophy of Management:** [管理理念]
+        body {
+            font-family: 'ByteSans-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1f2329;
+            background: #000;
+        }
 
-### Milestones and Achievements
-- **Significant Milestones:** [重要里程碑]
-- **Key Growth Indicators:** [成长指标，如收入增长、客户增长]
-- **Recognition and Awards:** [获得的奖项和认可]
-  - **Press and Media Highlights:** [媒体报道]
+        /* 导航栏样式 */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 48px;
+            height: 64px;
+            background: #fff;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
 
-### Strategic Impact
-- **Initiatives Undertaken:** [您发起的战略举措]
-- **Notable Projects Spearheaded:** [您领导的主要项目]
-  - **Outcomes and Impact:** [项目成果]
-- **Innovative Contributions:** [您引入的创新]
-  - **Business Implications:** [对业务的影响]
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 15px;
+            color: #1f2329;
+        }
 
-### Overcoming Adversity
-- **Key Challenges Faced:** [面临的重大挑战]
-- **Approaches to Problem Solving:** [解决问题的方法]
-  - **Adaptability and Learnings:** [学习与适应]
+        .logo-section img {
+            height: 32px;
+        }
 
-### Future Prospects
-- **Short-term Objectives:** [未来的目标]
-- **Long-term Strategic Expansion:** [扩张计划]
-  - **Vision and Aspirations:** [长期愿景]
+        .nav-links {
+            display: flex;
+            gap: 36px;
+            align-items: center;
+            margin-right: auto;
+            margin-left: 48px;
+        }
 
+        .nav-links a {
+            color: #1f2329;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+            position: relative;
+        }
 
-Experience
-======
-* Launched a vehicle health monitoring system and an online medical payment platform, directly leading a software team to meet critical industry needs.
-* Initiated and closed strategic partnerships with Chengdu Hikvision Research Institute and Chengdu Extreme Viewpoint Technology, expanding company reach and capability.
-* Streamlined our supply chain by securing a pivotal agreement with Guilin Jingrui Sensor Technology Co., Ltd significantly enhancing the quality and efficiency of our product offerings.
+        .nav-links a:hover {
+            color: #1677ff;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #1677ff;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            transform: scaleX(1);
+        }
+
+        .social-hire {
+            border: 1px solid #e5e6eb;
+            padding: 6px 16px !important;
+            border-radius: 6px;
+            margin-left: 12px;
+            transition: all 0.3s ease !important;
+        }
+
+        .social-hire:hover {
+            border-color: #1677ff;
+            background: rgba(22,119,255,0.1);
+        }
+
+        .login-section {
+            margin-left: 24px;
+        }
+
+        .login-btn {
+            background: #1677ff;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        /* 登录弹窗 */
+        .login-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            padding: 16px;
+            margin-top: 8px;
+            display: none;
+            width: 300px;
+        }
+
+        .login-dropdown.active {
+            display: block;
+        }
+
+        .login-form-group {
+            margin-bottom: 16px;
+        }
+
+        .login-input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #e5e6eb;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .login-input:focus {
+            border-color: #1677ff;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(22,119,255,0.2);
+        }
+
+        .login-error {
+            color: #ff4d4f;
+            font-size: 12px;
+            margin-top: 4px;
+            display: none;
+        }
+
+        .login-btn-submit {
+            width: 100%;
+            padding: 8px;
+            background: #1677ff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .login-btn-submit:hover {
+            background: #4096ff;
+        }
+
+        .login-btn-submit:active {
+            background: #0958d9;
+        }
+
+        .login-options {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 12px;
+            font-size: 12px;
+        }
+
+        .login-options a {
+            color: #1677ff;
+            text-decoration: none;
+        }
+
+        .login-options a:hover {
+            color: #4096ff;
+        }
+
+        .loading {
+            position: relative;
+            pointer-events: none;
+        }
+
+        .loading::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 16px;
+            height: 16px;
+            margin: -8px 0 0 -8px;
+            border: 2px solid #fff;
+            border-top-color: transparent;
+            border-radius: 50%;
+            animation: loading 0.75s infinite linear;
+        }
+
+        @keyframes loading {
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Hero区域样式 */
+        .hero {
+            min-height: 100vh;
+            padding-top: 64px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding-left: 120px;
+            padding-top: 120px;
+        }
+
+        .join-text {
+            font-family: 'Satisfy', cursive;
+            font-size: 42px;
+            background: linear-gradient(120deg, #52ffa8 20%, #1677ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            transform: translateX(-100px) rotate(-8deg);
+            opacity: 0;
+            animation: slideIn 0.8s ease forwards;
+            text-shadow: 4px 4px 8px rgba(82, 255, 168, 0.2);
+        }
+
+        .hero-title {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 96px;
+            color: #52ffa8;
+            margin-bottom: 24px;
+            letter-spacing: 4px;
+            transform: translateX(-100px) rotate(-2deg);
+            opacity: 0;
+            animation: slideIn 0.8s ease 0.2s forwards, 
+                       float 6s ease-in-out infinite;
+            text-shadow: 0 0 20px rgba(82, 255, 168, 0.3),
+                         4px 4px 0 rgba(22, 119, 255, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 52px;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 20px;
+            transform: translateX(-100px) rotate(-1deg);
+            opacity: 0;
+            animation: slideIn 0.8s ease 0.4s forwards;
+            letter-spacing: 2px;
+        }
+
+        .hero-subtitle span {
+            color: #52ffa8;
+            position: relative;
+            display: inline-block;
+            transform: rotate(2deg);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-subtitle span:hover {
+            transform: rotate(-2deg) scale(1.1);
+        }
+
+        .hero-description {
+            font-family: 'Satisfy', cursive;
+            font-size: 32px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 48px;
+            transform: translateX(-100px) rotate(-1deg);
+            opacity: 0;
+            animation: slideIn 0.8s ease 0.6s forwards;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 32px;
+            transform: translateX(-100px);
+            opacity: 0;
+            animation: slideIn 0.8s ease 0.8s forwards;
+        }
+
+        .hero-btn {
+            padding: 16px 40px;
+            border-radius: 30px;
+            font-size: 20px;
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.4s ease;
+            transform: rotate(-1deg);
+            white-space: nowrap;
+        }
+
+        .primary-btn {
+            background: linear-gradient(135deg, #52ffa8, #1677ff);
+            color: #000;
+            box-shadow: 0 4px 15px rgba(82, 255, 168, 0.4);
+        }
+
+        .primary-btn:hover {
+            transform: translateY(-4px) rotate(1deg) scale(1.05);
+            box-shadow: 0 8px 20px rgba(82, 255, 168, 0.6);
+        }
+
+        .secondary-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: 2px solid rgba(82, 255, 168, 0.4);
+            backdrop-filter: blur(5px);
+        }
+
+        .secondary-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-4px) rotate(1deg) scale(1.05);
+            border-color: #52ffa8;
+        }
+
+        /* 添加文字发光动画 */
+        @keyframes textGlow {
+            0%, 100% {
+                text-shadow: 0 0 20px rgba(82, 255, 168, 0.3);
+            }
+            50% {
+                text-shadow: 0 0 30px rgba(82, 255, 168, 0.6);
+            }
+        }
+
+        @keyframes slideIn {
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(-2deg);
+            }
+            50% {
+                transform: translateY(-15px) rotate(1deg);
+            }
+        }
+
+        .hero-image {
+            width: 600px;
+            height: auto;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.8;
+            filter: drop-shadow(0 0 20px rgba(82, 255, 168, 0.3));
+        }
+
+        .seed-svg {
+            fill: none;
+            stroke: #52ffa8;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: drawSeed 3s ease-out forwards, 
+                       floatSeed 4s ease-in-out infinite,
+                       glowSeed 3s infinite;
+        }
+
+        @keyframes drawSeed {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes floatSeed {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(2deg);
+            }
+        }
+
+        @keyframes glowSeed {
+            0%, 100% {
+                stroke: #52ffa8;
+                filter: drop-shadow(0 0 20px rgba(82, 255, 168, 0.3));
+            }
+            50% {
+                stroke: #7cffbe;
+                filter: drop-shadow(0 0 30px rgba(82, 255, 168, 0.6));
+            }
+        }
+
+        .arrow-icon {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        /* 添加叶子生长动画 */
+        .leaf-grow {
+            transform-origin: bottom;
+            animation: growLeaf 2s ease-out forwards;
+        }
+
+        @keyframes growLeaf {
+            from {
+                transform: scaleY(0);
+            }
+            to {
+                transform: scaleY(1);
+            }
+        }
+
+        .company-name {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            font-family: 'ByteSans-Regular', sans-serif;
+            position: relative;
+            padding: 8px 0;
+        }
+
+        .jie {
+            font-size: 32px;
+            font-weight: 800;
+            background: linear-gradient(120deg, #1677ff 0%, #52ffa8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+            transform: rotate(-5deg);
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .min {
+            font-size: 32px;
+            font-weight: 800;
+            background: linear-gradient(120deg, #52ffa8 0%, #1677ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+            transform: rotate(5deg);
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .tech {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 26px;
+            color: #1f2329;
+            opacity: 0.9;
+            margin-left: 6px;
+            transform: rotate(-2deg);
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .recruit {
+            font-family: 'Satisfy', cursive;
+            font-size: 24px;
+            color: #1677ff;
+            margin-left: 12px;
+            padding-left: 12px;
+            border-left: 2px solid #e5e6eb;
+            transform: rotate(2deg);
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        /* 添加悬停动画效果 */
+        .company-name:hover .jie {
+            transform: rotate(-8deg) translateY(-2px);
+            text-shadow: 2px 2px 4px rgba(22,119,255,0.3);
+        }
+
+        .company-name:hover .min {
+            transform: rotate(8deg) translateY(-2px);
+            text-shadow: 2px 2px 4px rgba(82,255,168,0.3);
+        }
+
+        .company-name:hover .tech {
+            transform: rotate(-4deg) translateY(-2px);
+            color: #000;
+        }
+
+        .company-name:hover .recruit {
+            transform: rotate(4deg) translateY(-2px);
+            color: #0958d9;
+        }
+
+        /* 添加光效动画 */
+        .company-name::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.2),
+                transparent
+            );
+            transition: 0.5s;
+        }
+
+        .company-name:hover::after {
+            left: 100%;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .jie, .min {
+                font-size: 28px;
+            }
+            .tech {
+                font-size: 22px;
+            }
+            .recruit {
+                font-size: 20px;
+            }
+        }
+
+        /* 基础响应式设置 */
+        :root {
+            --nav-height: 64px;
+            --content-padding: 120px;
+        }
+
+        /* 导航栏响应式 */
+        @media (max-width: 1200px) {
+            .nav-links {
+                gap: 24px;
+            }
+            
+            .nav-links a {
+                font-size: 14px;
+            }
+            .hero-content {
+                padding-left: 60px;
+            }
+            .hero-btn {
+                padding: 14px 32px;
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .navbar {
+                padding: 0 24px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+                order: 1;
+            }
+
+            .login-section {
+                margin-left: auto;
+                margin-right: 16px;
+            }
+
+            .mobile-nav {
+                display: none;
+                position: fixed;
+                top: var(--nav-height);
+                left: 0;
+                width: 100%;
+                background: white;
+                z-index: 999;
+            }
+
+            .mobile-nav.active {
+                display: block;
+            }
+
+            .hero-content {
+                padding: 60px 24px;
+                text-align: center;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                padding: 0 16px;
+            }
+
+            .company-name {
+                font-size: 90%;
+            }
+
+            .login-btn {
+                padding: 6px 12px;
+                font-size: 13px;
+            }
+            .hero-buttons {
+                max-width: 260px;
+            }
+            .hero-btn {
+                padding: 10px 20px;
+                font-size: 15px;
+            }
+        }
+
+        /* 登录框响应式 */
+        @media (max-width: 480px) {
+            .login-dropdown {
+                width: calc(100vw - 32px);
+                right: -16px;
+            }
+        }
+
+        /* 移动端导航菜单样式 */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: var(--nav-height);
+            left: 0;
+            width: 100%;
+            background: white;
+            padding: 16px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            z-index: 999;
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-nav.active {
+            display: block;
+            transform: translateY(0);
+        }
+
+        .mobile-nav a {
+            display: block;
+            padding: 12px 16px;
+            color: #1f2329;
+            text-decoration: none;
+            border-bottom: 1px solid #e5e6eb;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav a:hover {
+            background: rgba(22,119,255,0.1);
+            color: #1677ff;
+            padding-left: 24px;
+        }
+
+        /* 汉堡菜单按钮样式 */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+            color: #1f2329;
+        }
+
+        .menu-toggle svg {
+            fill: currentColor;
+        }
+
+        /* 优化移动端整体布局 */
+        @media (max-width: 768px) {
+            .hero {
+                padding-top: 80px;
+                min-height: auto;
+            }
+            
+            .hero-content {
+                padding-top: 40px;
+            }
+
+            .hero-title {
+                font-size: 56px;
+                margin-bottom: 20px;
+            }
+
+            .join-text {
+                font-size: 32px;
+            }
+
+            .hero-subtitle {
+                font-size: 32px;
+                margin-bottom: 16px;
+            }
+
+            .hero-description {
+                font-size: 20px;
+                margin-bottom: 32px;
+            }
+
+            .hero-image {
+                width: 80%;
+                max-width: 300px;
+                margin: 40px auto;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            .hero-btn {
+                width: 100%;
+                justify-content: center;
+                padding: 12px 24px;
+                font-size: 16px;
+            }
+        }
+
+        /* 通用部分样式 */
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        .section-title {
+            font-size: 42px;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 60px;
+            font-family: 'Permanent Marker', cursive;
+            text-shadow: 0 0 20px rgba(82, 255, 168, 0.3);
+        }
+
+        /* 关于我们部分样式优化 */
+        .about-us {
+            background: linear-gradient(180deg, #000 0%, #0a1930 100%);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 添加背景动效 */
+        .about-us::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(82, 255, 168, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(22, 119, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+        }
+
+        .about-text {
+            color: #fff;
+            position: relative;
+        }
+
+        .highlight-text {
+            font-size: 42px;
+            background: linear-gradient(120deg, #52ffa8, #1677ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 32px;
+            font-family: 'Permanent Marker', cursive;
+            position: relative;
+            display: inline-block;
+        }
+
+        .highlight-text::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(90deg, #52ffa8, transparent);
+        }
+
+        .mission-text {
+            font-size: 20px;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+            position: relative;
+            padding-left: 24px;
+            border-left: 3px solid #52ffa8;
+        }
+
+        .feature-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+
+        .feature-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 24px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px rgba(82, 255, 168, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 16px;
+            display: inline-block;
+            padding: 12px;
+            background: rgba(82, 255, 168, 0.1);
+            border-radius: 12px;
+        }
+
+        .feature-title {
+            color: #52ffa8;
+            font-size: 20px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .feature-desc {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .about-stats {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 24px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-item {
+            text-align: left;
+            padding: 20px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.02);
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateX(5px);
+        }
+
+        .stat-number {
+            font-size: 52px;
+            font-weight: 800;
+            background: linear-gradient(120deg, #52ffa8, #1677ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 18px;
+            display: block;
+        }
+
+        .stat-desc {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .feature-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ByteStyle 部分样式 */
+        .bytestyle-section {
+            margin-bottom: 80px;
+            text-align: center;
+        }
+
+        .bytestyle-title {
+            font-size: 48px;
+            color: #fff;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .bytestyle-desc {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 64px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .bytestyle-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .bytestyle-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            padding: 24px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bytestyle-item:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .bytestyle-image {
+            width: 100%;
+            height: 200px;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 24px;
+        }
+
+        .bytestyle-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .bytestyle-item:hover .bytestyle-image img {
+            transform: scale(1.05);
+        }
+
+        .bytestyle-icon {
+            font-size: 32px;
+            margin-bottom: 16px;
+            background: rgba(82, 255, 168, 0.1);
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: -48px auto 16px;
+            position: relative;
+            z-index: 1;
+            backdrop-filter: blur(4px);
+        }
+
+        .bytestyle-item h4 {
+            color: #52ffa8;
+            font-size: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .bytestyle-item p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 992px) {
+            .bytestyle-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+                padding: 0 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .bytestyle-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .bytestyle-title {
+                font-size: 36px;
+            }
+
+            .bytestyle-desc {
+                font-size: 16px;
+                margin-bottom: 40px;
+                padding: 0 20px;
+            }
+        }
+
+        .partnership {
+            background: linear-gradient(180deg, #0a1930 0%, #000 100%);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .partnership::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 80% 20%, rgba(82, 255, 168, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(22, 119, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .partnership-desc {
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            font-size: 18px;
+            max-width: 800px;
+            margin: -30px auto 60px;
+        }
+
+        .partnership-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px 30px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(82, 255, 168, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-icon {
+            font-size: 40px;
+            margin-bottom: 24px;
+            background: rgba(82, 255, 168, 0.1);
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card h3 {
+            color: #52ffa8;
+            font-size: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .card p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 24px;
+            min-height: 52px;
+        }
+
+        .card ul {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .card ul li {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .card ul li::before {
+            content: '✓';
+            color: #52ffa8;
+            position: absolute;
+            left: 0;
+        }
+
+        .learn-more {
+            display: inline-block;
+            padding: 12px 32px;
+            background: linear-gradient(45deg, #52ffa8, #1677ff);
+            color: #000;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .learn-more:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(82, 255, 168, 0.3);
+        }
+
+        @media (max-width: 992px) {
+            .partnership-cards {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 0 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .partnership-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .card {
+                padding: 30px 20px;
+            }
+
+            .partnership-desc {
+                font-size: 16px;
+                padding: 0 20px;
+                margin-bottom: 40px;
+            }
+        }
+
+        /* 在 partnership section 后添加职位部分 */
+        .jobs {
+            background: linear-gradient(0deg, #000 0%, #0a1930 100%);
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .jobs-desc {
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 48px;
+        }
+
+        /* 职位筛选器 */
+        .job-filters {
+            margin-bottom: 48px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .filter-label {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+            min-width: 80px;
+        }
+
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 6px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .filter-btn:hover {
+            border-color: #52ffa8;
+            color: #52ffa8;
+        }
+
+        .filter-btn.active {
+            background: #52ffa8;
+            border-color: #52ffa8;
+            color: #000;
+        }
+
+        /* 职位列表 */
+        .job-list {
+            display: grid;
+            gap: 24px;
+        }
+
+        .job-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .job-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(82, 255, 168, 0.3);
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .job-title {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .job-tag {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .job-tag.intern {
+            background: rgba(82, 255, 168, 0.1);
+            color: #52ffa8;
+        }
+
+        .job-info {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .job-info span {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+        }
+
+        .job-desc {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .job-btn {
+            display: inline-block;
+            padding: 8px 24px;
+            background: linear-gradient(45deg, #52ffa8, #1677ff);
+            color: #000;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .job-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(82, 255, 168, 0.2);
+        }
+
+        .load-more {
+            text-align: center;
+            margin-top: 48px;
+        }
+
+        .load-more-btn {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 12px 32px;
+            border-radius: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0 auto;
+            transition: all 0.3s ease;
+        }
+
+        .load-more-btn:hover {
+            border-color: #52ffa8;
+            color: #52ffa8;
+        }
+
+        @media (max-width: 768px) {
+            .job-filters {
+                padding: 0 20px;
+            }
+
+            .filter-group {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .filter-options {
+                width: 100%;
+            }
+
+            .job-list {
+                padding: 0 20px;
+            }
+
+            .job-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .job-title {
+                font-size: 18px;
+            }
+        }
+
+        /* 在 jobs section 后添加招聘流程和Q&A部分 */
+        .recruitment-process {
+            background: linear-gradient(180deg, #000 0%, #0a1930 100%);
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .process-timeline {
+            display: flex;
+            justify-content: space-between;
+            margin: 60px 0;
+            position: relative;
+            max-width: 1000px;
+            margin: 60px auto;
+        }
+
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            top: 80px;
+            left: 60px;
+            right: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, #52ffa8, #1677ff);
+            z-index: 1;
+        }
+
+        .process-item {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            flex: 1;
+        }
+
+        .process-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            position: relative;
+            background: #0a1930;
+            border-radius: 50%;
+            padding: 4px;
+        }
+
+        .process-icon img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .process-number {
+            position: absolute;
+            bottom: -10px;
+            right: -10px;
+            background: #52ffa8;
+            color: #000;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .process-item h3 {
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .process-item p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+        }
+
+        .process-note {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        /* FAQ样式 */
+        .recruitment-faq {
+            background: #0a1930;
+            padding: 80px 0;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 48px;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(82, 255, 168, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .faq-question, .faq-answer {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .faq-question {
+            margin-bottom: 16px;
+        }
+
+        .faq-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .faq-question .faq-icon {
+            background: #52ffa8;
+            color: #000;
+        }
+
+        .faq-answer .faq-icon {
+            background: #1677ff;
+            color: #fff;
+        }
+
+        .faq-question h3 {
+            color: #fff;
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .faq-answer p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        @media (max-width: 992px) {
+            .process-timeline {
+                flex-direction: column;
+                gap: 40px;
+                margin: 40px auto;
+            }
+
+            .process-timeline::before {
+                left: 50%;
+                top: 0;
+                bottom: 0;
+                width: 2px;
+                height: auto;
+                transform: translateX(-50%);
+            }
+
+            .process-item {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                text-align: left;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+                padding: 0 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .process-item {
+                flex-direction: column;
+                align-items: flex-start;
+                padding-left: 20px;
+            }
+
+            .process-icon {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        /* 在 recruitment-faq section 后添加产品与服务板块 */
+        .products-services {
+            background: linear-gradient(180deg, #0a1930 0%, #000 100%);
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .section-desc {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 18px;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .product-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(82, 255, 168, 0.3);
+        }
+
+        .product-icon {
+            margin-bottom: 24px;
+        }
+
+        .product-card h3 {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .product-card p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 24px;
+            min-height: 52px;
+        }
+
+        .product-card .feature-list {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .product-card .feature-list li {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .product-card .feature-list li::before {
+            content: '•';
+            color: #52ffa8;
+            position: absolute;
+            left: 0;
+            font-size: 20px;
+            line-height: 1;
+        }
+
+        .product-card .learn-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #52ffa8;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .product-card .learn-more::after {
+            content: '→';
+            transition: transform 0.3s ease;
+        }
+
+        .product-card .learn-more:hover {
+            color: #1677ff;
+        }
+
+        .product-card .learn-more:hover::after {
+            transform: translateX(4px);
+        }
+
+        @media (max-width: 992px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .product-card {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section-desc {
+                font-size: 16px;
+                margin-bottom: 40px;
+                padding: 0 20px;
+            }
+
+            .product-card h3 {
+                font-size: 20px;
+            }
+
+            .product-card p {
+                font-size: 14px;
+            }
+        }
+
+        /* 在 products-services section 后添加成长体验部分 */
+        .growth-experience {
+            background: linear-gradient(180deg, #000 0%, #0a1930 100%);
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .growth-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .growth-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 32px;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .growth-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(82, 255, 168, 0.3);
+        }
+
+        .growth-icon {
+            width: 64px;
+            height: 64px;
+        }
+
+        .growth-card h3 {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .growth-card p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 992px) {
+            .growth-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .growth-card {
+                padding: 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .growth-card h3 {
+                font-size: 20px;
+            }
+
+            .growth-card p {
+                font-size: 14px;
+            }
+        }
+
+        /* 分隔线样式 */
+        .section-divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, 
+                rgba(255,255,255,0) 0%, 
+                rgba(255,255,255,0.1) 50%, 
+                rgba(255,255,255,0) 100%);
+            margin: 0 auto;
+        }
+
+        /* 统一区块样式 */
+        section {
+            position: relative;
+            overflow: hidden;
+            padding: 100px 0;
+        }
+
+        section:first-of-type {
+            padding-top: 120px; /* 为导航栏留出空间 */
+        }
+
+        /* 背景渐变过渡 */
+        section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(180deg, 
+                rgba(0,0,0,0.3) 0%, 
+                rgba(0,0,0,0) 100%);
+            pointer-events: none;
+        }
+
+        /* 标题统一样式 */
+        .section-title {
+            font-size: 48px;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 24px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #52ffa8;
+            margin: 20px auto 0;
+            border-radius: 2px;
+        }
+
+        /* 平滑滚动 */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* 导航栏激活状态 */
+        .nav-links a.active,
+        .mobile-nav a.active {
+            color: #1677ff;
+        }
+
+        .nav-links a.active::after {
+            transform: scaleX(1);
+        }
+
+        /* 更新样式部分 */
+        :root {
+            --dark-bg: #0a1930;
+            --darker-bg: #000;
+            --light-bg: #f8f9fa;
+            --primary: #1677ff;
+            --accent: #52ffa8;
+            --text-light: #fff;
+            --text-dark: #1f2329;
+            --section-padding: 100px;
+        }
+
+        /* 交替背景色的section基础样式 */
+        section {
+            position: relative;
+            padding: var(--section-padding) 0;
+            overflow: hidden;
+        }
+
+        section.dark {
+            background: var(--dark-bg);
+            color: var(--text-light);
+        }
+
+        section.darker {
+            background: var(--darker-bg);
+            color: var(--text-light);
+        }
+
+        section.light {
+            background: var(--light-bg);
+            color: var(--text-dark);
+        }
+
+        /* 背景装饰效果 */
+        .bg-decoration {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            opacity: 0.1;
+            mix-blend-mode: overlay;
+        }
+
+        .dark .bg-decoration {
+            background: radial-gradient(circle at 0% 0%, var(--primary) 0%, transparent 50%),
+                        radial-gradient(circle at 100% 100%, var(--accent) 0%, transparent 50%);
+        }
+
+        .light .bg-decoration {
+            background: radial-gradient(circle at 100% 0%, var(--primary) 0%, transparent 50%),
+                        radial-gradient(circle at 0% 100%, var(--accent) 0%, transparent 50%);
+        }
+
+        /* 分隔线优化 */
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                rgba(22, 119, 255, 0.2) 50%, 
+                transparent 100%
+            );
+        }
+
+        /* 内容容器优化 */
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 标题样式优化 */
+        .section-title {
+            font-size: 42px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 48px;
+            position: relative;
+        }
+
+        .dark .section-title,
+        .darker .section-title {
+            color: var(--text-light);
+        }
+
+        .light .section-title {
+            color: var(--text-dark);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+            margin: 20px auto 0;
+            border-radius: 2px;
+        }
+
+        /* 更新各个部分的背景色 */
+        #hero {
+            background: var(--darker-bg);
+        }
+
+        #about {
+            background: #f8fafc;  /* 更柔和的背景色 */
+        }
+
+        #partnership {
+            background: var(--dark-bg);
+        }
+
+        #products {
+            background: var(--light-bg);
+        }
+
+        #growth {
+            background: var(--dark-bg);
+        }
+
+        #jobs {
+            background: var(--light-bg);
+        }
+
+        /* 卡片样式统一优化 */
+        .card-base {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 32px;
+            transition: all 0.3s ease;
+        }
+
+        .light .card-base {
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-base:hover {
+            transform: translateY(-10px);
+        }
+
+        .dark .card-base:hover,
+        .darker .card-base:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--accent);
+        }
+
+        .light .card-base:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        /* 更新文本颜色相关样式 */
+        /* 深色背景下的文本样式 */
+        .dark, .darker {
+            color: var(--text-light);
+        }
+
+        .dark .section-desc,
+        .darker .section-desc {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* 浅色背景下的文本样式 */
+        .light {
+            color: var(--text-dark);
+        }
+
+        .light .section-desc {
+            color: rgba(31, 35, 41, 0.8);
+        }
+
+        /* 卡片样式调整 */
+        .light .card-base {
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .light .card-base h3 {
+            color: var(--text-dark);
+        }
+
+        .light .card-base p {
+            color: rgba(31, 35, 41, 0.8);
+        }
+
+        /* 职位卡片样式调整 */
+        .light .job-card {
+            background: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .light .job-title {
+            color: var(--text-dark);
+        }
+
+        .light .job-info span {
+            color: rgba(31, 35, 41, 0.6);
+        }
+
+        .light .job-desc {
+            color: rgba(31, 35, 41, 0.8);
+        }
+
+        /* FAQ卡片样式调整 */
+        .light .faq-item {
+            background: #fff;
+        }
+
+        .light .faq-question h3 {
+            color: var(--text-dark);
+        }
+
+        .light .faq-answer p {
+            color: rgba(31, 35, 41, 0.8);
+        }
+
+        /* 成长体验卡片样式调整 */
+        .light .growth-card {
+            background: #fff;
+        }
+
+        .light .growth-card h3 {
+            color: var(--text-dark);
+        }
+
+        .light .growth-card p {
+            color: rgba(31, 35, 41, 0.8);
+        }
+
+        /* 产品服务卡片样式调整 */
+        .light .product-card {
+            background: #fff;
+        }
+
+        .light .product-card h3 {
+            color: var(--text-dark);
+        }
+
+        .light .product-card p,
+        .light .product-card .feature-list li {
+            color: rgba(31, 35, 41, 0.8);
+        }
+
+        /* 按钮样式调整 */
+        .light .learn-more {
+            color: var(--primary);
+        }
+
+        .light .learn-more:hover {
+            color: var(--accent);
+        }
+
+        /* 统计数字样式调整 */
+        .light .stat-number {
+            color: var(--primary);
+        }
+
+        .light .stat-label {
+            color: var(--text-dark);
+        }
+
+        .light .stat-desc {
+            color: rgba(31, 35, 41, 0.8);
+        }
+
+        /* 过滤器按钮样式调整 */
+        .light .filter-btn {
+            background: rgba(0, 0, 0, 0.05);
+            color: var(--text-dark);
+            border: none;
+        }
+
+        .light .filter-btn:hover,
+        .light .filter-btn.active {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        /* 分隔线样式调整 */
+        .light .section-divider {
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                rgba(0, 0, 0, 0.1) 50%, 
+                transparent 100%
+            );
+        }
+
+        /* 浅色背景部分的整体样式调整 */
+        .light {
+            background: #f5f7fa;  /* 更柔和的背景色 */
+            color: #2c3e50;       /* 更深的主文本色 */
+        }
+
+        /* 浅色背景下的标题样式 */
+        .light .section-title {
+            color: #1a365d;      /* 深蓝色标题 */
+        }
+
+        .light .section-desc {
+            color: #4a5568;      /* 较深的副标题色 */
+        }
+
+        /* 浅色背景下的卡片样式 */
+        .light .card-base,
+        .light .product-card,
+        .light .job-card,
+        .light .growth-card,
+        .light .faq-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .light .card-base:hover,
+        .light .product-card:hover,
+        .light .job-card:hover,
+        .light .growth-card:hover,
+        .light .faq-item:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            border-color: #1677ff;
+            transform: translateY(-5px);
+        }
+
+        /* 浅色背景下的文本样式 */
+        .light h3 {
+            color: #2d3748;      /* 深色标题 */
+        }
+
+        .light p {
+            color: #4a5568;      /* 正文文本色 */
+        }
+
+        /* 浅色背景下的按钮样式 */
+        .light .learn-more {
+            color: #1677ff;
+            background: rgba(22, 119, 255, 0.1);
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+
+        .light .learn-more:hover {
+            background: #1677ff;
+            color: #ffffff;
+        }
+
+        /* 浅色背景下的列表样式 */
+        .light .feature-list li {
+            color: #4a5568;
+        }
+
+        .light .feature-list li::before {
+            color: #1677ff;
+        }
+
+        /* 浅色背景下的统计数字样式 */
+        .light .stat-number {
+            color: #1677ff;
+            font-weight: 600;
+        }
+
+        .light .stat-label {
+            color: #2d3748;
+        }
+
+        .light .stat-desc {
+            color: #4a5568;
+        }
+
+        /* 浅色背景下的过滤器按钮样式 */
+        .light .filter-btn {
+            background: #edf2f7;
+            color: #4a5568;
+            border: 1px solid #e2e8f0;
+        }
+
+        .light .filter-btn:hover,
+        .light .filter-btn.active {
+            background: #1677ff;
+            color: #ffffff;
+            border-color: #1677ff;
+        }
+
+        /* 浅色背景下的职位卡片样式 */
+        .light .job-title {
+            color: #2d3748;
+        }
+
+        .light .job-tag {
+            background: rgba(22, 119, 255, 0.1);
+            color: #1677ff;
+        }
+
+        .light .job-info span {
+            color: #718096;
+        }
+
+        .light .job-btn {
+            background: #1677ff;
+            color: #ffffff;
+        }
+
+        .light .job-btn:hover {
+            background: #1261d4;
+            transform: translateY(-2px);
+        }
+
+        /* 浅色背景下的FAQ样式 */
+        .light .faq-question h3 {
+            color: #2d3748;
+        }
+
+        .light .faq-answer p {
+            color: #4a5568;
+        }
+
+        /* 浅色背景下的图标样式 */
+        .light .product-icon svg,
+        .light .growth-icon svg {
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        }
+
+        /* 浅色背景下的装饰效果 */
+        .light .bg-decoration {
+            opacity: 0.05;
+            background: linear-gradient(
+                45deg,
+                #1677ff 0%,
+                #52ffa8 100%
+            );
+        }
+
+        /* 关于我们部分的样式优化 */
+        #about {
+            background: #f8fafc;
+        }
+
+        /* 数字统计部分 */
+        .stats-container {
+            margin: 60px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+            position: relative;
+        }
+
+        .stat-item::after {
+            content: '';
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 40%;
+            background: linear-gradient(180deg, 
+                transparent 0%, 
+                rgba(0, 0, 0, 0.1) 50%,
+                transparent 100%
+            );
+        }
+
+        .stat-item:last-child::after {
+            display: none;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            font-family: 'ByteSans-Regular', sans-serif;
+        }
+
+        .stat-label {
+            color: #333333;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .stat-desc {
+            color: #666666;
+            font-size: 14px;
+        }
+
+        /* 公司介绍部分 */
+        .company-intro {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .intro-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .intro-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+            border-color: rgba(0, 0, 0, 0.12);
+        }
+
+        .intro-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 24px;
+            background: #f5f5f5;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .intro-card h3 {
+            color: #1a1a1a;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .intro-card p {
+            color: #4d4d4d;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* 标题样式优化 */
+        #about .section-title {
+            color: #1a1a1a;
+            margin-bottom: 16px;
+        }
+
+        #about .section-desc {
+            color: #4d4d4d;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            text-align: center;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /* 图标颜色 */
+        .intro-icon svg {
+            fill: #1a1a1a;
+            opacity: 0.8;
+        }
+
+        /* 按钮样式 */
+        .intro-card .learn-more {
+            color: #1a1a1a;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .intro-card .learn-more:hover {
+            color: #666666;
+        }
+
+        .intro-card .learn-more::after {
+            content: '→';
+            transition: transform 0.3s ease;
+        }
+
+        .intro-card .learn-more:hover::after {
+            transform: translateX(4px);
+        }
+
+        /* 加载更多按钮样式调整 */
+        .light .load-more-btn {
+            background: #ffffff;
+            color: #1a1a1a;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 12px 32px;
+            border-radius: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 48px auto 0;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .light .load-more-btn:hover {
+            background: #f5f5f5;
+            border-color: rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .light .load-more-btn svg {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.3s ease;
+            fill: #1a1a1a;
+        }
+
+        .light .load-more-btn:hover svg {
+            transform: translateY(2px);
+        }
+
+        /* 加载中状态 */
+        .light .load-more-btn.loading {
+            background: #f5f5f5;
+            pointer-events: none;
+        }
+
+        .light .load-more-btn.loading svg {
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(4px); }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="logo-section">
+            <div class="company-name">
+                <span class="jie">孑</span>
+                <span class="min">民</span>
+                <span class="tech">科技</span>
+                <span class="recruit">招聘</span>
+            </div>
+        </div>
+        
+        <div class="nav-links">
+            <a href="#about">关于我们</a>
+            <a href="#partnership">合作伙伴</a>
+            <a href="#products">产品服务</a>
+            <a href="#growth">成长体验</a>
+            <a href="#jobs">职位招聘</a>
+        </div>
+
+        <button class="menu-toggle">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+            </svg>
+        </button>
+
+        <div class="login-section">
+            <a href="#" class="login-btn" onclick="toggleLogin()">
+                Cry with Smile
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                    <path d="M6 8.5L2 4.5h8L6 8.5z"/>
+                </svg>
+            </a>
+            <div class="login-dropdown" id="loginDropdown">
+                <form id="loginForm" novalidate>
+                    <h3 style="margin-bottom: 16px">登录</h3>
+                    
+                    <div class="login-form-group">
+                        <input type="text" 
+                               class="login-input" 
+                               id="username" 
+                               name="username" 
+                               placeholder="用户名/手机号/邮箱" 
+                               required>
+                        <div class="login-error" id="username-error"></div>
+                    </div>
+                    
+                    <div class="login-form-group">
+                        <input type="password" 
+                               class="login-input" 
+                               id="password" 
+                               name="password" 
+                               placeholder="密码" 
+                               required>
+                        <div class="login-error" id="password-error"></div>
+                    </div>
+                    
+                    <button type="submit" class="login-btn-submit" id="submitBtn">
+                        登录
+                    </button>
+                    
+                    <div class="login-options">
+                        <label>
+                            <input type="checkbox" id="remember"> 记住我
+                        </label>
+                        <div>
+                            <a href="#" id="forgetPassword">忘记密码</a>
+                            <span style="margin: 0 4px">|</span>
+                            <a href="#" id="register">立即注册</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- 移动端导航菜单放在这里 -->
+        <div class="mobile-nav">
+            <a href="#about">关于我们</a>
+            <a href="#partnership">合作伙伴</a>
+            <a href="#products">产品服务</a>
+            <a href="#growth">成长体验</a>
+            <a href="#jobs">职位招聘</a>
+        </div>
+    </nav>
+
+    <!-- Hero区域 -->
+    <section id="hero" class="darker">
+        <div class="bg-decoration"></div>
+        <div class="hero-content">
+            <div class="join-text">Join Jiemin</div>
+            <h1 class="hero-title">Top Seed!</h1>
+            <div class="hero-subtitle">
+                <span>孑民科技</span> Top Seed 发展计划
+            </div>
+            <p class="hero-description">以火种之名，点亮未来世界</p>
+            <div class="hero-buttons">
+                <a href="#" class="hero-btn primary-btn">
+                    应届生招聘
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z"/>
+                    </svg>
+                </a>
+                <a href="#" class="hero-btn secondary-btn">
+                    实习生招聘
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <svg class="hero-image" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- 种子主体 -->
+            <path class="seed-svg" d="
+                M100,20 
+                C140,20 170,50 170,90 
+                C170,130 140,160 100,160 
+                C60,160 30,130 30,90 
+                C30,50 60,20 100,20">
+            </path>
+            
+            <!-- 发芽的茎 -->
+            <path class="seed-svg leaf-grow" d="
+                M100,160 L100,180">
+            </path>
+            
+            <!-- 内部纹理 -->
+            <path class="seed-svg" d="
+                M60,50 C80,40 120,40 140,50
+                M100,90 L100,120
+                M80,70 C90,60 110,60 120,70">
+            </path>
+            
+            <!-- 两侧叶子 -->
+            <path class="seed-svg leaf-grow" d="
+                M70,140 
+                C50,100 50,80 70,60">
+            </path>
+            <path class="seed-svg leaf-grow" d="
+                M130,140 
+                C150,100 150,80 130,60">
+            </path>
+
+            <!-- 发光粒子 -->
+            <circle class="seed-glow" cx="100" cy="90" r="2">
+                <animate attributeName="opacity" 
+                         values="0;1;0" 
+                         dur="2s" 
+                         repeatCount="indefinite"/>
+                <animate attributeName="r" 
+                         values="2;4;2" 
+                         dur="2s" 
+                         repeatCount="indefinite"/>
+            </circle>
+        </svg>
+    </section>
+
+    <!-- 在 Hero 区域后添加新的部分 -->
+    <section id="about" class="light">
+        <div class="bg-decoration"></div>
+        <div class="section-container">
+            <h2 class="section-title">关于我们</h2>
+            
+            <!-- 孑民范部分 -->
+            <div class="bytestyle-section">
+                <h3 class="bytestyle-title">孑民范 JieminStyle</h3>
+                <p class="bytestyle-desc">孑民科技秉持"以教育创新促进人才发展"的理念，致力于打造智慧教育生态系统</p>
+                
+                <div class="bytestyle-grid">
+                    <div class="bytestyle-item">
+                        <div class="bytestyle-image">
+                            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800" alt="创新驱动">
+                        </div>
+                        <div class="bytestyle-icon">💡</div>
+                        <h4>创新驱动</h4>
+                        <p>坚持技术创新，推动教育数字化转型，打造智慧校园整体解决方案</p>
+                    </div>
+                    
+                    <div class="bytestyle-item">
+                        <div class="bytestyle-image">
+                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800" alt="育人为本">
+                        </div>
+                        <div class="bytestyle-icon">🎓</div>
+                        <h4>育人为本</h4>
+                        <p>以学生发展为中心，注重个性化学习体验，助力每个学生实现全面发展</p>
+                    </div>
+                    
+                    <div class="bytestyle-item">
+                        <div class="bytestyle-image">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800" alt="生态共建">
+                        </div>
+                        <div class="bytestyle-icon">🌱</div>
+                        <h4>生态共建</h4>
+                        <p>联合教育机构、学校、企业，构建开放共赢的智慧教育生态圈</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 class="highlight-text">智慧教育，成就未来</h3>
+                    <p class="mission-text">
+                        孑民科技专注于教育信息化建设，从中小学到高等教育，
+                        我们提供全方位的智慧校园解决方案和创新教育服务，
+                        致力于用科技力量推动教育变革，助力莘莘学子成就梦想。
+                    </p>
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <span class="feature-icon">🏫</span>
+                            <h4 class="feature-title">智慧校园建设</h4>
+                            <p class="feature-desc">提供从信息化基础设施到管理系统的整体解决方案，打造数字化校园生态</p>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">📚</span>
+                            <h4 class="feature-title">升学服务体系</h4>
+                            <p class="feature-desc">整合优质教育资源，提供个性化升学规划和全方位升学指导服务</p>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🤖</span>
+                            <h4 class="feature-title">AI教育应用</h4>
+                            <p class="feature-desc">运用人工智能技术，提供智能题库、个性化学习、教学分析等创新服务</p>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🔄</span>
+                            <h4 class="feature-title">教育生态集成</h4>
+                            <p class="feature-desc">连接学校、家庭、社会多方资源，构建完整的教育服务生态系统</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">合作院校</span>
+                        <p class="stat-desc">深度服务各级教育机构</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100万+</span>
+                        <span class="stat-label">服务学生</span>
+                        <p class="stat-desc">助力学生成长发展</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label">教育解决方案</span>
+                        <p class="stat-desc">覆盖教育全场景应用</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section id="partnership" class="dark">
+        <div class="bg-decoration"></div>
+        <div class="section-container">
+            <h2 class="section-title">合作伙伴计划</h2>
+            <p class="partnership-desc">携手共建智慧教育生态，让每一次合作都创造价值</p>
+            <div class="partnership-content">
+                <div class="partnership-cards">
+                    <div class="card">
+                        <div class="card-icon">🏫</div>
+                        <h3>院校合作</h3>
+                        <p>深度合作共建智慧校园，打造数字化教育标杆</p>
+                        <ul>
+                            <li>智慧校园整体解决方案</li>
+                            <li>定制化系统开发服务</li>
+                            <li>专业技术支持团队</li>
+                            <li>持续优化升级服务</li>
+                        </ul>
+                        <a href="#" class="learn-more">了解详情</a>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🤝</div>
+                        <h3>教育机构合作</h3>
+                        <p>整合优质教育资源，共创教育服务新模式</p>
+                        <ul>
+                            <li>教育资源共享平台</li>
+                            <li>联合教研支持</li>
+                            <li>品牌增值服务</li>
+                            <li>市场拓展支持</li>
+                        </ul>
+                        <a href="#" class="learn-more">了解详情</a>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🌐</div>
+                        <h3>技术生态合作</h3>
+                        <p>开放平台能力，共建教育科技生态</p>
+                        <ul>
+                            <li>API 开放平台</li>
+                            <li>技术能力输出</li>
+                            <li>联合创新项目</li>
+                            <li>生态资源对接</li>
+                        </ul>
+                        <a href="#" class="learn-more">了解详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section id="products" class="light">
+        <div class="bg-decoration"></div>
+        <div class="section-container">
+            <h2 class="section-title">产品与服务</h2>
+            <p class="section-desc">以科技创新赋能教育发展，打造智慧教育生态系统</p>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect width="48" height="48" rx="10" fill="#1677ff" fill-opacity="0.1"/>
+                            <path d="M24 12L34 18V30L24 36L14 30V18L24 12Z" stroke="#1677ff" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>智慧校园解决方案</h3>
+                    <p>打造一体化的智慧校园信息服务平台，实现教学、管理、服务的数字化转型</p>
+                    <ul class="feature-list">
+                        <li>校园信息化基础设施</li>
+                        <li>教务管理系统</li>
+                        <li>智慧课堂</li>
+                        <li>校园大数据分析</li>
+                    </ul>
+                    <a href="#" class="learn-more">了解更多</a>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect width="48" height="48" rx="10" fill="#52ffa8" fill-opacity="0.1"/>
+                            <path d="M14 18H34M14 24H34M14 30H24" stroke="#52ffa8" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>升学规划服务</h3>
+                    <p>提供专业的升学咨询和规划服务，助力学生实现理想升学目标</p>
+                    <ul class="feature-list">
+                        <li>个性化升学方案</li>
+                        <li>院校专业分析</li>
+                        <li>学业评估</li>
+                        <li>志愿填报指导</li>
+                    </ul>
+                    <a href="#" class="learn-more">了解更多</a>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect width="48" height="48" rx="10" fill="#ff4d4f" fill-opacity="0.1"/>
+                            <path d="M24 16V32M16 24H32" stroke="#ff4d4f" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>AI 智能教育平台</h3>
+                    <p>运用人工智能技术，提供个性化学习体验和智能教学辅助</p>
+                    <ul class="feature-list">
+                        <li>智能题库系统</li>
+                        <li>个性化学习路径</li>
+                        <li>学情分析报告</li>
+                        <li>智能教学助手</li>
+                    </ul>
+                    <a href="#" class="learn-more">了解更多</a>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect width="48" height="48" rx="10" fill="#722ed1" fill-opacity="0.1"/>
+                            <path d="M16 24C16 19.5817 19.5817 16 24 16C28.4183 16 32 19.5817 32 24C32 28.4183 28.4183 32 24 32" stroke="#722ed1" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>教育资源整合平台</h3>
+                    <p>整合优质教育资源，构建开放共享的教育生态系统</p>
+                    <ul class="feature-list">
+                        <li>优质课程资源库</li>
+                        <li>教研共享平台</li>
+                        <li>教育资源交易</li>
+                        <li>校企合作对接</li>
+                    </ul>
+                    <a href="#" class="learn-more">了解更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section id="growth" class="dark">
+        <div class="bg-decoration"></div>
+        <div class="section-container">
+            <h2 class="section-title">在有挑战的事中成长</h2>
+            <p class="section-desc">我们认为"和优秀的人，做有挑战的事"是成长最好的方式</p>
+
+            <div class="growth-grid">
+                <div class="growth-card">
+                    <div class="growth-icon">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                            <circle cx="32" cy="32" r="32" fill="#1677ff" fill-opacity="0.1"/>
+                            <path d="M32 20L44 32L32 44L20 32L32 20Z" stroke="#1677ff" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>参与有挑战性的项目</h3>
+                    <p>我们鼓励新人大胆创新，做项目 Owner，一起做突破行业、有全球影响力的事。这里有数以亿计的用户，在等你用新技术、新想法创造价值。</p>
+                </div>
+
+                <div class="growth-card">
+                    <div class="growth-icon">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                            <circle cx="32" cy="32" r="32" fill="#52ffa8" fill-opacity="0.1"/>
+                            <path d="M24 32C24 27.5817 27.5817 24 32 24C36.4183 24 40 27.5817 40 32" stroke="#52ffa8" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>和优秀队友互相激发</h3>
+                    <p>这里有技术 Mentor，带你体验定制化成长，务实高效的团队让你可以快速融入。与科学家、资深工程师一起交流探讨，相互激发。</p>
+                </div>
+
+                <div class="growth-card">
+                    <div class="growth-icon">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                            <circle cx="32" cy="32" r="32" fill="#ff4d4f" fill-opacity="0.1"/>
+                            <path d="M24 32H40M32 24V40" stroke="#ff4d4f" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>完善的培养体系</h3>
+                    <p>系统化的新人培养计划，导师制度确保每位新人都能得到充分指导。定期的技术分享和培训，帮助你持续提升专业能力。</p>
+                </div>
+
+                <div class="growth-card">
+                    <div class="growth-icon">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                            <circle cx="32" cy="32" r="32" fill="#722ed1" fill-opacity="0.1"/>
+                            <path d="M24 32L32 40L40 32L32 24L24 32Z" stroke="#722ed1" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>广阔的发展空间</h3>
+                    <p>扁平化的组织结构，开放的晋升通道，让每个人都有施展才华的机会。多元化的项目经验，助你快速成长。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section id="jobs" class="light">
+        <div class="bg-decoration"></div>
+        <div class="section-container">
+            <h2 class="section-title">职位招聘</h2>
+            <p class="jobs-desc">加入孑民科技，与优秀的人一起做有挑战的事</p>
+
+            <!-- 职位筛选器 -->
+            <div class="job-filters">
+                <div class="filter-group">
+                    <span class="filter-label">招聘类型</span>
+                    <div class="filter-options">
+                        <button class="filter-btn active">全部</button>
+                        <button class="filter-btn">应届生</button>
+                        <button class="filter-btn">实习生</button>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <span class="filter-label">工作地点</span>
+                    <div class="filter-options">
+                        <button class="filter-btn active">全部</button>
+                        <button class="filter-btn">北京</button>
+                        <button class="filter-btn">上海</button>
+                        <button class="filter-btn">杭州</button>
+                        <button class="filter-btn">深圳</button>
+                        <button class="filter-btn">广州</button>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <span class="filter-label">职位类别</span>
+                    <div class="filter-options">
+                        <button class="filter-btn active">全部</button>
+                        <button class="filter-btn">研发</button>
+                        <button class="filter-btn">产品</button>
+                        <button class="filter-btn">运营</button>
+                        <button class="filter-btn">设计</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 职位列表 -->
+            <div class="job-list">
+                <div class="job-card">
+                    <div class="job-header">
+                        <h3 class="job-title">前端开发实习生-生活服务</h3>
+                        <span class="job-tag intern">实习生</span>
+                    </div>
+                    <div class="job-info">
+                        <span class="job-location">上海</span>
+                        <span class="job-type">研发-前端</span>
+                        <span class="job-id">职位 ID: A29476</span>
+                    </div>
+                    <p class="job-desc">面向2026届毕业生（2025年9月-2026年8月期间毕业），为符合岗位要求的同学提供转正机会。</p>
+                    <a href="#" class="job-btn">立即申请</a>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <h3 class="job-title">策略运营实习生-直播国际化</h3>
+                        <span class="job-tag intern">实习生</span>
+                    </div>
+                    <div class="job-info">
+                        <span class="job-location">北京</span>
+                        <span class="job-type">运营-产品运营</span>
+                        <span class="job-id">职位 ID: A97834A</span>
+                    </div>
+                    <p class="job-desc">面向全体在校生，为符合岗位要求的同学提供为期3个月的项目实践机会。团队介绍：直播国际化团队致力于创造以人为核心的实时互动场景。</p>
+                    <a href="#" class="job-btn">立即申请</a>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <h3 class="job-title">用户产品经理实习生-社交与创作</h3>
+                        <span class="job-tag intern">实习生</span>
+                    </div>
+                    <div class="job-info">
+                        <span class="job-location">上海</span>
+                        <span class="job-type">产品-产品经理</span>
+                        <span class="job-id">职位 ID: A234442</span>
+                    </div>
+                    <p class="job-desc">面向2026届毕业生（2025年9月-2026年8月期间毕业），为符合岗位要求的同学提供转正机会。</p>
+                    <a href="#" class="job-btn">立即申请</a>
+                </div>
+            </div>
+
+            <!-- 加载更多按钮 -->
+            <div class="load-more">
+                <button class="load-more-btn">
+                    加载更多职位
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 在 jobs section 后添加招聘流程和Q&A部分 -->
+    <section class="recruitment-process">
+        <div class="section-container">
+            <h2 class="section-title">招聘流程</h2>
+            <div class="process-timeline">
+                <div class="process-item">
+                    <div class="process-icon">
+                        <img src="https://images.unsplash.com/photo-1611224885990-ab7363d1f2a9?w=64" alt="网申">
+                        <span class="process-number">01</span>
+                    </div>
+                    <h3>网申/内推</h3>
+                    <p>提交简历，开启你的职业之旅</p>
+                </div>
+                <div class="process-item">
+                    <div class="process-icon">
+                        <img src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?w=64" alt="笔试">
+                        <span class="process-number">02</span>
+                    </div>
+                    <h3>笔试</h3>
+                    <p>线上完成专业技能测评</p>
+                </div>
+                <div class="process-item">
+                    <div class="process-icon">
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=64" alt="面试">
+                        <span class="process-number">03</span>
+                    </div>
+                    <h3>面试</h3>
+                    <p>与面试官深入交流</p>
+                </div>
+                <div class="process-item">
+                    <div class="process-icon">
+                        <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=64" alt="Offer">
+                        <span class="process-number">04</span>
+                    </div>
+                    <h3>Offer发放</h3>
+                    <p>期待你的加入</p>
+                </div>
+            </div>
+            <p class="process-note">关于Top Seed人才计划和储备云人才计划的招聘流程，请前往项目页面了解</p>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section class="recruitment-faq">
+        <div class="section-container">
+            <h2 class="section-title">招聘Q&A</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-icon">Q</span>
+                        <h3>简历投递后多久会收到反馈？</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <span class="faq-icon">A</span>
+                        <p>我们会在收到简历后的3-5个工作日内完成简历筛选，如果通过筛选，HR会通过邮件或电话与你联系。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-icon">Q</span>
+                        <h3>实习期间可以转正吗？</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <span class="faq-icon">A</span>
+                        <p>对于表现优秀的实习生，我们会在实习期结束前进行转正评估。通过评估的同学将获得正式offer。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-icon">Q</span>
+                        <h3>面试形式是线上还是线下？</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <span class="faq-icon">A</span>
+                        <p>根据具体情况，我们会安排线上或线下面试。如果是异地面试，通常会采用线上形式。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-icon">Q</span>
+                        <h3>可以获得实习证明吗？</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <span class="faq-icon">A</span>
+                        <p>实习期满后，我们会为表现良好的同学开具实习证明，证明可用于学校实习学分认证。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <script>
+        function toggleLogin() {
+            const dropdown = document.getElementById('loginDropdown');
+            dropdown.classList.toggle('active');
+        }
+
+        // 点击页面其他地方关闭登录框
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('loginDropdown');
+            const loginBtn = event.target.closest('.login-btn');
+            const loginDropdown = event.target.closest('.login-dropdown');
+            
+            if (!loginBtn && !loginDropdown) {
+                dropdown.classList.remove('active');
+            }
+        });
+
+        // 表单验证和提交处理
+        const loginForm = document.getElementById('loginForm');
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+        const submitBtn = document.getElementById('submitBtn');
+
+        // 验证用户名
+        function validateUsername(username) {
+            if (!username) {
+                showError('username', '请输入用户名/手机号/邮箱');
+                return false;
+            }
+            
+            // 邮箱格式验证
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            // 手机号格式验证
+            const phoneRegex = /^1[3-9]\d{9}$/;
+            
+            if (username.includes('@') && !emailRegex.test(username)) {
+                showError('username', '邮箱格式不正确');
+                return false;
+            }
+            
+            if (/^\d+$/.test(username) && !phoneRegex.test(username)) {
+                showError('username', '手机号格式不正确');
+                return false;
+            }
+            
+            hideError('username');
+            return true;
+        }
+
+        // 验证密码
+        function validatePassword(password) {
+            if (!password) {
+                showError('password', '请输入密码');
+                return false;
+            }
+            
+            if (password.length < 6) {
+                showError('password', '密码长度不能小于6位');
+                return false;
+            }
+            
+            hideError('password');
+            return true;
+        }
+
+        // 显示错误信息
+        function showError(field, message) {
+            const errorDiv = document.getElementById(`${field}-error`);
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
+            document.getElementById(field).classList.add('error');
+        }
+
+        // 隐藏错误信息
+        function hideError(field) {
+            const errorDiv = document.getElementById(`${field}-error`);
+            errorDiv.style.display = 'none';
+            document.getElementById(field).classList.remove('error');
+        }
+
+        // 处理表单提交
+        loginForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const username = usernameInput.value.trim();
+            const password = passwordInput.value.trim();
+            
+            // 验证表单
+            const isUsernameValid = validateUsername(username);
+            const isPasswordValid = validatePassword(password);
+            
+            if (!isUsernameValid || !isPasswordValid) {
+                return;
+            }
+            
+            // 显示加载状态
+            submitBtn.classList.add('loading');
+            submitBtn.textContent = '登录中...';
+            
+            try {
+                // 这里替换为实际的API调用
+                const response = await mockLoginAPI(username, password);
+                
+                if (response.success) {
+                    // 登录成功
+                    localStorage.setItem('token', response.token);
+                    localStorage.setItem('user', JSON.stringify(response.user));
+                    
+                    // 刷新页面或重定向
+                    window.location.reload();
+                } else {
+                    showError('username', response.message);
+                }
+            } catch (error) {
+                showError('username', '登录失败，请稍后重试');
+            } finally {
+                submitBtn.classList.remove('loading');
+                submitBtn.textContent = '登录';
+            }
+        });
+
+        // 模拟登录API
+        async function mockLoginAPI(username, password) {
+            // 这里模拟API调用延迟
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            // 模拟登录验证
+            if (username === 'admin@example.com' && password === '123456') {
+                return {
+                    success: true,
+                    token: 'mock_token_123',
+                    user: {
+                        id: 1,
+                        username: 'admin',
+                        email: 'admin@example.com'
+                    }
+                };
+            }
+            
+            return {
+                success: false,
+                message: '用户名或密码错误'
+            };
+        }
+
+        // 实时表单验证
+        usernameInput.addEventListener('blur', () => {
+            validateUsername(usernameInput.value.trim());
+        });
+
+        passwordInput.addEventListener('blur', () => {
+            validatePassword(passwordInput.value.trim());
+        });
+
+        // 忘记密码和注册链接处理
+        document.getElementById('forgetPassword').addEventListener('click', (e) => {
+            e.preventDefault();
+            alert('忘记密码功能开发中...');
+        });
+
+        document.getElementById('register').addEventListener('click', (e) => {
+            e.preventDefault();
+            alert('注册功能开发中...');
+        });
+
+        // 添加动态效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const seed = document.querySelector('.hero-image');
+            
+            // 鼠标悬停效果
+            seed.addEventListener('mouseover', function() {
+                this.style.transform = 'translateY(-50%) scale(1.05)';
+                this.style.transition = 'transform 0.3s ease';
+            });
+            
+            seed.addEventListener('mouseout', function() {
+                this.style.transform = 'translateY(-50%) scale(1)';
+            });
+        });
+
+        // 移动端菜单控制
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mobileNav = document.querySelector('.mobile-nav');
+
+        menuToggle.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+        });
+
+        // 点击页面其他地方关闭移动端菜单
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.menu-toggle') && !e.target.closest('.mobile-nav')) {
+                mobileNav.classList.remove('active');
+            }
+        });
+
+        // 监听窗口大小变化
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 992) {
+                mobileNav.classList.remove('active');
+            }
+        });
+
+        // 监听滚动，更新导航激活状态
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-links a, .mobile-nav a');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // 平滑滚动到指定位置
+        document.querySelectorAll('.nav-links a, .mobile-nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                const offset = 80; // 导航栏高度
+
+                window.scrollTo({
+                    top: targetSection.offsetTop - offset,
+                    behavior: 'smooth'
+                });
+
+                // 移动端菜单点击后关闭
+                document.querySelector('.mobile-nav').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
