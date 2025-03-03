@@ -8,8 +8,7 @@ date: 2023-01-10
 location: "Xiangtan, China"
 ---
 
-A university-level tutoring enterprise was established, focusing on preparing students for various competitions and enhancing career readiness. In its inaugural phase during the winter term of 2023, the enterprise successfully enrolled 70 students in a program concentrated on e-commerce innovation and entrepreneurship. Building on its initial success, the company is expanding its services to cover a broader range of academic competitions and educational services, aiming to accommodate a diverse array of student academic interests and career aspirations.
-
+The company recently launched two innovative projects: a vehicle health monitoring system and an online medical payment platform. These initiatives were spearheaded by a dedicated software team aimed at addressing critical needs in the industry. Additionally, strategic partnerships were established with Chengdu Hikvision Research Institute and Chengdu Extreme Viewpoint Technology, which have notably expanded the company's reach and capabilities. In a move to enhance operational efficiency, a significant supply chain improvement was achieved by securing a pivotal agreement with Guilin Jingrui Sensor Technology Co. This partnership has notably enhanced the quality and efficiency of the company's product offerings, marking a significant step forward in its operational excellence.
 
 ### Founding Story
 - **Date of Establishment:** [成立时间]
