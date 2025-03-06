@@ -14,7 +14,7 @@ A university-level tutoring enterprise was established, focusing on preparing st
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>四川孑民科技有限责任公司</title>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Satisfy&display=swap" rel="stylesheet">
     <style>
@@ -34,6 +34,7 @@ A university-level tutoring enterprise was established, focusing on preparing st
             line-height: 1.6;
             color: #1f2329;
             background: #000;
+            overflow-x: hidden;
         }
 
         /* 导航栏样式 */
@@ -41,14 +42,16 @@ A university-level tutoring enterprise was established, focusing on preparing st
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 48px;
-            height: 64px;
-            background: #fff;
-            position: fixed;
+            padding: 0 24px;
+            height: var(--nav-height, 64px);
             width: 100%;
+            position: fixed;
             top: 0;
+            left: 0;
             z-index: 1000;
+            background: #fff;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
         }
 
         .logo-section {
@@ -65,10 +68,7 @@ A university-level tutoring enterprise was established, focusing on preparing st
 
         .nav-links {
             display: flex;
-            gap: 36px;
-            align-items: center;
-            margin-right: auto;
-            margin-left: 48px;
+            gap: 32px;
         }
 
         .nav-links a {
@@ -245,10 +245,12 @@ A university-level tutoring enterprise was established, focusing on preparing st
         }
 
         .hero-content {
+            max-width: 650px;
+            margin: 0 auto;
+            text-align: center;
             position: relative;
             z-index: 2;
-            padding-left: 120px;
-            padding-top: 120px;
+            padding: 40px 20px;
         }
 
         .join-text {
@@ -267,9 +269,9 @@ A university-level tutoring enterprise was established, focusing on preparing st
 
         .hero-title {
             font-family: 'Permanent Marker', cursive;
-            font-size: 96px;
+            font-size: 4rem;
             color: #52ffa8;
-            margin-bottom: 24px;
+            margin-bottom: 1.5rem;
             letter-spacing: 4px;
             transform: translateX(-100px) rotate(-2deg);
             opacity: 0;
@@ -571,6 +573,9 @@ A university-level tutoring enterprise was established, focusing on preparing st
         :root {
             --nav-height: 64px;
             --content-padding: 120px;
+            --section-padding: 80px 24px;
+            --card-padding: 24px;
+            --border-radius: 16px;
         }
 
         /* 导航栏响应式 */
@@ -593,7 +598,7 @@ A university-level tutoring enterprise was established, focusing on preparing st
 
         @media (max-width: 992px) {
             .navbar {
-                padding: 0 24px;
+                padding: 0 16px;
             }
 
             .nav-links {
@@ -766,9 +771,10 @@ A university-level tutoring enterprise was established, focusing on preparing st
 
         /* 通用部分样式 */
         .section-container {
-            max-width: 1200px;
+            width: 100%;
+            max-width: 1280px;
             margin: 0 auto;
-            padding: 80px 24px;
+            padding: var(--section-padding);
         }
 
         .section-title {
@@ -781,11 +787,208 @@ A university-level tutoring enterprise was established, focusing on preparing st
         }
 
         /* 关于我们部分样式优化 */
-        .about-us {
-            background: linear-gradient(180deg, #000 0%, #0a1930 100%);
-            padding: 80px 0;
+        #about {
+            background: #f8fafc;
+            padding: 120px 0;
             position: relative;
             overflow: hidden;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-subtitle-top {
+            font-size: 14px;
+            letter-spacing: 4px;
+            color: #1a1a1a;
+            opacity: 0.6;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .section-title {
+            font-size: 42px;
+            color: #1a1a1a;
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+
+        .title-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .title-divider span {
+            width: 40px;
+            height: 2px;
+            background: #1a1a1a;
+        }
+
+        .title-divider span:first-child {
+            opacity: 0.3;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: #4a5568;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* 左侧公司愿景样式 */
+        .company-vision {
+            padding-right: 60px;
+        }
+
+        .company-vision h3 {
+            font-size: 36px;
+            color: #1a1a1a;
+            margin-bottom: 32px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .vision-text {
+            font-size: 16px;
+            color: #4a5568;
+            line-height: 1.8;
+            margin-bottom: 48px;
+        }
+
+        .vision-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .stat-item {
+            text-align: left;
+        }
+
+        .stat-number {
+            font-size: 42px;
+            font-weight: 600;
+            color: #1a1a1a;
+            display: block;
+            margin-bottom: 8px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: #4a5568;
+        }
+
+        /* 右侧核心价值观样式 */
+        .core-values {
+            display: grid;
+            gap: 32px;
+        }
+
+        .value-card {
+            background: #ffffff;
+            padding: 32px;
+            border-radius: 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            border-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .value-icon {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8fafc;
+            border-radius: 12px;
+        }
+
+        .value-number {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1a1a1a;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .value-symbol {
+            position: absolute;
+            bottom: -6px;
+            right: -6px;
+            font-size: 12px;
+            padding: 4px 8px;
+            background: #1a1a1a;
+            color: #ffffff;
+            border-radius: 4px;
+            font-style: normal;
+        }
+
+        .value-content h4 {
+            font-size: 20px;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .value-content p {
+            font-size: 15px;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 1200px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .company-vision {
+                padding-right: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .company-vision h3 {
+                font-size: 28px;
+            }
+            
+            .vision-stats {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            
+            .value-card {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 24px;
+            }
         }
 
         /* 添加背景动效 */
@@ -804,7 +1007,7 @@ A university-level tutoring enterprise was established, focusing on preparing st
 
         .about-content {
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
+            grid-template-columns: 1fr 1fr;
             gap: 80px;
             align-items: center;
             position: relative;
@@ -1611,20 +1814,21 @@ A university-level tutoring enterprise was established, focusing on preparing st
             margin-right: auto;
         }
 
+        /* 更新产品与服务部分的样式 */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
-            max-width: 1200px;
+            grid-template-columns: repeat(4, 1fr);  /* 改为4列 */
+            gap: 24px;  /* 减小间距使其能够适应一行 */
+            max-width: 1400px;  /* 增加最大宽度以适应4列 */
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
 
         .product-card {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
-            padding: 40px;
+            padding: 24px  /* 减小内边距 */
             transition: all 0.3s ease;
         }
 
@@ -1640,29 +1844,30 @@ A university-level tutoring enterprise was established, focusing on preparing st
 
         .product-card h3 {
             color: #fff;
-            font-size: 24px;
-            margin-bottom: 16px;
+            font-size: 18px;  /* 稍微减小标题字号 */
+            margin-bottom: 12px;
             font-weight: 600;
         }
 
         .product-card p {
             color: rgba(255, 255, 255, 0.8);
-            font-size: 16px;
+            font-size: 14px;  /* 减小描述文字字号 */
             line-height: 1.6;
-            margin-bottom: 24px;
-            min-height: 52px;
+            margin-bottom: 16px;
+            min-height: 60px;  /* 确保描述文字高度一致 */
         }
 
         .product-card .feature-list {
             list-style: none;
-            margin-bottom: 32px;
+            margin-bottom: 24px;
         }
 
         .product-card .feature-list li {
             color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             padding-left: 24px;
             position: relative;
+            font-size: 13px;
         }
 
         .product-card .feature-list li::before {
@@ -1697,30 +1902,21 @@ A university-level tutoring enterprise was established, focusing on preparing st
             transform: translateX(4px);
         }
 
-        @media (max-width: 992px) {
+        @media (max-width: 1400px) {
             .product-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .product-card {
-                padding: 30px;
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 1000px;
             }
         }
 
         @media (max-width: 768px) {
-            .section-desc {
-                font-size: 16px;
-                margin-bottom: 40px;
+            .product-grid {
+                grid-template-columns: 1fr;
                 padding: 0 20px;
             }
 
-            .product-card h3 {
-                font-size: 20px;
-            }
-
-            .product-card p {
-                font-size: 14px;
+            .product-card {
+                padding: 20px;
             }
         }
 
@@ -1875,6 +2071,10 @@ A university-level tutoring enterprise was established, focusing on preparing st
             --text-light: #fff;
             --text-dark: #1f2329;
             --section-padding: 100px;
+            --text-primary: #2c3e50;    /* 主要文字颜色，深灰蓝色 */
+            --text-secondary: #4a5568;  /* 次要文字颜色，中灰色 */
+            --accent-green: #10b981;   /* 绿色强调色，更柔和的绿色 */
+            --accent-blue: #3b82f6;    /* 蓝色强调色，更柔和的蓝色 */
         }
 
         /* 交替背景色的section基础样式 */
@@ -2507,6 +2707,1026 @@ A university-level tutoring enterprise was established, focusing on preparing st
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(4px); }
         }
+
+        /* 孑民范样式 */
+        .jiemin-style {
+            margin-bottom: 80px;
+            text-align: center;
+        }
+
+        .style-title {
+            font-size: 32px;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .style-desc {
+            font-size: 16px;
+            color: #4a5568;
+            max-width: 800px;
+            margin: 0 auto 48px;
+            line-height: 1.8;
+        }
+
+        .style-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .style-item {
+            position: relative;
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 24px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .style-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .style-image {
+            width: 100%;
+            height: 200px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .style-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .style-item:hover .style-image img {
+            transform: scale(1.05);
+        }
+
+        .style-icon {
+            position: absolute;
+            top: 180px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .icon-circle {
+            width: 48px;
+            height: 48px;
+            background: #1a1a1a;
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .style-item h4 {
+            font-size: 20px;
+            color: #1a1a1a;
+            margin: 24px 0 16px;
+            font-weight: 600;
+        }
+
+        .style-item p {
+            font-size: 15px;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 992px) {
+            .style-grid {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 0 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .style-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .style-item {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
+
+        /* 更新关于我们部分的样式 */
+        .leader-section {
+            text-align: center;
+            margin-bottom: 100px;
+            max-width: 900px;
+            margin: 0 auto 100px;
+        }
+
+        .leader-title {
+            font-size: 42px;
+            color: #1a1a1a;
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+
+        .leader-desc {
+            font-size: 18px;
+            color: #4a5568;
+            line-height: 1.8;
+            margin-bottom: 60px;
+        }
+
+        .stats-grid {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            margin-top: 60px;
+        }
+
+        .stat-item {
+            text-align: center;
+            position: relative;
+        }
+
+        .stat-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.1), transparent);
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 600;
+            color: #1a1a1a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+        }
+
+        .plus {
+            font-size: 24px;
+            margin-left: 4px;
+            color: #1a1a1a;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: #4a5568;
+        }
+
+        /* 更新孑民范样式 */
+        .style-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .style-item {
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .style-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .style-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .style-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .style-item:hover .style-image img {
+            transform: scale(1.05);
+        }
+
+        .style-content {
+            padding: 30px;
+            position: relative;
+        }
+
+        .style-icon {
+            position: absolute;
+            top: -24px;
+            left: 30px;
+        }
+
+        .icon-circle {
+            width: 48px;
+            height: 48px;
+            background: #1a1a1a;
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .style-content h4 {
+            font-size: 20px;
+            color: #1a1a1a;
+            margin: 20px 0 16px;
+            font-weight: 600;
+        }
+
+        .style-content p {
+            font-size: 15px;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 992px) {
+            .style-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .stats-grid {
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .style-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 60px auto 0;
+            }
+            
+            .stats-grid {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .stat-item:not(:last-child)::after {
+                display: none;
+            }
+            
+            .leader-title {
+                font-size: 32px;
+            }
+            
+            .leader-desc {
+                font-size: 16px;
+            }
+        }
+
+        /* 关于我们部分样式更新 */
+        .about-slogan {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .slogan-title {
+            font-size: 42px;
+            margin-bottom: 24px;
+            line-height: 1.4;
+        }
+
+        .highlight-green {
+            color: #52ffa8;
+            position: relative;
+            display: inline-block;
+        }
+
+        .highlight-green::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #52ffa8;
+            opacity: 0.3;
+        }
+
+        .highlight-blue {
+            color: #1677ff;
+        }
+
+        .slogan-desc {
+            font-size: 18px;
+            color: #4a5568;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .business-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin: 60px 0;
+        }
+
+        .business-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .business-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .business-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 24px;
+            background: #f8fafc;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .business-icon img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .business-card h4 {
+            font-size: 20px;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .business-card p {
+            font-size: 15px;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 1200px) {
+            .business-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slogan-title {
+                font-size: 32px;
+            }
+
+            .slogan-desc {
+                font-size: 16px;
+                padding: 0 24px;
+            }
+
+            .business-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 40px auto;
+            }
+        }
+
+        /* 更新样式以确保所有内容正确显示 */
+        .section-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* 数据统计样式优化 */
+        .stats-grid {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            margin: 80px 0;
+            padding: 40px 0;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        /* 孑民范样式优化 */
+        .jiemin-style {
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        .style-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 1200px) {
+            .business-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .style-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .business-grid,
+            .style-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                flex-direction: column;
+                gap: 40px;
+                padding: 30px 0;
+            }
+        }
+
+        /* 更新图标样式 */
+        .business-icon {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .business-card:hover .business-icon {
+            transform: scale(1.1);
+        }
+
+        /* 更新图片样式 */
+        .style-image {
+            height: 240px;
+            overflow: hidden;
+            border-radius: 16px 16px 0 0;
+        }
+
+        .style-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .style-item:hover .style-image img {
+            transform: scale(1.05);
+        }
+
+        /* 更新标题样式 */
+        .slogan-title {
+            color: var(--text-primary);
+        }
+
+        .highlight-green {
+            color: var(--accent-green);
+        }
+
+        .highlight-green::after {
+            background: var(--accent-green);
+            opacity: 0.15;
+        }
+
+        .highlight-blue {
+            color: var(--accent-blue);
+        }
+
+        /* 更新描述文字样式 */
+        .slogan-desc {
+            color: var(--text-secondary);
+        }
+
+        /* 更新业务卡片样式 */
+        .business-card h4 {
+            color: var(--text-primary);
+        }
+
+        .business-card p {
+            color: var(--text-secondary);
+        }
+
+        /* 更新图标颜色 */
+        .business-icon svg rect {
+            fill: rgba(59, 130, 246, 0.1);  /* 更柔和的背景色 */
+        }
+
+        .business-icon svg path {
+            stroke: var(--accent-blue);
+        }
+
+        /* 第一个图标 - 智慧校园 */
+        .business-card:nth-child(1) .business-icon svg rect {
+            fill: rgba(59, 130, 246, 0.1);
+        }
+
+        .business-card:nth-child(1) .business-icon svg path {
+            stroke: var(--accent-blue);
+        }
+
+        /* 第二个图标 - 升学服务 */
+        .business-card:nth-child(2) .business-icon svg rect {
+            fill: rgba(16, 185, 129, 0.1);
+        }
+
+        .business-card:nth-child(2) .business-icon svg path {
+            stroke: var(--accent-green);
+        }
+
+        /* 第三个图标 - AI教育 */
+        .business-card:nth-child(3) .business-icon svg rect {
+            fill: rgba(236, 72, 153, 0.1);
+        }
+
+        .business-card:nth-child(3) .business-icon svg path {
+            stroke: #ec4899;
+        }
+
+        /* 第四个图标 - 教育生态 */
+        .business-card:nth-child(4) .business-icon svg rect {
+            fill: rgba(124, 58, 237, 0.1);
+        }
+
+        .business-card:nth-child(4) .business-icon svg path {
+            stroke: #7c3aed;
+        }
+
+        /* 更新数据统计样式 */
+        .stat-number {
+            color: var(--text-primary);
+        }
+
+        .plus {
+            color: var(--accent-blue);
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+        }
+
+        /* 更新孑民范样式 */
+        .style-title {
+            color: var(--text-primary);
+        }
+
+        .style-desc {
+            color: var(--text-secondary);
+        }
+
+        .style-content h4 {
+            color: var(--text-primary);
+        }
+
+        .style-content p {
+            color: var(--text-secondary);
+        }
+
+        .icon-circle {
+            background: var(--text-primary);
+            color: #ffffff;
+        }
+
+        /* 更新卡片悬浮效果 */
+        .business-card:hover {
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .style-item {
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+        }
+
+        .style-item:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        /* 更新分隔线样式 */
+        .title-divider span {
+            background: var(--text-primary);
+            opacity: 0.8;
+        }
+
+        .title-divider span:first-child {
+            opacity: 0.3;
+        }
+
+        /* 产品与服务部分样式 */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 60px;
+        }
+
+        .product-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 32px 24px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            border-color: rgba(22, 119, 255, 0.2);
+        }
+
+        .product-icon {
+            margin-bottom: 24px;
+        }
+
+        .product-card h3 {
+            font-size: 18px;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .product-card p {
+            font-size: 14px;
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .feature-list {
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #4a5568;
+        }
+
+        .feature-dot {
+            width: 6px;
+            height: 6px;
+            background: #1677ff;
+            border-radius: 50%;
+        }
+
+        .learn-more {
+            display: inline-flex;
+            align-items: center;
+            color: #1677ff;
+            font-size: 14px;
+            margin-top: 20px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .learn-more:hover {
+            color: #0e5edb;
+            transform: translateX(4px);
+        }
+
+        @media (max-width: 1400px) {
+            .products-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+            }
+
+            .product-card {
+                padding: 24px 20px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 40px auto 0;
+            }
+        }
+
+        /* 产品服务部分样式优化 */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 60px;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            border-color: rgba(0, 0, 0, 0.15);
+        }
+
+        .product-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 20px;
+        }
+
+        .product-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .icon-blue { color: #1677ff; }
+        .icon-green { color: #52c41a; }
+        .icon-red { color: #ff4d4f; }
+        .icon-purple { color: #722ed1; }
+
+        .product-card h3 {
+            font-size: 18px;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .product-card p {
+            font-size: 14px;
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .feature-list span {
+            font-size: 13px;
+            color: #666;
+            padding: 4px 8px;
+            background: rgba(0, 0, 0, 0.02);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+        }
+
+        .learn-more {
+            color: #1677ff;
+            text-decoration: none;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            margin-top: auto;
+            transition: all 0.3s ease;
+        }
+
+        .learn-more:hover {
+            color: #0e5edb;
+            transform: translateX(4px);
+        }
+
+        @media (max-width: 1200px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* 职位招聘部分 */
+        #jobs {
+            background: #f8fafc;
+            padding: 100px 0;
+        }
+
+        .job-filters {
+            margin-bottom: 40px;
+        }
+
+        .filter-group {
+            margin-bottom: 20px;
+        }
+
+        .filter-label {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+        }
+
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.05);
+            color: #4a5568;
+            border: none;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.active {
+            background: #2c3e50;
+            color: #ffffff;
+        }
+
+        .filter-btn:hover:not(.active) {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .job-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .job-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .job-title {
+            font-size: 18px;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .job-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 16px;
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        .job-description {
+            font-size: 14px;
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .job-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .job-tag {
+            font-size: 12px;
+            padding: 4px 10px;
+            background: rgba(44, 62, 80, 0.1);
+            color: #2c3e50;
+            border-radius: 12px;
+        }
+
+        .job-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: #64748b;
+            margin-bottom: 20px;
+            margin-top: auto;
+        }
+
+        .job-btn {
+            background: #2c3e50;
+            color: #ffffff;
+            border: none;
+            border-radius: 20px;
+            padding: 8px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            align-self: flex-start;
+        }
+
+        .job-btn:hover {
+            background: #1c2e40;
+            transform: translateY(-2px);
+        }
+
+        .load-more-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: #ffffff;
+            color: #2c3e50;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 24px;
+            padding: 12px 24px;
+            font-size: 15px;
+            cursor: pointer;
+            margin: 0 auto;
+            transition: all 0.3s ease;
+        }
+
+        .load-more-btn:hover {
+            background: #f5f5f5;
+            border-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .load-more-btn.loading svg {
+            animation: rotate 1s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 992px) {
+            .job-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .filter-options {
+                overflow-x: auto;
+                padding-bottom: 8px;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            .filter-btn {
+                scroll-snap-align: start;
+                white-space: nowrap;
+            }
+        }
     </style>
 </head>
 <body>
@@ -2669,89 +3889,132 @@ A university-level tutoring enterprise was established, focusing on preparing st
     <section id="about" class="light">
         <div class="bg-decoration"></div>
         <div class="section-container">
-            <h2 class="section-title">关于我们</h2>
-            
-            <!-- 孑民范部分 -->
-            <div class="bytestyle-section">
-                <h3 class="bytestyle-title">孑民范 JieminStyle</h3>
-                <p class="bytestyle-desc">孑民科技秉持"以教育创新促进人才发展"的理念，致力于打造智慧教育生态系统</p>
-                
-                <div class="bytestyle-grid">
-                    <div class="bytestyle-item">
-                        <div class="bytestyle-image">
-                            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800" alt="创新驱动">
-                        </div>
-                        <div class="bytestyle-icon">💡</div>
-                        <h4>创新驱动</h4>
-                        <p>坚持技术创新，推动教育数字化转型，打造智慧校园整体解决方案</p>
-                    </div>
-                    
-                    <div class="bytestyle-item">
-                        <div class="bytestyle-image">
-                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800" alt="育人为本">
-                        </div>
-                        <div class="bytestyle-icon">🎓</div>
-                        <h4>育人为本</h4>
-                        <p>以学生发展为中心，注重个性化学习体验，助力每个学生实现全面发展</p>
-                    </div>
-                    
-                    <div class="bytestyle-item">
-                        <div class="bytestyle-image">
-                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800" alt="生态共建">
-                        </div>
-                        <div class="bytestyle-icon">🌱</div>
-                        <h4>生态共建</h4>
-                        <p>联合教育机构、学校、企业，构建开放共赢的智慧教育生态圈</p>
-                    </div>
+            <!-- 标题部分 -->
+            <div class="section-header">
+                <h2 class="section-title">关于我们</h2>
+                <div class="title-divider">
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
 
-            <div class="about-content">
-                <div class="about-text">
-                    <h3 class="highlight-text">智慧教育，成就未来</h3>
-                    <p class="mission-text">
-                        孑民科技专注于教育信息化建设，从中小学到高等教育，
-                        我们提供全方位的智慧校园解决方案和创新教育服务，
-                        致力于用科技力量推动教育变革，助力莘莘学子成就梦想。
-                    </p>
-                    <div class="feature-list">
-                        <div class="feature-item">
-                            <span class="feature-icon">🏫</span>
-                            <h4 class="feature-title">智慧校园建设</h4>
-                            <p class="feature-desc">提供从信息化基础设施到管理系统的整体解决方案，打造数字化校园生态</p>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">📚</span>
-                            <h4 class="feature-title">升学服务体系</h4>
-                            <p class="feature-desc">整合优质教育资源，提供个性化升学规划和全方位升学指导服务</p>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">🤖</span>
-                            <h4 class="feature-title">AI教育应用</h4>
-                            <p class="feature-desc">运用人工智能技术，提供智能题库、个性化学习、教学分析等创新服务</p>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">🔄</span>
-                            <h4 class="feature-title">教育生态集成</h4>
-                            <p class="feature-desc">连接学校、家庭、社会多方资源，构建完整的教育服务生态系统</p>
-                        </div>
+            <!-- 智慧教育标语部分 -->
+            <div class="about-slogan">
+                <h3 class="slogan-title">
+                    <span class="highlight-green">智慧教育</span>，
+                    <span class="highlight-blue">成就未来</span>
+                </h3>
+                <p class="slogan-desc">
+                    子民科技专注于教育信息化建设，从中小学到高等教育，我们提供全方位的智慧校园解决方案和创新教育服务，致力于用科技力量推动教育变革，助力莘莘学子成就梦想。
+                </p>
+            </div>
+
+            <!-- 四大业务板块 -->
+            <div class="business-grid">
+                <div class="business-card">
+                    <div class="business-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect width="32" height="32" rx="8" fill="#E6F4FF"/>
+                            <path d="M8 12h16M8 16h16M8 20h8" stroke="#1677FF" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
                     </div>
+                    <h4>智慧校园建设</h4>
+                    <p>提供从信息化基础设施到管理系统的整体解决方案，打造数字化校园生态</p>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">500+</span>
-                        <span class="stat-label">合作院校</span>
-                        <p class="stat-desc">深度服务各级教育机构</p>
+
+                <div class="business-card">
+                    <div class="business-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect width="32" height="32" rx="8" fill="#F6FFED"/>
+                            <path d="M16 8l8 4v8l-8 4-8-4v-8l8-4z" stroke="#52C41A" stroke-width="2"/>
+                        </svg>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">100万+</span>
-                        <span class="stat-label">服务学生</span>
-                        <p class="stat-desc">助力学生成长发展</p>
+                    <h4>升学服务体系</h4>
+                    <p>整合优质教育资源，提供个性化升学规划和全方位升学指导服务</p>
+                </div>
+
+                <div class="business-card">
+                    <div class="business-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect width="32" height="32" rx="8" fill="#FFF1F0"/>
+                            <path d="M16 8v16M8 16h16" stroke="#FF4D4F" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">20+</span>
-                        <span class="stat-label">教育解决方案</span>
-                        <p class="stat-desc">覆盖教育全场景应用</p>
+                    <h4>AI教育应用</h4>
+                    <p>运用人工智能技术，提供智能题库、个性化学习、教学分析等创新服务</p>
+                </div>
+
+                <div class="business-card">
+                    <div class="business-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect width="32" height="32" rx="8" fill="#F9F0FF"/>
+                            <path d="M8 16c0-4.4183 3.5817-8 8-8s8 3.5817 8 8" stroke="#722ED1" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h4>教育生态集成</h4>
+                    <p>连接学校、家庭、社会多方资源，构建完整的教育服务生态系统</p>
+                </div>
+            </div>
+
+            <!-- 数据统计部分 -->
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">500<span class="plus">+</span></span>
+                    <span class="stat-label">合作院校</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100<span class="plus">万+</span></span>
+                    <span class="stat-label">服务学生</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">20<span class="plus">+</span></span>
+                    <span class="stat-label">解决方案</span>
+                </div>
+            </div>
+
+            <!-- 孑民范部分 -->
+            <div class="jiemin-style">
+                <h3 class="style-title">孑民范 JieminStyle</h3>
+                <p class="style-desc">孑民科技秉持"以教育创新促进人才发展"的理念，致力于打造智慧教育生态系统</p>
+                
+                <div class="style-grid">
+                    <div class="style-item">
+                        <div class="style-image">
+                            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=400&fit=crop" alt="创新驱动" loading="lazy">
+                        </div>
+                        <div class="style-content">
+                            <div class="style-icon">
+                                <span class="icon-circle">创</span>
+                            </div>
+                            <h4>创新驱动发展</h4>
+                            <p>以技术创新推动教育变革，打造智慧教育新生态，引领行业发展方向</p>
+                        </div>
+                    </div>
+
+                    <div class="style-item">
+                        <div class="style-image">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=400&fit=crop" alt="育人为本" loading="lazy">
+                        </div>
+                        <div class="style-content">
+                            <div class="style-icon">
+                                <span class="icon-circle">育</span>
+                            </div>
+                            <h4>专业专注教育</h4>
+                            <p>深耕教育信息化领域，提供专业解决方案，持续提升服务品质</p>
+                        </div>
+                    </div>
+
+                    <div class="style-item">
+                        <div class="style-image">
+                            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=400&fit=crop" alt="生态共建" loading="lazy">
+                        </div>
+                        <div class="style-content">
+                            <div class="style-icon">
+                                <span class="icon-circle">共</span>
+                            </div>
+                            <h4>开放共赢生态</h4>
+                            <p>构建开放的教育生态，实现合作共赢发展，创造更大的社会价值</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2811,82 +4074,87 @@ A university-level tutoring enterprise was established, focusing on preparing st
     <div class="section-divider"></div>
 
     <section id="products" class="light">
-        <div class="bg-decoration"></div>
         <div class="section-container">
-            <h2 class="section-title">产品与服务</h2>
-            <p class="section-desc">以科技创新赋能教育发展，打造智慧教育生态系统</p>
+            <div class="section-header">
+                <h2 class="section-title">产品与服务</h2>
+                <div class="title-divider">
+                    <span></span>
+                    <span></span>
+                </div>
+                <p class="section-desc">以科技创新赋能教育发展，打造智慧教育生态系统</p>
+            </div>
 
-            <div class="product-grid">
+            <div class="products-grid">
+                <!-- 智慧校园解决方案 -->
                 <div class="product-card">
                     <div class="product-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <rect width="48" height="48" rx="10" fill="#1677ff" fill-opacity="0.1"/>
-                            <path d="M24 12L34 18V30L24 36L14 30V18L24 12Z" stroke="#1677ff" stroke-width="2"/>
+                        <svg viewBox="0 0 24 24" fill="none" class="icon-blue">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                     <h3>智慧校园解决方案</h3>
                     <p>打造一体化的智慧校园信息服务平台，实现教学、管理、服务的数字化转型</p>
-                    <ul class="feature-list">
-                        <li>校园信息化基础设施</li>
-                        <li>教务管理系统</li>
-                        <li>智慧课堂</li>
-                        <li>校园大数据分析</li>
-                    </ul>
-                    <a href="#" class="learn-more">了解更多</a>
+                    <div class="feature-list">
+                        <span>校园信息化基础设施</span>
+                        <span>教务管理系统</span>
+                        <span>智慧课堂</span>
+                        <span>校园大数据分析</span>
+                    </div>
+                    <a href="#" class="learn-more">了解更多 →</a>
                 </div>
 
+                <!-- 升学规划服务 -->
                 <div class="product-card">
                     <div class="product-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <rect width="48" height="48" rx="10" fill="#52ffa8" fill-opacity="0.1"/>
-                            <path d="M14 18H34M14 24H34M14 30H24" stroke="#52ffa8" stroke-width="2" stroke-linecap="round"/>
+                        <svg viewBox="0 0 24 24" fill="none" class="icon-green">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                     <h3>升学规划服务</h3>
                     <p>提供专业的升学咨询和规划服务，助力学生实现理想升学目标</p>
-                    <ul class="feature-list">
-                        <li>个性化升学方案</li>
-                        <li>院校专业分析</li>
-                        <li>学业评估</li>
-                        <li>志愿填报指导</li>
-                    </ul>
-                    <a href="#" class="learn-more">了解更多</a>
+                    <div class="feature-list">
+                        <span>个性化升学方案</span>
+                        <span>学业评估</span>
+                        <span>志愿填报指导</span>
+                        <span>院校专业分析</span>
+                    </div>
+                    <a href="#" class="learn-more">了解更多 →</a>
                 </div>
 
+                <!-- AI智能教育平台 -->
                 <div class="product-card">
                     <div class="product-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <rect width="48" height="48" rx="10" fill="#ff4d4f" fill-opacity="0.1"/>
-                            <path d="M24 16V32M16 24H32" stroke="#ff4d4f" stroke-width="2" stroke-linecap="round"/>
+                        <svg viewBox="0 0 24 24" fill="none" class="icon-red">
+                            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3>AI 智能教育平台</h3>
+                    <h3>AI智能教育平台</h3>
                     <p>运用人工智能技术，提供个性化学习体验和智能教学辅助</p>
-                    <ul class="feature-list">
-                        <li>智能题库系统</li>
-                        <li>个性化学习路径</li>
-                        <li>学情分析报告</li>
-                        <li>智能教学助手</li>
-                    </ul>
-                    <a href="#" class="learn-more">了解更多</a>
+                    <div class="feature-list">
+                        <span>智能题库系统</span>
+                        <span>个性化学习路径</span>
+                        <span>学情分析报告</span>
+                        <span>智能教学助手</span>
+                    </div>
+                    <a href="#" class="learn-more">了解更多 →</a>
                 </div>
 
+                <!-- 教育资源整合平台 -->
                 <div class="product-card">
                     <div class="product-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <rect width="48" height="48" rx="10" fill="#722ed1" fill-opacity="0.1"/>
-                            <path d="M16 24C16 19.5817 19.5817 16 24 16C28.4183 16 32 19.5817 32 24C32 28.4183 28.4183 32 24 32" stroke="#722ed1" stroke-width="2"/>
+                        <svg viewBox="0 0 24 24" fill="none" class="icon-purple">
+                            <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                     <h3>教育资源整合平台</h3>
-                    <p>整合优质教育资源，构建开放共享的教育生态系统</p>
-                    <ul class="feature-list">
-                        <li>优质课程资源库</li>
-                        <li>教研共享平台</li>
-                        <li>教育资源交易</li>
-                        <li>校企合作对接</li>
-                    </ul>
-                    <a href="#" class="learn-more">了解更多</a>
+                    <p>整合优质教育资源，构建开放共享的教育服务生态系统</p>
+                    <div class="feature-list">
+                        <span>优质课程资源库</span>
+                        <span>教育资源交易</span>
+                        <span>教研共享平台</span>
+                        <span>校企合作对接</span>
+                    </div>
+                    <a href="#" class="learn-more">了解更多 →</a>
                 </div>
             </div>
         </div>
@@ -2951,98 +4219,224 @@ A university-level tutoring enterprise was established, focusing on preparing st
     <div class="section-divider"></div>
 
     <section id="jobs" class="light">
-        <div class="bg-decoration"></div>
         <div class="section-container">
-            <h2 class="section-title">职位招聘</h2>
-            <p class="jobs-desc">加入孑民科技，与优秀的人一起做有挑战的事</p>
-
-            <!-- 职位筛选器 -->
+            <div class="section-header">
+                <h2 class="section-title">职位招聘</h2>
+                <div class="title-divider">
+                    <span></span>
+                    <span></span>
+                </div>
+                <p class="section-desc">加入孑民科技，与优秀的人一起做有挑战的事</p>
+            </div>
+            
+            <!-- 筛选区域 -->
             <div class="job-filters">
                 <div class="filter-group">
-                    <span class="filter-label">招聘类型</span>
+                    <div class="filter-label">职位类型</div>
                     <div class="filter-options">
-                        <button class="filter-btn active">全部</button>
-                        <button class="filter-btn">应届生</button>
-                        <button class="filter-btn">实习生</button>
+                        <button class="filter-btn active" data-type="all">全部</button>
+                        <button class="filter-btn" data-type="social">社会招聘</button>
+                        <button class="filter-btn" data-type="graduate">应届生</button>
+                        <button class="filter-btn" data-type="intern">实习生</button>
                     </div>
                 </div>
+                
                 <div class="filter-group">
-                    <span class="filter-label">工作地点</span>
+                    <div class="filter-label">工作城市</div>
                     <div class="filter-options">
-                        <button class="filter-btn active">全部</button>
-                        <button class="filter-btn">北京</button>
-                        <button class="filter-btn">上海</button>
-                        <button class="filter-btn">杭州</button>
-                        <button class="filter-btn">深圳</button>
-                        <button class="filter-btn">广州</button>
+                        <button class="filter-btn active" data-city="all">全部</button>
+                        <button class="filter-btn" data-city="beijing">北京</button>
+                        <button class="filter-btn" data-city="shanghai">上海</button>
+                        <button class="filter-btn" data-city="hangzhou">杭州</button>
+                        <button class="filter-btn" data-city="shenzhen">深圳</button>
+                        <button class="filter-btn" data-city="guangzhou">广州</button>
                     </div>
                 </div>
+                
                 <div class="filter-group">
-                    <span class="filter-label">职位类别</span>
+                    <div class="filter-label">职位方向</div>
                     <div class="filter-options">
-                        <button class="filter-btn active">全部</button>
-                        <button class="filter-btn">研发</button>
-                        <button class="filter-btn">产品</button>
-                        <button class="filter-btn">运营</button>
-                        <button class="filter-btn">设计</button>
+                        <button class="filter-btn active" data-dept="all">全部</button>
+                        <button class="filter-btn" data-dept="rd">研发</button>
+                        <button class="filter-btn" data-dept="product">产品</button>
+                        <button class="filter-btn" data-dept="operation">运营</button>
+                        <button class="filter-btn" data-dept="design">设计</button>
+                        <button class="filter-btn" data-dept="marketing">市场</button>
                     </div>
                 </div>
             </div>
-
+            
             <!-- 职位列表 -->
             <div class="job-list">
-                <div class="job-card">
-                    <div class="job-header">
-                        <h3 class="job-title">前端开发实习生-生活服务</h3>
-                        <span class="job-tag intern">实习生</span>
-                    </div>
-                    <div class="job-info">
+                <!-- 研发岗位 -->
+                <div class="job-card" data-type="graduate" data-city="shanghai" data-dept="rd">
+                    <h3 class="job-title">前端开发实习生-生活服务</h3>
+                    <div class="job-meta">
                         <span class="job-location">上海</span>
-                        <span class="job-type">研发-前端</span>
+                        <span class="job-department">研发-前端</span>
                         <span class="job-id">职位 ID: A29476</span>
                     </div>
-                    <p class="job-desc">面向2026届毕业生（2025年9月-2026年8月期间毕业），为符合岗位要求的同学提供转正机会。</p>
-                    <a href="#" class="job-btn">立即申请</a>
-                </div>
-
-                <div class="job-card">
-                    <div class="job-header">
-                        <h3 class="job-title">策略运营实习生-直播国际化</h3>
-                        <span class="job-tag intern">实习生</span>
+                    <p class="job-description">面向2026届毕业生（2025年9月-2026年8月期间毕业），为符合岗位要求的同学提供转正机会。</p>
+                    <div class="job-tags">
+                        <span class="job-tag">React</span>
+                        <span class="job-tag">TypeScript</span>
+                        <span class="job-tag">应届生</span>
                     </div>
                     <div class="job-info">
+                        <span class="job-date">发布时间: 2023-12-15</span>
+                        <span class="job-type">实习</span>
+                    </div>
+                    <button class="job-btn">立即申请</button>
+                </div>
+
+                <div class="job-card" data-type="intern" data-city="beijing" data-dept="rd">
+                    <h3 class="job-title">策略运营实习生-直播国际化</h3>
+                    <div class="job-meta">
                         <span class="job-location">北京</span>
-                        <span class="job-type">运营-产品运营</span>
+                        <span class="job-department">运营-产品运营</span>
                         <span class="job-id">职位 ID: A97834A</span>
                     </div>
-                    <p class="job-desc">面向全体在校生，为符合岗位要求的同学提供为期3个月的项目实践机会。团队介绍：直播国际化团队致力于创造以人为核心的实时互动场景。</p>
-                    <a href="#" class="job-btn">立即申请</a>
-                </div>
-
-                <div class="job-card">
-                    <div class="job-header">
-                        <h3 class="job-title">用户产品经理实习生-社交与创作</h3>
-                        <span class="job-tag intern">实习生</span>
+                    <p class="job-description">面向全体在校生，为符合岗位要求的同学提供为期3个月的项目实践机会。团队介绍：直播国际化团队致力于创造以人为核心的变现与互动场景。</p>
+                    <div class="job-tags">
+                        <span class="job-tag">数据分析</span>
+                        <span class="job-tag">用户运营</span>
+                        <span class="job-tag">实习</span>
                     </div>
                     <div class="job-info">
-                        <span class="job-location">上海</span>
-                        <span class="job-type">产品-产品经理</span>
-                        <span class="job-id">职位 ID: A234442</span>
+                        <span class="job-date">发布时间: 2023-12-10</span>
+                        <span class="job-type">实习</span>
                     </div>
-                    <p class="job-desc">面向2026届毕业生（2025年9月-2026年8月期间毕业），为符合岗位要求的同学提供转正机会。</p>
-                    <a href="#" class="job-btn">立即申请</a>
+                    <button class="job-btn">立即申请</button>
+                </div>
+
+                <div class="job-card" data-type="social" data-city="beijing" data-dept="product">
+                    <h3 class="job-title">高级产品经理-教育平台</h3>
+                    <div class="job-meta">
+                        <span class="job-location">北京</span>
+                        <span class="job-department">产品-教育平台</span>
+                        <span class="job-id">职位 ID: B78392</span>
+                    </div>
+                    <p class="job-description">负责智慧教育平台的产品设计与规划，推动产品从0到1的落地，打造行业领先的教育信息化解决方案。</p>
+                    <div class="job-tags">
+                        <span class="job-tag">产品设计</span>
+                        <span class="job-tag">教育行业</span>
+                        <span class="job-tag">3年+</span>
+                    </div>
+                    <div class="job-info">
+                        <span class="job-date">发布时间: 2023-12-05</span>
+                        <span class="job-type">全职</span>
+                    </div>
+                    <button class="job-btn">立即申请</button>
+                </div>
+
+                <div class="job-card" data-type="graduate" data-city="hangzhou" data-dept="rd">
+                    <h3 class="job-title">后端开发工程师-教育平台</h3>
+                    <div class="job-meta">
+                        <span class="job-location">杭州</span>
+                        <span class="job-department">研发-后端</span>
+                        <span class="job-id">职位 ID: C45678</span>
+                    </div>
+                    <p class="job-description">负责智慧教育平台的后端系统开发，包括高并发服务设计、数据存储优化等工作，打造稳定高效的教育应用基础架构。</p>
+                    <div class="job-tags">
+                        <span class="job-tag">Java</span>
+                        <span class="job-tag">Spring Boot</span>
+                        <span class="job-tag">应届生</span>
+                    </div>
+                    <div class="job-info">
+                        <span class="job-date">发布时间: 2023-11-28</span>
+                        <span class="job-type">全职</span>
+                    </div>
+                    <button class="job-btn">立即申请</button>
+                </div>
+
+                <div class="job-card" data-type="social" data-city="shenzhen" data-dept="design">
+                    <h3 class="job-title">资深UI设计师</h3>
+                    <div class="job-meta">
+                        <span class="job-location">深圳</span>
+                        <span class="job-department">设计-用户体验</span>
+                        <span class="job-id">职位 ID: D38765</span>
+                    </div>
+                    <p class="job-description">负责公司产品的视觉设计，包括界面设计、交互原型设计，参与产品全流程设计工作，打造优秀的用户体验。</p>
+                    <div class="job-tags">
+                        <span class="job-tag">UI设计</span>
+                        <span class="job-tag">Figma</span>
+                        <span class="job-tag">5年+</span>
+                    </div>
+                    <div class="job-info">
+                        <span class="job-date">发布时间: 2023-11-20</span>
+                        <span class="job-type">全职</span>
+                    </div>
+                    <button class="job-btn">立即申请</button>
+                </div>
+
+                <div class="job-card" data-type="social" data-city="guangzhou" data-dept="marketing">
+                    <h3 class="job-title">市场营销经理</h3>
+                    <div class="job-meta">
+                        <span class="job-location">广州</span>
+                        <span class="job-department">市场-营销策划</span>
+                        <span class="job-id">职位 ID: E29384</span>
+                    </div>
+                    <p class="job-description">负责公司教育产品的市场营销策略制定与执行，组织开展市场活动，提升品牌影响力和产品知名度。</p>
+                    <div class="job-tags">
+                        <span class="job-tag">市场营销</span>
+                        <span class="job-tag">活动策划</span>
+                        <span class="job-tag">3年+</span>
+                    </div>
+                    <div class="job-info">
+                        <span class="job-date">发布时间: 2023-11-15</span>
+                        <span class="job-type">全职</span>
+                    </div>
+                    <button class="job-btn">立即申请</button>
+                </div>
+
+                <div class="job-card" data-type="intern" data-city="shanghai" data-dept="operation">
+                    <h3 class="job-title">内容运营实习生</h3>
+                    <div class="job-meta">
+                        <span class="job-location">上海</span>
+                        <span class="job-department">运营-内容</span>
+                        <span class="job-id">职位 ID: F87652</span>
+                    </div>
+                    <p class="job-description">负责教育平台的内容规划、内容审核及运营，挖掘优质内容，提升用户活跃度和平台内容质量。</p>
+                    <div class="job-tags">
+                        <span class="job-tag">内容运营</span>
+                        <span class="job-tag">活动策划</span>
+                        <span class="job-tag">实习</span>
+                    </div>
+                    <div class="job-info">
+                        <span class="job-date">发布时间: 2023-12-02</span>
+                        <span class="job-type">实习</span>
+                    </div>
+                    <button class="job-btn">立即申请</button>
+                </div>
+
+                <div class="job-card" data-type="graduate" data-city="shenzhen" data-dept="rd">
+                    <h3 class="job-title">算法工程师-教育智能</h3>
+                    <div class="job-meta">
+                        <span class="job-location">深圳</span>
+                        <span class="job-department">研发-算法</span>
+                        <span class="job-id">职位 ID: G56431</span>
+                    </div>
+                    <p class="job-description">负责教育智能推荐、个性化学习、智能批改等算法研发，为用户提供智能化的学习体验。</p>
+                    <div class="job-tags">
+                        <span class="job-tag">机器学习</span>
+                        <span class="job-tag">Python</span>
+                        <span class="job-tag">应届生</span>
+                    </div>
+                    <div class="job-info">
+                        <span class="job-date">发布时间: 2023-11-25</span>
+                        <span class="job-type">全职</span>
+                    </div>
+                    <button class="job-btn">立即申请</button>
                 </div>
             </div>
-
+            
             <!-- 加载更多按钮 -->
-            <div class="load-more">
-                <button class="load-more-btn">
-                    加载更多职位
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
-                    </svg>
-                </button>
-            </div>
+            <button class="load-more-btn">
+                <span>查看更多职位</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
         </div>
     </section>
 
@@ -3383,6 +4777,112 @@ A university-level tutoring enterprise was established, focusing on preparing st
 
                 // 移动端菜单点击后关闭
                 document.querySelector('.mobile-nav').classList.remove('active');
+            });
+        });
+
+        // 职位筛选功能
+        document.addEventListener('DOMContentLoaded', function() {
+            // 获取所有筛选按钮和职位卡片
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const jobCards = document.querySelectorAll('.job-card');
+            
+            // 当前选中的筛选条件
+            let activeFilters = {
+                type: 'all',
+                city: 'all',
+                dept: 'all'
+            };
+            
+            // 点击筛选按钮事件
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // 获取筛选类型和值
+                    let filterType = '';
+                    if(btn.hasAttribute('data-type')) filterType = 'type';
+                    else if(btn.hasAttribute('data-city')) filterType = 'city';
+                    else if(btn.hasAttribute('data-dept')) filterType = 'dept';
+                    
+                    const filterValue = btn.getAttribute(`data-${filterType}`);
+                    
+                    // 更新当前筛选条件
+                    activeFilters[filterType] = filterValue;
+                    
+                    // 切换按钮激活状态
+                    const siblingBtns = btn.parentElement.querySelectorAll('.filter-btn');
+                    siblingBtns.forEach(sib => sib.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    // 根据筛选条件显示/隐藏职位
+                    filterJobs();
+                });
+            });
+            
+            // 根据筛选条件过滤职位
+            function filterJobs() {
+                jobCards.forEach(card => {
+                    const cardType = card.getAttribute('data-type');
+                    const cardCity = card.getAttribute('data-city');
+                    const cardDept = card.getAttribute('data-dept');
+                    
+                    // 检查是否符合所有筛选条件
+                    const matchesType = activeFilters.type === 'all' || cardType === activeFilters.type;
+                    const matchesCity = activeFilters.city === 'all' || cardCity === activeFilters.city;
+                    const matchesDept = activeFilters.dept === 'all' || cardDept === activeFilters.dept;
+                    
+                    // 显示或隐藏职位卡片
+                    if(matchesType && matchesCity && matchesDept) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                // 检查是否没有匹配结果
+                checkEmptyResults();
+            }
+            
+            // 检查是否没有匹配结果，显示提示信息
+            function checkEmptyResults() {
+                const visibleCards = document.querySelectorAll('.job-card[style="display: flex;"]');
+                const loadMoreBtn = document.querySelector('.load-more-btn');
+                
+                if(visibleCards.length === 0) {
+                    // 没有匹配结果
+                    if(!document.querySelector('.no-jobs-message')) {
+                        const message = document.createElement('div');
+                        message.className = 'no-jobs-message';
+                        message.textContent = '暂时没有匹配的职位，请尝试其他筛选条件';
+                        message.style.textAlign = 'center';
+                        message.style.padding = '40px 0';
+                        message.style.color = '#64748b';
+                        message.style.fontSize = '16px';
+                        
+                        const jobList = document.querySelector('.job-list');
+                        jobList.after(message);
+                    }
+                    loadMoreBtn.style.display = 'none';
+                } else {
+                    // 有匹配结果，移除提示
+                    const message = document.querySelector('.no-jobs-message');
+                    if(message) message.remove();
+                    loadMoreBtn.style.display = 'flex';
+                }
+            }
+            
+            // 加载更多按钮
+            const loadMoreBtn = document.querySelector('.load-more-btn');
+            loadMoreBtn.addEventListener('click', function() {
+                this.classList.add('loading');
+                this.querySelector('span').textContent = '加载中...';
+                
+                // 模拟加载更多职位
+                setTimeout(() => {
+                    this.classList.remove('loading');
+                    this.querySelector('span').textContent = '没有更多职位了';
+                    this.disabled = true;
+                    this.style.opacity = '0.6';
+                    this.style.cursor = 'not-allowed';
+                }, 1500);
             });
         });
     </script>
