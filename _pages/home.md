@@ -1,13 +1,22 @@
-
 <html lang="en">
 
 <style>
 :root {
-    --primary: #0a192f;
-    --secondary: #112240;
-    --accent: #64ffda;
-    --text: #ccd6f6;
-    --text-secondary: #8892b0;
+    --primary: #0f172a;
+    --secondary: #1e293b;
+    --accent: #38bdf8;
+    --accent-dark: #0284c7;
+    --text: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --gradient-start: #38bdf8;
+    --gradient-end: #818cf8;
+    --card-bg: rgba(30, 41, 59, 0.6);
+    --nav-bg: rgba(15, 23, 42, 0.8);
+    --github: #333;
+    --twitter: #1DA1F2;
+    --linkedin: #0077B5;
+    --instagram: #E4405F;
+    --wechat: #07C160;
 }
 
 * {
@@ -17,7 +26,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
     color: var(--text);
     overflow-x: hidden;
     background: var(--primary);
@@ -31,6 +40,24 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-dark);
 }
 
 /* 内容包装器 */
@@ -50,21 +77,26 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
+    background: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .nav-brand a {
-    color: #ffffff;
+    color: var(--text);
     text-decoration: none;
     font-size: 1.5rem;
-    font-weight: 600;
-    transition: color 0.3s ease;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    letter-spacing: -0.5px;
 }
 
 .nav-brand a:hover {
-    color: #FFD700;
+    color: var(--accent);
+    transform: translateY(-2px);
 }
 
 .nav-links {
@@ -76,17 +108,19 @@ body {
 }
 
 .nav-links a {
-    color: #ffffff;
+    color: var(--text);
     text-decoration: none;
     font-size: 1rem;
+    font-weight: 500;
     transition: all 0.3s ease;
     opacity: 0.8;
-    padding: 5px 0;
+    padding: 8px 0;
     position: relative;
 }
 
 .nav-links a:hover {
     opacity: 1;
+    color: var(--accent);
 }
 
 .nav-links a::after {
@@ -95,9 +129,9 @@ body {
     bottom: 0;
     left: 0;
     width: 0;
-    height: 2px;
-    background: #FFD700;
-    transition: width 0.3s ease;
+    height: a2px;
+    background: var(--accent);
+    transition: width 0.3s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 .nav-links a:hover::after {
@@ -117,9 +151,9 @@ body {
     display: block;
     width: 25px;
     height: 2px;
-    background-color: #ffffff;
+    background-color: var(--text);
     margin: 5px 0;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 /* 添加汉堡菜单动画效果 */
@@ -148,7 +182,9 @@ body {
         left: 0;
         width: 100%;
         height: 100vh;
-        background: rgba(10, 25, 47, 0.95);
+        background: var(--nav-bg);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -159,6 +195,7 @@ body {
     
     .nav-links.active {
         display: flex;
+        animation: fadeIn 0.3s ease;
     }
 
     .nav-links a {
@@ -168,7 +205,7 @@ body {
     
     /* 调整其他元素在移动端的布局 */
     .hero-text h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     
     .main-content {
@@ -195,28 +232,47 @@ body {
     max-width: 100%;
     margin: 0 auto;
     text-align: center;
+    padding: 0 20px;
 }
 
 .hero-text {
     margin-bottom: 3rem;
+    animation: fadeInUp 0.8s ease;
 }
 
 .hero-text h1 {
-    font-size: clamp(2rem, 8vw, 4rem);
-    font-weight: 600;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 800;
     margin-bottom: clamp(1rem, 3vw, 2rem);
-    background: linear-gradient(45deg, var(--text), var(--accent));
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
     word-wrap: break-word;
     hyphens: auto;
-    line-height: 1.2;
+    line-height: 1.1;
+    letter-spacing: -1px;
 }
 
 .title {
     font-size: clamp(1.2rem, 4vw, 2rem);
     color: var(--accent);
     margin-bottom: clamp(0.8rem, 2vw, 1.2rem);
+    font-weight: 600;
+}
+
+.position {
+    font-size: clamp(1rem, 3vw, 1.6rem);
+    margin: clamp(10px, 2vw, 20px) 0;
+    font-weight: 600;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    padding: 5px 0;
 }
 
 .description {
@@ -224,47 +280,55 @@ body {
     color: var(--text-secondary);
     max-width: clamp(300px, 80vw, 800px);
     margin: 0 auto;
+    line-height: 1.6;
 }
 
 .cta-buttons {
     display: flex;
     gap: 1.5rem;
+    animation: fadeInUp 1s ease 0.3s forwards;
+    opacity: 0;
 }
 
 .cta-primary, .cta-secondary {
     padding: 1rem 2rem;
-    border-radius: 4px;
+    border-radius: 8px;
     text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+    font-size: 1rem;
+    letter-spacing: 0.2px;
 }
 
 .cta-primary {
-    background: var(--accent);
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
     color: var(--primary);
+    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.3);
 }
 
 .cta-secondary {
-    border: 1px solid var(--accent);
+    border: 2px solid var(--accent);
     color: var(--accent);
 }
 
 .cta-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(100, 255, 218, 0.2);
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
 }
 
 .cta-secondary:hover {
-    background: rgba(100, 255, 218, 0.1);
+    background: rgba(56, 189, 248, 0.1);
+    transform: translateY(-3px);
 }
 
 .footer {
     width: 100%;
-    padding: clamp(12px, 2vh, 20px) 0;
-    background-color: rgba(20, 20, 20, 0.9);
-    backdrop-filter: blur(10px);
+    padding: clamp(20px, 3vh, 30px) 0;
+    background-color: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     margin-top: auto;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .footer-content {
@@ -278,44 +342,44 @@ body {
 
 .footer-info p {
     margin: 0;
-    color: #ffffff;
-    font-size: clamp(0.7rem, 1.5vw, 1.1rem);
-    opacity: 0.8;
+    color: var(--text-secondary);
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
     white-space: nowrap;
 }
 
 .footer-links {
     display: flex;
     align-items: center;
-    gap: clamp(10px, 2vw, 30px);
+    gap: clamp(15px, 2vw, 30px);
 }
 
 .footer-links a {
-    color: #ffffff;
+    color: var(--text-secondary);
     text-decoration: none;
     transition: all 0.3s ease;
-    opacity: 0.8;
-    font-size: clamp(0.7rem, 1.5vw, 1.1rem);
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
     white-space: nowrap;
+    position: relative;
 }
 
 .footer-links a:hover {
-    color: #ffffff;
-    opacity: 1;
+    color: var(--accent);
     transform: translateY(-2px);
 }
 
-.hero .position {
-    font-size: clamp(1rem, 3vw, 1.6rem);
-    color: #ffffff;
-    margin: clamp(10px, 2vw, 20px) 0;
-    font-weight: 500;
-    opacity: 0.9;
-    background: linear-gradient(90deg, #4a90e2, #63b3ed);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-    padding: 5px 0;
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
 }
 
 /* 为了让标题更有层次感，可以稍微调整其他相关样式 */
@@ -329,91 +393,369 @@ body {
 }
 
 .why-section {
-    padding: 80px 20px;
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(10px);
+    padding: 120px 20px;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.8));
+    position: relative;
+    overflow: hidden;
+}
+
+.why-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1557682250-33bd709cbe85?q=80&w=2940&auto=format&fit=crop') center/cover no-repeat;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+.why-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 50px;
-}
-
-.section-header h2 {
-    font-size: 2.5rem;
-    color: #ffffff;
-    margin-bottom: 20px;
-    background: linear-gradient(90deg, #FFD700, #FFA500);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.why-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.why-card {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
-    padding: 30px;
-    transition: transform 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.why-card:hover {
-    transform: translateY(-10px);
-}
-
-.card-icon {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.why-card h3 {
-    color: #ffffff;
-    margin-bottom: 15px;
-    font-size: 1.5rem;
-}
-
-.why-card p, .why-card li {
-    color: rgba(255, 255, 255, 0.8);
-    line-height: 1.6;
-}
-
-.why-card ul {
-    list-style: none;
-    padding: 0;
-}
-
-.why-card li {
-    margin-bottom: 10px;
-    padding-left: 20px;
+    margin-bottom: 80px;
     position: relative;
 }
 
-.why-card li:before {
-    content: "→";
-    position: absolute;
-    left: 0;
-    color: #FFD700;
+.section-header h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -1px;
+    position: relative;
+    display: inline-block;
 }
 
-.quote-box {
-    max-width: 800px;
-    margin: 60px auto 0;
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    border-radius: 5px;
+}
+
+.section-header p.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.why-layout {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 0;
+    position: relative;
+}
+
+.vertical-line {
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, var(--accent), transparent);
+    position: relative;
+}
+
+.vertical-line::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: var(--secondary);
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.vertical-line::after {
+    content: '&';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--accent);
+    font-size: 1.5rem;
+    font-weight: 700;
+    z-index: 3;
+}
+
+.why-left, .why-right {
+    padding: 30px;
+}
+
+.philosophy-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.philosophy-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    padding: 25px;
+    border-radius: 16px;
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.philosophy-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
+    opacity: 0.8;
+}
+
+.philosophy-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-color: rgba(56, 189, 248, 0.2);
+}
+
+.philosophy-icon {
+    font-size: 2rem;
+    color: var(--accent);
+    background: rgba(56, 189, 248, 0.1);
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.philosophy-item:hover .philosophy-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.philosophy-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.philosophy-content h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 3px;
+}
+
+.philosophy-content p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.feature-card {
+    padding: 25px;
+    border-radius: 16px;
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-color: rgba(56, 189, 248, 0.2);
+}
+
+.feature-icon {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--accent);
+    background: rgba(56, 189, 248, 0.1);
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.feature-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--text);
+}
+
+.feature-content {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.cta-wrapper {
+    margin-top: 80px;
     text-align: center;
 }
 
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 30px;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    border-radius: 30px;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(56, 189, 248, 0.4);
+}
+
+.cta-button i {
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover i {
+    transform: translateX(5px);
+}
+
+.quote-box {
+    max-width: 900px;
+    margin: 60px auto 0; /* 从原来的100px减小到60px */
+    text-align: center;
+    position: relative;
+    padding: 50px 30px;
+    background: rgba(15, 23, 42, 0.4);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.quote-box::before, .quote-box::after {
+    content: '"';
+    font-family: 'Georgia', serif;
+    font-size: 10rem;
+    color: var(--accent);
+    opacity: 0.2;
+    position: absolute;
+    line-height: 1;
+    z-index: 0;
+}
+
+.quote-box::before {
+    top: -30px;
+    left: 20px;
+}
+
+.quote-box::after {
+    bottom: -100px;
+    right: 20px;
+}
+
 .quote-box blockquote {
-    font-size: 1.4rem;
-    color: #ffffff;
+    font-size: 1.8rem;
+    color: var(--text);
     font-style: italic;
-    opacity: 0.9;
     line-height: 1.6;
+    font-weight: 300;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+
+.quote-author {
+    font-size: 1.1rem;
+    color: var(--accent);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.quote-author::before, .quote-author::after {
+    content: '';
+    width: 30px;
+    height: 1px;
+    background: var(--accent);
+    opacity: 0.5;
+}
+
+@media (max-width: 992px) {
+    .why-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .vertical-line {
+        display: none;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-header h2 {
+        font-size: 2.5rem;
+    }
+    
+    .quote-box blockquote {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .philosophy-item {
+        flex-direction: column;
+    }
+    
+    .philosophy-icon {
+        margin-bottom: 15px;
+    }
 }
 
 /* 添加滚动动画 */
@@ -428,14 +770,23 @@ body {
     }
 }
 
-.why-card {
-    opacity: 0;
-    animation: fadeInUp 0.6s ease forwards;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-.why-card:nth-child(1) { animation-delay: 0.2s; }
-.why-card:nth-child(2) { animation-delay: 0.4s; }
-.why-card:nth-child(3) { animation-delay: 0.6s; }
+.why-card {
+    opacity: 0;
+    animation: fadeInUp 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.why-card:nth-child(1) { animation-delay: 0.3s; }
+.why-card:nth-child(2) { animation-delay: 0.5s; }
+.why-card:nth-child(3) { animation-delay: 0.7s; }
 
 .nav-right {
     display: flex;
@@ -445,22 +796,26 @@ body {
 
 .language-switch {
     margin-right: 20px;
+    position: relative;
+    z-index: 1000;
 }
 
 .lang-btn {
-    background: none;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-    color: #ffffff;
-    padding: 5px 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    color: var(--text);
+    padding: 6px 16px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.65, 0, 0.35, 1);
     font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .lang-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(56, 189, 248, 0.1);
+    border-color: var(--accent);
+    transform: translateY(-2px);
 }
 
 .lang-separator {
@@ -469,16 +824,17 @@ body {
 }
 
 .lang-text {
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .lang-text.active {
     opacity: 1;
-    font-weight: 600;
+    font-weight: 700;
+    color: var(--accent);
 }
 
 .lang-text:not(.active) {
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 /* 响应式设计更新 */
@@ -490,6 +846,26 @@ body {
     .language-switch {
         margin-right: 10px;
     }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .cta-primary, .cta-secondary {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+    
+    .quote-box blockquote {
+        font-size: 1.2rem;
+    }
 }
 
 /* 添加语言切换过渡效果 */
@@ -497,79 +873,418 @@ body {
     transition: opacity 0.3s ease;
 }
 
-.language-switch {
-    position: relative;
-    z-index: 1000;
-}
-
-.lang-btn {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    padding: 5px 15px;
-    color: #ffffff;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.lang-btn:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.lang-text {
-    transition: opacity 0.3s ease;
-}
-
-.lang-text.active {
-    opacity: 1;
-    font-weight: 600;
-}
-
-.lang-text:not(.active) {
-    opacity: 0.6;
-}
-
 /* 移动端响应式调整 */
 @media (max-width: 768px) {
     .footer {
-        padding: 10px 0;
+        padding: 15px 0;
     }
     
     .footer-content {
-        padding: 0 10px;
+        padding: 0 15px;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
     }
     
-    .footer-info p {
-        font-size: 0.7rem;
-    }
-    
-    .footer-links a {
-        margin-left: 10px;
-        font-size: 0.7rem;
+    .footer-links {
+        justify-content: center;
     }
 }
 
 /* 大屏幕优化 */
 @media (min-width: 1400px) {
     .hero-text h1 {
-        font-size: 4rem;
+        font-size: 5rem;
     }
     
     .title {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     
     .position {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
     
     .description {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
     
-    .footer-info p,
-    .footer-links a {
-        font-size: 1.1rem;
+    .section-header h2 {
+        font-size: 3.5rem;
+    }
+}
+
+/* 社交媒体图标样式 */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon i {
+    font-size: 1.2rem;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.social-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    opacity: 0;
+}
+
+.social-icon:hover::before {
+    opacity: 1;
+}
+
+.social-icon:hover i {
+    transform: scale(1.2);
+}
+
+.github::before {
+    background: var(--github);
+}
+
+.twitter::before {
+    background: var(--twitter);
+}
+
+.linkedin::before {
+    background: var(--linkedin);
+}
+
+.instagram::before {
+    background: var(--instagram);
+}
+
+.wechat::before {
+    background: var(--wechat);
+}
+
+/* 加入QR码弹出效果 */
+.wechat {
+    position: relative;
+}
+
+.qr-code {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.qr-code img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.qr-code::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+}
+
+.wechat:hover .qr-code {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+}
+
+/* 社交媒体动态展示区域 */
+.social-feed {
+    padding: 60px 20px; /* 从原来的100px减小到60px */
+    background: rgba(15, 23, 42, 0.5);
+    position: relative;
+}
+
+.social-feed::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+.feed-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feed-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.feed-header h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -1px;
+}
+
+.feed-header::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+.feed-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.feed-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feed-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border-color: rgba(56, 189, 248, 0.3);
+}
+
+.feed-header-bar {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.feed-platform-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    margin-right: 10px;
+}
+
+.feed-platform-icon i {
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
+.feed-date {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-left: auto;
+}
+
+.feed-content {
+    padding: 20px;
+}
+
+.feed-text {
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.feed-image {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.feed-image img {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.feed-card:hover .feed-image img {
+    transform: scale(1.05);
+}
+
+.feed-stats {
+    display: flex;
+    gap: 15px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.feed-stat {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.feed-stat i {
+    font-size: 0.9rem;
+}
+
+/* 社交分享按钮 */
+.share-container {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 100;
+}
+
+.share-button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.share-button.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.share-button:hover {
+    transform: scale(1.1) translateX(0);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.share-button i {
+    font-size: 1.2rem;
+    color: var(--text);
+    transition: all 0.3s ease;
+}
+
+.share-button:hover i {
+    color: var(--accent);
+}
+
+.share-tooltip {
+    position: absolute;
+    left: 110%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--nav-bg);
+    padding: 5px 12px;
+    border-radius: 4px;
+    color: var(--text);
+    font-size: 0.9rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.share-tooltip::before {
+    content: '';
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent var(--nav-bg) transparent transparent;
+}
+
+.share-button:hover .share-tooltip {
+    opacity: 1;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .share-container {
+        left: auto;
+        right: 10px;
+        top: auto;
+        bottom: 20px;
+        flex-direction: row;
+    }
+    
+    .share-tooltip {
+        left: 50%;
+        top: auto;
+        bottom: 130%;
+        transform: translateX(-50%);
+    }
+    
+    .share-tooltip::before {
+        right: auto;
+        left: 50%;
+        top: 100%;
+        transform: translateX(-50%);
+        border-color: var(--nav-bg) transparent transparent transparent;
+    }
+    
+    .feed-grid {
+        grid-template-columns: 1fr;
     }
 }
 </style>
@@ -577,10 +1292,16 @@ body {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home|Jiongtao Huang</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Mono&display=swap" rel="stylesheet">
+    <title>Home | Jiongtao Huang</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
     <!-- 动态背景画布 -->
@@ -631,52 +1352,263 @@ body {
                     <a href="cv/" class="cta-primary" data-en="Get in Touch" data-zh="联系我">Get in Touch</a>
                     <a href="introduction/" class="cta-secondary" data-en="Learn More" data-zh="了解更多">Learn More</a>
                 </div>
+                
+                <!-- 添加社交媒体图标 -->
+                <div class="social-icons">
+                    <a href="https://github.com/Kantrum" target="_blank" class="social-icon github">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://twitter.com/Kantrum88" target="_blank" class="social-icon twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jiongtao-huang-150709203/" target="_blank" class="social-icon linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://instagram.com/kantrums" target="_blank" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <div class="social-icon wechat" id="wechat-icon">
+                        <i class="fab fa-weixin"></i>
+                        <div class="qr-code">
+                            <img src="images/wechat-qrcode.png" alt="WeChat QR Code for www.kantrum.cn">
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <!-- 在 main-content 中添加新的 section -->
+            <!-- 重新设计的"Why This Website?"部分 -->
             <section class="why-section" id="why">
+                <div class="container">
                 <div class="section-header">
-                    <h2 data-en="Why This Website?" data-zh="为什么建立这个网站？">Why This Website?</h2>
+                        <h2 data-en="Why This Digital Space?" data-zh="为何创建这个数字空间？">Why This Digital Space?</h2>
+                        <p class="subtitle" data-en="A showcase of ideas, a canvas for creative expressions, and a bridge connecting diverse perspectives." 
+                           data-zh="这是一个展示思想的平台，创意表达的画布，连接多元视角的桥梁。">
+                           A showcase of ideas, a canvas for creative expressions, and a bridge connecting diverse perspectives.
+                        </p>
                 </div>
                 
-                <div class="why-grid">
-                    <!-- 目的卡片 -->
-                    <div class="why-card purpose">
-                        <div class="card-icon">🎯</div>
-                        <h3 data-en="Purpose" data-zh="目的">Purpose</h3>
-                        <p data-en="A centralized platform showcasing my journey through academia, life, entrepreneurship, and career." 
-                           data-zh="一个集中展示我在学术、生活、创业和职业生涯历程的平台。">A centralized platform showcasing my journey through academia, life, entrepreneurship, and career.</p>
+                    <div class="why-layout">
+                        <div class="why-left">
+                            <div class="philosophy-container">
+                                <div class="philosophy-item" data-aos="fade-right" data-aos-delay="100">
+                                    <div class="philosophy-icon">
+                                        <i class="fas fa-lightbulb"></i>
+                                    </div>
+                                    <div class="philosophy-content">
+                                        <h3 data-en="Innovation Nexus" data-zh="创新枢纽">Innovation Nexus</h3>
+                                        <p data-en="This platform serves as a convergence point where academic rigor meets entrepreneurial spirit, fostering creative problem-solving and technological advancement." 
+                                           data-zh="这个平台是学术严谨与创业精神的交汇点，促进创造性解决问题和技术进步。">
+                                           This platform serves as a convergence point where academic rigor meets entrepreneurial spirit, fostering creative problem-solving and technological advancement.
+                                        </p>
+                                    </div>
                     </div>
                     
-                    <!-- 内容卡片 -->
-                    <div class="why-card content">
-                        <div class="card-icon">📚</div>
-                        <h3 data-en="What You'll Find" data-zh="网站内容">What You'll Find</h3>
-                        <ul>
-                            <li data-en="Academic Papers" data-zh="学术论文">Academic Papers</li>
-                            <li data-en="Project Works" data-zh="项目作品">Project Works</li>
-                            <li data-en="Entrepreneurial Stories" data-zh="创业故事">Entrepreneurial Stories</li>
-                            <li data-en="Life Reflections" data-zh="生活感悟">Life Reflections</li>
-                        </ul>
+                                <div class="philosophy-item" data-aos="fade-right" data-aos-delay="200">
+                                    <div class="philosophy-icon">
+                                        <i class="fas fa-network-wired"></i>
+                                    </div>
+                                    <div class="philosophy-content">
+                                        <h3 data-en="Knowledge Exchange" data-zh="知识交流">Knowledge Exchange</h3>
+                                        <p data-en="Beyond a portfolio, this space facilitates the exchange of ideas and expertise, creating value through shared insights and collaborative exploration." 
+                                           data-zh="超越作品集的范畴，这个空间促进思想和专业知识的交流，通过共享见解和协作探索创造价值。">
+                                           Beyond a portfolio, this space facilitates the exchange of ideas and expertise, creating value through shared insights and collaborative exploration.
+                                        </p>
+                                    </div>
                     </div>
                     
-                    <!-- 愿景卡片 -->
-                    <div class="why-card vision">
-                        <div class="card-icon">🌟</div>
-                        <h3 data-en="Vision" data-zh="愿景">Vision</h3>
-                        <p data-en="A bridge connecting minds, sharing experiences, and fostering growth through meaningful interactions." 
-                           data-zh="搭建一座连接思维、分享经验、促进成长的桥梁。">A bridge connecting minds, sharing experiences, and fostering growth through meaningful interactions.</p>
+                                <div class="philosophy-item" data-aos="fade-right" data-aos-delay="300">
+                                    <div class="philosophy-icon">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <div class="philosophy-content">
+                                        <h3 data-en="Progress Narrative" data-zh="进步叙事">Progress Narrative</h3>
+                                        <p data-en="Documenting the journey of continuous improvement and transformation, this platform captures the evolution of projects, ideas, and professional growth." 
+                                           data-zh="记录持续改进和转变的旅程，这个平台捕捉项目、想法和专业成长的演变过程。">
+                                           Documenting the journey of continuous improvement and transformation, this platform captures the evolution of projects, ideas, and professional growth.
+                                        </p>
+                                    </div>
+                                </div>
                     </div>
                 </div>
                 
-                <div class="quote-box">
-                    <blockquote data-en="Through this website, I aim not only to showcase who I was but also to explore who I might become." 
-                                data-zh="通过这个网站，我不仅想展示过去的自己，更想探索未来的可能。">
-                        "Through this website, I aim not only to showcase who I was but also to explore who I might become."
+                        <div class="vertical-line"></div>
+                        
+                        <div class="why-right">
+                            <div class="features-grid">
+                                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-microscope"></i>
+                                    </div>
+                                    <h4 class="feature-title" data-en="Research Insights" data-zh="研究洞见">Research Insights</h4>
+                                    <p class="feature-content" data-en="Exploring cutting-edge developments in electrical and computer engineering, with a focus on practical applications and future technologies." 
+                                       data-zh="探索电子与计算机工程的前沿发展，重点关注实际应用和未来技术。">
+                                       Exploring cutting-edge developments in electrical and computer engineering, with a focus on practical applications and future technologies.
+                                    </p>
+                                </div>
+                                
+                                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                    <h4 class="feature-title" data-en="Startup Journey" data-zh="创业历程">Startup Journey</h4>
+                                    <p class="feature-content" data-en="Chronicles of building and scaling technological ventures, sharing lessons learned and strategies for navigating the entrepreneurial landscape." 
+                                       data-zh="记录建立和扩展科技企业的历程，分享学到的经验教训和应对创业环境的策略。">
+                                       Chronicles of building and scaling technological ventures, sharing lessons learned and strategies for navigating the entrepreneurial landscape.
+                                    </p>
+                                </div>
+                                
+                                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-project-diagram"></i>
+                                    </div>
+                                    <h4 class="feature-title" data-en="Project Portfolio" data-zh="项目作品集">Project Portfolio</h4>
+                                    <p class="feature-content" data-en="Curated collection of technical projects, academic work, and professional achievements that demonstrate problem-solving capabilities and technical expertise." 
+                                       data-zh="精心策划的技术项目、学术作品和专业成就集合，展示解决问题的能力和技术专长。">
+                                       Curated collection of technical projects, academic work, and professional achievements that demonstrate problem-solving capabilities and technical expertise.
+                                    </p>
+                                </div>
+                                
+                                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <h4 class="feature-title" data-en="Community Engagement" data-zh="社区参与">Community Engagement</h4>
+                                    <p class="feature-content" data-en="A platform for meaningful connections with peers, mentors, and collaborators who share a passion for innovation and technological advancement." 
+                                       data-zh="一个与志同道合的同行、导师和合作者建立有意义联系的平台，共同热爱创新和技术进步。">
+                                       A platform for meaningful connections with peers, mentors, and collaborators who share a passion for innovation and technological advancement.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-wrapper">
+                        <a href="introduction/" class="cta-button" data-en="Explore My Journey" data-zh="探索我的旅程">
+                            <span data-en="Explore My Journey" data-zh="探索我的旅程">Explore My Journey</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="quote-box" data-aos="fade-up">
+                        <blockquote data-en="In the digital realm, we're not merely archiving the past but actively crafting the narrative of tomorrow's possibilities." 
+                                    data-zh="在数字领域中，我们不仅仅是在归档过去，更是在积极塑造明天可能性的叙事。">
+                            "In the digital realm, we're not merely archiving the past but actively crafting the narrative of tomorrow's possibilities."
                     </blockquote>
+                        <div class="quote-author" data-en="Personal Philosophy" data-zh="个人理念">Personal Philosophy</div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 添加社交媒体动态区域 -->
+            <section class="social-feed" id="social-feed">
+                <div class="feed-container">
+                    <div class="feed-header">
+                        <h2 data-en="Social Updates" data-zh="社交动态">Social Updates</h2>
+                    </div>
+                    
+                    <div class="feed-grid">
+                        <!-- Twitter动态卡片 -->
+                        <div class="feed-card">
+                            <div class="feed-header-bar">
+                                <div class="feed-platform-icon">
+                                    <i class="fab fa-twitter"></i>
+                                </div>
+                                <span class="feed-username">@Kantrum</span>
+                                <span class="feed-date">2 days ago</span>
+                            </div>
+                            <div class="feed-content">
+                                <p class="feed-text" data-en="Excited to share my latest research on advanced ML algorithms for signal processing! #MachineLearning #DSP" data-zh="很高兴分享我最新的关于信号处理中高级机器学习算法的研究！#机器学习 #数字信号处理">Excited to share my latest research on advanced ML algorithms for signal processing! #MachineLearning #DSP</p>
+                                <div class="feed-stats">
+                                    <div class="feed-stat">
+                                        <i class="far fa-heart"></i>
+                                        <span>42</span>
+                                    </div>
+                                    <div class="feed-stat">
+                                        <i class="far fa-comment"></i>
+                                        <span>7</span>
+                                    </div>
+                                    <div class="feed-stat">
+                                        <i class="fas fa-retweet"></i>
+                                        <span>12</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- LinkedIn动态卡片 -->
+                        <div class="feed-card">
+                            <div class="feed-header-bar">
+                                <div class="feed-platform-icon">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </div>
+                                <span class="feed-username">Jiongtao(Kaden) Huang</span>
+                                <span class="feed-date">1 week ago</span>
+                            </div>
+                            <div class="feed-content">
+                                <p class="feed-text" data-en="Honored to announce that our startup has secured seed funding to develop next-generation IoT solutions for smart cities." data-zh="很荣幸宣布我们的创业公司已获得种子轮融资，用于开发面向智慧城市的下一代物联网解决方案。">Honored to announce that our startup has secured seed funding to develop next-generation IoT solutions for smart cities.</p>
+                                <div class="feed-image">
+                                    <img src="https://via.placeholder.com/600x400" alt="Project Image">
+                                </div>
+                                <div class="feed-stats">
+                                    <div class="feed-stat">
+                                        <i class="far fa-thumbs-up"></i>
+                                        <span>138</span>
+                                    </div>
+                                    <div class="feed-stat">
+                                        <i class="far fa-comment"></i>
+                                        <span>24</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- GitHub动态卡片 -->
+                        <div class="feed-card">
+                            <div class="feed-header-bar">
+                                <div class="feed-platform-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <span class="feed-username">Kantrum</span>
+                                <span class="feed-date">3 days ago</span>
+                            </div>
+                            <div class="feed-content">
+                                <p class="feed-text" data-en="Just open-sourced our machine learning library for embedded systems. Check it out on GitHub! #OpenSource #EmbeddedML" data-zh="刚刚开源了我们的嵌入式系统机器学习库。欢迎在GitHub上查看！#开源 #嵌入式机器学习">Just open-sourced our machine learning library for embedded systems. Check it out on GitHub! #OpenSource #EmbeddedML</p>
+                                <div class="feed-stats">
+                                    <div class="feed-stat">
+                                        <i class="far fa-star"></i>
+                                        <span>87</span>
+                                    </div>
+                                    <div class="feed-stat">
+                                        <i class="fas fa-code-branch"></i>
+                                        <span>23</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
+
+        <!-- 社交分享按钮 -->
+        <div class="share-container">
+            <div class="share-button" data-platform="twitter">
+                <i class="fab fa-twitter"></i>
+                <span class="share-tooltip" data-en="Share on Twitter" data-zh="分享到推特">Share on Twitter</span>
+            </div>
+            <div class="share-button" data-platform="facebook">
+                <i class="fab fa-facebook-f"></i>
+                <span class="share-tooltip" data-en="Share on Facebook" data-zh="分享到脸书">Share on Facebook</span>
+            </div>
+            <div class="share-button" data-platform="linkedin">
+                <i class="fab fa-linkedin-in"></i>
+                <span class="share-tooltip" data-en="Share on LinkedIn" data-zh="分享到领英">Share on LinkedIn</span>
+            </div>
+            <div class="share-button" data-platform="wechat">
+                <i class="fab fa-weixin"></i>
+                <span class="share-tooltip" data-en="Scan QR code for www.kantrum.cn" data-zh="扫码访问 www.kantrum.cn">Scan QR code for www.kantrum.cn</span>
+            </div>
+        </div>
 
         <!-- 页脚 -->
         <footer class="footer">
@@ -686,7 +1618,9 @@ body {
                        data-zh="&copy; 2025 黄炯涛。保留所有权利。">&copy; 2025 Jiongtao Huang. All rights reserved.</p>
                 </div>
                 <div class="footer-links">
-                    <a href="https://www.linkedin.com/in/jiongtao-huang-150709203/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/jiongtao-huang-150709203/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/Kantrum" target="_blank">GitHub</a>
+                    <a href="https://twitter.com/Kantrum88" target="_blank">Twitter</a>
                     <a href="mailto:jh2877@cornell.edu">Email</a>
                 </div>
             </div>
@@ -699,7 +1633,8 @@ const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({
     canvas: document.querySelector('#bg-canvas'),
-    antialias: true
+    antialias: true,
+    alpha: true
 });
 
 // 设置渲染器
@@ -709,7 +1644,7 @@ camera.position.setZ(30);
 
 // 创建粒子
 const particlesGeometry = new THREE.BufferGeometry();
-const particlesCount = 5000;
+const particlesCount = 6000;
 const posArray = new Float32Array(particlesCount * 3);
 
 // 随机成粒子位置
@@ -721,9 +1656,9 @@ particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3
 // 创建粒子材质
 const particlesMaterial = new THREE.PointsMaterial({
     size: 0.005,
-    color: '#ffffff',
+    color: '#38bdf8',
     transparent: true,
-    opacity: 0.8,
+    opacity: 0.7,
     blending: THREE.AdditiveBlending
 });
 
@@ -736,14 +1671,13 @@ function animate() {
     requestAnimationFrame(animate);
     
     // 粒子旋转
-    particlesMesh.rotation.x += 0.0001;
+    particlesMesh.rotation.x += 0.0002;
     particlesMesh.rotation.y += 0.0001;
-    particlesMesh.rotation.z += 0.0001;
     
     // 让粒子随鼠标移动
-    if (mouseX > 0) {
-        particlesMesh.rotation.x = mouseY * 0.00008;
-        particlesMesh.rotation.y = mouseX * 0.00008;
+    if (mouseX > 0 || mouseY > 0) {
+        particlesMesh.rotation.x = mouseY * 0.0001;
+        particlesMesh.rotation.y = mouseX * 0.0001;
     }
 
     renderer.render(scene, camera);
@@ -775,11 +1709,59 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.style.animationPlayState = 'running';
         }
     });
+}, {
+    threshold: 0.1
 });
 
 document.querySelectorAll('.why-card').forEach((card) => {
     observer.observe(card);
 }); 
+
+// 页面加载时的动画效果
+document.addEventListener('DOMContentLoaded', () => {
+    // GSAP动画初始化
+    gsap.from(".navbar", {
+        y: -50,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out"
+    });
+    
+    gsap.from(".section-header", {
+        scrollTrigger: {
+            trigger: ".why-section",
+            start: "top 80%"
+        },
+        y: 50,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out"
+    });
+    
+    gsap.from(".quote-box", {
+        scrollTrigger: {
+            trigger: ".quote-box",
+            start: "top 80%"
+        },
+        y: 30,
+        opacity: 0,
+        duration: 1,
+        delay: 0.5,
+        ease: "power2.out"
+    });
+});
+
+// 导航栏滚动效果
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.style.padding = "15px 40px";
+        navbar.style.boxShadow = "0 10px 30px rgba(0, 0, 0, 0.1)";
+    } else {
+        navbar.style.padding = "20px 40px";
+        navbar.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.1)";
+    }
+});
 </script>
 
 <script>
@@ -807,11 +1789,23 @@ const translations = {
 };
 
 function toggleLanguage() {
+    // 添加过渡动画效果
+    document.querySelectorAll('[data-en], [data-zh]').forEach(element => {
+        element.style.opacity = 0;
+    });
+    
+    setTimeout(() => {
     currentLang = currentLang === 'en' ? 'zh' : 'en';
     updateLanguage();
+        
+        // 恢复元素可见性
+        document.querySelectorAll('[data-en], [data-zh]').forEach(element => {
+            element.style.opacity = 1;
+        });
     
     // 保存语言偏好到本地存储
     localStorage.setItem('preferredLanguage', currentLang);
+    }, 300);
 }
 
 function updateLanguage() {
@@ -831,6 +1825,9 @@ function updateLanguage() {
         enText.classList.remove('active');
         zhText.classList.add('active');
     }
+    
+    // 更新页面标题
+    document.title = currentLang === 'en' ? 'Home | Jiongtao Huang' : '首页 | 黄炯涛';
 }
 
 // 页面加载时初始化语言
@@ -841,6 +1838,198 @@ document.addEventListener('DOMContentLoaded', () => {
         currentLang = savedLang;
         updateLanguage();
     }
+    
+    // 为微信图标添加点击事件处理
+    const wechatIcon = document.getElementById('wechat-icon');
+    wechatIcon.addEventListener('click', function(e) {
+        e.preventDefault(); // 阻止默认事件
+        e.stopPropagation(); // 阻止事件冒泡
+        
+        // 创建模态弹窗
+        const qrModal = document.createElement('div');
+        qrModal.style.position = 'fixed';
+        qrModal.style.top = '0';
+        qrModal.style.left = '0';
+        qrModal.style.width = '100%';
+        qrModal.style.height = '100%';
+        qrModal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+        qrModal.style.display = 'flex';
+        qrModal.style.justifyContent = 'center';
+        qrModal.style.alignItems = 'center';
+        qrModal.style.zIndex = '9999';
+        qrModal.style.cursor = 'pointer';
+        
+        const qrContainer = document.createElement('div');
+        qrContainer.style.backgroundColor = '#fff';
+        qrContainer.style.padding = '20px';
+        qrContainer.style.borderRadius = '12px';
+        qrContainer.style.textAlign = 'center';
+        qrContainer.style.animation = 'fadeIn 0.3s ease, scaleIn 0.3s ease';
+        
+        // 添加动画样式
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+            @keyframes scaleIn {
+                from { transform: scale(0.8); }
+                to { transform: scale(1); }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        const qrImage = document.createElement('img');
+        qrImage.src = 'images/wechat-qrcode.png';
+        qrImage.style.width = '200px';
+        qrImage.style.height = '200px';
+        qrImage.style.objectFit = 'contain';
+        
+        const qrText = document.createElement('p');
+        qrText.textContent = currentLang === 'en' ? 'Scan to visit www.kantrum.cn' : '扫描二维码访问 www.kantrum.cn';
+        qrText.style.marginTop = '15px';
+        qrText.style.color = '#333';
+        qrText.style.fontWeight = '500';
+        
+        qrContainer.appendChild(qrImage);
+        qrContainer.appendChild(qrText);
+        qrModal.appendChild(qrContainer);
+        
+        document.body.appendChild(qrModal);
+        
+        qrModal.addEventListener('click', () => {
+            document.body.removeChild(qrModal);
+        });
+    });
+    
+    // 为所有卡片添加鼠标悬停发光效果
+    const cards = document.querySelectorAll('.why-card, .feed-card');
+    
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            card.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(56, 189, 248, 0.15), rgba(30, 41, 59, 0.5) 40%)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.background = 'rgba(30, 41, 59, 0.5)';
+        });
+    });
+    
+    // 初始化社交分享按钮的动画显示
+    gsap.registerPlugin(ScrollTrigger);
+    
+    const shareButtons = document.querySelectorAll('.share-button');
+    shareButtons.forEach((button, index) => {
+        gsap.to(button, {
+            opacity: 1,
+            x: 0,
+            duration: 0.5,
+            delay: 0.1 * index + 0.5,
+            ease: "power2.out"
+        });
+        
+        // 添加分享功能
+        button.addEventListener('click', () => {
+            const platform = button.getAttribute('data-platform');
+            const url = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent(document.title);
+            let shareUrl = '';
+            
+            switch(platform) {
+                case 'twitter':
+                    shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
+                    break;
+                case 'facebook':
+                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+                    break;
+                case 'linkedin':
+                    shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+                    break;
+                case 'wechat':
+                    // 为微信显示二维码
+                    const qrModal = document.createElement('div');
+                    qrModal.style.position = 'fixed';
+                    qrModal.style.top = '0';
+                    qrModal.style.left = '0';
+                    qrModal.style.width = '100%';
+                    qrModal.style.height = '100%';
+                    qrModal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+                    qrModal.style.display = 'flex';
+                    qrModal.style.justifyContent = 'center';
+                    qrModal.style.alignItems = 'center';
+                    qrModal.style.zIndex = '9999';
+                    qrModal.style.cursor = 'pointer';
+                    
+                    const qrContainer = document.createElement('div');
+                    qrContainer.style.backgroundColor = '#fff';
+                    qrContainer.style.padding = '20px';
+                    qrContainer.style.borderRadius = '12px';
+                    qrContainer.style.textAlign = 'center';
+                    qrContainer.style.animation = 'fadeIn 0.3s ease, scaleIn 0.3s ease';
+                    
+                    // 添加动画样式
+                    const style = document.createElement('style');
+                    style.textContent = `
+                        @keyframes fadeIn {
+                            from { opacity: 0; }
+                            to { opacity: 1; }
+                        }
+                        @keyframes scaleIn {
+                            from { transform: scale(0.8); }
+                            to { transform: scale(1); }
+                        }
+                    `;
+                    document.head.appendChild(style);
+                    
+                    const qrImage = document.createElement('img');
+                    qrImage.src = 'images/wechat-qrcode.png';
+                    qrImage.style.width = '200px';
+                    qrImage.style.height = '200px';
+                    qrImage.style.objectFit = 'contain';
+                    
+                    const qrText = document.createElement('p');
+                    qrText.textContent = currentLang === 'en' ? 'Scan to visit www.kantrum.cn' : '扫描二维码访问 www.kantrum.cn';
+                    qrText.style.marginTop = '15px';
+                    qrText.style.color = '#333';
+                    qrText.style.fontWeight = '500';
+                    
+                    qrContainer.appendChild(qrImage);
+                    qrContainer.appendChild(qrText);
+                    qrModal.appendChild(qrContainer);
+                    
+                    document.body.appendChild(qrModal);
+                    
+                    qrModal.addEventListener('click', () => {
+                        document.body.removeChild(qrModal);
+                    });
+                    return;
+            }
+            
+            window.open(shareUrl, '_blank', 'width=600,height=400');
+        });
+    });
+    
+    // 为社交媒体动态添加滚动触发动画
+    const feedCards = document.querySelectorAll('.feed-card');
+    feedCards.forEach((card, index) => {
+        gsap.from(card, {
+            scrollTrigger: {
+                trigger: card,
+                start: "top 85%",
+                toggleActions: "play none none none"
+            },
+            y: 50,
+            opacity: 0,
+            duration: 0.8,
+            delay: index * 0.2,
+            ease: "power3.out"
+        });
+    });
 }); 
 </script>
 
@@ -856,6 +2045,20 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // 切换body滚动
         document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        
+        // 添加菜单项动画效果
+        if (navLinks.classList.contains('active')) {
+            const links = document.querySelectorAll('.nav-links li');
+            links.forEach((link, index) => {
+                link.style.opacity = 0;
+                link.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    link.style.transition = 'all 0.3s ease';
+                    link.style.opacity = 1;
+                    link.style.transform = 'translateY(0)';
+                }, 100 + (index * 50));
+            });
+        }
     });
     
     // 点击导航链接时关闭菜单
@@ -877,6 +2080,61 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = '';
         }
     });
+    
+    // 为页面添加平滑滚动效果
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId !== '#') {
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
+    
+    // 为CTA按钮添加悬停效果
+    const ctaButtons = document.querySelectorAll('.cta-primary, .cta-secondary');
+    
+    ctaButtons.forEach(button => {
+        button.addEventListener('mouseenter', () => {
+            button.style.transition = 'all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1)';
+        });
+        
+        button.addEventListener('mouseleave', () => {
+            button.style.transition = 'all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1)';
+        });
+    });
+    
+    // 添加页面载入动画
+    const body = document.body;
+    body.style.opacity = 0;
+    body.style.transition = 'opacity 0.8s ease';
+    
+    setTimeout(() => {
+        body.style.opacity = 1;
+    }, 100);
+});
+</script>
+
+<script>
+// 初始化AOS动画库
+document.addEventListener('DOMContentLoaded', () => {
+    // ... existing code ...
+    
+    // 初始化AOS动画库
+    AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+    });
+    
+    // ... existing code ...
 });
 </script>
 </html>
