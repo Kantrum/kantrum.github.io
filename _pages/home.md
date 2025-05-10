@@ -92,6 +92,9 @@ body {
     font-weight: 700;
     transition: all 0.3s ease;
     letter-spacing: -0.5px;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .nav-brand a:hover {
@@ -236,6 +239,32 @@ body {
     
     .navbar {
         padding: 15px 20px;
+    }
+    .nav-brand a {
+        font-size: 1.1rem;
+        white-space: nowrap;
+        max-width: 60vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .language-switch {
+        white-space: nowrap;
+        max-width: 38vw;
+        display: flex;
+        align-items: center;
+    }
+    .lang-btn {
+        font-size: 0.95rem;
+        padding: 4px 10px;
+        min-width: 80px;
+        white-space: nowrap;
+        display: inline-block;
+    }
+    .nav-right {
+        flex-wrap: nowrap;
+        align-items: center;
     }
 }
 
