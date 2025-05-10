@@ -171,36 +171,58 @@ body {
 
 /* 响应式设计 */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 15px 10px;
+    }
     .mobile-menu-btn {
         display: block;
+        width: 48px;
+        height: 48px;
+        padding: 12px;
+        margin-left: 10px;
+        z-index: 1001;
     }
-    
+    .mobile-menu-btn span {
+        width: 32px;
+        height: 3px;
+        margin: 7px 0;
+    }
     .nav-links {
         display: none;
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 100vw;
         height: 100vh;
-        background: var(--nav-bg);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
+        background: rgba(15, 23, 42, 0.97);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 20px;
-        gap: 25px;
+        padding: 30px 10px;
+        gap: 32px;
         z-index: 1000;
+        transition: opacity 0.3s, visibility 0.3s;
     }
-    
     .nav-links.active {
         display: flex;
         animation: fadeIn 0.3s ease;
     }
-
     .nav-links a {
-        font-size: 1.2rem;
-        padding: 10px;
+        font-size: 1.4rem;
+        padding: 16px 0;
+        letter-spacing: 1px;
+    }
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+    .nav-right {
+        gap: 8px;
+    }
+    .language-switch {
+        margin-right: 0;
     }
     
     /* 调整其他元素在移动端的布局 */
@@ -393,7 +415,7 @@ body {
 }
 
 .why-section {
-    padding: 120px 20px;
+    padding: clamp(60px, 8vw, 120px) 20px clamp(40px, 6vw, 80px);
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.8));
     position: relative;
     overflow: hidden;
@@ -419,14 +441,14 @@ body {
 
 .section-header {
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: clamp(40px, 6vw, 80px);
     position: relative;
 }
 
 .section-header h2 {
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 800;
-    margin-bottom: 30px;
+    margin-bottom: clamp(15px, 3vw, 30px);
     background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -450,12 +472,13 @@ body {
 }
 
 .section-header p.subtitle {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     color: var(--text-secondary);
-    max-width: 700px;
+    max-width: min(700px, 90%);
     margin: 0 auto;
     line-height: 1.8;
     font-weight: 300;
+    padding: 0 15px;
 }
 
 .why-layout {
@@ -504,14 +527,14 @@ body {
 .philosophy-container {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: clamp(20px, 4vw, 40px);
 }
 
 .philosophy-item {
     display: flex;
     align-items: flex-start;
-    gap: 25px;
-    padding: 25px;
+    gap: clamp(15px, 3vw, 25px);
+    padding: clamp(20px, 4vw, 25px);
     border-radius: 16px;
     background: rgba(30, 41, 59, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -539,12 +562,12 @@ body {
 }
 
 .philosophy-icon {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
     color: var(--accent);
     background: rgba(56, 189, 248, 0.1);
-    width: 60px;
-    height: 60px;
-    min-width: 60px;
+    width: clamp(45px, 8vw, 60px);
+    height: clamp(45px, 8vw, 60px);
+    min-width: clamp(45px, 8vw, 60px);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -557,12 +580,12 @@ body {
 }
 
 .philosophy-content h3 {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: clamp(8px, 2vw, 10px);
     color: var(--text);
     position: relative;
-    padding-bottom: 10px;
+    padding-bottom: clamp(8px, 2vw, 10px);
 }
 
 .philosophy-content h3::after {
@@ -577,19 +600,19 @@ body {
 }
 
 .philosophy-content p {
-    font-size: 1.05rem;
+    font-size: clamp(0.9rem, 1.8vw, 1.05rem);
     line-height: 1.7;
     color: var(--text-secondary);
 }
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: clamp(20px, 4vw, 30px);
 }
 
 .feature-card {
-    padding: 25px;
+    padding: clamp(20px, 4vw, 25px);
     border-radius: 16px;
     background: rgba(30, 41, 59, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -599,41 +622,35 @@ body {
     flex-direction: column;
 }
 
-.feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    border-color: rgba(56, 189, 248, 0.2);
-}
-
 .feature-icon {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
+    font-size: clamp(1.5rem, 3vw, 1.8rem);
+    margin-bottom: clamp(12px, 2vw, 20px);
     color: var(--accent);
     background: rgba(56, 189, 248, 0.1);
-    width: 50px;
-    height: 50px;
+    width: clamp(40px, 8vw, 50px);
+    height: clamp(40px, 8vw, 50px);
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
 }
 
 .feature-title {
-    font-size: 1.3rem;
+    font-size: clamp(1.1rem, 2.2vw, 1.3rem);
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: clamp(10px, 2vw, 15px);
     color: var(--text);
 }
 
 .feature-content {
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
     line-height: 1.7;
     color: var(--text-secondary);
 }
 
 .cta-wrapper {
-    margin-top: 80px;
+    margin-top: clamp(40px, 6vw, 60px);
+    margin-bottom: clamp(30px, 4vw, 50px);
     text-align: center;
 }
 
@@ -667,10 +684,10 @@ body {
 
 .quote-box {
     max-width: 900px;
-    margin: 60px auto 0; /* 从原来的100px减小到60px */
+    margin: clamp(30px, 4vw, 50px) auto 0;
     text-align: center;
     position: relative;
-    padding: 50px 30px;
+    padding: clamp(30px, 4vw, 50px) clamp(20px, 3vw, 30px);
     background: rgba(15, 23, 42, 0.4);
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -679,7 +696,7 @@ body {
 .quote-box::before, .quote-box::after {
     content: '"';
     font-family: 'Georgia', serif;
-    font-size: 10rem;
+    font-size: clamp(6rem, 10vw, 10rem);
     color: var(--accent);
     opacity: 0.2;
     position: absolute;
@@ -688,28 +705,28 @@ body {
 }
 
 .quote-box::before {
-    top: -30px;
+    top: -20px;
     left: 20px;
 }
 
 .quote-box::after {
-    bottom: -100px;
+    bottom: -60px;
     right: 20px;
 }
 
 .quote-box blockquote {
-    font-size: 1.8rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
     color: var(--text);
     font-style: italic;
     line-height: 1.6;
     font-weight: 300;
     position: relative;
     z-index: 1;
-    margin-bottom: 20px;
+    margin-bottom: clamp(15px, 2vw, 20px);
 }
 
 .quote-author {
-    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 1.8vw, 1.1rem);
     color: var(--accent);
     font-weight: 500;
     display: flex;
@@ -720,7 +737,7 @@ body {
 
 .quote-author::before, .quote-author::after {
     content: '';
-    width: 30px;
+    width: clamp(20px, 3vw, 30px);
     height: 1px;
     background: var(--accent);
     opacity: 0.5;
@@ -1035,7 +1052,7 @@ body {
 
 /* 社交媒体动态展示区域 */
 .social-feed {
-    padding: 60px 20px; /* 从原来的100px减小到60px */
+    padding: clamp(40px, 6vw, 60px) 20px;
     background: rgba(15, 23, 42, 0.5);
     position: relative;
 }
@@ -1287,6 +1304,15 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* 新增过渡内容样式 */
+.journey-bridge p {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    margin: 0 auto;
+    max-width: 600px;
+    line-height: 1.7;
+}
 </style>
 
 <head>
@@ -1488,14 +1514,14 @@ body {
                             <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
-                    
-                    <div class="quote-box" data-aos="fade-up">
-                        <blockquote data-en="In the digital realm, we're not merely archiving the past but actively crafting the narrative of tomorrow's possibilities." 
-                                    data-zh="在数字领域中，我们不仅仅是在归档过去，更是在积极塑造明天可能性的叙事。">
-                            "In the digital realm, we're not merely archiving the past but actively crafting the narrative of tomorrow's possibilities."
-                    </blockquote>
-                        <div class="quote-author" data-en="Personal Philosophy" data-zh="个人理念">Personal Philosophy</div>
+                    <!-- 新增过渡内容 -->
+                    <div class="journey-bridge" style="margin: 24px 0; text-align: center;">
+                      <p data-en="Every journey is unique. Here's a glimpse into mine—full of curiosity, challenges, and growth." 
+                         data-zh="每一段旅程都独一无二。这里是我的缩影——充满好奇、挑战与成长。">
+                        Every journey is unique. Here's a glimpse into mine—full of curiosity, challenges, and growth.
+                      </p>
                     </div>
+                    <!-- quote-box已移除 -->
                 </div>
             </section>
             
@@ -1802,6 +1828,11 @@ function toggleLanguage() {
         document.querySelectorAll('[data-en], [data-zh]').forEach(element => {
             element.style.opacity = 1;
         });
+    
+    // 恢复所有分享tooltip为CSS控制
+    document.querySelectorAll('.share-tooltip').forEach(tip => {
+        tip.style.opacity = '';
+    });
     
     // 保存语言偏好到本地存储
     localStorage.setItem('preferredLanguage', currentLang);
