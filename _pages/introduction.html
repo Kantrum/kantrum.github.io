@@ -2839,9 +2839,9 @@ img, .experience-card, .skill-category, .activity-card, .awards-gallery > div > 
                         <h3>Software Development</h3>
                     </div>
                     <ul class="experience-list">
-                        <li>Full-stack web application development with real-time data visualization for EV charging monitoring systems</li>
-                        <li>Cloud-based architecture design for IoT applications with distributed data processing</li>
-                        <li>RESTful API design and integration with embedded systems for health monitoring solutions</li>
+                        <li>Full-stack web application development</li>
+                        <li>Cloud architecture and deployment</li>
+                        <li>API design and implementation</li>
                     </ul>
                 </div>
                 <div class="experience-card">
@@ -2850,20 +2850,20 @@ img, .experience-card, .skill-category, .activity-card, .awards-gallery > div > 
                         <h3>Machine Learning</h3>
                     </div>
                     <ul class="experience-list">
-                        <li>Deep learning model development for driver fatigue detection with 95% accuracy</li>
-                        <li>Computer vision applications for document layout analysis and OCR with 96% precision</li>
-                        <li>Data analysis and visualization for health monitoring systems with real-time predictive analytics</li>
+                        <li>Deep learning model development</li>
+                        <li>Computer vision applications</li>
+                        <li>Data analysis and visualization</li>
                     </ul>
                 </div>
                 <div class="experience-card">
                     <div class="card-header">
                         <i class="fas fa-mobile-alt"></i>
-                        <h3>Embedded Systems</h3>
+                        <h3>Mobile Development</h3>
                     </div>
                     <ul class="experience-list">
-                        <li>Smart LED matrix projects using Raspberry Pi and accelerometer sensors</li>
-                        <li>STM32 microcontroller programming for washing machine panels and games</li>
-                        <li>FPGA-based digital system design for timers and control applications</li>
+                        <li>Cross-platform app development</li>
+                        <li>Native iOS/Android development</li>
+                        <li>Progressive Web Apps (PWA)</li>
                     </ul>
                 </div>
                 <!-- Add more experience cards -->
@@ -2881,27 +2881,27 @@ img, .experience-card, .skill-category, .activity-card, .awards-gallery > div > 
                     <h3>Languages</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Python</span>
-                        <span class="skill-tag">C/C++</span>
                         <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">VHDL</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C++</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>AI & Data Science</h3>
+                    <h3>Frontend</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">TensorFlow</span>
-                        <span class="skill-tag">Computer Vision</span>
-                        <span class="skill-tag">PaddleOCR</span>
-                        <span class="skill-tag">Data Analytics</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">HTML5/CSS3</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Hardware & IoT</h3>
+                    <h3>Backend</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">STM32</span>
-                        <span class="skill-tag">Raspberry Pi</span>
-                        <span class="skill-tag">FPGA</span>
-                        <span class="skill-tag">Sensor Systems</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">GraphQL</span>
                     </div>
                 </div>
                 <!-- Add more skill categories -->
@@ -3177,15 +3177,20 @@ img, .experience-card, .skill-category, .activity-card, .awards-gallery > div > 
                 <h2>My Gallery</h2>
             </div>
             <div class="album-grid">
-                <div class="album-card" onclick="openAlbum('Summer_Style')">
-                    <img src="../images/IMG_1556.JPG" alt="Summer_Style">
-                    <h3>Summer Lifestyles</h3>
-                    <p>7 photos</p>
-                </div>
-                <div class="album-card" onclick="openAlbum('Cornell_Graduation')">
-                    <img src="../images/Cornell_graduate/WechatIMG148.jpg" alt="Cornell_Graduation">
+                <div class="album-card" onclick="openAlbum('cornell')">
+                    <img src="../images/Cornell_graduate/WechatIMG148.jpg" alt="Cornell Graduation">
                     <h3>Cornell Graduation</h3>
                     <p>6 photos</p>
+                </div>
+                <div class="album-card" onclick="openAlbum('travel')">
+                    <img src="../images/IMG_1556.JPG" alt="Travel">
+                    <h3>Travel</h3>
+                    <p>7 photos</p>
+                </div>
+                <div class="album-card" onclick="openAlbum('nature')">
+                    <img src="../images/IMG_1561.JPG" alt="Nature">
+                    <h3>Nature</h3>
+                    <p>8 photos</p>
                 </div>
                 <div class="album-card" onclick="openAlbum('campus')">
                     <img src="../images/IMG_1879.JPG" alt="Campus Life">
@@ -3221,7 +3226,7 @@ img, .experience-card, .skill-category, .activity-card, .awards-gallery > div > 
 
     <footer>
         <div class="footer-content">
-            <p class="copyright">&copy; 2025 Jiongtao Huang. All rights reserved.</p>
+            <p class="copyright">&copy; 2024 Jiongtao Huang. All rights reserved.</p>
             <div class="footer-links">
                 <a href="https://linkedin.com/in/yourusername" target="_blank" class="footer-link">LinkedIn</a>
                 <span class="footer-separator">|</span>
@@ -3496,8 +3501,7 @@ function openAlbumModal() {
     photoGrid.innerHTML = ''; // 清空之前的图片
 
     const photos = [
-        { src: '../images/IMG_1556.JPG', alt: 'Summer_Style' },
-        { src: '../images/Cornell_graduate/WechatIMG148.jpg', alt: 'Cornell_Graduation' },
+        { src: '../images/IMG_1556.JPG', alt: 'Travel' },
         { src: 'assets/albums/nature/cover.jpg', alt: 'Nature' },
         // 添加更多照片路径
     ];
@@ -3525,8 +3529,19 @@ function openImageInModal(src, alt) {
 <script>
 // 相册数据
 const albums = {
-    'Summer_Style': {
-        title: 'Summer_Style',
+    'cornell': {
+        title: 'Cornell Graduation',
+        photos: [
+            '../images/Cornell_graduate/WechatIMG148.jpg',
+            '../images/Cornell_graduate/WechatIMG149.jpg',
+            '../images/Cornell_graduate/WechatIMG150.jpg',
+            '../images/Cornell_graduate/WechatIMG151.jpg',
+            '../images/Cornell_graduate/WechatIMG152.jpg',
+            '../images/Cornell_graduate/WechatIMG153.jpg'
+        ]
+    },
+    'travel': {
+        title: 'Travel',
         photos: [
             '../images/IMG_1556.JPG',
             '../images/IMG_1562.JPG',
@@ -3538,44 +3553,50 @@ const albums = {
             // 添加更多照片路径
         ]
     }
-    'Cornell_Graduation': {
-        title: 'Cornell_Graduation',
-        photos: [
-            '../images/Cornell_graduate/WechatIMG148.jpg',
-            '../images/WechatIMG149.jpg',
-            '../images/WechatIMG150.jpg',
-            '../images/WechatIMG151.jpg',
-            '../images/WechatIMG152.jpg',
-            '../images/WechatIMG153.jpg',
-            // 添加更多照片路径
-        ]
-    }
     // 可以添加更多相册
 };
 
 // 打开相册
 function openAlbum(albumId) {
+    // 检查albumId是否存在
+    if (!albums[albumId]) {
+        console.error('相册不存在:', albumId);
+        return;
+    }
+    
     const modal = document.getElementById('albumModal');
     const photoGrid = modal.querySelector('.photo-grid');
     
     // 清空现有图片
     photoGrid.innerHTML = '';
     
+    // 添加相册标题
+    const titleElement = document.createElement('h2');
+    titleElement.textContent = albums[albumId].title;
+    titleElement.style.width = '100%';
+    titleElement.style.textAlign = 'center';
+    titleElement.style.marginBottom = '20px';
+    titleElement.style.color = '#2C3E50';
+    photoGrid.appendChild(titleElement);
+    
     // 添加相册中的照片
     albums[albumId].photos.forEach(photoSrc => {
         const img = document.createElement('img');
         img.src = photoSrc;
         img.onclick = () => openFullscreen(photoSrc);
+        img.style.cursor = 'pointer';
         photoGrid.appendChild(img);
     });
     
     // 确保模态框居中显示
     modal.style.display = 'block';
+    document.body.classList.add('no-scroll'); // 防止背景滚动
 }
 
 // 关闭相册
 document.querySelector('.close-modal').onclick = function() {
     document.getElementById('albumModal').style.display = 'none';
+    document.body.classList.remove('no-scroll'); // 恢复背景滚动
 };
 
 // 点击模态框外部关闭
@@ -3583,6 +3604,7 @@ window.addEventListener('click', function(event) {
     const modal = document.getElementById('albumModal');
     if (event.target === modal) {
         modal.style.display = 'none';
+        document.body.classList.remove('no-scroll'); // 恢复背景滚动
     }
 });
 
