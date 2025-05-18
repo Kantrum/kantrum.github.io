@@ -3177,15 +3177,15 @@ img, .experience-card, .skill-category, .activity-card, .awards-gallery > div > 
                 <h2>My Gallery</h2>
             </div>
             <div class="album-grid">
-                <div class="album-card" onclick="openAlbum('travel')">
-                    <img src="../images/IMG_1556.JPG" alt="Travel">
-                    <h3>Travel</h3>
+                <div class="album-card" onclick="openAlbum('Summer_Style')">
+                    <img src="../images/IMG_1556.JPG" alt="Summer_Style">
+                    <h3>Summer Lifestyles</h3>
                     <p>7 photos</p>
                 </div>
-                <div class="album-card" onclick="openAlbum('nature')">
-                    <img src="../images/IMG_1561.JPG" alt="Nature">
-                    <h3>Nature</h3>
-                    <p>8 photos</p>
+                <div class="album-card" onclick="openAlbum('Cornell_Graduation')">
+                    <img src="../images/Cornell_graduate/WechatIMG148.jpg" alt="Cornell_Graduation">
+                    <h3>Cornell Graduation</h3>
+                    <p>6 photos</p>
                 </div>
                 <div class="album-card" onclick="openAlbum('campus')">
                     <img src="../images/IMG_1879.JPG" alt="Campus Life">
@@ -3221,7 +3221,7 @@ img, .experience-card, .skill-category, .activity-card, .awards-gallery > div > 
 
     <footer>
         <div class="footer-content">
-            <p class="copyright">&copy; 2024 Jiongtao Huang. All rights reserved.</p>
+            <p class="copyright">&copy; 2025 Jiongtao Huang. All rights reserved.</p>
             <div class="footer-links">
                 <a href="https://linkedin.com/in/yourusername" target="_blank" class="footer-link">LinkedIn</a>
                 <span class="footer-separator">|</span>
@@ -3524,8 +3524,8 @@ function openImageInModal(src, alt) {
 <script>
 // 相册数据
 const albums = {
-    'travel': {
-        title: 'Travel',
+    'Summer_Style': {
+        title: 'Summer_Style',
         photos: [
             '../images/IMG_1556.JPG',
             '../images/IMG_1562.JPG',
@@ -3534,6 +3534,18 @@ const albums = {
             '../images/IMG_1562.JPG',
             '../images/IMG_1562.JPG',
             '../images/IMG_1556.JPG',
+            // 添加更多照片路径
+        ]
+    }
+    'Cornell_Graduation': {
+        title: 'Cornell_Graduation',
+        photos: [
+            '../images/Cornell_graduate/WechatIMG148.jpg',
+            '../images/WechatIMG149.jpg',
+            '../images/WechatIMG150.jpg',
+            '../images/WechatIMG151.jpg',
+            '../images/WechatIMG152.jpg',
+            '../images/WechatIMG153.jpg',
             // 添加更多照片路径
         ]
     }
