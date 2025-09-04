@@ -1352,6 +1352,22 @@ date: 2022-04-31
       grid-template-columns: repeat(2, 1fr);
       gap: 12px;
     }
+    
+    /* 结果与收获部分响应式优化 */
+    .metrics-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    
+    .achievements-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    
+    .future-content {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
   }
   
   @media (max-width: 640px) {
@@ -1396,6 +1412,22 @@ date: 2022-04-31
     .key-achievements {
       grid-template-columns: repeat(2, 1fr);
       gap: 8px;
+    }
+    
+    /* 结果与收获部分响应式优化 */
+    .metrics-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    
+    .achievements-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    
+    .future-content {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
     }
     
     iframe.phone {
@@ -1502,51 +1534,63 @@ date: 2022-04-31
     }
     
     .achievements-grid {
-      grid-template-columns: 1fr;
-      gap: 16px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
     }
     
     .achievement-card {
-      padding: 16px;
+      padding: 12px;
     }
     
     .achievement-card h4 {
-      font-size: 16px;
-    }
-    
-    .achievement-card li {
       font-size: 14px;
     }
     
+    .achievement-card li {
+      font-size: 12px;
+    }
+    
     .growth-content {
-      gap: 16px;
+      gap: 12px;
     }
     
     .growth-item {
-      flex-direction: column;
-      text-align: center;
-      padding: 16px;
+      flex-direction: row;
+      text-align: left;
+      padding: 12px;
     }
     
     .growth-item:hover {
       transform: translateY(-2px);
     }
     
+    .growth-icon {
+      font-size: 24px;
+    }
+    
+    .growth-text h4 {
+      font-size: 14px;
+    }
+    
+    .growth-text p {
+      font-size: 12px;
+    }
+    
     .future-content {
-      grid-template-columns: 1fr;
-      gap: 16px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
     }
     
     .future-item {
-      padding: 16px;
+      padding: 12px;
     }
     
     .future-text h4 {
-      font-size: 16px;
+      font-size: 14px;
     }
     
     .future-text p {
-      font-size: 14px;
+      font-size: 12px;
     }
     
     iframe.phone {
@@ -2264,7 +2308,7 @@ sequenceDiagram
     </section>
 
     <footer>
-      © 你的名字 — 自习室预约小程序案例
+      © Kantrum — 自习室预约小程序案例
     </footer>
   </div>
 
