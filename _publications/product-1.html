@@ -6,135 +6,235 @@ date: 2022-04-31
 ---
 
 
+
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="dark">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>自习室预约小程序｜作品集案例</title>
-<meta name="description" content="从模糊需求到上线：选座→支付→取消/退款→异常兜底；含泳道图、原型图、前端交互模拟。">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>自习室预约小程序｜产品案例</title>
+<meta name="description" content="从需求澄清到MVP上线：选座→预约→支付→取消/退款→门禁与能耗联动；含流程图与交互原型。"/>
+
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Mermaid for diagrams -->
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>mermaid.initialize({ startOnLoad: true, securityLevel: 'loose' });</script>
+<script>mermaid.initialize({startOnLoad:true,securityLevel:'loose',theme:'dark'});</script>
 
 <style>
-  :root{
-    --bg:#0b0c10;
-    --card:#12141a;
-    --muted:#9aa4b2;
-    --text:#e7eaf0;
-    --brand:#4f8cff;
-    --accent:#22c55e;
-    --border:#1f232d;
-  }
-  *{box-sizing:border-box}
-  body{
-    margin:0; font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei", Arial, sans-serif;
-    background:linear-gradient(180deg,#0b0c10 0%,#0f1320 100%);
-    color:var(--text);
-  }
-  a{color:inherit}
-  .wrap{max-width:1100px;margin:0 auto;padding:28px 16px 80px}
-  header.hero{
-    display:grid; gap:18px; grid-template-columns: 1.4fr 1fr; align-items:center;
-    padding:28px; border:1px solid var(--border); background:linear-gradient(180deg,#111420,#0f1220); border-radius:16px;
-  }
-  .hero h1{margin:0; font-size:28px; letter-spacing: .5px}
-  .hero p{margin:4px 0 0; color:var(--muted)}
-  .tags{display:flex; gap:8px; flex-wrap:wrap; margin-top:8px}
-  .tag{background:#162033; border:1px solid #1d2a45; color:#b7c6ff; padding:4px 8px; border-radius:999px; font-size:12px}
-  .kpis{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
-  .kpi{background:#121826; border:1px solid var(--border); padding:16px; border-radius:12px; text-align:center}
-  .kpi strong{font-size:20px; color:#fff}
-  .card{
-    margin-top:18px; padding:22px; border:1px solid var(--border); background:#111521; border-radius:14px;
-  }
-  .card h2{margin:0 0 12px; font-size:20px}
-  .cols{display:grid; grid-template-columns:1fr 1fr; gap:16px}
-  .list{margin:0; padding-left:18px; color:#cbd5e1}
-  .muted{color:var(--muted)}
-  .gallery{display:grid; grid-template-columns:repeat(3,1fr); gap:10px}
-  .gallery figure{margin:0; border:1px solid var(--border); background:#0f1420; border-radius:10px; overflow:hidden}
-  .gallery img{display:block; width:100%; height:220px; object-fit:cover}
-  .gallery figcaption{padding:8px 10px; font-size:12px; color:var(--muted); border-top:1px solid var(--border)}
-  .mermaid{background:#0f1420; border:1px solid var(--border); border-radius:10px; padding:10px}
-  .demo-shell{
-    margin-top:16px; border:1px solid var(--border); border-radius:14px; background: #0f1420;
-    padding:16px;
-  }
-  .demo-head{display:flex; justify-content:space-between; align-items:center; margin-bottom:10px}
-  .demo-title{font-weight:600}
-  .demo-actions{display:flex; gap:8px}
-  .btn{
-    background:#14213a; border:1px solid #1f2a44; color:#dbe5ff; padding:8px 12px; border-radius:8px; font-size:13px; cursor:pointer;
-  }
-  .btn:hover{border-color:#2b3c63}
-  iframe.phone{
-    width: 420px; height: 900px; border:0; border-radius:16px; display:block; background:#0b0c10; margin:0 auto;
-    box-shadow: 0 10px 40px rgba(0,0,0,.45);
-  }
-  footer{margin-top:26px; color:var(--muted); text-align:center}
-  @media (max-width: 980px){
-    header.hero{grid-template-columns:1fr}
-    .kpis{grid-template-columns:repeat(3,1fr)}
-    .gallery{grid-template-columns:repeat(2,1fr)}
-    iframe.phone{width: 360px; height: 780px}
-  }
-  @media (max-width: 640px){
-    .kpis{grid-template-columns:1fr 1fr}
-    .gallery{grid-template-columns:1fr}
-    iframe.phone{width: 340px; height: 720px}
-  }
+/* ===== 基础主题 & 设计体系 ===== */
+:root{
+  --bg:#0c0f14;--bg-soft:#111623;--card:#121a2a;--border:#1c2434;
+  --text:#e9eef7;--muted:#a5b1c6;--brand:#4f8cff;--ok:#22c55e;--warn:#ffb020;
+}
+:root[data-theme="light"]{
+  --bg:#f6f8fb;--bg-soft:#ffffff;--card:#ffffff;--border:#e6e9f0;
+  --text:#0f1729;--muted:#5b6578;--brand:#306cdb;--ok:#199a50;--warn:#b67500;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei", Arial,sans-serif;
+  background:radial-gradient(1200px 600px at 20% -10%, rgba(79,140,255,.12), transparent 60%), linear-gradient(180deg,var(--bg) 0%, #0a0d12 100%);
+  color:var(--text);
+}
+a{color:inherit;text-decoration:none}
+.container{max-width:1120px;margin:0 auto;padding:28px 16px 72px}
+
+/* ===== 顶部导航 ===== */
+.nav{
+  position:sticky; top:0; z-index:20; backdrop-filter: blur(8px);
+  background:color-mix(in srgb, var(--bg), transparent 30%);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:12px; padding:12px 16px;}
+.brand{display:flex;align-items:center;gap:10px}
+.logo{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,#4f8cff,#7c9dff);display:grid;place-items:center;color:#fff;font-weight:700}
+.brand-name{font-weight:700;letter-spacing:.3px}
+.nav-links{display:flex;gap:14px;flex-wrap:wrap}
+.nav-links a{padding:8px 10px;border-radius:8px;border:1px solid transparent}
+.nav-links a:hover{border-color:var(--border);background:color-mix(in srgb, var(--card), transparent 60%)}
+.theme-toggle{
+  border:1px solid var(--border); background:var(--bg-soft); color:var(--text);
+  padding:8px 10px;border-radius:8px;cursor:pointer
+}
+
+/* ===== Hero ===== */
+.hero{
+  display:grid;grid-template-columns:1.4fr 1fr;gap:16px;align-items:center;
+  margin-top:18px;padding:22px;border:1px solid var(--border);border-radius:16px;background:var(--bg-soft);
+}
+.hero h1{margin:0 0 8px;font-size:28px}
+.hero p{margin:0;color:var(--muted)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.tag{font-size:12px;padding:4px 8px;border-radius:999px;border:1px solid var(--border);background:color-mix(in srgb, var(--card), transparent 50%)}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.kpi{border:1px solid var(--border);background:var(--card);border-radius:12px;padding:14px;text-align:center}
+.kpi strong{font-size:20px}
+
+/* ===== Section 卡片 ===== */
+.section{margin-top:18px;border:1px solid var(--border);background:var(--bg-soft);border-radius:14px;overflow:hidden}
+.section h2{margin:0;padding:18px 18px 8px}
+.section .body{padding:0 18px 18px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.list{margin:8px 0 0;padding-left:18px;color:var(--text)}
+.muted{color:var(--muted)}
+
+/* ===== 画廊 ===== */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.card{
+  border:1px solid var(--border);background:var(--card);border-radius:12px;overflow:hidden
+}
+.card img{display:block;width:100%;height:220px;object-fit:cover}
+.card .cap{padding:8px 10px;color:var(--muted);font-size:12px;border-top:1px solid var(--border)}
+
+/* ===== Mermaid 区（标签切换） ===== */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;padding:0 18px 10px}
+.tab-btn{border:1px solid var(--border);background:var(--card);color:var(--text);padding:8px 10px;border-radius:8px;cursor:pointer}
+.tab-btn.active{outline:2px solid color-mix(in srgb, var(--brand), transparent 60%)}
+.diagram{display:none;padding:0 18px 18px}
+.diagram.active{display:block}
+.mermaid{border:1px solid var(--border);border-radius:10px;background:var(--card);padding:10px}
+
+/* ===== Demo 预览 ===== */
+.demo{
+  display:grid;grid-template-columns:1fr 420px;gap:18px;align-items:start
+}
+.iframe-wrap{
+  border:1px solid var(--border);border-radius:16px;background:var(--card);padding:12px
+}
+iframe.phone{width:100%;height:820px;border:0;border-radius:12px;background:#0b0c10}
+.demo-ops{display:flex;gap:10px;margin-top:8px}
+.btn{border:1px solid var(--border);background:var(--card);color:var(--text);padding:8px 12px;border-radius:8px;cursor:pointer}
+.btn:hover{background:color-mix(in srgb, var(--card), transparent 40%)}
+
+/* ===== Footer ===== */
+footer{margin-top:26px;color:var(--muted);text-align:center}
+
+/* ===== 响应式 ===== */
+@media (max-width:1020px){
+  .hero{grid-template-columns:1fr}
+  .kpis{grid-template-columns:repeat(3,1fr)}
+  .demo{grid-template-columns:1fr}
+}
+@media (max-width:800px){
+  .cols{grid-template-columns:1fr}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:580px){
+  .gallery{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
-  <div class="wrap">
-    <!-- HERO -->
-    <header class="hero">
+  <!-- 顶部导航 -->
+  <div class="nav">
+    <div class="nav-inner container">
+      <div class="brand">
+        <div class="logo">书</div>
+        <div class="brand-name">自习室预约｜案例</div>
+      </div>
+      <div class="nav-links">
+        <a href="#about">概览</a>
+        <a href="#diagrams">流程图</a>
+        <a href="#gallery">原型图</a>
+        <a href="#demo">交互演示</a>
+      </div>
+      <button class="theme-toggle" id="themeBtn">切换主题</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Hero -->
+    <section class="hero" id="about">
       <div>
-        <h1>自习室预约小程序｜从0到1产品案例</h1>
-        <p class="muted">把闲置教室转化为对外开放的自习空间：选座 → 预约 → 支付 → 取消/退款 → 门禁联动</p>
+        <h1>把“闲置教室”做成可预约的自习空间</h1>
+        <p class="muted">从一品威客接单，3人小团队，2–3个月上线 MVP；选座→预约→支付→取消/退款→门禁联动。</p>
         <div class="tags">
-          <span class="tag">产品经理</span><span class="tag">一品威客</span><span class="tag">MVP</span>
-          <span class="tag">支付回调</span><span class="tag">并发锁</span><span class="tag">物联网门禁</span>
+          <span class="tag">需求澄清</span><span class="tag">MVP</span><span class="tag">支付回调&幂等</span>
+          <span class="tag">Redis 并发锁</span><span class="tag">门禁/灯控</span>
         </div>
       </div>
       <div class="kpis">
-        <div class="kpi"><div>预约率提升</div><strong>18% → 62%</strong></div>
+        <div class="kpi"><div>预约率</div><strong>18% → 62%</strong></div>
         <div class="kpi"><div>退款率</div><strong>≈ 5%</strong></div>
-        <div class="kpi"><div>一周留存</div><strong>&gt; 50%</strong></div>
+        <div class="kpi"><div>7日留存</div><strong>&gt; 50%</strong></div>
       </div>
-    </header>
+    </section>
 
-    <!-- 概要 -->
-    <section class="card">
+    <!-- 项目简介 -->
+    <section class="section">
       <h2>项目简介</h2>
-      <div class="cols">
-        <div>
+      <div class="body cols">
+        <div class="card" style="padding:16px;">
+          <h3>我做了什么</h3>
           <ul class="list">
-            <li>背景：教育机构通过 <strong>一品威客</strong> 寻求将闲置教室改造成自习室的线上预约能力。</li>
-            <li>团队：3人（我：商务&产品；同学：前端/后端）。</li>
-            <li>职责：需求澄清、方案设计、评审推进、研发支持、测试验收、上线复盘。</li>
+            <li>把模糊诉求拆成“正向/反向/异常兜底”三条主线。</li>
+            <li>确定关键机制：双阶段锁、回调为准、幂等、定时补偿。</li>
+            <li>组织评审与测试验收，上线监控与复盘迭代。</li>
           </ul>
         </div>
-        <div>
+        <div class="card" style="padding:16px;">
+          <h3>范围与边界</h3>
           <ul class="list">
-            <li>范围：学生端选座/预约/支付；后台座位&订单&报表；取消/退款闭环。</li>
-            <li>关键机制：<em>双阶段锁</em>、<em>以回调为准</em>、幂等校验、Redis+MySQL、门禁/灯控解耦、定时补偿。</li>
-            <li>二期优化：<strong>最近一次选择记忆</strong>（低成本高体验）。</li>
+            <li>学生端：选座/预约/支付/订单/开门。</li>
+            <li>后台：座位&库存、订单与对账、退款。</li>
+            <li>二期体验：最近一次选择记忆（低成本高收益）。</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- 泳道图（Mermaid） -->
-    <section class="card">
-      <h2>泳道图｜正向预约主链路</h2>
-      <p class="muted">从登录→选座→预占→支付回调→到店开门；以支付平台 <em>异步回调</em> 为准并做幂等，成功后升级为订单锁。</p>
-      <pre class="mermaid">
+    <!-- 流程图（多标签） -->
+    <section class="section" id="diagrams">
+      <h2>流程图</h2>
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="d1">正向预约（端到端）</button>
+        <button class="tab-btn" data-tab="d2">反向取消与退款</button>
+        <button class="tab-btn" data-tab="d3">到店开门与能耗联动</button>
+        <button class="tab-btn" data-tab="d4">定时任务/补偿与对账</button>
+      </div>
+
+      <!-- D1 正向预约 -->
+      <div class="diagram active" id="d1">
+        <pre class="mermaid">
+sequenceDiagram
+    autonumber
+    participant U as 用户
+    participant MP as 小程序
+    participant RS as 预约服务
+    participant INV as 库存/排程(Redis+MySQL)
+    participant PS as 微信支付
+
+    U->>MP: 登录并选择门店/日期/时段/座位
+    MP->>RS: 查询可用座位
+    RS->>INV: 读可用池(余量/禁用/热度)
+    INV-->>RS: 返回座位状态
+    RS-->>MP: 渲染座位图
+
+    U->>MP: 提交订单
+    MP->>RS: 创建草稿
+    RS->>INV: 写预占锁(TTL≈30s, token)
+    alt 冲突
+      RS-->>MP: 座位被占,请重选
+    else 预占成功
+      MP->>PS: 发起微信支付(签名+幂等key)
+      PS-->>MP: 同步提示(以回调为准)
+      PS-->>RS: 异步回调(<=30s,可重试)
+      RS->>RS: 幂等校验
+      alt 回调成功
+        RS->>INV: 升级为订单锁(≈15min)
+        RS->>INV: 落库订单(已支付)
+        RS-->>MP: 返回成功凭证
+      else 回调失败/超时
+        RS->>INV: 释放预占锁
+        RS-->>MP: 支付失败,可重试
+      end
+    end
+        </pre>
+      </div>
+
+      <!-- D2 反向取消 -->
+      <div class="diagram" id="d2">
+        <pre class="mermaid">
 sequenceDiagram
     autonumber
     participant U as 用户
@@ -142,466 +242,153 @@ sequenceDiagram
     participant RS as 预约服务
     participant INV as 库存/排程
     participant PS as 微信支付
-    participant G as 门禁网关
 
-    U->>MP: 授权登录
-    MP->>RS: 建会话(openid)
-    U->>MP: 选 门店/日期/时段/座位
-    MP->>RS: 查询可用座位
-    RS->>INV: 读取可用池(热度/余量)
-    INV-->>RS: 返回座位状态
-    RS-->>MP: 渲染座位图
+    U->>MP: 订单页选择"取消预约"
+    MP->>RS: 取消申请(订单号+原因)
+    RS->>INV: 读订单状态/时间窗
 
-    U->>MP: 提交订单
-    MP->>RS: 创建草稿
-    RS->>INV: 写预占锁(TTL≈30s)
-    alt 预占冲突
-      RS-->>MP: 座位被占, 请重选
-    else 预占成功
-      MP->>PS: 拉起微信支付
-      PS-->>MP: 同步反馈(以回调为准)
-      PS-->>RS: 异步回调(<=30s, 可重试)
-      RS->>RS: 幂等校验
-      alt 回调成功
-        RS->>INV: 升级为订单锁(≈15min)
-        RS->>INV: 持久化订单(已支付)
-        RS-->>MP: 返回凭证
-      else 回调失败/超时
-        RS->>INV: 释放预占
-        RS-->>MP: 支付失败 可重试
+    alt 未支付/草稿
+      RS->>INV: 直接关闭订单并释放预占
+      RS-->>MP: 取消成功(无退款)
+    else 已支付
+      RS->>RS: 计算应退(规则: 开始前X小时全额/部分/不退)
+      RS->>PS: 发起原路退款(带幂等key)
+      PS-->>RS: 退款异步回调(可重试)
+      alt 退款成功
+        RS->>INV: 标记订单"已退款"并释放锁/库存
+        RS-->>MP: 展示退款成功
+      else 退款失败
+        RS->>RS: 写入重试队列&告警
+        RS-->>MP: 已受理,预计1-3工作日(后台重试)
       end
     end
+        </pre>
+      </div>
+
+      <!-- D3 开门与能耗 -->
+      <div class="diagram" id="d3">
+        <pre class="mermaid">
+sequenceDiagram
+    autonumber
+    participant U as 用户
+    participant MP as 小程序
+    participant RS as 预约服务
+    participant G as 门禁网关
+    participant L as 灯控/能耗
 
     U->>MP: 到店点击"开门"
-    MP->>RS: 校验订单/时间窗/黑白名单
-    RS->>G: 下发开门指令(TTL=5s)
-    G-->>RS: 回执(成功/失败)
-    RS-->>MP: 回显开门结果
-      </pre>
+    MP->>RS: 请求开门(订单号+设备ID)
+    RS->>RS: 校验(已支付/时间窗/黑白名单)
+    alt 校验通过
+      RS->>G: 下发开门指令(TTL=5s, traceId)
+      G-->>RS: 回执(成功/失败)
+      RS-->>MP: 回显结果
+      par 联动
+        RS->>L: 开灯/计量开始
+        L-->>RS: 回执(允许延迟)
+      and 记录
+        RS->>RS: 写入进出记录/状态迁移
+      end
+    else 校验失败
+      RS-->>MP: 拒绝开门(原因提示)
+    end
+        </pre>
+      </div>
+
+      <!-- D4 定时任务/补偿与对账 -->
+      <div class="diagram" id="d4">
+        <pre class="mermaid">
+flowchart TD
+    subgraph Scheduler[定时任务/补偿]
+      A[关单任务<br/>>15min 未支付] -->|释放预占| B[库存回滚]
+      C[退款补偿队列] -->|重试策略/退避| D[调用支付退款API]
+      D -->|成功| E[订单标记已退款]
+      D -->|失败| C
+    end
+    subgraph Finance[对账]
+      F[每日对账拉单] --> G{平台流水一致?}
+      G -->|是| H[对账通过]
+      G -->|否| I[差异分析+报警+人工处理]
+    end
+    B --> Finance
+    E --> Finance
+        </pre>
+      </div>
     </section>
 
-    <!-- 原型图画廊（替换为你的图片路径） -->
-    <section class="card">
+    <!-- 原型图画廊（替换为你的图片） -->
+    <section class="section" id="gallery">
       <h2>产品原型图</h2>
-      <p class="muted">以下为示意位，请替换为你自己的高保真原型图或线框图。</p>
-      <div class="gallery">
-        <figure>
-          <img src="images/studyroom/01-home.png" alt="首页/推荐">
-          <figcaption>首页/推荐</figcaption>
-        </figure>
-        <figure>
-          <img src="images/studyroom/02-seat.png" alt="选座页">
-          <figcaption>选座页</figcaption>
-        </figure>
-        <figure>
-          <img src="images/studyroom/03-order.png" alt="订单确认">
-          <figcaption>订单确认</figcaption>
-        </figure>
-        <figure>
-          <img src="images/studyroom/04-pay.png" alt="支付页">
-          <figcaption>支付页</figcaption>
-        </figure>
-        <figure>
-          <img src="images/studyroom/05-orders.png" alt="我的订单">
-          <figcaption>我的订单</figcaption>
-        </figure>
-        <figure>
-          <img src="images/studyroom/06-refund.png" alt="取消/退款">
-          <figcaption>取消/退款</figcaption>
-        </figure>
+      <div class="body gallery">
+        <div class="card"><img src="images/studyroom/01-home.png" alt="首页"/><div class="cap">首页/推荐</div></div>
+        <div class="card"><img src="images/studyroom/02-seat.png" alt="选座"/><div class="cap">选座页</div></div>
+        <div class="card"><img src="images/studyroom/03-order.png" alt="确认"/><div class="cap">订单确认</div></div>
+        <div class="card"><img src="images/studyroom/04-pay.png" alt="支付"/><div class="cap">支付页</div></div>
+        <div class="card"><img src="images/studyroom/05-orders.png" alt="订单列表"/><div class="cap">我的订单</div></div>
+        <div class="card"><img src="images/studyroom/06-refund.png" alt="取消退款"/><div class="cap">取消/退款</div></div>
+      </div>
+      <div class="body muted" style="margin-top:8px">把路径替换为你的真实图片；若无图可暂留占位。</div>
+    </section>
+
+    <!-- 交互前端演示（外部文件 app.html） -->
+    <section class="section" id="demo">
+      <h2>交互演示（前端模拟）</h2>
+      <div class="body demo">
+        <div class="card" style="padding:16px">
+          <h3>说明</h3>
+          <ul class="list">
+            <li>此处通过 <code>&lt;iframe&gt;</code> 加载你提供的前端原型（<strong>app.html</strong>）。</li>
+            <li>这样既隔离样式脚本，又能在页面内完整预览。</li>
+            <li>如需 100% 单文件，可把 <code>app.html</code> 内容复制为 <code>srcdoc</code>。</li>
+          </ul>
+          <div class="demo-ops">
+            <button class="btn" id="reloadBtn">重载</button>
+            <button class="btn" id="openBtn">新窗口打开</button>
+          </div>
+        </div>
+        <div class="iframe-wrap">
+          <iframe class="phone" id="phoneFrame" title="交互原型预览" src="app.html"></iframe>
+        </div>
       </div>
     </section>
 
-    <!-- 交互前端设计模拟（你的代码已被嵌入 iframe 中，隔离样式与脚本） -->
-    <section class="card">
-      <h2>交互前端设计模拟（可点全屏体验）</h2>
-      <div class="demo-shell" id="demoShell">
-        <div class="demo-head">
-          <div class="demo-title">微信小程序风格交互模拟</div>
-          <div class="demo-actions">
-            <button class="btn" id="btnReload">重载</button>
-            <button class="btn" id="btnFullscreen">全屏预览</button>
-          </div>
-        </div>
-        <iframe class="phone" id="phoneFrame" title="交互原型预览" loading="lazy"></iframe>
-      </div>
-      <p class="muted">说明：为避免与作品集页面样式/脚本冲突，模拟应用通过 <code>iframe srcdoc</code> 注入，保持沙盒化。</p>
-    </section>
-
-    <!-- 总结 -->
-    <section class="card">
-      <h2>结果与收获</h2>
-      <ul class="list">
-        <li>2–3个月落地MVP；闭环功能上线，指标达成（预约率/退款率/留存）。</li>
-        <li>将模糊需求拆解为可交付的“正向+反向+异常兜底”；产品与研发语言对齐。</li>
-        <li>以真实使用反馈驱动二期：上线“最近一次选择记忆”，专注低成本高体验。</li>
-      </ul>
-    </section>
-
-    <footer>
-      © 你的名字 — 自习室预约小程序案例
-    </footer>
-  </div>
-
-  <!-- 把你的交互模拟应用，注入到 iframe 的 srcdoc 中（已修复 event 传参避免报错） -->
-  <script>
-    const srcdocHTML = `
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>专注空间 - 自习室预约平台（嵌入预览）</title>
-<style>
-${/* ====== 你的样式，原样内联（无需外链），与外页完全隔离 ====== */''}
-/* 全局样式 */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html,body{height:100%}
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background: #F5F5F5;
-    background-attachment: fixed;
-    color: #333333;
-    line-height: 1.5;
-    overflow-x: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 40px 20px;
-}
-/* iPhone 16 Pro 尺寸适配 */
-.app-container {
-    width: 393px; height: 852px; max-width: 90vw; max-height: 90vh;
-    background: #FFFFFF; position: relative; overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; border: 1px solid #E5E5E5;
-    z-index: 10; transform-origin: center; transition: transform 0.3s ease;
-}
-/* 页面基础样式 */
-.page { position:absolute; top:0; left:0; width:100%; height:100%; background:#FFFFFF;
-  transform: translateX(100%); transition: all 0.3s ease; overflow-y:auto; overflow-x:hidden;
-  padding-bottom:20px; -webkit-overflow-scrolling: touch; border-radius: 8px; }
-.page.active { transform: translateX(0); opacity: 1; }
-.page:not(.active) { opacity: 0; }
-/* 登录页面样式 */
-.login-page { background:#FFFFFF; display:flex; flex-direction:column; justify-content:center; align-items:center; padding:0 32px; }
-.main-content { display:flex; flex-direction:column; align-items:center; width:100%; }
-.logo-section { display:flex; flex-direction:column; align-items:center; margin-bottom:60px; }
-.logo-icon { width:80px; height:80px; background:#007AFF; border-radius:16px; display:flex; justify-content:center; align-items:center; margin-bottom:24px; box-shadow:0 2px 8px rgba(0, 122, 255, 0.2); position:relative; }
-.logo-icon::before { content:''; position:absolute; top:-4px; left:-4px; right:-4px; bottom:-4px; background:#007AFF; border-radius:20px; opacity:0.1; z-index:-1; }
-.logo-image { font-size:32px; color:white; }
-.app-title { font-size:32px; font-weight:700; color:#333; margin-bottom:8px; letter-spacing:2px; }
-.app-subtitle { font-size:16px; color:#666; font-weight:400; }
-.login-section { width:100%; margin-bottom:40px; }
-.login-btn { width:100%; height:48px; background:#07C160; border-radius:8px; border:none; display:flex; justify-content:center; align-items:center; box-shadow:0 2px 8px rgba(7, 193, 96, 0.2); transition:all 0.2s ease; cursor:pointer; }
-.login-btn:hover { background:#06AD56; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(7, 193, 96, 0.3); }
-.login-btn-content { display:flex; align-items:center; color:#fff; }
-.wechat-icon { font-size:24px; margin-right:8px; }
-.login-text { font-size:18px; font-weight:500; }
-.agreement-section { width:100%; }
-.agreement-checkbox { display:flex; align-items:flex-start; font-size:14px; color:#666; line-height:1.5; cursor:pointer; }
-.checkbox { width:16px; height:16px; border:2px solid #ddd; border-radius:3px; margin-right:8px; margin-top:2px; display:flex; justify-content:center; align-items:center; flex-shrink:0; transition: all 0.3s ease; }
-.checkbox.checked { background:#007AFF; border-color:#007AFF; }
-.checkmark { color:#fff; font-size:10px; font-weight:bold; display:none; }
-.checkbox.checked .checkmark { display:block; }
-.link { color:#007AFF; text-decoration: underline; cursor:pointer; }
-.decoration-wave { position:absolute; right:20px; top:50%; width:80px; height:160px; background: linear-gradient(45deg, rgba(138, 43, 226, 0.1) 0%, rgba(75, 0, 130, 0.1) 100%); border-radius:50%; transform: translateY(-50%) rotate(15deg); z-index:1; }
-/* 首页等（以下保持你的原样式） */
-.header-section{display:flex;justify-content:space-between;align-items:center;padding:60px 0 20px;}
-.index-page{padding:0 16px;background:#FFFFFF;}
-/* 此处省略若干注释，保持你的原样式完整性 */
-${/* 你的长样式粘贴继续 —— 我已原样保留（下方直接粘贴你提供的CSS） */''}
-${`/* —— 以下为你提供的完整样式（从“首页样式”到“包最后的 @media/动画/滚动条等”已完整保留） */`.replace(/.*/,'')}
-</style>
-</head>
-<body>
-  <!-- 主容器（你的应用） -->
-  <div class="app-container">
-    <!-- === 你的页面结构：我已原样内联，唯一区别是把部分 onclick 传入 event 以避免某些浏览器下 event 未定义 === -->
-    <!-- 登录页面 -->
-    <div class="page login-page active" id="loginPage">
-      <div class="main-content">
-        <div class="logo-section">
-          <div class="logo-icon"><div class="logo-image">📚</div></div>
-          <div class="app-title">专注空间</div>
-          <div class="app-subtitle">高效自习室预约平台</div>
-        </div>
-        <div class="login-section">
-          <button class="login-btn" onclick="handleLogin(event)">
-            <div class="login-btn-content"><span class="wechat-icon">💬</span><span class="login-text">微信授权登录</span></div>
-          </button>
-        </div>
-        <div class="agreement-section">
-          <div class="agreement-checkbox" onclick="toggleAgreement(event)">
-            <div class="checkbox" id="agreementCheckbox"><div class="checkmark" id="checkmark">✓</div></div>
-            <span class="agreement-text">登录即同意 <span class="link" onclick="showUserAgreement(event)">《用户协议》</span> 和 <span class="link" onclick="showPrivacyPolicy(event)">《隐私政策》</span></span>
-          </div>
-        </div>
-      </div>
-      <div class="decoration-wave"></div>
-    </div>
-
-    <!-- 首页 -->
-    <div class="page index-page" id="indexPage">
-      <!-- 顶部 -->
-      <div class="header-section">
-        <div class="user-info">
-          <img class="avatar avatar-large" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIzMCIgZmlsbD0iIzAwN0FGRiIvPjxzdmcgeD0iMTUiIHk9IjE1IiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSI+PHBhdGggZD0iTTEyIDEyQzE0LjIwOTEgMTIgMTYgMTAuMjA5MSAxNiA4QzE2IDUuNzkwODYgMTQuMjA5MSA0IDEyIDRDOS43OTA4NiA0IDggNS43OTA4NiA4IDhDOCAxMC4yMDkxIDkuNzkwODYgMTIgMTIgMTJaIiBmaWxsPSJ3aGl0ZSIvPjxwYXRoIGQ9Ik0xMiAxNEM4LjY4NjI5IDE0IDYgMTYuNjg2MyA2IDIwSDE4QzE4IDE2LjY4NjMgMTUuMzEzNyAxNCAxMiAxNFoiIGZpbGw9IndoaXRlIi8+PC9zdmc+PC9zdmc+" />
-          <div class="user-details">
-            <div class="username">张同学</div><div class="member-level">普通会员</div>
-          </div>
-        </div>
-        <div class="notification" onclick="showNotifications(event)"><span class="bell-icon">🔔</span><div class="badge" id="notificationBadge">3</div></div>
-      </div>
-      <!-- 搜索 -->
-      <div class="search-section">
-        <div class="search-bar" onclick="goToSearch(event)"><span class="search-icon">🔍</span><span class="search-placeholder">搜索城市、门店或地址</span><span class="location-icon">📍</span></div>
-      </div>
-      <!-- 轮播 -->
-      <div class="banner-section">
-        <div class="banner-swiper">
-          <div class="banner-slide active"><div class="banner-image">📖 专注学习，高效成长</div></div>
-          <div class="banner-slide"><div class="banner-image">🌟 优质环境，舒适体验</div></div>
-          <div class="banner-slide"><div class="banner-image">⚡ 24小时开放，随时预约</div></div>
-        </div>
-        <div class="banner-dots">
-          <span class="dot" onclick="switchBanner(0, event)"></span>
-          <span class="dot active" onclick="switchBanner(1, event)"></span>
-          <span class="dot" onclick="switchBanner(2, event)"></span>
-        </div>
-      </div>
-      <!-- 快速功能 -->
-      <div class="quick-functions">
-        <div class="section-header"><span class="section-title">快速功能</span><span class="more-link" onclick="showMoreFunctions(event)">更多</span></div>
-        <div class="function-grid">
-          <div class="function-item" onclick="goToBooking('hourly', event)"><div class="function-icon blue"><span class="icon">📅</span></div><span class="function-name">立即预约</span></div>
-          <div class="function-item" onclick="goToOrders(event)"><div class="function-icon purple"><span class="icon">📋</span></div><span class="function-name">我的订单</span></div>
-          <div class="function-item" onclick="goToCoupons(event)"><div class="function-icon orange"><span class="icon">🎫</span></div><span class="function-name">优惠券</span></div>
-          <div class="function-item" onclick="goToMember(event)"><div class="function-icon green"><span class="icon">💎</span></div><span class="function-name">会员中心</span></div>
-        </div>
-      </div>
-      <!-- 附近门店（示例） -->
-      <div class="nearby-stores">
-        <div class="section-header"><span class="section-title">附近门店</span><span class="more-link" onclick="showAllStores(event)">查看全部</span></div>
-        <div class="store-list">
-          <div class="store-item" onclick="goToStore(1, event)"><div class="store-image">⛵</div><div class="store-info"><div class="store-name">科技园店</div><div class="store-details"><span class="distance">距离 800m</span><span class="hours">24小时营业</span></div><div class="store-footer"><div class="price-info"><span class="price">¥25</span><span class="price-unit">/小时起</span></div><div class="rating"><span class="star-icon">⭐</span><span class="rating-text">4.9</span></div></div></div></div>
-          <div class="store-item" onclick="goToStore(2, event)"><div class="store-image">📚</div><div class="store-info"><div class="store-name">大学城店</div><div class="store-details"><span class="distance">距离 1.2km</span><span class="hours">6:00-24:00</span></div><div class="store-footer"><div class="price-info"><span class="price">¥20</span><span class="price-unit">/小时起</span></div><div class="rating"><span class="star-icon">⭐</span><span class="rating-text">4.8</span></div></div></div></div>
-          <div class="store-item" onclick="goToStore(3, event)"><div class="store-image">💻</div><div class="store-info"><div class="store-name">金融中心店</div><div class="store-details"><span class="distance">距离 2.5km</span><span class="hours">24小时营业</span></div><div class="store-footer"><div class="price-info"><span class="price">¥30</span><span class="price-unit">/小时起</span></div><div class="rating"><span class="star-icon">⭐</span><span class="rating-text">4.7</span></div></div></div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 你的其余页面结构（按小时/按天/按月/订单确认/支付成功/订单列表/开门成功/取消流程等） -->
-    <!-- ⭐ 我已将所有 onclick 增加第二参数 event，下面的脚本已兼容。出于篇幅，这里不重复粘贴你整段 HTML；
-         实际注入版本中，我会保留你提供的完整结构（已包含在本 srcdoc 的后续代码中）。 -->
+    <footer>© 你的名字 — 自习室预约产品案例</footer>
   </div>
 
 <script>
-/* ====== 你的脚本，做了“事件对象传参”的小修，避免部分浏览器 window.event 不可用 ====== */
-const AppState = {
-  currentPage: 'loginPage',
-  userInfo: null,
-  bookingData: { type:'hourly', date:0, timeSlot:2, seat:'A8', area:'A区' },
-  orderData: { orderId:'ORD202412041008', store:'科技园店', time:'2021-12-04 10:00-11:00', seat:'A区 - A8', amount:15.00 },
-  currentBanner: 1, agreed: false, selectedPayment: 'wechat', selectedReason: 'schedule'
-};
-
-function $all(sel, root=document){ return Array.from(root.querySelectorAll(sel)); }
-function $(sel, root=document){ return root.querySelector(sel); }
-
-function showPage(id){
-  $all('.page').forEach(p=>p.classList.remove('active'));
-  const t = document.getElementById(id);
-  if(t){ t.classList.add('active'); AppState.currentPage = id; }
-}
-
-function toggleAgreement(evt){
-  AppState.agreed = !AppState.agreed;
-  const checkbox = document.getElementById('agreementCheckbox');
-  const checkmark = document.getElementById('checkmark');
-  checkbox.classList.toggle('checked', AppState.agreed);
-  checkmark.style.display = AppState.agreed ? 'block' : 'none';
-}
-function handleLogin(evt){
-  if(!AppState.agreed){ showToast('请先同意用户协议'); return; }
-  showToast('登录成功','success'); setTimeout(()=>showPage('indexPage'), 800);
-}
-function showUserAgreement(evt){ showModal('用户协议','这里是用户协议的内容...'); }
-function showPrivacyPolicy(evt){ showModal('隐私政策','这里是隐私政策的内容...'); }
-
-function showNotifications(evt){ showToast('您有3条新通知'); }
-function goToSearch(evt){ showToast('搜索功能开发中...'); }
-function switchBanner(index, evt){
-  const slides = $all('.banner-slide'); const dots=$all('.dot');
-  slides.forEach(s=>s.classList.remove('active')); dots.forEach(d=>d.classList.remove('active'));
-  slides[index].classList.add('active'); dots[index].classList.add('active'); AppState.currentBanner=index;
-}
-function showMoreFunctions(evt){ showToast('更多功能开发中...'); }
-function goToBooking(type, evt){ AppState.bookingData.type=type; showPage(type==='hourly'?'hourlyBookingPage':type==='daily'?'dailyBookingPage':'monthlyBookingPage'); }
-function goToOrders(evt){ showPage('ordersPage'); }
-function goToCoupons(evt){ showToast('优惠券功能开发中...'); }
-function goToMember(evt){ showToast('会员中心功能开发中...'); }
-function showAllStores(evt){ showToast('查看全部门店功能开发中...'); }
-function goToStore(id, evt){ AppState.bookingData.storeId=id; goToBooking('hourly', evt); }
-
-function selectBookingType(type, evt){
-  const tab = evt?.currentTarget || evt?.target;
-  tab?.closest('.type-tabs')?.querySelectorAll('.type-tab')?.forEach(t=>t.classList.remove('active'));
-  tab?.classList.add('active');
-  AppState.bookingData.type=type; goToBooking(type, evt);
-}
-function selectDate(index, evt){
-  const item = evt?.currentTarget || evt?.target;
-  item?.closest('.date-list')?.querySelectorAll('.date-item')?.forEach(el=>el.classList.remove('active'));
-  item?.classList.add('active'); AppState.bookingData.date=index;
-}
-function selectTime(index, evt){
-  const item = evt?.currentTarget || evt?.target;
-  item?.closest('.time-list')?.querySelectorAll('.time-item')?.forEach(el=>el.classList.remove('active'));
-  item?.classList.add('active'); AppState.bookingData.timeSlot=index;
-}
-function selectSeat(seatId, evt){
-  $all('.seat.available').forEach(s=>s.classList.remove('selected'));
-  const sel = document.querySelector(\`.seat[data-seat="\${seatId}"]\`);
-  if(sel && sel.classList.contains('available')){ sel.classList.add('selected'); AppState.bookingData.seat=seatId; updateBookingSummary(); }
-}
-function updateBookingSummary(){
-  const summary = document.querySelector('.selected-info'); const total = document.querySelector('.total-price');
-  if(summary && total){ summary.textContent = \`已选: \${AppState.bookingData.seat} (10:00-11:00)\`; total.textContent = '总计: ¥15.00'; }
-}
-function addBeverage(evt){ showToast('饮品套餐功能开发中...'); }
-
-function selectDailyTime(tp, evt){
-  const card = evt?.currentTarget || evt?.target;
-  card?.closest('.daily-time-grid')?.querySelectorAll('.time-card')?.forEach(c=>c.classList.remove('active'));
-  card?.classList.add('active'); AppState.bookingData.dailyTime=tp; updateDailyBookingSummary();
-}
-function selectArea(id, evt){
-  const card = evt?.currentTarget || evt?.target;
-  card?.closest('.area-list')?.querySelectorAll('.area-card')?.forEach(c=>c.classList.remove('active'));
-  card?.classList.add('active'); AppState.bookingData.area=id; updateDailyBookingSummary();
-}
-function updateDailyBookingSummary(){
-  const summary=document.querySelector('.selected-info'); const total=document.querySelector('.total-price');
-  if(summary && total){
-    const t = AppState.bookingData.dailyTime==='full'?'全天 08:00-22:00':AppState.bookingData.dailyTime==='morning'?'上午 08:00-15:00':AppState.bookingData.dailyTime==='afternoon'?'下午 15:00-22:00':'深夜 22:00-02:00';
-    const a = AppState.bookingData.area || 'A区';
-    summary.textContent=\`已选: \${a} (\${t})\`; total.textContent='总计: ¥100.00';
-  }
-}
-function changeMonth(dir, evt){ showToast('月份切换功能开发中...'); }
-function selectPackage(tp, evt){
-  const card = evt?.currentTarget || evt?.target;
-  card?.closest('.package-list')?.querySelectorAll('.package-card')?.forEach(c=>c.classList.remove('active'));
-  card?.classList.add('active'); AppState.bookingData.package=tp; updateMonthlyBookingSummary();
-}
-function updateMonthlyBookingSummary(){
-  const summary=document.querySelector('.selected-info'); const total=document.querySelector('.total-price');
-  if(summary && total){
-    const txt = AppState.bookingData.package==='standard'?'标准月卡':AppState.bookingData.package==='advanced'?'高级月卡':'VIP月卡';
-    summary.textContent=\`已选:\${txt}(2024年12月)\`; total.textContent='总计:¥1440.00';
-  }
-}
-function confirmBooking(evt){
-  if(!AppState.bookingData.seat){ showToast('请先选择座位'); return; }
-  showPage('orderConfirmPage');
-}
-function selectPayment(tp, evt){
-  const opt = evt?.currentTarget || evt?.target;
-  opt?.closest('.payment-methods')?.querySelectorAll('.payment-option')?.forEach(o=>o.classList.remove('active'));
-  opt?.classList.add('active'); AppState.selectedPayment=tp;
-}
-function processPayment(evt){ showToast('支付中...','loading'); setTimeout(()=>showPage('paymentSuccessPage'), 1200); }
-function openDoor(evt){ showToast('开门中...','loading'); setTimeout(()=>showPage('doorSuccessPage'), 800); }
-function viewOrderDetails(evt){ showToast('查看订单详情功能开发中...'); }
-function goToIndex(evt){ showPage('indexPage'); }
-function showOrderFilter(evt){ showToast('订单筛选功能开发中...'); }
-function switchOrderTab(tp, evt){
-  const tab = evt?.currentTarget || evt?.target;
-  tab?.closest('.order-tabs')?.querySelectorAll('.tab')?.forEach(t=>t.classList.remove('active'));
-  tab?.classList.add('active'); showToast(\`切换到\${tp}订单\`);
-}
-function controlPower(evt){ showToast('电源控制功能开发中...'); }
-function cancelOrder(evt){ showPage('cancelPage'); }
-function leaveEarly(evt){
-  showModal('提前离场','确定要提前离场吗？',[
-    { text:'取消', style:'cancel' },
-    { text:'确定', style:'destructive', handler:()=>{ showToast('已提前离场'); goToIndex(); } }
-  ]);
-}
-function reportProblem(evt){ showToast('问题反馈功能开发中...'); }
-function selectReason(r, evt){
-  const row = evt?.currentTarget || evt?.target;
-  row?.closest('.reason-options')?.querySelectorAll('.reason-option')?.forEach(o=>o.classList.remove('active'));
-  row?.classList.add('active'); AppState.selectedReason=r;
-}
-function confirmCancel(evt){ showToast('取消中...','loading'); setTimeout(()=>showPage('cancelSuccessPage'), 900); }
-function callCustomerService(evt){ showToast('客服电话: 400-123-4567'); }
-function showRefundPolicy(evt){ showModal('退款说明','退款将在1-3个工作日内原路退回...'); }
-
-function goBack(evt){
-  const prev = {
-    'hourlyBookingPage':'indexPage','dailyBookingPage':'indexPage','monthlyBookingPage':'indexPage',
-    'orderConfirmPage':'hourlyBookingPage','paymentSuccessPage':'indexPage','ordersPage':'indexPage',
-    'doorSuccessPage':'indexPage','cancelPage':'ordersPage','cancelSuccessPage':'indexPage'
-  }[AppState.currentPage];
-  showPage(prev || 'indexPage');
-}
-function goToDiscover(evt){ showToast('发现页面功能开发中...'); }
-function goToProfile(evt){ showToast('个人中心功能开发中...'); }
-
-function showToast(msg, type='info'){
-  const t=document.createElement('div'); t.textContent=msg;
-  Object.assign(t.style,{position:'fixed',top:'50%',left:'50%',transform:'translate(-50%,-50%)',background:type==='success'?'#34C759':(type==='error'?'#FF3B30':'#333'),color:'#fff',padding:'12px 16px',borderRadius:'8px',fontSize:'14px',zIndex:9999,opacity:0,transition:'opacity .25s'});
-  document.body.appendChild(t); requestAnimationFrame(()=>t.style.opacity=1);
-  setTimeout(()=>{t.style.opacity=0; setTimeout(()=>t.remove(),250)},1600);
-}
-function showModal(title,content,buttons=null){
-  const o=document.createElement('div'); o.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;justify-content:center;align-items:center;z-index:9999;opacity:0;transition:opacity .25s';
-  const m=document.createElement('div'); m.style.cssText='background:#fff;border-radius:12px;padding:20px;max-width:300px;width:calc(100% - 40px);transform:scale(.95);transition:transform .25s';
-  m.innerHTML=\`<div style="font-weight:600;font-size:18px;margin-bottom:10px">\${title}</div><div style="font-size:14px;color:#666;line-height:1.6;margin-bottom:16px">\${content}</div>\`;
-  const footer=document.createElement('div'); footer.style.cssText='display:flex;justify-content:flex-end;gap:10px';
-  if(buttons && buttons.length){
-    buttons.forEach(b=>{
-      const btn=document.createElement('button');
-      btn.textContent=b.text;
-      btn.style.cssText=\`padding:8px 14px;border-radius:6px;border:none;color:\${b.style==='cancel'?'#333':'#fff'};background:\${b.style==='destructive'?'#FF3B30':(b.style==='cancel'?'#f0f0f0':'#007AFF')}\`;
-      btn.onclick=()=>{ if(b.handler) b.handler(); close(); };
-      footer.appendChild(btn);
-    });
-  }else{
-    const ok=document.createElement('button'); ok.textContent='我知道了'; ok.style.cssText='padding:8px 14px;border-radius:6px;border:none;background:#007AFF;color:#fff';
-    ok.onclick=close; footer.appendChild(ok);
-  }
-  m.appendChild(footer); o.appendChild(m); document.body.appendChild(o);
-  requestAnimationFrame(()=>{o.style.opacity=1; m.style.transform='scale(1)';});
-  o.addEventListener('click',e=>{ if(e.target===o) close(); });
-  function close(){ o.style.opacity=0; setTimeout(()=>o.remove(),250); }
-}
-
-document.addEventListener('DOMContentLoaded', ()=>{
-  setInterval(()=>{ const i=(AppState.currentBanner+1)%3; switchBanner(i); }, 3000);
-  updateBookingSummary();
+/* 主题切换 */
+const themeBtn = document.getElementById('themeBtn');
+themeBtn.addEventListener('click',()=>{
+  const html=document.documentElement;
+  const next = html.getAttribute('data-theme')==='dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  mermaid.initialize({startOnLoad:true,securityLevel:'loose',theme: next==='dark'?'dark':'default'});
+  // 触发重绘以适配新主题
+  document.querySelectorAll('.mermaid').forEach(el=>{
+    el.removeAttribute('data-processed'); el.innerHTML = el.textContent; // reset
+  });
+  mermaid.init(undefined, document.querySelectorAll('.mermaid'));
 });
-/* 暴露函数给内联 HTML */
-Object.assign(window,{
-  showPage,toggleAgreement,handleLogin,showUserAgreement,showPrivacyPolicy,showNotifications,goToSearch,switchBanner,showMoreFunctions,goToBooking,goToOrders,goToCoupons,goToMember,showAllStores,goToStore,selectBookingType,selectDate,selectTime,selectSeat,addBeverage,confirmBooking,selectPayment,processPayment,openDoor,viewOrderDetails,goToIndex,showOrderFilter,switchOrderTab,controlPower,cancelOrder,leaveEarly,reportProblem,selectReason,confirmCancel,callCustomerService,showRefundPolicy,goBack,goToDiscover,goToProfile,selectDailyTime,selectArea,changeMonth,selectPackage
+
+/* 标签切换（流程图） */
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const id = btn.getAttribute('data-tab');
+    document.querySelectorAll('.diagram').forEach(d=>d.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    // 重新渲染可见 mermaid
+    const block = document.getElementById(id).querySelector('.mermaid');
+    if(block){ block.removeAttribute('data-processed'); block.innerHTML = block.textContent; mermaid.init(undefined,[block]); }
+  });
 });
+
+/* Demo 控件 */
+const frame = document.getElementById('phoneFrame');
+document.getElementById('reloadBtn').addEventListener('click',()=>{ frame.src = frame.src; });
+document.getElementById('openBtn').addEventListener('click',()=>{ window.open('app.html','_blank'); });
 </script>
 </body>
 </html>
-    `.trim();
 
-    const frame = document.getElementById('phoneFrame');
-    function loadDemo(){ frame.srcdoc = srcdocHTML; }
-    loadDemo();
-
-    document.getElementById('btnReload').addEventListener('click', loadDemo);
-    document.getElementById('btnFullscreen').addEventListener('click', async ()=>{
-      const shell = document.getElementById('demoShell');
-      if (shell.requestFullscreen) await shell.requestFullscreen();
-      else if (shell.webkitRequestFullscreen) await shell.webkitRequestFullscreen();
-    });
-  </script>
-</body>
-</html>
