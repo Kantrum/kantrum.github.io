@@ -1,0 +1,3780 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专注空间 - 自习室预约平台</title>
+</head>
+
+<style>
+  /* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: #F5F5F5;
+    background-attachment: fixed;
+    color: #333333;
+    line-height: 1.5;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* iPhone 16 Pro 尺寸适配 */
+.app-container {
+    width: 393px;
+    height: 852px;
+    max-width: 90vw;
+    max-height: 90vh;
+    background: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #E5E5E5;
+    z-index: 10;
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+/* 页面基础样式 */
+.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 20px; /* 页面底部留白 */
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.page.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.page:not(.active) {
+    opacity: 0;
+}
+
+.page-title {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    font-size: 14px;
+    color: #999;
+    z-index: 10;
+}
+
+/* 登录页面样式 */
+.login-page {
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 32px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.logo-icon {
+    width: 80px;
+    height: 80px;
+    background: #007AFF;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0, 122, 255, 0.2);
+    position: relative;
+}
+
+.logo-icon::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: #007AFF;
+    border-radius: 20px;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.logo-image {
+    font-size: 32px;
+    color: white;
+}
+
+.app-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+
+.app-subtitle {
+    font-size: 16px;
+    color: #666;
+    font-weight: 400;
+}
+
+.login-section {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.login-btn {
+    width: 100%;
+    height: 48px;
+    background: #07C160;
+    border-radius: 8px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(7, 193, 96, 0.2);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background: #06AD56;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(7, 193, 96, 0.3);
+}
+
+.login-btn-content {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.wechat-icon {
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+.login-text {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.agreement-section {
+    width: 100%;
+}
+
+.agreement-checkbox {
+    display: flex;
+    align-items: flex-start;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.checkbox {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ddd;
+    border-radius: 3px;
+    margin-right: 8px;
+    margin-top: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.checkbox.checked {
+    background: #007AFF;
+    border-color: #007AFF;
+}
+
+.checkmark {
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    display: none;
+}
+
+.checkbox.checked .checkmark {
+    display: block;
+}
+
+.agreement-text {
+    flex: 1;
+}
+
+.link {
+    color: #007AFF;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.decoration-wave {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    width: 80px;
+    height: 160px;
+    background: linear-gradient(45deg, rgba(138, 43, 226, 0.1) 0%, rgba(75, 0, 130, 0.1) 100%);
+    border-radius: 50%;
+    transform: translateY(-50%) rotate(15deg);
+    z-index: 1;
+}
+
+/* 首页样式 */
+.index-page {
+    padding: 0 16px;
+    background: #FFFFFF;
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 0 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.avatar-large {
+    width: 60px;
+    height: 60px;
+    margin-right: 12px;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.member-level {
+    font-size: 14px;
+    color: #666;
+}
+
+.notification {
+    position: relative;
+    cursor: pointer;
+}
+
+.bell-icon {
+    font-size: 24px;
+    color: #666;
+}
+
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #FF3B30;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-section {
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    background: #fff;
+    border-radius: 12px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.search-icon {
+    font-size: 16px;
+    color: #999;
+    margin-right: 8px;
+}
+
+.search-placeholder {
+    flex: 1;
+    color: #999;
+    font-size: 16px;
+}
+
+.location-icon {
+    font-size: 16px;
+    color: #007AFF;
+}
+
+.banner-section {
+    margin-bottom: 24px;
+}
+
+.banner-swiper {
+    position: relative;
+    height: 120px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.banner-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.banner-slide.active {
+    opacity: 1;
+}
+
+.banner-image {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.banner-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ddd;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.dot.active {
+    background: #007AFF;
+}
+
+.quick-functions, .nearby-stores {
+    margin-bottom: 24px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.more-link {
+    font-size: 14px;
+    color: #007AFF;
+    cursor: pointer;
+}
+
+.function-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.function-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.function-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.function-icon.blue {
+    background: #E3F2FD;
+}
+
+.function-icon.purple {
+    background: #F3E5F5;
+}
+
+.function-icon.orange {
+    background: #FFF3E0;
+}
+
+.function-icon.green {
+    background: #E8F5E8;
+}
+
+.function-icon .icon {
+    font-size: 24px;
+}
+
+.function-name {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+}
+
+.store-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.store-item {
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.store-item:hover {
+    transform: translateY(-2px);
+}
+
+.store-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin-right: 12px;
+}
+
+.store-info {
+    flex: 1;
+}
+
+.store-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.store-details {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.distance, .hours {
+    margin-right: 8px;
+}
+
+.store-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-info {
+    display: flex;
+    align-items: baseline;
+}
+
+.price {
+    color: #FF3B30;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.price-unit {
+    color: #666;
+    font-size: 12px;
+    margin-left: 2px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+.star-icon {
+    font-size: 12px;
+    margin-right: 2px;
+}
+
+.rating-text {
+    font-size: 12px;
+    color: #666;
+}
+
+/* 预约页面样式 */
+.booking-page {
+    padding: 0 16px;
+}
+
+.booking-header {
+    display: flex;
+    align-items: center;
+    padding: 60px 0 20px;
+}
+
+.back-btn {
+    font-size: 24px;
+    color: #333;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+.store-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.booking-type-section, .date-section, .time-section, .seat-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.current-date, .current-price {
+    font-size: 14px;
+    color: #666;
+}
+
+.type-tabs {
+    display: flex;
+    gap: 12px;
+}
+
+.type-tab {
+    flex: 1;
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.type-tab.active {
+    background: #007AFF;
+    color: white;
+}
+
+.type-name {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.type-price {
+    display: block;
+    font-size: 12px;
+}
+
+.discount-tag {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: #34C759;
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.date-list, .time-list {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+}
+
+.date-item, .time-item {
+    flex-shrink: 0;
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 80px;
+}
+
+.date-item.active, .time-item.active {
+    background: #007AFF;
+    color: white;
+}
+
+.time-item.disabled {
+    background: #f0f0f0;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.date-label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.date-number {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.date-week {
+    display: block;
+    font-size: 12px;
+}
+
+.time {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.seats, .status {
+    display: block;
+    font-size: 12px;
+}
+
+.seat-section .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.seat-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.filter-btn {
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+}
+
+.view-toggle {
+    display: flex;
+    background: #f5f5f5;
+    border-radius: 6px;
+    padding: 2px;
+}
+
+.grid-view, .list-view {
+    padding: 4px 8px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.grid-view.active, .list-view.active {
+    background: #007AFF;
+    color: white;
+}
+
+.seat-legend {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #666;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    margin-right: 6px;
+}
+
+.legend-color.available {
+    background: #34C759;
+}
+
+.legend-color.selected {
+    background: #007AFF;
+}
+
+.legend-color.occupied {
+    background: #f0f0f0;
+}
+
+.legend-color.disabled {
+    background: #FF3B30;
+}
+
+.seat-area {
+    position: relative;
+}
+
+.area-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.entrance {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #f0f0f0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #666;
+}
+
+.seat-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.seat {
+    aspect-ratio: 1;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.seat.available {
+    background: #34C759;
+    color: white;
+}
+
+.seat.selected {
+    background: #007AFF;
+    color: white;
+}
+
+.seat.occupied {
+    background: #f0f0f0;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.seat.disabled {
+    background: #FF3B30;
+    color: white;
+    cursor: not-allowed;
+}
+
+.seat.warning {
+    background: #FF9500;
+    color: white;
+}
+
+.enhance-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.enhance-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.enhance-text {
+    font-size: 14px;
+    color: #333;
+}
+
+.enhance-btn {
+    background: #007AFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.booking-footer {
+    position: relative;
+    margin: 16px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    border: 1px solid #E5E5E5;
+}
+
+.booking-summary {
+    display: flex;
+    flex-direction: column;
+}
+
+.selected-info {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.total-price {
+    font-size: 16px;
+    font-weight: 600;
+    color: #FF3B30;
+}
+
+.confirm-btn {
+    background: #007AFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 122, 255, 0.2);
+}
+
+/* 订单确认页面样式 */
+.order-confirm-page {
+    padding: 0 16px;
+}
+
+.order-header {
+    display: flex;
+    align-items: center;
+    padding: 60px 0 20px;
+}
+
+.page-title-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-left: 16px;
+}
+
+.order-status {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.status-icon {
+    font-size: 48px;
+    color: #007AFF;
+}
+
+.order-details {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.detail-row .label {
+    font-size: 14px;
+    color: #666;
+}
+
+.detail-row .value {
+    font-size: 14px;
+    color: #333;
+}
+
+.value.coupon {
+    color: #34C759;
+    cursor: pointer;
+}
+
+.divider {
+    height: 1px;
+    background: #f0f0f0;
+    margin: 16px 0;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.total-row .label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.total-row .value.total {
+    font-size: 20px;
+    font-weight: 700;
+    color: #FF3B30;
+}
+
+.payment-deadline {
+    background: #FFF3CD;
+    color: #856404;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+.payment-methods {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border: 2px solid #f0f0f0;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.payment-option.active {
+    border-color: #007AFF;
+    background: #f0f8ff;
+}
+
+.payment-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+    font-size: 16px;
+}
+
+.payment-icon.wechat {
+    background: #07C160;
+    color: white;
+}
+
+.payment-icon.balance {
+    background: #f0f0f0;
+    color: #666;
+}
+
+.payment-name {
+    flex: 1;
+    font-size: 14px;
+    color: #333;
+}
+
+.payment-check {
+    color: #007AFF;
+    font-weight: bold;
+}
+
+.payment-footer {
+    position: relative;
+    margin: 16px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+
+.pay-btn {
+    width: 100%;
+    background: #007AFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 122, 255, 0.2);
+}
+
+/* 支付成功页面样式 */
+.payment-success-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 32px;
+}
+
+.success-content {
+    text-align: center;
+    width: 100%;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background: #34C759;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: white;
+    margin: 0 auto 24px;
+}
+
+.success-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.success-message {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 32px;
+    line-height: 1.5;
+}
+
+.order-info {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.info-row .label {
+    font-size: 14px;
+    color: #666;
+}
+
+.info-row .value {
+    font-size: 14px;
+    color: #333;
+}
+
+.info-row .value.price {
+    color: #FF3B30;
+    font-weight: 600;
+}
+
+.action-buttons {
+    position: relative;
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1;
+}
+
+.primary-btn, .secondary-btn {
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.primary-btn {
+    background: #007AFF;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 122, 255, 0.2);
+}
+
+.secondary-btn {
+    background: #FFFFFF;
+    color: #007AFF;
+    border: 1px solid #007AFF;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.back-home {
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+}
+
+/* 我的订单页面样式 */
+.orders-page {
+    padding: 0 16px;
+}
+
+.orders-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 0 20px;
+}
+
+.filter-btn {
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+}
+
+.order-tabs {
+    display: flex;
+    background: #fff;
+    border-radius: 8px;
+    padding: 4px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.tab.active {
+    background: #007AFF;
+    color: white;
+}
+
+.order-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 100px;
+}
+
+.order-item {
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.order-number {
+    font-size: 12px;
+    color: #666;
+}
+
+.order-status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.order-status.pending {
+    background: #E3F2FD;
+    color: #1976D2;
+}
+
+.order-status.active {
+    background: #E8F5E8;
+    color: #2E7D32;
+}
+
+.order-status.completed {
+    background: #F5F5F5;
+    color: #666;
+}
+
+.order-status.cancelled {
+    background: #FFEBEE;
+    color: #C62828;
+}
+
+.room-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.order-details {
+    margin-bottom: 12px;
+}
+
+.detail-item {
+    display: flex;
+    margin-bottom: 4px;
+}
+
+.detail-item .label {
+    font-size: 12px;
+    color: #666;
+    width: 80px;
+}
+
+.detail-item .value {
+    font-size: 12px;
+    color: #333;
+    flex: 1;
+}
+
+.order-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total {
+    font-size: 14px;
+    font-weight: 600;
+    color: #FF3B30;
+}
+
+.order-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.action-btn {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.action-btn.primary {
+    background: #007AFF;
+    color: white;
+}
+
+.action-btn.success {
+    background: #34C759;
+    color: white;
+}
+
+.action-link {
+    font-size: 12px;
+    color: #007AFF;
+    cursor: pointer;
+}
+
+.floating-action {
+    position: relative;
+    margin: 16px;
+    z-index: 1;
+}
+
+.fab {
+    width: 100%;
+    background: #007AFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+}
+
+/* 开门成功页面样式 */
+.door-success-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 32px;
+}
+
+.door-success-content {
+    text-align: center;
+    width: 100%;
+}
+
+.door-success-content .success-icon {
+    background: #34C759;
+    font-size: 40px;
+}
+
+.reservation-info {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.door-actions {
+    position: relative;
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1;
+}
+
+.door-actions .action-btn {
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.door-actions .action-btn:first-child {
+    background: #007AFF;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 122, 255, 0.2);
+}
+
+.door-actions .action-btn.secondary {
+    background: #fff;
+    color: #666;
+    border: 2px solid #f0f0f0;
+}
+
+.door-actions .action-btn.home {
+    background: #34C759;
+    color: white;
+    border: none;
+    box-shadow: 0 2px 8px rgba(52, 199, 89, 0.2);
+}
+
+.door-actions .action-btn.home:hover {
+    background: #30B04F;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(52, 199, 89, 0.3);
+}
+
+/* 取消预约页面样式 */
+.cancel-page {
+    padding: 0 16px;
+}
+
+.cancel-header {
+    display: flex;
+    align-items: center;
+    padding: 60px 0 20px;
+}
+
+.order-info-section, .cancel-reason-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reason-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.reason-option {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border: 2px solid #f0f0f0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.reason-option.active {
+    border-color: #007AFF;
+    background: #f0f8ff;
+}
+
+.radio-button {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    margin-right: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.reason-option.active .radio-button {
+    border-color: #007AFF;
+}
+
+.radio-dot {
+    width: 8px;
+    height: 8px;
+    background: #007AFF;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.reason-option.active .radio-dot {
+    opacity: 1;
+}
+
+.reason-text {
+    font-size: 14px;
+    color: #333;
+}
+
+.refund-policy {
+    background: #FFF3CD;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.policy-icon {
+    font-size: 16px;
+    margin-right: 8px;
+    margin-top: 2px;
+}
+
+.policy-text {
+    font-size: 12px;
+    color: #856404;
+    line-height: 1.5;
+}
+
+.cancel-actions {
+    position: relative;
+    margin: 16px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    gap: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+
+.cancel-btn, .confirm-cancel-btn {
+    flex: 1;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.cancel-btn {
+    background: #fff;
+    color: #666;
+    border: 2px solid #f0f0f0;
+}
+
+.confirm-cancel-btn {
+    background: #FF3B30;
+    color: white;
+}
+
+/* 取消成功页面样式 */
+.cancel-success-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 32px;
+}
+
+.cancel-success-content {
+    text-align: center;
+    width: 100%;
+}
+
+.refund-info {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.estimated {
+    color: #34C759;
+    font-weight: 600;
+}
+
+.support-info {
+    margin-top: 24px;
+}
+
+.support-text {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.support-contact {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.success-actions {
+    position: relative;
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1;
+}
+
+.phone, .refund-link {
+    font-size: 12px;
+    color: #007AFF;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+
+/* 新增页面样式 */
+.daily-time-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.time-card {
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.time-card.active {
+    background: #e3f2fd;
+    border-color: #007AFF;
+    color: #007AFF;
+}
+
+.time-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.time-range {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.time-label {
+    font-size: 12px;
+    color: #999;
+}
+
+.seat-area-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.area-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.area-card {
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.area-card.active {
+    border-color: #007AFF;
+    background: #f0f8ff;
+}
+
+.area-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.area-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.area-price {
+    font-size: 16px;
+    font-weight: 600;
+    color: #FF3B30;
+}
+
+.area-desc {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.area-amenities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.amenity-tag {
+    background: #e9ecef;
+    color: #666;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.month-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.month-picker {
+    margin-top: 16px;
+}
+
+.month-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.nav-btn {
+    width: 32px;
+    height: 32px;
+    background: #f8f9fa;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: #666;
+}
+
+.current-month {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.calendar-grid {
+    margin-bottom: 16px;
+}
+
+.calendar-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.calendar-header span {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    padding: 8px 0;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+}
+
+.day-item {
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.day-item.prev-month {
+    color: #ccc;
+}
+
+.day-item.selected {
+    background: #007AFF;
+    color: white;
+}
+
+.month-note {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    padding: 8px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.package-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.package-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.package-card {
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.package-card.active {
+    border-color: #007AFF;
+    background: #f0f8ff;
+}
+
+.package-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.package-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.package-price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #FF3B30;
+}
+
+.package-desc {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.package-features {
+    margin-bottom: 12px;
+}
+
+.feature-item {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.package-offer {
+    font-size: 12px;
+    color: #34C759;
+    font-weight: 600;
+    background: #e8f5e8;
+    padding: 6px 12px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+/* 响应式适配 */
+@media (max-width: 480px) {
+    body {
+        padding: 20px 10px;
+    }
+    
+    .app-container {
+        width: 100%;
+        height: 100vh;
+        max-width: 100vw;
+        max-height: 100vh;
+        border-radius: 0;
+    }
+}
+
+/* 小屏幕适配 */
+@media (max-height: 900px) {
+    .app-container {
+        transform: scale(0.9);
+    }
+}
+
+@media (max-height: 800px) {
+    .app-container {
+        transform: scale(0.8);
+    }
+}
+
+@media (max-height: 700px) {
+    .app-container {
+        transform: scale(0.7);
+    }
+}
+
+/* 超小屏幕适配 */
+@media (max-height: 600px) {
+    .app-container {
+        transform: scale(0.6);
+    }
+}
+
+/* 横向屏幕适配 */
+@media (max-width: 600px) and (orientation: landscape) {
+    .app-container {
+        transform: scale(0.7);
+    }
+}
+
+@media (max-width: 500px) and (orientation: landscape) {
+    .app-container {
+        transform: scale(0.6);
+    }
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.page.active {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+  </style>
+
+<body>
+    <!-- 主容器 -->
+    <div class="app-container">
+        <!-- 登录页面 -->
+        <div class="page login-page active" id="loginPage">
+            <div class="main-content">
+                <div class="logo-section">
+                    <div class="logo-icon">
+                        <div class="logo-image">📚</div>
+                    </div>
+                    <div class="app-title">专注空间</div>
+                    <div class="app-subtitle">高效自习室预约平台</div>
+                </div>
+                
+                <div class="login-section">
+                    <button class="login-btn" onclick="handleLogin()">
+                        <div class="login-btn-content">
+                            <span class="wechat-icon">💬</span>
+                            <span class="login-text">微信授权登录</span>
+                        </div>
+                    </button>
+                </div>
+                
+                <div class="agreement-section">
+                    <div class="agreement-checkbox" onclick="toggleAgreement()">
+                        <div class="checkbox" id="agreementCheckbox">
+                            <div class="checkmark" id="checkmark">✓</div>
+                        </div>
+                        <span class="agreement-text">
+                            登录即同意
+                            <span class="link" onclick="showUserAgreement()">《用户协议》</span>
+                            和
+                            <span class="link" onclick="showPrivacyPolicy()">《隐私政策》</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="decoration-wave"></div>
+        </div>
+
+        <!-- 首页 -->
+        <div class="page index-page" id="indexPage">
+            
+            <!-- 顶部用户信息 -->
+            <div class="header-section">
+                <div class="user-info">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMzAiIGZpbGw9IiMwMDdBRkYiLz4KPHN2ZyB4PSIxNSIgeT0iMTUiIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIj4KPHBhdGggZD0iTTEyIDEyQzE0LjIwOTEgMTIgMTYgMTAuMjA5MSAxNiA4QzE2IDUuNzkwODYgMTQuMjA5MSA0IDEyIDRDOS43OTA4NiA0IDggNS43OTA4NiA4IDhDOCAxMC4yMDkxIDkuNzkwODYgMTIgMTIgMTJaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTIgMTRDOC42ODYyOSAxNCA2IDE2LjY4NjMgNiAyMEgxOEMxOCAxNi42ODYzIDE1LjMxMzcgMTQgMTIgMTRaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4KPC9zdmc+" class="avatar avatar-large">
+                    <div class="user-details">
+                        <div class="username">张同学</div>
+                        <div class="member-level">普通会员</div>
+                    </div>
+                </div>
+                <div class="notification" onclick="showNotifications()">
+                    <span class="bell-icon">🔔</span>
+                    <div class="badge" id="notificationBadge">3</div>
+                </div>
+            </div>
+            
+            <!-- 搜索栏 -->
+            <div class="search-section">
+                <div class="search-bar" onclick="goToSearch()">
+                    <span class="search-icon">🔍</span>
+                    <span class="search-placeholder">搜索城市、门店或地址</span>
+                    <span class="location-icon">📍</span>
+                </div>
+            </div>
+            
+            <!-- 轮播图 -->
+            <div class="banner-section">
+                <div class="banner-swiper">
+                    <div class="banner-slide active">
+                        <div class="banner-image">📖 专注学习，高效成长</div>
+                    </div>
+                    <div class="banner-slide">
+                        <div class="banner-image">🌟 优质环境，舒适体验</div>
+                    </div>
+                    <div class="banner-slide">
+                        <div class="banner-image">⚡ 24小时开放，随时预约</div>
+                    </div>
+                </div>
+                <div class="banner-dots">
+                    <span class="dot" onclick="switchBanner(0)"></span>
+                    <span class="dot active" onclick="switchBanner(1)"></span>
+                    <span class="dot" onclick="switchBanner(2)"></span>
+                </div>
+            </div>
+            
+            <!-- 快速功能 -->
+            <div class="quick-functions">
+                <div class="section-header">
+                    <span class="section-title">快速功能</span>
+                    <span class="more-link" onclick="showMoreFunctions()">更多</span>
+                </div>
+                <div class="function-grid">
+                    <div class="function-item" onclick="goToBooking('hourly')">
+                        <div class="function-icon blue">
+                            <span class="icon">📅</span>
+                        </div>
+                        <span class="function-name">立即预约</span>
+                    </div>
+                    <div class="function-item" onclick="goToOrders()">
+                        <div class="function-icon purple">
+                            <span class="icon">📋</span>
+                        </div>
+                        <span class="function-name">我的订单</span>
+                    </div>
+                    <div class="function-item" onclick="goToCoupons()">
+                        <div class="function-icon orange">
+                            <span class="icon">🎫</span>
+                        </div>
+                        <span class="function-name">优惠券</span>
+                    </div>
+                    <div class="function-item" onclick="goToMember()">
+                        <div class="function-icon green">
+                            <span class="icon">💎</span>
+                        </div>
+                        <span class="function-name">会员中心</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 附近门店 -->
+            <div class="nearby-stores">
+                <div class="section-header">
+                    <span class="section-title">附近门店</span>
+                    <span class="more-link" onclick="showAllStores()">查看全部</span>
+                </div>
+                <div class="store-list">
+                    <div class="store-item" onclick="goToStore(1)">
+                        <div class="store-image">⛵</div>
+                        <div class="store-info">
+                            <div class="store-name">科技园店</div>
+                            <div class="store-details">
+                                <span class="distance">距离 800m</span>
+                                <span class="hours">24小时营业</span>
+                            </div>
+                            <div class="store-footer">
+                                <div class="price-info">
+                                    <span class="price">¥25</span>
+                                    <span class="price-unit">/小时起</span>
+                                </div>
+                                <div class="rating">
+                                    <span class="star-icon">⭐</span>
+                                    <span class="rating-text">4.9</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="store-item" onclick="goToStore(2)">
+                        <div class="store-image">📚</div>
+                        <div class="store-info">
+                            <div class="store-name">大学城店</div>
+                            <div class="store-details">
+                                <span class="distance">距离 1.2km</span>
+                                <span class="hours">6:00-24:00</span>
+                            </div>
+                            <div class="store-footer">
+                                <div class="price-info">
+                                    <span class="price">¥20</span>
+                                    <span class="price-unit">/小时起</span>
+                                </div>
+                                <div class="rating">
+                                    <span class="star-icon">⭐</span>
+                                    <span class="rating-text">4.8</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="store-item" onclick="goToStore(3)">
+                        <div class="store-image">💻</div>
+                        <div class="store-info">
+                            <div class="store-name">金融中心店</div>
+                            <div class="store-details">
+                                <span class="distance">距离 2.5km</span>
+                                <span class="hours">24小时营业</span>
+                            </div>
+                            <div class="store-footer">
+                                <div class="price-info">
+                                    <span class="price">¥30</span>
+                                    <span class="price-unit">/小时起</span>
+                                </div>
+                                <div class="rating">
+                                    <span class="star-icon">⭐</span>
+                                    <span class="rating-text">4.7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 按小时预约页面 -->
+        <div class="page booking-page" id="hourlyBookingPage">
+            
+            <div class="booking-header">
+                <span class="back-btn" onclick="goBack()">←</span>
+                <span class="store-name">科技园店</span>
+            </div>
+            
+            <!-- 预约类型选择 -->
+            <div class="booking-type-section">
+                <div class="section-title">选择预约类型</div>
+                <div class="type-tabs">
+                    <div class="type-tab active" onclick="selectBookingType('hourly')">
+                        <span class="type-name">按小时</span>
+                        <span class="type-price">¥15/小时</span>
+                    </div>
+                    <div class="type-tab" onclick="selectBookingType('daily')">
+                        <span class="type-name">按天</span>
+                        <span class="type-price">¥100/天</span>
+                        <span class="discount-tag">8折</span>
+                    </div>
+                    <div class="type-tab" onclick="selectBookingType('monthly')">
+                        <span class="type-name">按月</span>
+                        <span class="type-price">¥1800/月</span>
+                        <span class="discount-tag">5折</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 日期选择 -->
+            <div class="date-section">
+                <div class="section-title">
+                    <span>选择日期</span>
+                    <span class="current-date">今天 12月4日</span>
+                </div>
+                <div class="date-list">
+                    <div class="date-item active" onclick="selectDate(0)">
+                        <span class="date-label">今天</span>
+                        <span class="date-number">4</span>
+                        <span class="date-week">周二</span>
+                    </div>
+                    <div class="date-item" onclick="selectDate(1)">
+                        <span class="date-label">明天</span>
+                        <span class="date-number">5</span>
+                        <span class="date-week">周三</span>
+                    </div>
+                    <div class="date-item" onclick="selectDate(2)">
+                        <span class="date-label">后天</span>
+                        <span class="date-number">6</span>
+                        <span class="date-week">周四</span>
+                    </div>
+                    <div class="date-item" onclick="selectDate(3)">
+                        <span class="date-number">7</span>
+                        <span class="date-week">周五</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 时段选择 -->
+            <div class="time-section">
+                <div class="section-title">
+                    <span>选择时段</span>
+                    <span class="current-price">¥15/小时</span>
+                </div>
+                <div class="time-list">
+                    <div class="time-item disabled">
+                        <span class="time">08:00</span>
+                        <span class="status">已满</span>
+                    </div>
+                    <div class="time-item disabled">
+                        <span class="time">09:00</span>
+                        <span class="status">已满</span>
+                    </div>
+                    <div class="time-item active" onclick="selectTime(2)">
+                        <span class="time">10:00</span>
+                        <span class="seats">12/20</span>
+                    </div>
+                    <div class="time-item" onclick="selectTime(3)">
+                        <span class="time">11:00</span>
+                        <span class="seats">15/20</span>
+                    </div>
+                    <div class="time-item" onclick="selectTime(4)">
+                        <span class="time">12:00</span>
+                        <span class="seats">8/20</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 座位选择 -->
+            <div class="seat-section">
+                <div class="section-header">
+                    <span class="section-title">选择座位</span>
+                    <div class="seat-controls">
+                        <span class="filter-btn">筛选</span>
+                        <div class="view-toggle">
+                            <span class="grid-view active">⊞</span>
+                            <span class="list-view">☰</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="seat-legend">
+                    <div class="legend-item">
+                        <div class="legend-color available"></div>
+                        <span>可选</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color selected"></div>
+                        <span>已选</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color occupied"></div>
+                        <span>已占</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color disabled"></div>
+                        <span>禁用</span>
+                    </div>
+                </div>
+                
+                <div class="seat-area">
+                    <div class="area-title">A区-开放学习区</div>
+                    <div class="entrance">入口</div>
+                    <div class="seat-grid">
+                        <div class="seat occupied" data-seat="A1">A1</div>
+                        <div class="seat occupied" data-seat="A2">A2</div>
+                        <div class="seat available" data-seat="A3" onclick="selectSeat('A3')">A3</div>
+                        <div class="seat available" data-seat="A4" onclick="selectSeat('A4')">A4</div>
+                        <div class="seat occupied" data-seat="A5">A5</div>
+                        <div class="seat available" data-seat="A6" onclick="selectSeat('A6')">A6</div>
+                        <div class="seat occupied" data-seat="A7">A7</div>
+                        <div class="seat selected" data-seat="A8" onclick="selectSeat('A8')">A8</div>
+                        <div class="seat occupied" data-seat="A9">A9</div>
+                        <div class="seat available" data-seat="A10" onclick="selectSeat('A10')">A10</div>
+                        <div class="seat disabled" data-seat="A11">A11</div>
+                        <div class="seat warning" data-seat="A12">A12</div>
+                        <div class="seat warning" data-seat="A13">A13</div>
+                        <div class="seat occupied" data-seat="A14">A14</div>
+                        <div class="seat disabled" data-seat="A15">A15</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 增强体验 -->
+            <div class="enhance-section">
+                <div class="enhance-content">
+                    <span class="enhance-text">添加饮品套餐,享8折优惠</span>
+                    <button class="enhance-btn" onclick="addBeverage()">立即添加</button>
+                </div>
+            </div>
+            
+            <!-- 底部确认栏 -->
+            <div class="booking-footer" id="hourlyBookingFooter">
+                <div class="booking-summary">
+                    <span class="selected-info">已选: A8 (10:00-11:00)</span>
+                    <span class="total-price">总计: ¥15.00</span>
+                </div>
+                <button class="confirm-btn" onclick="confirmBooking()">确认预约</button>
+            </div>
+        </div>
+
+        <!-- 按天预约页面 -->
+        <div class="page booking-page" id="dailyBookingPage">
+            <div class="booking-header">
+                <span class="back-btn" onclick="goBack()">←</span>
+                <span class="store-name">科技园店</span>
+            </div>
+            
+            <!-- 预约类型选择 -->
+            <div class="booking-type-section">
+                <div class="section-title">选择预约类型</div>
+                <div class="type-tabs">
+                    <div class="type-tab" onclick="selectBookingType('hourly')">
+                        <span class="type-name">按小时</span>
+                        <span class="type-price">¥15/小时</span>
+                    </div>
+                    <div class="type-tab active" onclick="selectBookingType('daily')">
+                        <span class="type-name">按天</span>
+                        <span class="type-price">¥100/天</span>
+                        <span class="discount-tag">8折</span>
+                    </div>
+                    <div class="type-tab" onclick="selectBookingType('monthly')">
+                        <span class="type-name">按月</span>
+                        <span class="type-price">¥1800/月</span>
+                        <span class="discount-tag">5折</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 日期选择 -->
+            <div class="date-section">
+                <div class="section-title">
+                    <span>选择日期</span>
+                    <span class="current-date">今天 12月4日</span>
+                </div>
+                <div class="date-list">
+                    <div class="date-item active" onclick="selectDate(0)">
+                        <span class="date-label">今天</span>
+                        <span class="date-number">4</span>
+                        <span class="date-week">周二</span>
+                    </div>
+                    <div class="date-item" onclick="selectDate(1)">
+                        <span class="date-label">明天</span>
+                        <span class="date-number">5</span>
+                        <span class="date-week">周三</span>
+                    </div>
+                    <div class="date-item" onclick="selectDate(2)">
+                        <span class="date-label">后天</span>
+                        <span class="date-number">6</span>
+                        <span class="date-week">周四</span>
+                    </div>
+                    <div class="date-item" onclick="selectDate(3)">
+                        <span class="date-number">7</span>
+                        <span class="date-week">周五</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 时段选择 -->
+            <div class="time-section">
+                <div class="section-title">
+                    <span>选择时段</span>
+                    <span class="current-price">¥100/天</span>
+                </div>
+                <div class="daily-time-grid">
+                    <div class="time-card active" onclick="selectDailyTime('full')">
+                        <div class="time-name">全天</div>
+                        <div class="time-range">08:00-22:00</div>
+                        <div class="time-label">标准营业时间</div>
+                    </div>
+                    <div class="time-card" onclick="selectDailyTime('morning')">
+                        <div class="time-name">半天</div>
+                        <div class="time-range">08:00-15:00</div>
+                        <div class="time-label">上午场</div>
+                    </div>
+                    <div class="time-card" onclick="selectDailyTime('afternoon')">
+                        <div class="time-name">半天</div>
+                        <div class="time-range">15:00-22:00</div>
+                        <div class="time-label">下午场</div>
+                    </div>
+                    <div class="time-card" onclick="selectDailyTime('night')">
+                        <div class="time-name">深夜</div>
+                        <div class="time-range">22:00-02:00</div>
+                        <div class="time-label">需额外审批</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 座位区域选择 -->
+            <div class="seat-area-section">
+                <div class="section-header">
+                    <span class="section-title">选择座位区域</span>
+                    <span class="filter-btn">筛选</span>
+                </div>
+                <div class="area-list">
+                    <div class="area-card active" onclick="selectArea('A')">
+                        <div class="area-header">
+                            <span class="area-name">A区 - 开放学习区</span>
+                            <span class="area-price">¥100/天</span>
+                        </div>
+                        <div class="area-desc">开放式学习环境,适合小组讨论与协作,配备高速WiFi与充电站</div>
+                        <div class="area-amenities">
+                            <span class="amenity-tag">WiFi</span>
+                            <span class="amenity-tag">充电站</span>
+                            <span class="amenity-tag">空调</span>
+                            <span class="amenity-tag">打印</span>
+                        </div>
+                    </div>
+                    <div class="area-card" onclick="selectArea('B')">
+                        <div class="area-header">
+                            <span class="area-name">B区 - 专注学习区</span>
+                            <span class="area-price">¥120/天</span>
+                        </div>
+                        <div class="area-desc">独立隔间设计,静音环境,适合需要高度专注的学习者</div>
+                        <div class="area-amenities">
+                            <span class="amenity-tag">静音</span>
+                            <span class="amenity-tag">独立插座</span>
+                            <span class="amenity-tag">台灯</span>
+                        </div>
+                    </div>
+                    <div class="area-card" onclick="selectArea('C')">
+                        <div class="area-header">
+                            <span class="area-name">C区 - VIP专属区</span>
+                            <span class="area-price">¥180/天</span>
+                        </div>
+                        <div class="area-desc">高端私密空间,配备人体工学座椅与专业学习设备,含免费饮品</div>
+                        <div class="area-amenities">
+                            <span class="amenity-tag">独立空间</span>
+                            <span class="amenity-tag">人体工学椅</span>
+                            <span class="amenity-tag">免费饮品</span>
+                            <span class="amenity-tag">储物柜</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 增强体验 -->
+            <div class="enhance-section">
+                <div class="enhance-content">
+                    <span class="enhance-text">添加饮品套餐,享8折优惠</span>
+                    <button class="enhance-btn" onclick="addBeverage()">立即添加</button>
+                </div>
+            </div>
+            
+            <!-- 底部确认栏 -->
+            <div class="booking-footer" id="dailyBookingFooter">
+                <div class="booking-summary">
+                    <span class="selected-info">已选: A区 (全天 08:00-22:00)</span>
+                    <span class="total-price">总计: ¥100.00</span>
+                </div>
+                <button class="confirm-btn" onclick="confirmBooking()">确认预约</button>
+            </div>
+        </div>
+
+        <!-- 按月预约页面 -->
+        <div class="page booking-page" id="monthlyBookingPage">
+            <div class="booking-header">
+                <span class="back-btn" onclick="goBack()">←</span>
+                <span class="store-name">科技园店</span>
+            </div>
+            
+            <!-- 预约类型选择 -->
+            <div class="booking-type-section">
+                <div class="section-title">选择预约类型</div>
+                <div class="type-tabs">
+                    <div class="type-tab" onclick="selectBookingType('hourly')">
+                        <span class="type-name">按小时</span>
+                        <span class="type-price">¥15/小时</span>
+                    </div>
+                    <div class="type-tab" onclick="selectBookingType('daily')">
+                        <span class="type-name">按天</span>
+                        <span class="type-price">¥100/天</span>
+                        <span class="discount-tag">8折</span>
+                    </div>
+                    <div class="type-tab active" onclick="selectBookingType('monthly')">
+                        <span class="type-name">按月</span>
+                        <span class="type-price">¥1800/月</span>
+                        <span class="discount-tag">5折</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 月份选择 -->
+            <div class="month-section">
+                <div class="section-title">选择月份</div>
+                <div class="month-picker">
+                    <div class="month-nav">
+                        <span class="nav-btn" onclick="changeMonth(-1)">‹</span>
+                        <span class="current-month">2024年12月</span>
+                        <span class="nav-btn" onclick="changeMonth(1)">›</span>
+                    </div>
+                    <div class="calendar-grid">
+                        <div class="calendar-header">
+                            <span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span>
+                        </div>
+                        <div class="calendar-days">
+                            <div class="day-item prev-month">26</div>
+                            <div class="day-item prev-month">27</div>
+                            <div class="day-item prev-month">28</div>
+                            <div class="day-item prev-month">29</div>
+                            <div class="day-item prev-month">30</div>
+                            <div class="day-item prev-month">31</div>
+                            <div class="day-item">1</div>
+                            <div class="day-item">2</div>
+                            <div class="day-item">3</div>
+                            <div class="day-item selected">4</div>
+                            <div class="day-item">5</div>
+                            <div class="day-item">6</div>
+                            <div class="day-item">7</div>
+                            <div class="day-item">8</div>
+                        </div>
+                    </div>
+                    <div class="month-note">按月预约将覆盖整个自然月,无需选择具体日期</div>
+                </div>
+            </div>
+            
+            <!-- 套餐类型选择 -->
+            <div class="package-section">
+                <div class="section-title">选择套餐类型</div>
+                <div class="package-list">
+                    <div class="package-card active" onclick="selectPackage('standard')">
+                        <div class="package-header">
+                            <span class="package-name">标准月卡</span>
+                            <span class="package-price">¥1800/月</span>
+                        </div>
+                        <div class="package-desc">适合长期学习的基础套餐,提供标准自习服务</div>
+                        <div class="package-features">
+                            <div class="feature-item">✓ A区任意座位使用权限</div>
+                            <div class="feature-item">✓ 每日8:00-22:00使用时间</div>
+                            <div class="feature-item">✓ 高速WiFi与基础设施使用</div>
+                            <div class="feature-item">✓ 每月10张打印券</div>
+                        </div>
+                        <div class="package-offer">首月开通享8折优惠,仅需¥1440</div>
+                    </div>
+                    
+                    <div class="package-card" onclick="selectPackage('advanced')">
+                        <div class="package-header">
+                            <span class="package-name">高级月卡</span>
+                            <span class="package-price">¥2800/月</span>
+                        </div>
+                        <div class="package-desc">适合对学习环境有更高要求的用户</div>
+                        <div class="package-features">
+                            <div class="feature-item">✓ A/B区任意座位使用权限</div>
+                            <div class="feature-item">✓ 每日7:00-23:00使用时间</div>
+                            <div class="feature-item">✓ 高速WiFi与全部基础设施</div>
+                            <div class="feature-item">✓ 每月30张打印券</div>
+                            <div class="feature-item">✓ 每月10杯免费饮品</div>
+                        </div>
+                    </div>
+                    
+                    <div class="package-card" onclick="selectPackage('vip')">
+                        <div class="package-header">
+                            <span class="package-name">VIP月卡</span>
+                            <span class="package-price">¥3800/月</span>
+                        </div>
+                        <div class="package-desc">尊享顶级学习体验,适合追求高品质的用户</div>
+                        <div class="package-features">
+                            <div class="feature-item">✓ 全区域任意座位使用权限</div>
+                            <div class="feature-item">✓ 全天候24小时使用权限</div>
+                            <div class="feature-item">✓ 专属储物柜与私人空间</div>
+                            <div class="feature-item">✓ 无限打印与高速下载</div>
+                            <div class="feature-item">✓ 每日2杯免费饮品</div>
+                            <div class="feature-item">✓ 每月2次会议室使用权限</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 底部确认栏 -->
+            <div class="booking-footer" id="monthlyBookingFooter">
+                <div class="booking-summary">
+                    <span class="selected-info">已选:标准月卡(2024年12月)</span>
+                    <span class="total-price">总计:¥1440.00</span>
+                </div>
+                <button class="confirm-btn" onclick="confirmBooking()">确认预约</button>
+            </div>
+        </div>
+
+        <!-- 订单确认页面 -->
+        <div class="page order-confirm-page" id="orderConfirmPage">
+            
+            <div class="order-header">
+                <span class="back-btn" onclick="goBack()">←</span>
+                <span class="page-title-text">确认订单</span>
+            </div>
+            
+            <div class="order-status">
+                <div class="status-icon">⏰</div>
+            </div>
+            
+            <div class="order-details">
+                <div class="detail-row">
+                    <span class="label">预约门店</span>
+                    <span class="value">科技园店</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">预约时间</span>
+                    <span class="value">2021-12-04 10:00-11:00</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">座位信息</span>
+                    <span class="value">A区 - A8</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">预约人</span>
+                    <span class="value">张同学</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">联系电话</span>
+                    <span class="value">138****5678</span>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <div class="detail-row">
+                    <span class="label">时长费用</span>
+                    <span class="value">¥15.00</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">服务费</span>
+                    <span class="value">¥0.00</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">优惠券</span>
+                    <span class="value coupon">未使用 ></span>
+                </div>
+                
+                <div class="total-row">
+                    <span class="label">实付金额</span>
+                    <span class="value total">¥15.00</span>
+                </div>
+                
+                <div class="payment-deadline">
+                    请在15分钟内完成支付,超时将释放座位
+                </div>
+            </div>
+            
+            <div class="payment-methods">
+                <div class="section-title">支付方式</div>
+                <div class="payment-option active" onclick="selectPayment('wechat')">
+                    <div class="payment-icon wechat">💬</div>
+                    <span class="payment-name">微信支付</span>
+                    <div class="payment-check">✓</div>
+                </div>
+                <div class="payment-option" onclick="selectPayment('balance')">
+                    <div class="payment-icon balance">💰</div>
+                    <span class="payment-name">余额支付¥0.00</span>
+                </div>
+            </div>
+            
+            <!-- 支付按钮 -->
+            <div class="payment-footer" id="orderConfirmFooter">
+                <button class="pay-btn" onclick="processPayment()">确认支付 ¥15.00</button>
+            </div>
+        </div>
+
+        <!-- 支付成功页面 -->
+        <div class="page payment-success-page" id="paymentSuccessPage">
+            
+            <div class="success-content">
+                <div class="success-icon">✓</div>
+                <div class="success-title">支付成功</div>
+                <div class="success-message">您的预约已确认,可在"我的订单"中查看详情</div>
+                
+                <div class="order-info">
+                    <div class="info-row">
+                        <span class="label">订单编号</span>
+                        <span class="value">ORD202509041008</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">预约时间</span>
+                        <span class="value">2021-09-04 10:00-11:00</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">座位信息</span>
+                        <span class="value">科技园店 A区-A8</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">支付金额</span>
+                        <span class="value price">¥15.00</span>
+                    </div>
+                </div>
+                
+                <!-- 操作按钮 -->
+                <div class="action-buttons" id="paymentSuccessActions">
+                    <button class="primary-btn" onclick="openDoor()">🚪 到店开门</button>
+                    <button class="secondary-btn" onclick="viewOrderDetails()">查看订单详情</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 我的订单页面 -->
+        <div class="page orders-page" id="ordersPage">
+            
+            <div class="orders-header">
+                <span class="back-btn" onclick="goBack()">←</span>
+                <span class="page-title-text">我的订单</span>
+                <span class="filter-btn" onclick="showOrderFilter()">☰</span>
+            </div>
+            
+            <div class="order-tabs">
+                <div class="tab active" onclick="switchOrderTab('all')">全部订单</div>
+                <div class="tab" onclick="switchOrderTab('pending')">待开始</div>
+                <div class="tab" onclick="switchOrderTab('active')">进行中</div>
+                <div class="tab" onclick="switchOrderTab('completed')">已完成</div>
+            </div>
+            
+            <div class="order-list">
+                <div class="order-item">
+                    <div class="order-header">
+                        <span class="order-number">订单编号: ORD202412050930</span>
+                        <span class="order-status pending">待开始</span>
+                    </div>
+                    <div class="order-content">
+                        <div class="room-name">科技园自习室</div>
+                        <div class="order-details">
+                            <div class="detail-item">
+                                <span class="label">预约时间:</span>
+                                <span class="value">2021-12-05 09:30-11:30</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">座位信息:</span>
+                                <span class="value">B区 - B5 独立隔间</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">预约类型:</span>
+                                <span class="value">按小时</span>
+                            </div>
+                        </div>
+                        <div class="order-footer">
+                            <span class="total">总计: ¥30.00</span>
+                            <div class="order-actions">
+                                <button class="action-btn primary" onclick="openDoor()">开门</button>
+                                <span class="action-link" onclick="cancelOrder()">取消预约</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="order-item">
+                    <div class="order-header">
+                        <span class="order-number">订单编号: ORD202412041008</span>
+                        <span class="order-status active">进行中</span>
+                    </div>
+                    <div class="order-content">
+                        <div class="room-name">科技园自习室</div>
+                        <div class="order-details">
+                            <div class="detail-item">
+                                <span class="label">预约时间:</span>
+                                <span class="value">2021-12-04 10:00-11:00</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">座位信息:</span>
+                                <span class="value">A区 - A8 靠窗座位</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">预约类型:</span>
+                                <span class="value">按小时</span>
+                            </div>
+                        </div>
+                        <div class="order-footer">
+                            <span class="total">总计: ¥15.00</span>
+                            <div class="order-actions">
+                                <button class="action-btn primary" onclick="openDoor()">开门</button>
+                                <button class="action-btn success" onclick="controlPower()">电源</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="order-item">
+                    <div class="order-header">
+                        <span class="order-number">订单编号: ORD202412031530</span>
+                        <span class="order-status completed">已完成</span>
+                    </div>
+                    <div class="order-content">
+                        <div class="room-name">科技园自习室</div>
+                        <div class="order-details">
+                            <div class="detail-item">
+                                <span class="label">预约时间:</span>
+                                <span class="value">2021-12-03 15:30-17:30</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">座位信息:</span>
+                                <span class="value">B区 - B3 独立隔间</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">预约类型:</span>
+                                <span class="value">按小时</span>
+                            </div>
+                        </div>
+                        <div class="order-footer">
+                            <span class="total">总计: ¥30.00</span>
+                            <div class="order-actions">
+                                <span class="action-link" onclick="viewOrderDetails()">详情</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="order-item">
+                    <div class="order-header">
+                        <span class="order-number">订单编号: ORD202412020915</span>
+                        <span class="order-status cancelled">已取消</span>
+                    </div>
+                    <div class="order-content">
+                        <div class="room-name">创意园自习室</div>
+                        <div class="order-details">
+                            <div class="detail-item">
+                                <span class="label">预约时间:</span>
+                                <span class="value">2021-12-02 09:15-12:15</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">座位信息:</span>
+                                <span class="value">A区 - A5 普通座位</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">预约类型:</span>
+                                <span class="value">按小时</span>
+                            </div>
+                        </div>
+                        <div class="order-footer">
+                            <span class="total">总计: ¥45.00</span>
+                            <div class="order-actions">
+                                <span class="action-link" onclick="viewOrderDetails()">详情</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="floating-action">
+                <button class="fab" onclick="goToBooking('hourly')">+ 立即预约自习室</button>
+            </div>
+        </div>
+
+        <!-- 开门成功页面 -->
+        <div class="page door-success-page" id="doorSuccessPage">
+            
+            <div class="door-success-content">
+                <div class="success-icon">🚪</div>
+                <div class="success-title">开门成功</div>
+                <div class="success-message">门禁已开启,请在5分钟内进入</div>
+                
+                <div class="reservation-info">
+                    <div class="info-row">
+                        <span class="label">门店</span>
+                        <span class="value">科技园店</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">座位</span>
+                        <span class="value">A区 - A8</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">时段</span>
+                        <span class="value">10:00-11:00</span>
+                    </div>
+                </div>
+                
+                <!-- 操作按钮 -->
+                <div class="door-actions" id="doorSuccessActions">
+                    <button class="action-btn" onclick="leaveEarly()">🚪 提前离场</button>
+                    <button class="action-btn secondary" onclick="reportProblem()">遇到问题</button>
+                    <button class="action-btn home" onclick="goToIndex()">🏠 返回首页</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 取消预约页面 -->
+        <div class="page cancel-page" id="cancelPage">
+            
+            <div class="cancel-header">
+                <span class="back-btn" onclick="goBack()">←</span>
+                <span class="page-title-text">取消预约</span>
+            </div>
+            
+            <div class="order-info-section">
+                <div class="section-title">订单信息</div>
+                <div class="order-info">
+                    <div class="info-row">
+                        <span class="label">订单编号</span>
+                        <span class="value">ORD202412041008</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">预约场所</span>
+                        <span class="value">科技园自习室</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">预约时间</span>
+                        <span class="value">2021-12-04 10:00-11:00</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">座位信息</span>
+                        <span class="value">A区 - A8 靠窗座位</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cancel-reason-section">
+                <div class="section-title">请选择取消原因</div>
+                <div class="reason-options">
+                    <div class="reason-option active" onclick="selectReason('schedule')">
+                        <div class="radio-button">
+                            <div class="radio-dot"></div>
+                        </div>
+                        <span class="reason-text">行程变更,无法按时到达</span>
+                    </div>
+                    <div class="reason-option" onclick="selectReason('better')">
+                        <div class="radio-button">
+                            <div class="radio-dot"></div>
+                        </div>
+                        <span class="reason-text">找到了更合适的自习场所</span>
+                    </div>
+                    <div class="reason-option" onclick="selectReason('unsatisfied')">
+                        <div class="radio-button">
+                            <div class="radio-dot"></div>
+                        </div>
+                        <span class="reason-text">对预约的座位/场所不满意</span>
+                    </div>
+                    <div class="reason-option" onclick="selectReason('price')">
+                        <div class="radio-button">
+                            <div class="radio-dot"></div>
+                        </div>
+                        <span class="reason-text">价格过高</span>
+                    </div>
+                    <div class="reason-option" onclick="selectReason('other')">
+                        <div class="radio-button">
+                            <div class="radio-dot"></div>
+                        </div>
+                        <span class="reason-text">其他原因 (选填)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="refund-policy">
+                <div class="policy-icon">ℹ️</div>
+                <div class="policy-text">根据取消政策,预约开始前2小时取消可获得全额退款,少于2小时将收取50%手续费。</div>
+            </div>
+            
+            <!-- 取消操作按钮 -->
+            <div class="cancel-actions" id="cancelPageActions">
+                <button class="cancel-btn" onclick="goBack()">取消</button>
+                <button class="confirm-cancel-btn" onclick="confirmCancel()">确认取消</button>
+            </div>
+        </div>
+
+        <!-- 取消成功页面 -->
+        <div class="page cancel-success-page" id="cancelSuccessPage">
+            
+            <div class="cancel-success-content">
+                <div class="success-icon">✓</div>
+                <div class="success-title">取消成功</div>
+                <div class="success-message">您的预约已成功取消,退款将在1-3个工作日内原路退回</div>
+                
+                <div class="refund-info">
+                    <div class="info-row">
+                        <span class="label">订单编号</span>
+                        <span class="value">ORD202412041008</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">退款金额</span>
+                        <span class="value">¥15.00</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">预计到账</span>
+                        <span class="value estimated">2021-12-07前</span>
+                    </div>
+                </div>
+                
+                <!-- 操作按钮 -->
+                <div class="success-actions" id="cancelSuccessActions">
+                    <button class="primary-btn" onclick="goToIndex()">返回首页</button>
+                    <button class="secondary-btn" onclick="viewOrderDetails()">查看订单详情</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+
+<script>
+// 全局状态管理
+const AppState = {
+    currentPage: 'login',
+    userInfo: null,
+    bookingData: {
+        type: 'hourly',
+        date: 0,
+        timeSlot: 2,
+        seat: 'A8',
+        area: 'A区'
+    },
+    orderData: {
+        orderId: 'ORD202412041008',
+        store: '科技园店',
+        time: '2021-12-04 10:00-11:00',
+        seat: 'A区 - A8',
+        amount: 15.00
+    },
+    currentBanner: 1,
+    agreed: false,
+    selectedPayment: 'wechat',
+    selectedReason: 'schedule'
+};
+
+// 页面切换函数
+function showPage(pageId) {
+    // 隐藏所有页面
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(page => {
+        page.classList.remove('active');
+    });
+    
+    // 显示目标页面
+    const targetPage = document.getElementById(pageId);
+    if (targetPage) {
+        targetPage.classList.add('active');
+        AppState.currentPage = pageId;
+        
+
+    }
+}
+
+
+
+// 登录相关函数
+function toggleAgreement() {
+    AppState.agreed = !AppState.agreed;
+    const checkbox = document.getElementById('agreementCheckbox');
+    const checkmark = document.getElementById('checkmark');
+    
+    if (AppState.agreed) {
+        checkbox.classList.add('checked');
+        checkmark.style.display = 'block';
+    } else {
+        checkbox.classList.remove('checked');
+        checkmark.style.display = 'none';
+    }
+}
+
+function handleLogin() {
+    if (!AppState.agreed) {
+        showToast('请先同意用户协议');
+        return;
+    }
+    
+    showToast('登录成功', 'success');
+    setTimeout(() => {
+        showPage('indexPage');
+    }, 1500);
+}
+
+function showUserAgreement() {
+    showModal('用户协议', '这里是用户协议的内容...');
+}
+
+function showPrivacyPolicy() {
+    showModal('隐私政策', '这里是隐私政策的内容...');
+}
+
+// 首页相关函数
+function showNotifications() {
+    showToast('您有3条新通知');
+}
+
+function goToSearch() {
+    showToast('搜索功能开发中...');
+}
+
+function switchBanner(index) {
+    const slides = document.querySelectorAll('.banner-slide');
+    const dots = document.querySelectorAll('.dot');
+    
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    slides[index].classList.add('active');
+    dots[index].classList.add('active');
+    
+    AppState.currentBanner = index;
+}
+
+function showMoreFunctions() {
+    showToast('更多功能开发中...');
+}
+
+function goToBooking(type) {
+    AppState.bookingData.type = type;
+    if (type === 'hourly') {
+        showPage('hourlyBookingPage');
+    } else if (type === 'daily') {
+        showPage('dailyBookingPage');
+    } else if (type === 'monthly') {
+        showPage('monthlyBookingPage');
+    }
+}
+
+function goToOrders() {
+    showPage('ordersPage');
+}
+
+function goToCoupons() {
+    showToast('优惠券功能开发中...');
+}
+
+function goToMember() {
+    showToast('会员中心功能开发中...');
+}
+
+function showAllStores() {
+    showToast('查看全部门店功能开发中...');
+}
+
+function goToStore(storeId) {
+    AppState.bookingData.storeId = storeId;
+    goToBooking('hourly');
+}
+
+// 预约页面相关函数
+function selectBookingType(type) {
+    const tabs = document.querySelectorAll('.type-tab');
+    tabs.forEach(tab => tab.classList.remove('active'));
+    
+    // 激活选中的标签
+    event.target.closest('.type-tab').classList.add('active');
+    
+    AppState.bookingData.type = type;
+    
+    // 根据类型跳转到对应页面
+    if (type === 'hourly') {
+        showPage('hourlyBookingPage');
+    } else if (type === 'daily') {
+        showPage('dailyBookingPage');
+    } else if (type === 'monthly') {
+        showPage('monthlyBookingPage');
+    }
+}
+
+function selectDate(index) {
+    const dateItems = document.querySelectorAll('.date-item');
+    dateItems.forEach(item => item.classList.remove('active'));
+    
+    event.target.closest('.date-item').classList.add('active');
+    AppState.bookingData.date = index;
+}
+
+function selectTime(index) {
+    const timeItems = document.querySelectorAll('.time-item');
+    timeItems.forEach(item => item.classList.remove('active'));
+    
+    event.target.closest('.time-item').classList.add('active');
+    AppState.bookingData.timeSlot = index;
+}
+
+function selectSeat(seatId) {
+    const seats = document.querySelectorAll('.seat');
+    seats.forEach(seat => {
+        if (seat.classList.contains('available')) {
+            seat.classList.remove('selected');
+        }
+    });
+    
+    const selectedSeat = document.querySelector(`[data-seat="${seatId}"]`);
+    if (selectedSeat && selectedSeat.classList.contains('available')) {
+        selectedSeat.classList.add('selected');
+        AppState.bookingData.seat = seatId;
+        
+        // 更新底部确认栏
+        updateBookingSummary();
+    }
+}
+
+function updateBookingSummary() {
+    const summary = document.querySelector('.selected-info');
+    const total = document.querySelector('.total-price');
+    
+    if (summary && total) {
+        summary.textContent = `已选: ${AppState.bookingData.seat} (10:00-11:00)`;
+        total.textContent = '总计: ¥15.00';
+    }
+}
+
+function addBeverage() {
+    showToast('饮品套餐功能开发中...');
+}
+
+// 按天预约相关函数
+function selectDailyTime(timeType) {
+    const timeCards = document.querySelectorAll('.time-card');
+    timeCards.forEach(card => card.classList.remove('active'));
+    
+    event.target.closest('.time-card').classList.add('active');
+    AppState.bookingData.dailyTime = timeType;
+    
+    // 更新底部确认栏
+    updateDailyBookingSummary();
+}
+
+function selectArea(areaId) {
+    const areaCards = document.querySelectorAll('.area-card');
+    areaCards.forEach(card => card.classList.remove('active'));
+    
+    event.target.closest('.area-card').classList.add('active');
+    AppState.bookingData.area = areaId;
+    
+    // 更新底部确认栏
+    updateDailyBookingSummary();
+}
+
+function updateDailyBookingSummary() {
+    const summary = document.querySelector('.selected-info');
+    const total = document.querySelector('.total-price');
+    
+    if (summary && total) {
+        const timeText = AppState.bookingData.dailyTime === 'full' ? '全天 08:00-22:00' : 
+                        AppState.bookingData.dailyTime === 'morning' ? '上午 08:00-15:00' :
+                        AppState.bookingData.dailyTime === 'afternoon' ? '下午 15:00-22:00' : '深夜 22:00-02:00';
+        const areaText = AppState.bookingData.area || 'A区';
+        summary.textContent = `已选: ${areaText} (${timeText})`;
+        total.textContent = '总计: ¥100.00';
+    }
+}
+
+// 按月预约相关函数
+function changeMonth(direction) {
+    // 这里可以实现月份切换逻辑
+    showToast('月份切换功能开发中...');
+}
+
+function selectPackage(packageType) {
+    const packageCards = document.querySelectorAll('.package-card');
+    packageCards.forEach(card => card.classList.remove('active'));
+    
+    event.target.closest('.package-card').classList.add('active');
+    AppState.bookingData.package = packageType;
+    
+    // 更新底部确认栏
+    updateMonthlyBookingSummary();
+}
+
+function updateMonthlyBookingSummary() {
+    const summary = document.querySelector('.selected-info');
+    const total = document.querySelector('.total-price');
+    
+    if (summary && total) {
+        const packageText = AppState.bookingData.package === 'standard' ? '标准月卡' :
+                           AppState.bookingData.package === 'advanced' ? '高级月卡' : 'VIP月卡';
+        summary.textContent = `已选:${packageText}(2024年12月)`;
+        total.textContent = '总计:¥1440.00';
+    }
+}
+
+function confirmBooking() {
+    if (!AppState.bookingData.seat) {
+        showToast('请先选择座位');
+        return;
+    }
+    
+    showPage('orderConfirmPage');
+}
+
+// 订单确认页面相关函数
+function selectPayment(type) {
+    const options = document.querySelectorAll('.payment-option');
+    options.forEach(option => option.classList.remove('active'));
+    
+    event.target.closest('.payment-option').classList.add('active');
+    AppState.selectedPayment = type;
+}
+
+function processPayment() {
+    showToast('支付中...', 'loading');
+    
+    setTimeout(() => {
+        showPage('paymentSuccessPage');
+    }, 2000);
+}
+
+// 支付成功页面相关函数
+function openDoor() {
+    showToast('开门中...', 'loading');
+    
+    setTimeout(() => {
+        showPage('doorSuccessPage');
+    }, 1500);
+}
+
+function viewOrderDetails() {
+    showToast('查看订单详情功能开发中...');
+}
+
+function goToIndex() {
+    showPage('indexPage');
+}
+
+// 我的订单页面相关函数
+function showOrderFilter() {
+    showToast('订单筛选功能开发中...');
+}
+
+function switchOrderTab(type) {
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => tab.classList.remove('active'));
+    
+    event.target.classList.add('active');
+    
+    // 这里可以根据类型筛选订单
+    showToast(`切换到${type}订单`);
+}
+
+function controlPower() {
+    showToast('电源控制功能开发中...');
+}
+
+function cancelOrder() {
+    showPage('cancelPage');
+}
+
+// 开门成功页面相关函数
+function leaveEarly() {
+    showModal('提前离场', '确定要提前离场吗？', [
+        { text: '取消', style: 'cancel' },
+        { text: '确定', style: 'destructive', handler: () => {
+            showToast('已提前离场');
+            goToIndex();
+        }}
+    ]);
+}
+
+function reportProblem() {
+    showToast('问题反馈功能开发中...');
+}
+
+// 取消预约页面相关函数
+function selectReason(reason) {
+    const options = document.querySelectorAll('.reason-option');
+    options.forEach(option => option.classList.remove('active'));
+    
+    event.target.closest('.reason-option').classList.add('active');
+    AppState.selectedReason = reason;
+}
+
+function confirmCancel() {
+    showToast('取消中...', 'loading');
+    
+    setTimeout(() => {
+        showPage('cancelSuccessPage');
+    }, 1500);
+}
+
+// 取消成功页面相关函数
+function callCustomerService() {
+    showToast('客服电话: 400-123-4567');
+}
+
+function showRefundPolicy() {
+    showModal('退款说明', '退款将在1-3个工作日内原路退回...');
+}
+
+// 导航相关函数
+function goBack() {
+    const pageHistory = {
+        'hourlyBookingPage': 'indexPage',
+        'dailyBookingPage': 'indexPage',
+        'monthlyBookingPage': 'indexPage',
+        'orderConfirmPage': 'hourlyBookingPage',
+        'paymentSuccessPage': 'indexPage',
+        'ordersPage': 'indexPage',
+        'doorSuccessPage': 'indexPage',
+        'cancelPage': 'ordersPage',
+        'cancelSuccessPage': 'indexPage'
+    };
+    
+    const previousPage = pageHistory[AppState.currentPage];
+    if (previousPage) {
+        showPage(previousPage);
+    } else {
+        showPage('indexPage');
+    }
+}
+
+function goToDiscover() {
+    showToast('发现页面功能开发中...');
+}
+
+function goToProfile() {
+    showToast('个人中心功能开发中...');
+}
+
+// 工具函数
+function showToast(message, type = 'info') {
+    // 创建toast元素
+    const toast = document.createElement('div');
+    toast.className = `toast toast-${type}`;
+    toast.textContent = message;
+    
+    // 添加样式
+    Object.assign(toast.style, {
+        position: 'fixed',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        background: type === 'success' ? '#34C759' : type === 'error' ? '#FF3B30' : '#333',
+        color: 'white',
+        padding: '12px 24px',
+        borderRadius: '8px',
+        fontSize: '14px',
+        zIndex: '10000',
+        opacity: '0',
+        transition: 'opacity 0.3s ease'
+    });
+    
+    document.body.appendChild(toast);
+    
+    // 显示动画
+    setTimeout(() => {
+        toast.style.opacity = '1';
+    }, 10);
+    
+    // 自动隐藏
+    setTimeout(() => {
+        toast.style.opacity = '0';
+        setTimeout(() => {
+            document.body.removeChild(toast);
+        }, 300);
+    }, 2000);
+}
+
+function showModal(title, content, buttons = null) {
+    // 创建模态框背景
+    const overlay = document.createElement('div');
+    overlay.className = 'modal-overlay';
+    overlay.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    `;
+    
+    // 创建模态框内容
+    const modal = document.createElement('div');
+    modal.className = 'modal';
+    modal.style.cssText = `
+        background: white;
+        border-radius: 12px;
+        padding: 24px;
+        margin: 20px;
+        max-width: 300px;
+        width: 100%;
+        transform: scale(0.9);
+        transition: transform 0.3s ease;
+    `;
+    
+    modal.innerHTML = `
+        <div style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: #333;">${title}</div>
+        <div style="font-size: 14px; color: #666; line-height: 1.5; margin-bottom: 20px;">${content}</div>
+        <div style="display: flex; justify-content: flex-end; gap: 12px;">
+            ${buttons ? buttons.map(btn => `
+                <button onclick="handleModalButton('${btn.text}', ${btn.handler ? 'true' : 'false'})" 
+                        style="padding: 8px 16px; border-radius: 6px; border: none; font-size: 14px; cursor: pointer;
+                               background: ${btn.style === 'destructive' ? '#FF3B30' : btn.style === 'cancel' ? '#f0f0f0' : '#007AFF'};
+                               color: ${btn.style === 'cancel' ? '#666' : 'white'};">
+                    ${btn.text}
+                </button>
+            `).join('') : `
+                <button onclick="closeModal()" style="padding: 8px 16px; border-radius: 6px; border: none; font-size: 14px; cursor: pointer; background: #007AFF; color: white;">
+                    我知道了
+                </button>
+            `}
+        </div>
+    `;
+    
+    overlay.appendChild(modal);
+    document.body.appendChild(overlay);
+    
+    // 显示动画
+    setTimeout(() => {
+        overlay.style.opacity = '1';
+        modal.style.transform = 'scale(1)';
+    }, 10);
+    
+    // 点击背景关闭
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            closeModal();
+        }
+    });
+    
+    // 存储引用以便关闭
+    window.currentModal = overlay;
+}
+
+function handleModalButton(text, hasHandler) {
+    if (hasHandler) {
+        // 这里应该调用对应的处理函数
+        closeModal();
+    } else {
+        closeModal();
+    }
+}
+
+function closeModal() {
+    if (window.currentModal) {
+        window.currentModal.style.opacity = '0';
+        setTimeout(() => {
+            document.body.removeChild(window.currentModal);
+            window.currentModal = null;
+        }, 300);
+    }
+}
+
+// 页面初始化
+document.addEventListener('DOMContentLoaded', function() {
+    // 初始化轮播图自动播放
+    setInterval(() => {
+        const nextIndex = (AppState.currentBanner + 1) % 3;
+        switchBanner(nextIndex);
+    }, 3000);
+    
+    // 初始化座位选择状态
+    updateBookingSummary();
+    
+    // 添加触摸事件支持
+    addTouchSupport();
+    
+    // 响应式调整手机大小
+    adjustPhoneSize();
+    window.addEventListener('resize', adjustPhoneSize);
+});
+
+// 响应式调整手机大小
+function adjustPhoneSize() {
+    const appContainer = document.querySelector('.app-container');
+    const body = document.body;
+    
+    if (!appContainer) return;
+    
+    const bodyWidth = window.innerWidth;
+    const bodyHeight = window.innerHeight;
+    const phoneWidth = 393;
+    const phoneHeight = 852;
+    
+    // 计算缩放比例
+    const scaleX = (bodyWidth - 80) / phoneWidth; // 减去左右padding
+    const scaleY = (bodyHeight - 80) / phoneHeight; // 减去上下padding
+    const scale = Math.min(scaleX, scaleY, 1); // 不超过原始大小
+    
+    // 应用缩放
+    appContainer.style.transform = `scale(${scale})`;
+    
+    // 确保手机居中
+    appContainer.style.margin = 'auto';
+}
+
+// 添加触摸支持
+function addTouchSupport() {
+    let startX = 0;
+    let startY = 0;
+    
+    document.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+    });
+    
+    document.addEventListener('touchend', (e) => {
+        const endX = e.changedTouches[0].clientX;
+        const endY = e.changedTouches[0].clientY;
+        const diffX = startX - endX;
+        const diffY = startY - endY;
+        
+        // 水平滑动检测
+        if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+            if (diffX > 0) {
+                // 向左滑动 - 下一页
+                handleSwipeLeft();
+            } else {
+                // 向右滑动 - 上一页
+                handleSwipeRight();
+            }
+        }
+    });
+}
+
+function handleSwipeLeft() {
+    // 根据当前页面决定滑动行为
+    if (AppState.currentPage === 'indexPage') {
+        // 在首页可以滑动到其他功能
+        showToast('滑动到其他功能');
+    }
+}
+
+function handleSwipeRight() {
+    // 返回上一页
+    goBack();
+}
+
+// 添加键盘支持
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeModal();
+    }
+});
+
+// 添加页面可见性变化处理
+document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+        // 页面隐藏时的处理
+        console.log('页面隐藏');
+    } else {
+        // 页面显示时的处理
+        console.log('页面显示');
+    }
+});
+
+// 错误处理
+window.addEventListener('error', (e) => {
+    console.error('页面错误:', e.error);
+    showToast('页面出现错误，请刷新重试', 'error');
+});
+
+// 导出全局函数供HTML调用
+window.showPage = showPage;
+window.toggleAgreement = toggleAgreement;
+window.handleLogin = handleLogin;
+window.showUserAgreement = showUserAgreement;
+window.showPrivacyPolicy = showPrivacyPolicy;
+window.showNotifications = showNotifications;
+window.goToSearch = goToSearch;
+window.switchBanner = switchBanner;
+window.showMoreFunctions = showMoreFunctions;
+window.goToBooking = goToBooking;
+window.goToOrders = goToOrders;
+window.goToCoupons = goToCoupons;
+window.goToMember = goToMember;
+window.showAllStores = showAllStores;
+window.goToStore = goToStore;
+window.selectBookingType = selectBookingType;
+window.selectDate = selectDate;
+window.selectTime = selectTime;
+window.selectSeat = selectSeat;
+window.addBeverage = addBeverage;
+window.confirmBooking = confirmBooking;
+window.selectPayment = selectPayment;
+window.processPayment = processPayment;
+window.openDoor = openDoor;
+window.viewOrderDetails = viewOrderDetails;
+window.goToIndex = goToIndex;
+window.showOrderFilter = showOrderFilter;
+window.switchOrderTab = switchOrderTab;
+window.controlPower = controlPower;
+window.cancelOrder = cancelOrder;
+window.leaveEarly = leaveEarly;
+window.reportProblem = reportProblem;
+window.selectReason = selectReason;
+window.confirmCancel = confirmCancel;
+window.callCustomerService = callCustomerService;
+window.showRefundPolicy = showRefundPolicy;
+window.goBack = goBack;
+window.goToDiscover = goToDiscover;
+window.goToProfile = goToProfile;
+window.selectDailyTime = selectDailyTime;
+window.selectArea = selectArea;
+window.changeMonth = changeMonth;
+window.selectPackage = selectPackage;
+</script>
