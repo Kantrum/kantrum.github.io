@@ -378,6 +378,511 @@ date: 2022-04-31
     border-bottom: 1px solid var(--border);
   }
   
+  /* 故事内容样式 */
+  .story-section {
+    margin-bottom: 32px;
+  }
+  
+  .story-content {
+    background: rgba(248, 250, 252, 0.8);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .team-info {
+    background: rgba(59, 130, 246, 0.05);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 16px;
+  }
+  
+  .team-info h4 {
+    color: var(--brand);
+    margin: 0 0 8px;
+    font-size: 16px;
+  }
+  
+  /* 需求框样式 */
+  .requirement-box {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 16px 0;
+    box-shadow: 0 4px 12px var(--shadow);
+  }
+  
+  .requirement-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .requirement-header h4 {
+    margin: 0;
+    color: var(--text);
+    font-size: 18px;
+  }
+  
+  .platform-tag {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .requirement-list h5 {
+    color: var(--text);
+    margin: 16px 0 8px;
+    font-size: 16px;
+  }
+  
+  .requirement-list ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+  
+  .requirement-list li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+  }
+  
+  .requirement-note {
+    background: rgba(255, 193, 7, 0.1);
+    border: 1px solid rgba(255, 193, 7, 0.2);
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 16px;
+  }
+  
+  .requirement-note p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-style: italic;
+  }
+  
+  /* 时间线样式 */
+  .communication-timeline {
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .communication-timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--gradient-primary);
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 32px;
+  }
+  
+  .timeline-marker {
+    position: absolute;
+    left: -28px;
+    top: 8px;
+    width: 24px;
+    height: 24px;
+    background: var(--brand);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    z-index: 1;
+  }
+  
+  .timeline-content {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px var(--shadow);
+  }
+  
+  .timeline-content h4 {
+    margin: 0 0 12px;
+    color: var(--text);
+    font-size: 16px;
+  }
+  
+  .timeline-details ul {
+    margin: 8px 0;
+    padding-left: 20px;
+  }
+  
+  .timeline-details li {
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  
+  .timeline-note {
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 12px;
+  }
+  
+  .timeline-note p {
+    margin: 0;
+    color: var(--text);
+  }
+  
+  /* 技术方案网格 */
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .tech-item {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px var(--shadow);
+  }
+  
+  .tech-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px var(--shadow-lg);
+  }
+  
+  .tech-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+  
+  .tech-item h4 {
+    margin: 0 0 8px;
+    color: var(--text);
+    font-size: 16px;
+  }
+  
+  .tech-item p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  /* 项目成果 */
+  .results-summary {
+    background: rgba(248, 250, 252, 0.8);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .results-summary p {
+    margin: 0 0 20px;
+    line-height: 1.6;
+  }
+  
+  .key-achievements {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+  }
+  
+  .achievement-item {
+    text-align: center;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+  
+  .achievement-number {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  
+  .achievement-label {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  /* 结果与收获部分样式 */
+  .metrics-section {
+    margin: 32px 0;
+  }
+  
+  .metrics-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .metric-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+  }
+  
+  .metric-card.primary::before {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  .metric-card.success::before {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  }
+  
+  .metric-card.info::before {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  }
+  
+  .metric-card.warning::before {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  }
+  
+  .metric-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .metric-icon {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  
+  .metric-content {
+    text-align: center;
+  }
+  
+  .metric-number {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .metric-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .metric-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+  }
+  
+  .achievements-section {
+    margin: 40px 0;
+  }
+  
+  .achievements-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  
+  .achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  
+  .achievement-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.3s ease;
+  }
+  
+  .achievement-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px var(--shadow);
+  }
+  
+  .achievement-icon {
+    font-size: 32px;
+    margin-bottom: 16px;
+    display: block;
+  }
+  
+  .achievement-card h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 16px;
+  }
+  
+  .achievement-card ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+  
+  .achievement-card li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+  
+  .growth-section {
+    margin: 40px 0;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    padding: 32px;
+  }
+  
+  .growth-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  
+  .growth-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .growth-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+  }
+  
+  .growth-item:hover {
+    transform: translateX(8px);
+    box-shadow: 0 8px 25px var(--shadow);
+  }
+  
+  .growth-icon {
+    font-size: 32px;
+    flex-shrink: 0;
+  }
+  
+  .growth-text h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+  
+  .growth-text p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  .future-section {
+    margin: 40px 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    border-radius: 16px;
+    padding: 32px;
+  }
+  
+  .future-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  
+  .future-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  
+  .future-item {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .future-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .future-icon {
+    font-size: 32px;
+    margin-bottom: 16px;
+    display: block;
+  }
+  
+  .future-text h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+  
+  .future-text p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+  }
+  
   .results-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -787,8 +1292,8 @@ date: 2022-04-31
     }
     
     .cols {
-      grid-template-columns: 1fr;
-      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
     }
     
     .kpis {
@@ -796,16 +1301,56 @@ date: 2022-04-31
     }
     
     .gallery {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, 1fr);
     }
     
     .results-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
     }
     
     iframe.phone {
       width: 360px;
       height: 780px;
+    }
+    
+    /* 移动端故事内容优化 */
+    .story-content {
+      padding: 16px;
+    }
+    
+    .requirement-box {
+      padding: 16px;
+    }
+    
+    .requirement-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    
+    .communication-timeline {
+      padding-left: 16px;
+    }
+    
+    .timeline-marker {
+      left: -24px;
+      width: 20px;
+      height: 20px;
+      font-size: 10px;
+    }
+    
+    .timeline-content {
+      padding: 16px;
+    }
+    
+    .tech-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    
+    .key-achievements {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
     }
   }
   
@@ -823,16 +1368,190 @@ date: 2022-04-31
     }
     
     .kpis {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
     }
     
     .card {
       padding: 20px;
     }
     
+    .cols {
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .results-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    .tech-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    
+    .key-achievements {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+    
     iframe.phone {
       width: 340px;
       height: 720px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .wrap {
+      padding: 16px 8px 40px;
+    }
+    
+    header.hero {
+      padding: 20px;
+    }
+    
+    .hero h1 {
+      font-size: 22px;
+    }
+    
+    .hero p {
+      font-size: 14px;
+    }
+    
+    .kpis {
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    
+    .card {
+      padding: 16px;
+    }
+    
+    .cols {
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+    
+    .results-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    
+    .tech-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+    
+    .key-achievements {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px;
+    }
+    
+    .tech-item {
+      padding: 12px;
+    }
+    
+    .tech-item h4 {
+      font-size: 14px;
+    }
+    
+    .tech-item p {
+      font-size: 12px;
+    }
+    
+    .achievement-item {
+      padding: 12px;
+    }
+    
+    .achievement-number {
+      font-size: 16px;
+    }
+    
+    .achievement-label {
+      font-size: 10px;
+    }
+    
+    /* 结果与收获响应式优化 */
+    .metrics-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    
+    .metric-card {
+      padding: 16px;
+    }
+    
+    .metric-number {
+      font-size: 20px;
+    }
+    
+    .metric-label {
+      font-size: 14px;
+    }
+    
+    .metric-desc {
+      font-size: 12px;
+    }
+    
+    .achievements-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    
+    .achievement-card {
+      padding: 16px;
+    }
+    
+    .achievement-card h4 {
+      font-size: 16px;
+    }
+    
+    .achievement-card li {
+      font-size: 14px;
+    }
+    
+    .growth-content {
+      gap: 16px;
+    }
+    
+    .growth-item {
+      flex-direction: column;
+      text-align: center;
+      padding: 16px;
+    }
+    
+    .growth-item:hover {
+      transform: translateY(-2px);
+    }
+    
+    .future-content {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    
+    .future-item {
+      padding: 16px;
+    }
+    
+    .future-text h4 {
+      font-size: 16px;
+    }
+    
+    .future-text p {
+      font-size: 14px;
+    }
+    
+    iframe.phone {
+      width: 320px;
+      height: 680px;
     }
   }
   
@@ -933,28 +1652,162 @@ date: 2022-04-31
       </div>
     </header>
 
-    <!-- 概要 -->
+    <!-- 项目背景 -->
     <section class="card" id="project-overview">
       <div class="card-header">
-      <h2>项目简介</h2>
-        <div class="card-badge">核心信息</div>
+        <h2>项目背景</h2>
+        <div class="card-badge">创业故事</div>
       </div>
-      <div class="cols">
-        <div class="info-section">
-          <h3 class="section-title">项目背景</h3>
-          <ul class="list">
-            <li>背景：教育机构通过 <strong>一品威客</strong> 寻求将闲置教室改造成自习室的线上预约能力。</li>
-            <li>团队：3人（我：商务&产品；同学：前端/后端）。</li>
-            <li>职责：需求澄清、方案设计、评审推进、研发支持、测试验收、上线复盘。</li>
+      
+      <!-- 创业背景 -->
+      <div class="story-section">
+        <h3 class="section-title">🚀 创业起步</h3>
+        <div class="story-content">
+          <p>我最初成立公司时是以"技术服务公司"的定位起步，主要承接中小型企业和个人客户的软件开发需求。在创业初期，我通过 <strong>一品威客</strong> 平台获取客户资源，其中第一个项目就是一个教育行业客户提出的：开发一款自习室预约小程序。</p>
+          <div class="team-info">
+            <h4>👥 团队构成</h4>
+            <p>当时我们团队一共3个人：我 + 两位计算机专业的同学。我本人并非计算机专业，所以主要负责 <strong>商务沟通、需求澄清与产品设计</strong>；同学则负责技术实现与交付。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 客户需求 -->
+      <div class="story-section">
+        <h3 class="section-title">📋 客户原始需求</h3>
+        <div class="requirement-box">
+          <div class="requirement-header">
+            <h4>项目名称：自习室预约小程序开发</h4>
+            <span class="platform-tag">一品威客</span>
+          </div>
+          <div class="requirement-content">
+            <p><strong>需求描述：</strong>我们是一家教育机构，计划把部分闲置教室改造成对外开放的自习室，想要开发一个微信小程序，方便学生进行在线预约和支付。</p>
+            <div class="requirement-list">
+              <h5>功能需求：</h5>
+              <ul>
+                <li><strong>学生端：</strong>查看自习室座位情况，支持在线选座、预约、支付（余额支付、微信支付），预约成功后生成订单</li>
+                <li><strong>后台端：</strong>管理员可以管理自习室和座位信息，查看每天的预约情况和收入，支持导出报表</li>
+                <li><strong>其他：</strong>支持预约取消和退款，具体规则待开发方设计</li>
+                <li><strong>界面：</strong>简洁大方，2-3个月内上线试用</li>
           </ul>
         </div>
-        <div class="info-section">
-          <h3 class="section-title">技术方案</h3>
-          <ul class="list">
-            <li>范围：学生端选座/预约/支付；后台座位&订单&报表；取消/退款闭环。</li>
-            <li>关键机制：<em>双阶段锁</em>、<em>以回调为准</em>、幂等校验、Redis+MySQL、门禁/灯控解耦、定时补偿。</li>
-            <li>二期优化：<strong>最近一次选择记忆</strong>（低成本高体验）。</li>
+            <div class="requirement-note">
+              <p><em>补充说明：目前我们还没有明确的产品文档，期待开发方能根据经验提出具体的方案。</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 沟通历程 -->
+      <div class="story-section">
+        <h3 class="section-title">💬 三轮沟通历程</h3>
+        <div class="communication-timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker">1</div>
+            <div class="timeline-content">
+              <h4>第一次沟通：明确目标 & 基础框架</h4>
+              <div class="timeline-details">
+                <p><strong>讨论要点：</strong></p>
+                <ul>
+                  <li>客户确认核心目标：把闲置教室改造成自习室，对外收费，学生可以线上预约</li>
+                  <li>明确基本功能框架：学生端（查座位→预约→支付→生成订单）+ 管理端（教室/座位管理、订单管理、收入统计）</li>
+                  <li>平台选择：初期只做微信小程序，不做APP，降低获客成本</li>
+                  <li>交付目标：先上线MVP版本，2-3个月内试点</li>
           </ul>
+                <p class="timeline-note"><strong>遗留问题：</strong>取消预约如何处理？退款规则如何定义？座位是自由选还是系统分配？</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">2</div>
+            <div class="timeline-content">
+              <h4>第二次沟通：细化用户场景 & 异常流程</h4>
+              <div class="timeline-details">
+                <p><strong>讨论要点：</strong></p>
+                <ul>
+                  <li><strong>学生端细化：</strong>用户可以按"小时/天/月"预约座位，支持类似"订电影票"的座位图，需要能查看预约记录，支持取消预约</li>
+                  <li><strong>机构端需求：</strong>后台需要实时看到当日座位利用率，希望能按日期导出预约报表</li>
+                  <li><strong>异常流程补充：</strong>库存冲突、支付失败、超时订单等异常情况的处理</li>
+                </ul>
+                <p class="timeline-note"><strong>结论：</strong>预约流程需包含正向（预约）+反向（取消）+异常处理三条主线。退款规则待进一步讨论。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">3</div>
+            <div class="timeline-content">
+              <h4>第三次沟通：退款规则 & 功能优先级对齐</h4>
+              <div class="timeline-details">
+                <p><strong>讨论要点：</strong></p>
+                <ul>
+                  <li><strong>退款规则明确：</strong>开场前1小时取消→全额退款，开场后取消→不退款，支持原路退回（微信/余额）</li>
+                  <li><strong>功能优先级划分：</strong>MVP必须（预约→支付→退款/取消→座位管理→报表导出），二期扩展（会员充值、积分兑换、优惠券）</li>
+                  <li><strong>产品走查：</strong>用原型图演示学生端流程，客户认可整体方案</li>
+                </ul>
+                <p class="timeline-note"><strong>最终确定：</strong>范围锁定在预约/取消/退款闭环，2个月内交付可上线的MVP小程序。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 技术方案 -->
+      <div class="story-section">
+        <h3 class="section-title">⚙️ 核心技术方案</h3>
+        <div class="tech-grid">
+          <div class="tech-item">
+            <div class="tech-icon">🔒</div>
+            <h4>双阶段锁</h4>
+            <p>先"预占锁"（30秒）防并发，支付成功后升级为"订单锁"（15分钟），解决并发抢座问题</p>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">💰</div>
+            <h4>以回调为准</h4>
+            <p>用户界面"支付成功"不作准，后端以微信回调为准并做幂等，保证收款准确</p>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">🔄</div>
+            <h4>幂等校验</h4>
+            <p>支付回调可能多次触发，用唯一key去重，防止重复扣费或生成订单</p>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">💾</div>
+            <h4>Redis + MySQL</h4>
+            <p>Redis负责快速读写座位状态，MySQL负责落订单账务，快与稳兼顾</p>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">🚪</div>
+            <h4>门禁/灯控解耦</h4>
+            <p>设备出问题还能兜底，允许人工代开+写审计日志，保证系统可用性</p>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">⏰</div>
+            <h4>定时任务/补偿</h4>
+            <p>系统自动自愈，超时未支付自动关单，退款失败走重试队列</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 项目成果 -->
+      <div class="story-section">
+        <h3 class="section-title">🎯 项目成果</h3>
+        <div class="results-summary">
+          <p>通过三轮沟通，我们从客户最初模糊的"做个自习室小程序"需求，逐步澄清出了核心用户场景、正/反向流程、异常处理逻辑、退款规则与功能优先级。这让整个项目可交付、可落地，也体现了我作为负责人在需求挖掘、方案设计和客户对齐上的价值。</p>
+          <div class="key-achievements">
+            <div class="achievement-item">
+              <span class="achievement-number">18% → 62%</span>
+              <span class="achievement-label">预约率提升</span>
+            </div>
+            <div class="achievement-item">
+              <span class="achievement-number">≈ 5%</span>
+              <span class="achievement-label">退款率</span>
+            </div>
+            <div class="achievement-item">
+              <span class="achievement-number">> 50%</span>
+              <span class="achievement-label">一周留存</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1263,26 +2116,151 @@ sequenceDiagram
     <!-- 总结 -->
     <section class="card" id="results">
       <div class="card-header">
-      <h2>结果与收获</h2>
+        <h2>结果与收获</h2>
         <div class="card-badge">项目成果</div>
-  </div>
-      <div class="results-grid">
-        <div class="result-item">
-          <div class="result-icon">🎯</div>
-          <h3>项目成果</h3>
-          <p>2–3个月落地MVP；闭环功能上线，指标达成（预约率/退款率/留存）。</p>
-        </div>
-        <div class="result-item">
-          <div class="result-icon">🔧</div>
-          <h3>技术突破</h3>
-          <p>将模糊需求拆解为可交付的"正向+反向+异常兜底"；产品与研发语言对齐。</p>
-        </div>
-        <div class="result-item">
-          <div class="result-icon">🚀</div>
-          <h3>持续优化</h3>
-          <p>以真实使用反馈驱动二期：上线"最近一次选择记忆"，专注低成本高体验。</p>
+      </div>
+      
+      <!-- 核心数据指标 -->
+      <div class="metrics-section">
+        <h3 class="metrics-title">📊 核心数据指标</h3>
+        <div class="metrics-grid">
+          <div class="metric-card primary">
+            <div class="metric-icon">📈</div>
+            <div class="metric-content">
+              <div class="metric-number">18% → 62%</div>
+              <div class="metric-label">预约率提升</div>
+              <div class="metric-desc">从传统线下预约到线上智能化预约</div>
+            </div>
+          </div>
+          <div class="metric-card success">
+            <div class="metric-icon">💰</div>
+            <div class="metric-content">
+              <div class="metric-number">≈ 5%</div>
+              <div class="metric-label">退款率控制</div>
+              <div class="metric-desc">合理的退款规则设计，用户满意度高</div>
+            </div>
+          </div>
+          <div class="metric-card info">
+            <div class="metric-icon">👥</div>
+            <div class="metric-content">
+              <div class="metric-number">> 50%</div>
+              <div class="metric-label">一周留存率</div>
+              <div class="metric-desc">用户粘性强，产品价值得到验证</div>
+            </div>
+          </div>
+          <div class="metric-card warning">
+            <div class="metric-icon">⏱️</div>
+            <div class="metric-content">
+              <div class="metric-number">2个月</div>
+              <div class="metric-label">交付周期</div>
+              <div class="metric-desc">从需求到上线，快速响应客户需求</div>
+            </div>
           </div>
         </div>
+      </div>
+
+      <!-- 项目成果 -->
+      <div class="achievements-section">
+        <h3 class="achievements-title">🏆 项目成果</h3>
+        <div class="achievements-grid">
+          <div class="achievement-card">
+            <div class="achievement-icon">🎯</div>
+            <h4>产品成功上线</h4>
+            <ul>
+              <li>MVP版本2个月内成功交付</li>
+              <li>完整预约-支付-取消-退款闭环</li>
+              <li>异常处理机制完善，系统稳定运行</li>
+              <li>客户满意度高，获得续约机会</li>
+            </ul>
+          </div>
+          <div class="achievement-card">
+            <div class="achievement-icon">🔧</div>
+            <h4>技术能力提升</h4>
+            <ul>
+              <li>掌握产品需求分析方法论</li>
+              <li>学会与研发团队高效协作</li>
+              <li>理解技术实现原理和约束</li>
+              <li>建立异常处理思维模式</li>
+            </ul>
+          </div>
+          <div class="achievement-card">
+            <div class="achievement-icon">💡</div>
+            <h4>产品思维建立</h4>
+            <ul>
+              <li>从模糊需求到清晰方案的转化能力</li>
+              <li>用户体验与商业价值的平衡</li>
+              <li>数据驱动的产品优化思路</li>
+              <li>低成本高体验的功能设计理念</li>
+            </ul>
+          </div>
+          <div class="achievement-card">
+            <div class="achievement-icon">🤝</div>
+            <h4>团队协作经验</h4>
+            <ul>
+              <li>跨部门沟通协调能力</li>
+              <li>客户需求澄清和方案对齐</li>
+              <li>项目进度管理和风险控制</li>
+              <li>测试验收和问题解决</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 个人成长 -->
+      <div class="growth-section">
+        <h3 class="growth-title">🌱 个人成长收获</h3>
+        <div class="growth-content">
+          <div class="growth-item">
+            <div class="growth-icon">📚</div>
+            <div class="growth-text">
+              <h4>从0到1的产品经理</h4>
+              <p>作为非技术背景的创业者，通过这个项目快速掌握了产品经理的核心技能：需求分析、原型设计、流程梳理、团队协作。从"完全不懂"到"能讲清楚"，实现了质的飞跃。</p>
+            </div>
+          </div>
+          <div class="growth-item">
+            <div class="growth-icon">🎨</div>
+            <div class="growth-text">
+              <h4>用户体验设计思维</h4>
+              <p>学会了站在用户角度思考问题，设计出"最近一次选择记忆"这样的低成本高体验功能。理解了什么是真正的用户价值，以及如何平衡功能复杂度和用户体验。</p>
+            </div>
+          </div>
+          <div class="growth-item">
+            <div class="growth-icon">⚡</div>
+            <div class="growth-text">
+              <h4>快速学习能力</h4>
+              <p>在项目过程中快速学习了Redis、MySQL、支付系统、异常处理等技术概念，虽然不直接编程，但能够理解技术实现逻辑，与研发团队进行有效沟通。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 后续规划 -->
+      <div class="future-section">
+        <h3 class="future-title">🚀 后续规划与展望</h3>
+        <div class="future-content">
+          <div class="future-item">
+            <div class="future-icon">📱</div>
+            <div class="future-text">
+              <h4>产品迭代优化</h4>
+              <p>基于用户反馈持续优化产品体验，计划增加智能推荐、会员体系、数据分析等高级功能，打造更完善的自习室管理生态。</p>
+            </div>
+          </div>
+          <div class="future-item">
+            <div class="future-icon">🌐</div>
+            <div class="future-text">
+              <h4>业务模式拓展</h4>
+              <p>将成功经验复制到其他教育场景，如会议室预约、实验室管理、图书馆座位等，形成标准化的SaaS解决方案。</p>
+            </div>
+          </div>
+          <div class="future-item">
+            <div class="future-icon">👥</div>
+            <div class="future-text">
+              <h4>团队能力建设</h4>
+              <p>建立更完善的产品开发流程，培养更多优秀的产品经理和技术人才，打造专业的教育科技服务团队。</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer>
