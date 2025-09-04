@@ -543,14 +543,13 @@ date: 2022-04-31
   
   /* Gallery - 小红书风格瀑布流 */
   .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    column-count: 3;
+    column-gap: 20px;
     margin-top: 20px;
   }
   
   .gallery figure {
-    margin: 0;
+    margin: 0 0 20px 0;
     border: 1px solid var(--border);
     background: var(--card);
     border-radius: 16px;
@@ -559,6 +558,8 @@ date: 2022-04-31
     position: relative;
     break-inside: avoid;
     page-break-inside: avoid;
+    display: inline-block;
+    width: 100%;
   }
   
   .gallery figure:hover {
@@ -570,11 +571,10 @@ date: 2022-04-31
     display: block;
     width: 100%;
     height: auto;
-    min-height: 200px;
-    max-height: 400px;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
     transition: transform 0.3s ease;
+    background: #f8fafc;
   }
   
   .gallery figure:hover img {
@@ -588,20 +588,36 @@ date: 2022-04-31
     border-top: 1px solid var(--border);
     font-weight: 500;
     line-height: 1.4;
+    background: var(--card);
   }
   
   /* 响应式调整 */
+  @media (max-width: 1024px) {
+    .gallery {
+      column-count: 2;
+      column-gap: 16px;
+    }
+  }
+  
   @media (max-width: 768px) {
     .gallery {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 16px;
+      column-count: 2;
+      column-gap: 16px;
+    }
+    
+    .gallery figure {
+      margin-bottom: 16px;
     }
   }
   
   @media (max-width: 480px) {
     .gallery {
-      grid-template-columns: 1fr;
-      gap: 12px;
+      column-count: 1;
+      column-gap: 12px;
+    }
+    
+    .gallery figure {
+      margin-bottom: 12px;
     }
   }
   
