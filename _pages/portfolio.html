@@ -5,13 +5,6 @@ permalink: /portfolio/
 author_profile: true
 ---
 
-<!-- 语言切换按钮 - 移到页面内容内部 -->
-<div class="language-switcher-container">
-    <div class="language-switcher" id="language-switcher">
-        <button class="lang-btn active" data-lang="en" id="btn-en">EN</button>
-        <button class="lang-btn" data-lang="zh" id="btn-zh">中文</button>
-    </div>
-</div>
 
 <style>
 /* 全局样式重置和基础设置 */
@@ -96,89 +89,9 @@ body {
 .delay-5 { animation-delay: 0.5s; }
 .delay-6 { animation-delay: 0.6s; }
 
-/* 语言切换按钮容器 */
-.language-switcher-container {
-    position: relative;
-    width: 100%;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: flex-end;
-    padding: 0 20px;
-}
-
-/* 语言切换按钮样式 */
-.language-switcher {
-    position: relative;
-    display: inline-flex;
-    gap: 5px;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-radius: 25px;
-    padding: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    z-index: 100;
-}
-
-.language-switcher:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-}
-
-.lang-btn {
-    padding: 8px 16px;
-    border: none;
-    background: transparent;
-    color: #666;
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    min-width: 40px;
-    text-align: center;
-    user-select: none;
-}
-
-.lang-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-    transition: left 0.5s;
-}
-
-.lang-btn:hover::before {
-    left: 100%;
-}
-
-.lang-btn.active {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-}
-
-.lang-btn:hover {
-    color: #333;
-    transform: scale(1.05);
-}
-
-.lang-btn.active:hover {
-    color: white;
-}
-
-/* 隐藏/显示内容 */
+/* 隐藏/显示内容 - 默认显示英文 */
 .lang-zh { display: none; }
 .lang-en { display: block; }
-
-.language-zh .lang-zh { display: block; }
-.language-zh .lang-en { display: none; }
 
 /* 主标题样式 */
 .page-title {
@@ -263,24 +176,17 @@ body {
     }
 </style>
 
-<h1 class="page-title fade-in-up">
-    <span class="lang-en">LIFE EXPERIENCES</span>
-    <span class="lang-zh">人生经历</span>
-</h1>
+<h1 class="page-title fade-in-up">LIFE EXPERIENCES</h1>
 
 <div class="justify-text fade-in-up delay-1">
-    <p class="lang-en">From exploring the corners of the world to embarking on a journey of personal growth, 
+    <p>From exploring the corners of the world to embarking on a journey of personal growth, 
         my "Life Experiences" are a tapestry of vibrant stories. Here, I share valuable lessons learned 
         from diverse cultures and the adventures that have shaped who I am today. Whether it's trekking 
         through remote hiking trails or urban explorations, each experience has added rich hues to the 
         canvas of my life. Join me in uncovering these tales and savoring the insights and joys that life brings.</p>
-    <p class="lang-zh">从探索世界的各个角落到踏上个人成长的旅程，我的"人生经历"是一幅充满活力的故事画卷。在这里，我分享从不同文化中学到的宝贵经验，以及塑造了今天的我的各种冒险。无论是穿越偏远徒步小径还是城市探索，每一次经历都为我的生活画布增添了丰富的色彩。和我一起发现这些故事，品味生活带来的洞察和欢乐。</p>
 </div>
 
-<h2 class="section-title fade-in-scale delay-2">
-    <span class="lang-en">VARIOUS LIFE</span>
-    <span class="lang-zh">多彩生活</span>
-</h2>
+<h2 class="section-title fade-in-scale delay-2">VARIOUS LIFE</h2>
 
 <style>
 /* 卡片容器样式 */
@@ -520,23 +426,6 @@ body {
 }
 
 /* 响应式设计 */
-@media (max-width: 768px) {
-    .language-switcher-container {
-        padding: 0 15px;
-        margin-bottom: 15px;
-    }
-    
-    .language-switcher {
-        padding: 6px;
-    }
-    
-    .lang-btn {
-        padding: 6px 12px;
-        font-size: 13px;
-        min-width: 35px;
-    }
-}
-
 @media (max-width: 480px) {
     .page-title {
         font-size: 2rem;
@@ -550,16 +439,6 @@ body {
     .block h3 {
         font-size: 1.2rem;
     }
-    
-    .language-switcher-container {
-        padding: 0 10px;
-    }
-    
-    .lang-btn {
-        padding: 5px 10px;
-        font-size: 12px;
-        min-width: 30px;
-    }
 }
 </style>
 
@@ -570,14 +449,8 @@ body {
   <!-- New blocks -->
   <div class="block blue fade-in-up delay-3">
     <a href="../portfolio/portfolio-1/">
-      <h3>
-        <span class="lang-en">100M Running</span>
-        <span class="lang-zh">百米短跑</span>
-      </h3>
-      <p>
-        <span class="lang-en">Experience the thrill and adrenaline of short-distance sprinting, showcasing speed and agility on the track.</span>
-        <span class="lang-zh">体验短距离冲刺的刺激和肾上腺素飙升，在赛道上展现速度与敏捷。</span>
-      </p>
+      <h3>100M Running</h3>
+      <p>Experience the thrill and adrenaline of short-distance sprinting, showcasing speed and agility on the track.</p>
       <div class="image-container">
           <img src="../images/IMG_1872.JPG" alt="100M Running">
       </div>
@@ -587,14 +460,8 @@ body {
   <!-- ... -->
   <div class="block red fade-in-up delay-4">
     <a href="../portfolio/portfolio-2/">
-      <h3>
-        <span class="lang-en">Cycling</span>
-        <span class="lang-zh">骑行</span>
-      </h3>
-      <p>
-        <span class="lang-en">Embrace the freedom and joy of cycling, a perfect blend of physical exercise and exploration of scenic routes.</span>
-        <span class="lang-zh">拥抱骑行的自由与快乐，这是体育锻炼与风景路线探索的完美结合。</span>
-      </p>
+      <h3>Cycling</h3>
+      <p>Embrace the freedom and joy of cycling, a perfect blend of physical exercise and exploration of scenic routes.</p>
       <div class="image-container">
           <img src="../images/IMG_1878.JPG" alt="Cycling">
       </div>
@@ -602,14 +469,8 @@ body {
   </div>
   <div class="block orange fade-in-up delay-5">
     <a href="../portfolio/portfolio-3/">
-      <h3>
-        <span class="lang-en">Skiing</span>
-        <span class="lang-zh">滑雪</span>
-      </h3>
-      <p>
-        <span class="lang-en">Glide through snowy landscapes, where the exhilaration of skiing combines with the beauty of winter.</span>
-        <span class="lang-zh">在雪景中滑行，滑雪的兴奋与冬季美景完美融合。</span>
-      </p>
+      <h3>Skiing</h3>
+      <p>Glide through snowy landscapes, where the exhilaration of skiing combines with the beauty of winter.</p>
       <div class="image-container">
           <img src="../images/IMG_1875.JPG" alt="Skiing">
       </div>
@@ -617,14 +478,8 @@ body {
   </div>
   <div class="block teal fade-in-up delay-6">
     <a href="../portfolio/portfolio-4/">
-      <h3>
-        <span class="lang-en">Golf</span>
-        <span class="lang-zh">高尔夫</span>
-      </h3>
-      <p>
-        <span class="lang-en">Enjoy the calm and precision of golf, a sport that tests skill and strategy amidst serene green courses.</span>
-        <span class="lang-zh">享受高尔夫的宁静与精准，这项运动在宁静的绿色球场上考验技巧与策略。</span>
-      </p>
+      <h3>Golf</h3>
+      <p>Enjoy the calm and precision of golf, a sport that tests skill and strategy amidst serene green courses.</p>
       <div class="image-container">
           <img src="../images/IMG_1872.JPG" alt="Golf">
       </div>
@@ -632,14 +487,8 @@ body {
   </div>
   <div class="block pink slide-in-left delay-1">
     <a href="../portfolio/portfolio-5/">
-      <h3>
-        <span class="lang-en">Horse Riding</span>
-        <span class="lang-zh">马术</span>
-      </h3>
-      <p>
-        <span class="lang-en">Connect with nature and experience the elegant art of horse riding, offering a unique blend of adventure and companionship.</span>
-        <span class="lang-zh">与自然连接，体验马术的优雅艺术，提供冒险与陪伴的独特结合。</span>
-      </p>
+      <h3>Horse Riding</h3>
+      <p>Connect with nature and experience the elegant art of horse riding, offering a unique blend of adventure and companionship.</p>
       <div class="image-container">
           <img src="../images/IMG_1872.JPG" alt="Horse Riding">
       </div>
@@ -647,14 +496,8 @@ body {
   </div>
   <div class="block indigo slide-in-right delay-2">
     <a href="../portfolio/portfolio-6/">
-      <h3>
-        <span class="lang-en">Movie List</span>
-        <span class="lang-zh">电影清单</span>
-      </h3>
-      <p>
-        <span class="lang-en">Dive into a curated selection of films, spanning genres and eras, reflecting a journey through the magic of cinema.</span>
-        <span class="lang-zh">深入精选的电影选集，跨越类型和时代，反映穿越电影魔法的旅程。</span>
-      </p>
+      <h3>Movie List</h3>
+      <p>Dive into a curated selection of films, spanning genres and eras, reflecting a journey through the magic of cinema.</p>
       <div class="image-container">
           <img src="../images/IMG_1872.JPG" alt="Movie List">
       </div>
@@ -662,14 +505,8 @@ body {
   </div>
   <div class="block purple slide-in-left delay-3">
     <a href="../portfolio/portfolio-7/">
-      <h3>
-        <span class="lang-en">Music List</span>
-        <span class="lang-zh">音乐清单</span>
-      </h3>
-      <p>
-        <span class="lang-en">Explore a diverse playlist of melodies and rhythms that resonate with life's various moods and moments.</span>
-        <span class="lang-zh">探索多样化的旋律和节奏播放列表，与生活的各种情绪和时刻产生共鸣。</span>
-      </p>
+      <h3>Music List</h3>
+      <p>Explore a diverse playlist of melodies and rhythms that resonate with life's various moods and moments.</p>
       <div class="image-container">
           <img src="../images/IMG_1872.JPG" alt="Music List">
       </div>
@@ -677,14 +514,8 @@ body {
   </div>
   <div class="block cyan slide-in-right delay-4">
     <a href="../portfolio/portfolio-8/">
-      <h3>
-        <span class="lang-en">Singing</span>
-        <span class="lang-zh">歌唱</span>
-      </h3>
-      <p>
-        <span class="lang-en">Discover the joy of vocal expression through singing, a wonderful way to celebrate art and emotion.</span>
-        <span class="lang-zh">通过歌唱发现声音表达的快乐，这是庆祝艺术和情感的美妙方式。</span>
-      </p>
+      <h3>Singing</h3>
+      <p>Discover the joy of vocal expression through singing, a wonderful way to celebrate art and emotion.</p>
       <div class="image-container">
           <img src="../images/IMG_1872.JPG" alt="Singing">
       </div>
@@ -692,14 +523,8 @@ body {
   </div>
   <div class="block gray slide-in-left delay-5">
     <a href="../portfolio/portfolio-9/">
-      <h3>
-        <span class="lang-en">Travelling</span>
-        <span class="lang-zh">旅行</span>
-      </h3>
-      <p>
-        <span class="lang-en">Embark on journeys to new destinations, embracing different cultures, landscapes, and experiences that broaden horizons.</span>
-        <span class="lang-zh">踏上前往新目的地的旅程，拥抱不同的文化、风景和拓宽视野的体验。</span>
-      </p>
+      <h3>Travelling</h3>
+      <p>Embark on journeys to new destinations, embracing different cultures, landscapes, and experiences that broaden horizons.</p>
       <div class="image-container">
           <img src="../images/IMG_1872.JPG" alt="Travelling">
       </div>
@@ -707,14 +532,8 @@ body {
   </div>
   <div class="block dark fade-in-scale delay-6">
     <a href="../portfolio/portfolio-10/">
-      <h3>
-        <span class="lang-en">Others</span>
-        <span class="lang-zh">其他</span>
-      </h3>
-      <p>
-        <span class="lang-en">Stay tuned.</span>
-        <span class="lang-zh">敬请期待。</span>
-      </p>
+      <h3>Others</h3>
+      <p>Stay tuned.</p>
     </a>
   </div>
   <!-- Add more blocks as needed -->
@@ -723,14 +542,10 @@ body {
 
 
 
-<h2 class="section-title fade-in-scale delay-1">
-    <span class="lang-en">SOCIAL MEDIA ACCOUNTS</span>
-    <span class="lang-zh">社交媒体账号</span>
-</h2>
+<h2 class="section-title fade-in-scale delay-1">SOCIAL MEDIA ACCOUNTS</h2>
 <div class="justify-text fade-in-up delay-2">
-    <p class="lang-en">"For a closer look into my daily life and to stay updated with my latest adventures, 
+    <p>"For a closer look into my daily life and to stay updated with my latest adventures, 
         feel free to follow my social media accounts. I'm excited to share more of my journey with you!"</p>
-    <p class="lang-zh">"想要更深入了解我的日常生活并了解我的最新冒险，欢迎关注我的社交媒体账号。我很兴奋能与您分享更多我的旅程！"</p>
 </div>
 
     <style>
@@ -863,90 +678,57 @@ body {
         <!-- 二维码项 -->
         <div class="qr-code-item fade-in-scale delay-1">
             <img src="../images/IMG_1903.jpg" alt="Social Media 1">
-            <p>
-                <span class="lang-en"><a href="https://m.weibo.cn/u/5217974261?featurecode=profile_qrcode&uid=5217974261&t=userinfo" target="_blank"><strong>Weibo</strong></a></span>
-                <span class="lang-zh"><a href="https://m.weibo.cn/u/5217974261?featurecode=profile_qrcode&uid=5217974261&t=userinfo" target="_blank"><strong>微博</strong></a></span>
-            </p>
+            <p><a href="https://m.weibo.cn/u/5217974261?featurecode=profile_qrcode&uid=5217974261&t=userinfo" target="_blank"><strong>Weibo</strong></a></p>
         </div>
         <!-- 重复以上代码块添加更多二维码项 -->
         <div class="qr-code-item fade-in-scale delay-2">
             <img src="../images/IMG_1906.jpg" alt="Social Media 2">
-            <p>
-                <span class="lang-en"><a href="https://www.xiaohongshu.com/user/profile/5f16b885000000000101d720" target="_blank"><strong>Xiaohongshu</strong></a></span>
-                <span class="lang-zh"><a href="https://www.xiaohongshu.com/user/profile/5f16b885000000000101d720" target="_blank"><strong>小红书</strong></a></span>
-            </p>
+            <p><a href="https://www.xiaohongshu.com/user/profile/5f16b885000000000101d720" target="_blank"><strong>Xiaohongshu</strong></a></p>
         </div>
         <!-- 重复以上代码块添加更多二维码项 -->
         <div class="qr-code-item fade-in-scale delay-3">
             <img src="../images/IMG_1912.JPG" alt="Social Media 3">
-            <p>
-                <span class="lang-en"><a href="https://m.bilibili.com/space/509306465" target="_blank"><strong>bilibili</strong></a></span>
-                <span class="lang-zh"><a href="https://m.bilibili.com/space/509306465" target="_blank"><strong>哔哩哔哩</strong></a></span>
-            </p>
+            <p><a href="https://m.bilibili.com/space/509306465" target="_blank"><strong>bilibili</strong></a></p>
         </div>
         <!-- 重复以上代码块添加更多二维码项 -->
         <div class="qr-code-item fade-in-scale delay-4">
             <img src="../images/IMG_1911.JPG" alt="Social Media 4">
-            <p>
-                <span class="lang-en"><a href="https://www.zhihu.com/people/smile-38-92-38?utm_id=0" target="_blank"><strong>zhihu</strong></a></span>
-                <span class="lang-zh"><a href="https://www.zhihu.com/people/smile-38-92-38?utm_id=0" target="_blank"><strong>知乎</strong></a></span>
-            </p>
+            <p><a href="https://www.zhihu.com/people/smile-38-92-38?utm_id=0" target="_blank"><strong>zhihu</strong></a></p>
         </div>
         <!-- 重复以上代码块添加更多二维码项 -->
         <div class="qr-code-item fade-in-scale delay-5">
             <img src="../images/IMG_1913.JPG" alt="Social Media 5">
-            <p>
-                <span class="lang-en"><strong>Tiktok</strong></span>
-                <span class="lang-zh"><strong>抖音</strong></span>
-            </p>
+            <p><strong>Tiktok</strong></p>
         </div>
         <!-- 重复以上代码块添加更多二维码项 -->
         <div class="qr-code-item fade-in-scale delay-6">
             <img src="../images/IMG_1915.JPG" alt="Social Media 6">
-            <p>
-                <span class="lang-en"><a href="https://twitter.com/Kantrums" target="_blank"><strong>Twitter</strong></a></span>
-                <span class="lang-zh"><a href="https://twitter.com/Kantrums" target="_blank"><strong>推特</strong></a></span>
-            </p>
+            <p><a href="https://twitter.com/Kantrums" target="_blank"><strong>Twitter</strong></a></p>
         </div>
         <!-- 重复以上代码块添加更多二维码项 -->
         <div class="qr-code-item fade-in-scale delay-1">
             <img src="../images/IMG_1914.JPG" alt="Social Media 7">
-            <p>
-                <span class="lang-en"><a href="https://www.instagram.com/kantrums/?igsh=YzAwZjE1ZTI0Zg%3D%3D" target="_blank"><strong>Instagram</strong></a></span>
-                <span class="lang-zh"><a href="https://www.instagram.com/kantrums/?igsh=YzAwZjE1ZTI0Zg%3D%3D" target="_blank"><strong>Instagram</strong></a></span>
-            </p>
+            <p><a href="https://www.instagram.com/kantrums/?igsh=YzAwZjE1ZTI0Zg%3D%3D" target="_blank"><strong>Instagram</strong></a></p>
         </div>
         <!-- 重复以上代码块添加更多二维码项 -->
         <div class="qr-code-item fade-in-scale delay-2">
             <img src="../images/IMG_1903.jpg" alt="Social Media 8">
-            <p>
-                <span class="lang-en"><a href="https://www.facebook.com/profile.php?id=100074729113799&mibextid=LQQJ4d" target="_blank"><strong>Facebook</strong></a></span>
-                <span class="lang-zh"><a href="https://www.facebook.com/profile.php?id=100074729113799&mibextid=LQQJ4d" target="_blank"><strong>脸书</strong></a></span>
-            </p>
+            <p><a href="https://www.facebook.com/profile.php?id=100074729113799&mibextid=LQQJ4d" target="_blank"><strong>Facebook</strong></a></p>
         </div>
         <!-- 重复以上代码块添加更多二维码项 -->
         <div class="qr-code-item fade-in-scale delay-3">
             <img src="../images/IMG_1918.JPG" alt="Social Media 9">
-            <p>
-                <span class="lang-en"><a href="https://t.me/Kantrum" target="_blank"><strong>Telegram</strong></a></span>
-                <span class="lang-zh"><a href="https://t.me/Kantrum" target="_blank"><strong>Telegram</strong></a></span>
-            </p>
+            <p><a href="https://t.me/Kantrum" target="_blank"><strong>Telegram</strong></a></p>
         </div>
         <!-- 重复以上代码块添加更多二维码项 -->
         <div class="qr-code-item fade-in-scale delay-4">
             <img src="../images/IMG_1903.jpg" alt="Social Media 10">
-            <p>
-                <span class="lang-en"><strong>Messenger</strong></span>
-                <span class="lang-zh"><strong>Messenger</strong></span>
-            </p>
+            <p><strong>Messenger</strong></p>
         </div>
         <!-- 重复以上代码块添加更多二维码项 -->
         <div class="qr-code-item fade-in-scale delay-5">
             <img src="../images/IMG_1916.JPG" alt="Social Media 11">
-            <p>
-                <span class="lang-en"><a href="https://api.whatsapp.com/qr/GLB2VTAQMQ3AP1?autoload=1&app_absent=0" target="_blank"><strong>WhatsApp</strong></a></span>
-                <span class="lang-zh"><a href="https://api.whatsapp.com/qr/GLB2VTAQMQ3AP1?autoload=1&app_absent=0" target="_blank"><strong>WhatsApp</strong></a></span>
-            </p>
+            <p><a href="https://api.whatsapp.com/qr/GLB2VTAQMQ3AP1?autoload=1&app_absent=0" target="_blank"><strong>WhatsApp</strong></a></p>
         </div>
         <!-- 重复以上代码块添加更多二维码项 -->
         
@@ -955,51 +737,6 @@ body {
 <script>
 // 页面加载完成后执行
 document.addEventListener('DOMContentLoaded', function() {
-    // 语言切换功能
-    const langButtons = document.querySelectorAll('.lang-btn');
-    const body = document.body;
-    
-    // 从localStorage获取保存的语言设置，默认为英文
-    const savedLang = localStorage.getItem('language') || 'en';
-    
-    // 设置初始语言
-    function setLanguage(lang) {
-        if (lang === 'zh') {
-            body.classList.add('language-zh');
-            body.classList.remove('language-en');
-        } else {
-            body.classList.add('language-en');
-            body.classList.remove('language-zh');
-        }
-        
-        // 更新按钮状态
-        langButtons.forEach(btn => {
-            btn.classList.remove('active');
-            if (btn.dataset.lang === lang) {
-                btn.classList.add('active');
-            }
-        });
-        
-        // 保存语言设置
-        localStorage.setItem('language', lang);
-    }
-    
-    // 初始化语言
-    setLanguage(savedLang);
-    
-    // 语言切换事件监听
-    langButtons.forEach(btn => {
-        btn.addEventListener('click', function() {
-            const lang = this.dataset.lang;
-            setLanguage(lang);
-            
-            // 添加切换动画效果
-            body.style.opacity = '0.8';
-            setTimeout(() => {
-                body.style.opacity = '1';
-            }, 200);
-        });
-    });
     
     // 为所有动画元素添加初始状态
     const animatedElements = document.querySelectorAll('.fade-in-up, .fade-in-scale, .slide-in-left, .slide-in-right');
