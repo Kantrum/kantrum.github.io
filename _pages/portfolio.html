@@ -11,6 +11,11 @@ author_profile: true
     <button class="lang-btn" data-lang="zh" id="btn-zh">中文</button>
 </div>
 
+<!-- 调试按钮 -->
+<div style="position: fixed; top: 120px; right: 30px; z-index: 10000; background: red; color: white; padding: 10px; cursor: pointer;" onclick="testLanguageSwitch()">
+    测试切换
+</div>
+
 <style>
 /* 全局样式重置和基础设置 */
 * {
@@ -96,11 +101,11 @@ body {
 
 /* 语言切换按钮样式 */
 .language-switcher {
-    position: fixed;
-    top: 80px; /* 调整到导航栏下方 */
-    right: 30px;
-    z-index: 9999; /* 提高z-index确保在最上层 */
-    display: flex;
+    position: fixed !important;
+    top: 80px !important; /* 调整到导航栏下方 */
+    right: 30px !important;
+    z-index: 9999 !important; /* 提高z-index确保在最上层 */
+    display: flex !important;
     gap: 5px;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
