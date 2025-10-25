@@ -38,14 +38,14 @@ body {
     --border-color: #E9ECEF;
     --gradient-start: #f8f9fa;
     --gradient-end: #e9ecef;
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 2rem;
-    --spacing-lg: 4rem;
-    --spacing-xl: 6rem;
-    --border-radius-sm: 8px;
-    --border-radius-md: 15px;
-    --border-radius-lg: 30px;
+    --spacing-xs: 0.3rem;
+    --spacing-sm: 0.8rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2.5rem;
+    --spacing-xl: 3.5rem;
+    --border-radius-sm: 6px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 20px;
 }
 
 body {
@@ -125,20 +125,44 @@ body {
 
 /* 英雄区域样式 */
 .hero-section {
-    padding: 5rem 0 2rem 0;
-    background: none;
+    padding: 3rem 0 1.5rem 0;
+    background: linear-gradient(135deg, 
+        var(--gradient-start) 0%, 
+        var(--gradient-end) 100%
+    );
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        circle at top right,
+        rgba(231, 76, 60, 0.08),
+        transparent 70%
+    );
 }
 
 .hero-content {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 var(--spacing-sm);
 }
 
 .profile-card {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: var(--spacing-lg);
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
 }
 
 .profile-image-container {
@@ -148,24 +172,45 @@ body {
     z-index: 1;
 }
 
+.profile-image-container img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.profile-image-container img:hover {
+    transform: scale(1.05);
+}
+
 .social-links {
-    margin-top: 1rem;
+    margin-top: var(--spacing-sm);
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: var(--spacing-sm);
 }
 
 .social-icon {
-    color: #333;
-    font-size: 1.2rem;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    font-size: 1rem;
     text-decoration: none;
-    padding: 0.5rem;
-    transition: color 0.3s ease;
     cursor: pointer;
 }
 
 .social-icon:hover {
-    color: #666;
+    background: var(--secondary-color);
+    color: white;
+    transform: translateY(-2px);
 }
 
 .profile-info {
@@ -173,12 +218,18 @@ body {
 }
 
 .profile-info h1 {
-    margin-bottom: 0.5rem;
+    font-size: 2.2rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-color);
+    font-weight: 600;
 }
 
 .bio {
-    color: #666;
+    font-size: 1.1rem;
     line-height: 1.6;
+    color: #666;
+    margin: 0;
+    max-width: 90%;
 }
 
 /* 技能矩阵样式 */
@@ -563,34 +614,36 @@ footer {
 
 /* 优化主要内容区域 */
 main {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: var(--spacing-md) var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    box-sizing: border-box;
+    margin-top: 60px;
 }
 
 /* 优化section间距 */
 section {
-    margin-bottom: var(--spacing-xl);
-    padding: var(--spacing-lg) 0;
+    margin-bottom: var(--spacing-md);
+    padding: var(--spacing-sm) 0;
 }
 
 /* 优化section标题样式 */
 .section-header {
     text-align: center;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
 }
 
 .section-subtitle {
-    font-size: 0.9rem;
-    letter-spacing: 3px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
     color: var(--secondary-color);
     margin-bottom: var(--spacing-xs);
     display: block;
 }
 
 .section-header h2 {
-    font-size: 2.5rem;
-    margin: var(--spacing-xs) 0 var(--spacing-md);
+    font-size: 2rem;
+    margin: var(--spacing-xs) 0 var(--spacing-sm);
     position: relative;
 }
 
@@ -644,8 +697,12 @@ section {
 @media (max-width: 768px) {
     :root {
         /* 移动端减间 */
-        --spacing-lg: 3rem;
-        --spacing-xl: 4rem;
+        --spacing-lg: 1.5rem;
+        --spacing-xl: 2rem;
+    }
+    
+    main {
+        padding: var(--spacing-sm) var(--spacing-md);
     }
 
     .section-header h2 {
@@ -705,8 +762,10 @@ section {
 }
 
 .personal-info-section {
-    padding: 4rem 2rem;
-    background-color: #f8f9fa;
+    padding: var(--spacing-lg) 0;
+    background: var(--light-gray);
+    border-radius: var(--border-radius-md);
+    margin: var(--spacing-md) 0;
 }
 
 .info-grid {
@@ -716,13 +775,26 @@ section {
 
 .info-card {
     background: white;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
 }
 
 .info-group {
-    margin-bottom: 2rem;
+    margin-bottom: var(--spacing-md);
 }
 
 .info-group:last-child {
@@ -777,12 +849,19 @@ section {
 }
 
 .info-row {
-    padding: 2rem;
-    background: white;
-    margin-bottom: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
-    border: 1px solid var(--border-color);
+    padding: var(--spacing-md);
+    background: rgba(248, 249, 250, 0.5);
+    margin-bottom: var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(233, 236, 239, 0.6);
+    transition: all 0.3s ease;
+}
+
+.info-row:hover {
+    background: rgba(248, 249, 250, 0.8);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
 }
 
 .info-row:last-child {
@@ -791,11 +870,13 @@ section {
 
 .info-group h3 {
     color: var(--secondary-color);
-    font-size: 1.4rem;
-    margin-bottom: 1.5rem;
-    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-md);
+    font-weight: 700;
     position: relative;
-    padding-left: 1rem;
+    padding-left: var(--spacing-md);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .info-group h3::before {
@@ -804,20 +885,78 @@ section {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 4px;
-    height: 70%;
-    background: var(--secondary-color);
-    border-radius: 2px;
+    width: 5px;
+    height: 80%;
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    border-radius: 3px;
+    box-shadow: 0 2px 8px rgba(231, 76, 60, 0.3);
 }
 
-.personal-details-grid {
-    padding: 0.5rem 1rem;
+.personal-details-grid,
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+    align-items: start;
 }
 
-.email-container .email-links {
+.email-container {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.email-links {
     display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: center;
+    width: 100%;
+    margin-top: 0.2rem;
+}
+
+.email-links a {
+    background: white;
+    border-radius: var(--border-radius-sm);
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.4rem 0.6rem;
+    text-align: center;
+    word-break: break-all;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    width: 100%;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.email-links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(231, 76, 60, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.email-links a:hover::before {
+    left: 100%;
+}
+
+.email-links a:hover {
+    background: var(--secondary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
 }
 
 .info-label {
@@ -998,6 +1137,32 @@ section {
     z-index: -1;
 }
 
+/* 语言切换按钮样式 */
+.language-toggle {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 1rem;
+    min-width: 60px;
+}
+
+.language-toggle:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.lang-text {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
 /* 添加汉堡菜单按钮样式 */
 .menu-toggle {
     display: none;
@@ -1088,30 +1253,68 @@ section {
     padding: 0.5rem;
 }
 
-.detail-item {
-    background: #f8f9fa;
-    padding: 1.2rem;
-    border-radius: 8px;
-    transition: all 0.2s ease;
-    border: 1px solid transparent;
+.detail-item,
+.contact-grid > * {
+    background: white;
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-sm);
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    position: relative;
+    overflow: hidden;
 }
 
-.detail-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    border-color: #e9ecef;
+.detail-item::before,
+.contact-grid > *::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
-.detail-label {
-    color: #6c757d;
+.detail-item:hover::before,
+.contact-grid > *:hover::before {
+    transform: scaleX(1);
+}
+
+.detail-item:hover,
+.contact-grid > *:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border-color: var(--secondary-color);
+}
+
+.detail-label,
+.info-label {
     font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
+    color: #666;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.detail-value {
-    font-size: 1.1rem;
-    color: #212529;
+.detail-value,
+.contact-grid a,
+.contact-grid p,
+.contact-grid span {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 700;
+    word-break: break-word;
+    line-height: 1.3;
 }
 
 .chinese-name {
@@ -1314,9 +1517,7 @@ section {
     border-radius: 4px;
 }
 
-.modal .photo-grid img {
-    /* 仅影响模态框内的图片 */
-}
+/* 模态框内的图片样式已在上面定义 */
 
 body.no-scroll {
     overflow: hidden;
@@ -1400,10 +1601,211 @@ body.no-scroll {
 .activities-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    padding: 1.5rem 0;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) 0;
     width: 100%;
     box-sizing: border-box;
+}
+
+/* 优化Awards & Achievements部分 - 居中显示 */
+.honors-section {
+    text-align: center;
+}
+
+.honors-timeline {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-sm) 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+}
+
+.honor-category {
+    margin-bottom: var(--spacing-lg);
+    background: white;
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-md);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+}
+
+.category-title {
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-md);
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--secondary-color);
+    position: relative;
+}
+
+.honor-item {
+    display: flex;
+    margin-bottom: var(--spacing-md);
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--spacing-sm);
+    background: var(--light-gray);
+    border-radius: var(--border-radius-sm);
+    transition: all 0.3s ease;
+}
+
+.honor-item:hover {
+    background: rgba(231, 76, 60, 0.05);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.honor-date {
+    min-width: 80px;
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-size: 0.85rem;
+    text-align: left;
+    margin-right: var(--spacing-sm);
+    flex-shrink: 0;
+}
+
+.honor-content {
+    flex: 1;
+    text-align: left;
+    padding-left: var(--spacing-sm);
+}
+
+.honor-content h3 {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    color: var(--text-color);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.honor-content p {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0.2rem;
+    line-height: 1.4;
+}
+
+.honor-type {
+    font-size: 0.75rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+    background: rgba(231, 76, 60, 0.1);
+    padding: 0.15rem 0.4rem;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 0.2rem;
+}
+
+/* 优化What's Next部分 - 居中显示 */
+.schedule-section {
+    text-align: center;
+}
+
+.calendar-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: var(--spacing-sm) 0;
+}
+
+.calendar-wrapper {
+    background: white;
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    margin-bottom: var(--spacing-md);
+    position: relative;
+}
+
+.calendar-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+}
+
+.calendar-wrapper iframe {
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    height: 600px;
+    display: block;
+}
+
+.calendar-info {
+    text-align: center;
+    padding: var(--spacing-md);
+    background: var(--light-gray);
+    border-radius: var(--border-radius-sm);
+    margin-top: var(--spacing-sm);
+}
+
+.calendar-info p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.5;
+}
+
+.calendar-link {
+    display: inline-block;
+    background: var(--secondary-color);
+    color: white;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-sm);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.calendar-link:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.schedule-item {
+    display: flex;
+    margin-bottom: var(--spacing-sm);
+    align-items: center;
+    justify-content: center;
+}
+
+.schedule-date {
+    min-width: 100px;
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    text-align: right;
+    margin-right: var(--spacing-md);
+}
+
+.schedule-content {
+    flex: 1;
+    text-align: left;
+    padding-left: var(--spacing-md);
+    border-left: 2px solid var(--secondary-color);
+}
+
+.schedule-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+    color: var(--text-color);
+}
+
+.schedule-content p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
 }
 
 .activity-card {
@@ -1593,6 +1995,48 @@ body.no-scroll {
     border-left: 2px solid #4a90e2;
 }
 
+/* 移动端奖项布局优化 */
+@media (max-width: 768px) {
+    .honors-timeline {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+        max-width: 100%;
+    }
+    
+    .honor-category {
+        margin-bottom: var(--spacing-md);
+        padding: var(--spacing-sm);
+    }
+    
+    .category-title {
+        font-size: 1.1rem;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .honor-item {
+        margin-bottom: var(--spacing-sm);
+        padding: var(--spacing-xs);
+    }
+    
+    .honor-date {
+        min-width: 70px;
+        font-size: 0.8rem;
+    }
+    
+    .honor-content h3 {
+        font-size: 0.95rem;
+    }
+    
+    .honor-content p {
+        font-size: 0.8rem;
+    }
+    
+    .honor-type {
+        font-size: 0.7rem;
+        padding: 0.1rem 0.3rem;
+    }
+}
+
 /* 移动端导航栏优化 */
 @media (max-width: 768px) {
     .nav-bar {
@@ -1618,6 +2062,12 @@ body.no-scroll {
         padding: 1rem 0;
         width: 100%;
         text-align: left;
+    }
+
+    .language-toggle {
+        margin-left: 0;
+        margin-top: 1rem;
+        align-self: flex-start;
     }
 
     .menu-toggle {
@@ -1797,9 +2247,50 @@ body.no-scroll {
         gap: 0.8rem;
     }
 
+    .email-container {
+        padding: var(--spacing-xs);
+    }
+    
     .email-container .email-links {
         flex-direction: column;
-        gap: 0.5rem;
+        gap: var(--spacing-xs);
+    }
+    
+    .email-links a {
+        font-size: 0.85rem;
+        padding: var(--spacing-xs);
+    }
+    
+    .email-header .info-label {
+        font-size: 0.85rem;
+    }
+    
+    /* 移动端日历优化 */
+    .calendar-container {
+        padding: var(--spacing-xs) 0;
+    }
+    
+    .calendar-wrapper {
+        margin: 0 var(--spacing-xs);
+        border-radius: var(--border-radius-sm);
+    }
+    
+    .calendar-wrapper iframe {
+        height: 400px;
+    }
+    
+    .calendar-info {
+        margin: var(--spacing-xs);
+        padding: var(--spacing-sm);
+    }
+    
+    .calendar-info p {
+        font-size: 0.85rem;
+    }
+    
+    .calendar-link {
+        font-size: 0.85rem;
+        padding: var(--spacing-xs) var(--spacing-sm);
     }
 }
 
@@ -2536,39 +3027,108 @@ img, .experience-card, .skill-category, .activity-card, .awards-gallery > div > 
 
 /* Email大卡片内的邮箱列表样式 */
 .email-container {
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    padding: 0;
+    background: white;
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-sm);
     margin: 0;
     width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
 }
+
+.email-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.email-container:hover::before {
+    transform: scaleX(1);
+}
+
+.email-header {
+    margin-bottom: var(--spacing-xs);
+    text-align: center;
+}
+
+.email-header .info-label {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+}
+
 .email-links {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: var(--spacing-xs);
     align-items: center;
     width: 100%;
-    margin-top: 0.3rem;
+    margin-top: var(--spacing-xs);
 }
+
 .email-links a {
-    background: #fff;
-    border-radius: 8px;
-    color: #E74C3C;
-    font-size: 0.98rem;
+    background: var(--light-gray);
+    border-radius: var(--border-radius-sm);
+    color: var(--secondary-color);
+    font-size: 0.9rem;
     font-weight: 600;
-    padding: 0.3rem 0.5rem;
+    padding: var(--spacing-xs) var(--spacing-sm);
     text-align: center;
     word-break: break-all;
-    box-shadow: 0 1px 4px rgba(44,62,80,0.04);
-    border: 1px solid #ececec;
-    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
     width: 100%;
-    margin: 0 auto;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
 }
+
+.email-links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(231, 76, 60, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.email-links a:hover::before {
+    left: 100%;
+}
+
 .email-links a:hover {
-    background: #E74C3C;
-    color: #fff;
+    background: var(--secondary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+    border-color: var(--secondary-color);
+}
+
+.email-links a i {
+    font-size: 0.85rem;
+    transition: color 0.3s ease;
+}
+
+.email-links a:hover i {
+    color: white;
 }
 
 /* 移除最后一个卡片的下边距 */
@@ -2738,12 +3298,15 @@ img, .experience-card, .skill-category, .activity-card, .awards-gallery > div > 
             <span></span>
         </div>
         <div class="nav-links">
-            <a href="" class="active">Introduction</a>
-            <a href="../education/">Education</a>
-            <a href="../entrepreneurship/">Entrepreneurship</a>
-            <a href="../portfolio/">Life</a>
-            <a href="../year-archive/">Blog</a>
-            <a href="../cv/">Resume</a>
+            <a href="" class="active" data-en="Introduction" data-zh="介绍">Introduction</a>
+            <a href="../education/" data-en="Education" data-zh="教育">Education</a>
+            <a href="../entrepreneurship/" data-en="Entrepreneurship" data-zh="创业">Entrepreneurship</a>
+            <a href="../portfolio/" data-en="Life" data-zh="生活">Life</a>
+            <a href="../year-archive/" data-en="Blog" data-zh="博客">Blog</a>
+            <a href="../cv/" data-en="Resume" data-zh="简历">Resume</a>
+            <button class="language-toggle" onclick="toggleLanguage()">
+                <span class="lang-text" data-en="中文" data-zh="EN">中文</span>
+            </button>
         </div>
     </nav>
         
@@ -2770,7 +3333,7 @@ img, .experience-card, .skill-category, .activity-card, .awards-gallery > div > 
                     </div>
                     <div class="profile-info">
                         <h1 style="margin-bottom: 0.5rem;">Jiongtao Huang</h1>
-                        <p class="bio" style="line-height: 1.6; color: #666;">M.Eng. student in Electrical and Computer Engineering at Cornell University, focusing on software development and machine learning.</p>
+                        <p class="bio" style="line-height: 1.6; color: #666;" data-en="M.Eng. student in Electrical and Computer Engineering at Cornell University, focusing on AI product development and embedded systems." data-zh="康奈尔大学电子与计算机工程硕士在读，专注于AI产品开发和嵌入式系统。">M.Eng. student in Electrical and Computer Engineering at Cornell University, focusing on AI product development and embedded systems.</p>
                     </div>
                 </div>
             </div>
@@ -2780,24 +3343,24 @@ img, .experience-card, .skill-category, .activity-card, .awards-gallery > div > 
         <section class="personal-info-section">
             <div class="section-header">
                 <span class="section-subtitle">BIOGRAPHY</span>
-                <h2>Personal Details</h2>
+                <h2 data-en="Personal Details" data-zh="个人详情">Personal Details</h2>
             </div>
             <div class="info-card">
                 <!-- Personal Information -->
                 <div class="info-row">
                     <div class="info-group">
-                        <h3>Personal Information</h3>
+                        <h3 data-en="Personal Information" data-zh="个人信息">Personal Information</h3>
                         <div class="personal-details-grid">
                             <div class="detail-item">
-                                <div class="detail-label">Name (Chinese)</div>
+                                <div class="detail-label" data-en="Name (Chinese)" data-zh="中文姓名">Name (Chinese)</div>
                                 <div class="detail-value chinese-name">黄炯涛</div>
                             </div>
                             <div class="detail-item">
-                                <div class="detail-label">Name (English)</div>
+                                <div class="detail-label" data-en="Name (English)" data-zh="英文姓名">Name (English)</div>
                                 <div class="detail-value">Kaden</div>
                             </div>
                             <div class="detail-item">
-                                <div class="detail-label">Nickname</div>
+                                <div class="detail-label" data-en="Nickname" data-zh="昵称">Nickname</div>
                                 <div class="detail-value">Kantrum</div>
                             </div>
                         </div>
@@ -2806,20 +3369,22 @@ img, .experience-card, .skill-category, .activity-card, .awards-gallery > div > 
                 <!-- Contact Information -->
                 <div class="info-row">
                     <div class="info-group">
-                        <h3>Contact Information</h3>
+                        <h3 data-en="Contact Information" data-zh="联系信息">Contact Information</h3>
                         <div class="contact-grid">
                             <p>
-                                <span class="info-label">Address:</span>
+                                <span class="info-label" data-en="Address:" data-zh="地址：">Address:</span>
                                 <span class="address">210 Lake Street, Ithaca, NY, USA</span>
                             </p>
                             <div class="email-container">
-                                <span class="info-label">Email:</span>
+                                <div class="email-header">
+                                    <span class="info-label" data-en="Email:" data-zh="邮箱：">Email:</span>
+                                </div>
                                 <div class="email-links">
                                     <a href="mailto:kantrum@163.com"><i class="far fa-envelope"></i> kantrum@163.com</a>
                                     <a href="mailto:huangjiongtao@gmail.com"><i class="far fa-envelope"></i> huangjiongtao@gmail.com</a>
                                 </div>
                             </div>
-                            <p><span class="info-label">Phone:</span> +1 (607)-262-4666</p>
+                            <p><span class="info-label" data-en="Phone:" data-zh="电话：">Phone:</span> +1 (607)-262-4666</p>
                         </div>
                     </div>
                 </div>
@@ -2830,43 +3395,45 @@ img, .experience-card, .skill-category, .activity-card, .awards-gallery > div > 
         <section class="experience-section">
             <div class="section-header">
                 <span class="section-subtitle">EXPERIENCE</span>
-                <h2>Professional Journey</h2>
+                <h2 data-en="Professional Journey" data-zh="专业经验">Professional Journey</h2>
             </div>
             <div class="experience-grid">
                 <div class="experience-card">
                     <div class="card-header">
-                        <i class="fas fa-laptop-code"></i>
-                        <h3>Software Development</h3>
+                        <i class="fas fa-robot"></i>
+                        <h3 data-en="AI Product & System Development" data-zh="人工智能产品与系统开发">AI Product & System Development</h3>
                     </div>
                     <ul class="experience-list">
-                        <li>Full-stack web application development</li>
-                        <li>Cloud architecture and deployment</li>
-                        <li>API design and implementation</li>
+                        <li data-en="AI Agent Platform Design & Implementation" data-zh="智能体平台设计与实现">AI Agent Platform Design & Implementation</li>
+                        <li data-en="Multi-Model Collaboration & Workflow Orchestration" data-zh="多模型协同与工作流编排">Multi-Model Collaboration & Workflow Orchestration</li>
+                        <li data-en="RAG Knowledge Base & On-Premise Deployment" data-zh="RAG 知识库与私有化部署方案">RAG Knowledge Base & On-Premise Deployment</li>
+                        <li data-en="Speech Recognition & Conversational Interface" data-zh="语音识别与自然语言交互系统">Speech Recognition & Conversational Interface</li>
                     </ul>
                 </div>
                 <div class="experience-card">
                     <div class="card-header">
-                        <i class="fas fa-brain"></i>
-                        <h3>Machine Learning</h3>
+                        <i class="fas fa-microchip"></i>
+                        <h3 data-en="Embedded & IoT Systems" data-zh="嵌入式与物联网系统">Embedded & IoT Systems</h3>
                     </div>
                     <ul class="experience-list">
-                        <li>Deep learning model development</li>
-                        <li>Computer vision applications</li>
-                        <li>Data analysis and visualization</li>
+                        <li data-en="Raspberry Pi & Sensor Integration" data-zh="树莓派与传感器集成开发">Raspberry Pi & Sensor Integration</li>
+                        <li data-en="Real-Time Data Collection & Edge Computing" data-zh="实时数据采集与边缘计算架构">Real-Time Data Collection & Edge Computing</li>
+                        <li data-en="Driver Health Monitoring & Embedded Sensing" data-zh="健康监测与驾驶员状态识别系统">Driver Health Monitoring & Embedded Sensing</li>
+                        <li data-en="Smart Farming Voice-GPS Integration" data-zh="智慧农业语音与定位系统">Smart Farming Voice-GPS Integration</li>
                     </ul>
                 </div>
                 <div class="experience-card">
                     <div class="card-header">
-                        <i class="fas fa-mobile-alt"></i>
-                        <h3>Mobile Development</h3>
+                        <i class="fas fa-lightbulb"></i>
+                        <h3 data-en="AI-Driven Applications & Prototypes" data-zh="AI驱动应用与原型">AI-Driven Applications & Prototypes</h3>
                     </div>
                     <ul class="experience-list">
-                        <li>Cross-platform app development</li>
-                        <li>Native iOS/Android development</li>
-                        <li>Progressive Web Apps (PWA)</li>
+                        <li data-en="AI Coding Tools & Copilot-Style Assistant Research" data-zh="AI编程工具与智能助手调研">AI Coding Tools & Copilot-Style Assistant Research</li>
+                        <li data-en="Logistics Ordering Agent & Slot-Filling System" data-zh="智能下单Agent与多槽位识别系统">Logistics Ordering Agent & Slot-Filling System</li>
+                        <li data-en="Healthcare AI & Triage System Design" data-zh="医疗AI解决方案与导诊系统设计">Healthcare AI & Triage System Design</li>
+                        <li data-en="AI-Enhanced Education & Vocational Training Platform" data-zh="教育与职业培训智能化平台">AI-Enhanced Education & Vocational Training Platform</li>
                     </ul>
                 </div>
-                <!-- Add more experience cards -->
             </div>
         </section>
 
@@ -2874,37 +3441,46 @@ img, .experience-card, .skill-category, .activity-card, .awards-gallery > div > 
         <section class="skills-section">
             <div class="section-header">
                 <span class="section-subtitle">EXPERTISE</span>
-                <h2>Technical Proficiency</h2>
+                <h2 data-en="Technical Proficiency" data-zh="技术能力">Technical Proficiency</h2>
             </div>
             <div class="skills-matrix">
                 <div class="skill-category">
-                    <h3>Languages</h3>
+                    <h3 data-en="AI & Data Direction" data-zh="AI & 数据方向">AI & Data Direction</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Python</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">AI Models</span>
+                        <span class="skill-tag">RAG</span>
+                        <span class="skill-tag">Whisper</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Frontend</h3>
+                    <h3 data-en="Embedded & Systems Direction" data-zh="嵌入式与系统方向">Embedded & Systems Direction</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Vue.js</span>
-                        <span class="skill-tag">TypeScript</span>
-                        <span class="skill-tag">HTML5/CSS3</span>
+                        <span class="skill-tag">Raspberry Pi</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Verilog</span>
+                        <span class="skill-tag">MATLAB</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Backend</h3>
+                    <h3 data-en="Product Prototype & Visualization" data-zh="产品原型与可视化方向">Product Prototype & Visualization</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Django</span>
-                        <span class="skill-tag">Spring Boot</span>
-                        <span class="skill-tag">GraphQL</span>
+                        <span class="skill-tag">Python GUI</span>
+                        <span class="skill-tag">Web Frameworks</span>
+                        <span class="skill-tag">Data Visualization</span>
+                        <span class="skill-tag">UI/UX Design</span>
                     </div>
                 </div>
-                <!-- Add more skill categories -->
+                <div class="skill-category">
+                    <h3 data-en="Tools & Collaboration" data-zh="工具与协作方向">Tools & Collaboration</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">ProcessOn</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Supabase</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -2912,38 +3488,38 @@ img, .experience-card, .skill-category, .activity-card, .awards-gallery > div > 
         <section class="education-section">
             <div class="section-header">
                 <span class="section-subtitle">EDUCATION</span>
-                <h2>Academic Background</h2>
+                <h2 data-en="Academic Background" data-zh="教育背景">Academic Background</h2>
             </div>
             <div class="education-timeline">
                 <div class="education-item">
                     <div class="education-date">2024.08 - Present</div>
                     <div class="education-content">
-                        <h3>Cornell University</h3>
-                        <p class="degree">Master of Engineering in ECE</p>
+                        <h3 data-en="Cornell University" data-zh="美国康奈尔大学（Cornell University）">美国康奈尔大学（Cornell University）</h3>
+                        <p class="degree" data-en="Master of Engineering in ECE" data-zh="电子与计算机工程硕士">Master of Engineering in ECE</p>
                         <ul class="education-details">
-                            <li>GPA: 3.9/4.0</li>
+                            <li data-en="GPA: 3.9/4.0" data-zh="GPA: 3.9/4.0">GPA: 3.9/4.0</li>
                         </ul>
                     </div>
                 </div>
                 <div class="education-item">
                     <div class="education-date">2020.09 - 2024.07</div>
                     <div class="education-content">
-                        <h3>University of Leeds</h3>
-                        <p class="degree">Bachelor of Engineering in EE</p>
+                        <h3 data-en="University of Leeds" data-zh="英国利兹大学（University of Leeds）">英国利兹大学（University of Leeds）</h3>
+                        <p class="degree" data-en="Bachelor of Engineering in EE" data-zh="电子工程学士">Bachelor of Engineering in EE</p>
                         <ul class="education-details">
-                            <li>GPA: 3.91/4.0</li>
-                            <li>Major: Electrical and Electronic Engineering</li>
+                            <li data-en="GPA: 3.91/4.0" data-zh="GPA: 3.91/4.0">GPA: 3.91/4.0</li>
+                            <li data-en="Major: Electrical and Electronic Engineering" data-zh="专业：电子信息工程">Major: Electrical and Electronic Engineering</li>
                         </ul>
                     </div>
                 </div>
                 <div class="education-item">
                     <div class="education-date">2020.09 - 2024.07</div>
                     <div class="education-content">
-                        <h3>Southwest Jiaotong University</h3>
-                        <p class="degree">Bachelor of Engineering in EE</p>
+                        <h3 data-en="Southwest Jiaotong University" data-zh="西南交通大学">西南交通大学</h3>
+                        <p class="degree" data-en="Bachelor of Engineering in EE" data-zh="电子工程学士">Bachelor of Engineering in EE</p>
                         <ul class="education-details">
-                            <li>GPA: 91.03/100.00</li>
-                            <li>Major: Electrical and Electronic Engineering</li>
+                            <li data-en="GPA: 91.03/100.00" data-zh="GPA: 91.03/100.00">GPA: 91.03/100.00</li>
+                            <li data-en="Major: Electrical and Electronic Engineering" data-zh="专业：电子信息工程">Major: Electrical and Electronic Engineering</li>
                         </ul>
                     </div>
                 </div>
@@ -2953,30 +3529,30 @@ img, .experience-card, .skill-category, .activity-card, .awards-gallery > div > 
         <section class="social-activities-section">
             <div class="section-header">
                 <span class="section-subtitle">SOCIAL ACTIVITIES</span>
-                <h2>Community Engagement</h2>
+                <h2 data-en="Community Engagement" data-zh="社会活动">Community Engagement</h2>
             </div>
             <div class="activities-grid">
                 <div class="activity-card">
                     <div class="activity-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3>University Student Campus Self-Management Committee</h3>
-                    <p>President, May 2023 - Apr 2024</p>
-                    <p>Ministry Member, May 2022 - Apr 2023</p>
+                    <h3 data-en="University Student Campus Self-Management Committee" data-zh="大学生校园自我管理委员会">University Student Campus Self-Management Committee</h3>
+                    <p data-en="President, May 2023 - Apr 2024" data-zh="主席，2023年5月 - 2024年4月">President, May 2023 - Apr 2024</p>
+                    <p data-en="Ministry Member, May 2022 - Apr 2023" data-zh="部长，2022年5月 - 2023年4月">Ministry Member, May 2022 - Apr 2023</p>
                 </div>
                 <div class="activity-card">
                     <div class="activity-icon">
                         <i class="fas fa-medal"></i>
                     </div>
-                    <h3>31st Chengdu World University Games</h3>
-                    <p>Most Contributive Volunteer Award, May 2022</p>
+                    <h3 data-en="31st Chengdu World University Games" data-zh="第31届成都世界大学生运动会">31st Chengdu World University Games</h3>
+                    <p data-en="Most Contributive Volunteer Award, May 2022" data-zh="最具贡献志愿者奖，2022年5月">Most Contributive Volunteer Award, May 2022</p>
                 </div>
                 <div class="activity-card">
                     <div class="activity-icon">
                         <i class="fas fa-globe"></i>
                     </div>
-                    <h3>New Youth Global Competency Development Programme</h3>
-                    <p>Class Leader, Mar 2022 - Dec 2022</p>
+                    <h3 data-en="New Youth Global Competency Development Programme" data-zh="新青年全球人才培养项目">新青年全球人才培养项目</h3>
+                    <p data-en="Class Leader, Mar 2022 - Dec 2022" data-zh="班长，2022年3月 - 2022年12月">Class Leader, Mar 2022 - Dec 2022</p>
                 </div>
             </div>
         </section>
@@ -2984,97 +3560,97 @@ img, .experience-card, .skill-category, .activity-card, .awards-gallery > div > 
         <section class="honors-section">
             <div class="section-header">
                 <span class="section-subtitle">PERSONAL HONORS</span>
-                <h2>Awards & Achievements</h2>
+                <h2 data-en="Awards & Achievements" data-zh="奖项与成就">Awards & Achievements</h2>
             </div>
             <div class="honors-timeline">
                 <!-- Academic Excellence -->
                 <div class="honor-category">
-                    <h3 class="category-title">Academic Excellence</h3>
+                    <h3 class="category-title" data-en="Academic Excellence" data-zh="学术优秀">学术优秀</h3>
                     <div class="honor-item">
-                        <div class="honor-date">Jun 2022</div>
+                        <div class="honor-date" data-en="Jun 2022" data-zh="2022年6月">2022年6月</div>
                         <div class="honor-content">
-                            <h3>"Three Good Students" Award</h3>
-                            <p>Southwest Jiaotong University</p>
-                            <span class="honor-type">Academic Achievement</span>
+                            <h3 data-en='"Three Good Students" Award' data-zh="三好学生奖">三好学生奖</h3>
+                            <p data-en="Southwest Jiaotong University" data-zh="西南交通大学">西南交通大学</p>
+                            <span class="honor-type" data-en="Academic Achievement" data-zh="学术成就">学术成就</span>
                         </div>
                     </div>
                     <div class="honor-item">
-                        <div class="honor-date">Jun 2021</div>
+                        <div class="honor-date" data-en="Jun 2021" data-zh="2021年6月">2021年6月</div>
                         <div class="honor-content">
-                            <h3>"Three Good Students" Award</h3>
-                            <p>Southwest Jiaotong University</p>
-                            <span class="honor-type">Academic Achievement</span>
+                            <h3 data-en='"Three Good Students" Award' data-zh="三好学生奖">三好学生奖</h3>
+                            <p data-en="Southwest Jiaotong University" data-zh="西南交通大学">西南交通大学</p>
+                            <span class="honor-type" data-en="Academic Achievement" data-zh="学术成就">学术成就</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Leadership & Service -->
                 <div class="honor-category">
-                    <h3 class="category-title">Leadership & Service</h3>
+                    <h3 class="category-title" data-en="Leadership & Service" data-zh="领导力与服务">领导力与服务</h3>
                     <div class="honor-item">
-                        <div class="honor-date">May 2023</div>
+                        <div class="honor-date" data-en="May 2023" data-zh="2023年5月">2023年5月</div>
                         <div class="honor-content">
-                            <h3>Outstanding Class Officer</h3>
-                            <p>New Youth Global Competency Development Programme</p>
-                            <span class="honor-type">Leadership Excellence</span>
+                            <h3 data-en="Outstanding Class Officer" data-zh="优秀班干部">优秀班干部</h3>
+                            <p data-en="New Youth Global Competency Development Programme" data-zh="新青年全球人才培养项目">新青年全球人才培养项目</p>
+                            <span class="honor-type" data-en="Leadership Excellence" data-zh="领导力卓越">领导力卓越</span>
                         </div>
                     </div>
                     <div class="honor-item">
-                        <div class="honor-date">Mar 2023</div>
+                        <div class="honor-date" data-en="Mar 2023" data-zh="2023年3月">2023年3月</div>
                         <div class="honor-content">
-                            <h3>A Grade Certificate of Comprehensive Quality</h3>
-                            <p>Sichuan University Students Union</p>
-                            <span class="honor-type">Student Leadership</span>
+                            <h3 data-en="A Grade Certificate of Comprehensive Quality" data-zh="综合素质A级证书">综合素质A级证书</h3>
+                            <p data-en="Sichuan University Students Union" data-zh="四川学生联合会">四川学生联合会</p>
+                            <span class="honor-type" data-en="Student Leadership" data-zh="学生领导力">学生领导力</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Community Service & Volunteering -->
                 <div class="honor-category">
-                    <h3 class="category-title">Community Service & Volunteering</h3>
+                    <h3 class="category-title" data-en="Community Service & Volunteering" data-zh="社区服务与志愿服务">社区服务与志愿服务</h3>
                     <div class="honor-item">
-                        <div class="honor-date">Dec 2022</div>
+                        <div class="honor-date" data-en="Dec 2022" data-zh="2022年12月">2022年12月</div>
                         <div class="honor-content">
-                            <h3>Outstanding Communist Youth League Member</h3>
-                            <p>Southwest Jiaotong University</p>
-                            <span class="honor-type">Service Excellence</span>
+                            <h3 data-en="Outstanding Communist Youth League Member" data-zh="优秀共青团干部">优秀共青团干部</h3>
+                            <p data-en="Southwest Jiaotong University" data-zh="西南交通大学">西南交通大学</p>
+                            <span class="honor-type" data-en="Service Excellence" data-zh="服务卓越">服务卓越</span>
                         </div>
                     </div>
                     <div class="honor-item">
-                        <div class="honor-date">Sep 2021</div>
+                        <div class="honor-date" data-en="Sep 2021" data-zh="2021年9月">2021年9月</div>
                         <div class="honor-content">
-                            <h3>Outstanding Youth League Member</h3>
-                            <p>Southwest Jiaotong University</p>
-                            <span class="honor-type">Service Excellence</span>
+                            <h3 data-en="Outstanding Youth League Member" data-zh="优秀共青团员">优秀共青团员</h3>
+                            <p data-en="Southwest Jiaotong University" data-zh="西南交通大学">西南交通大学</p>
+                            <span class="honor-type" data-en="Service Excellence" data-zh="服务卓越">服务卓越</span>
                         </div>
                     </div>
                     <div class="honor-item">
-                        <div class="honor-date">Mar 2021</div>
+                        <div class="honor-date" data-en="Mar 2021" data-zh="2021年3月">2021年3月</div>
                         <div class="honor-content">
-                            <h3>Excellent Volunteer</h3>
-                            <p>Community Epidemic Prevention Activities</p>
-                            <span class="honor-type">Volunteer Service</span>
+                            <h3 data-en="Excellent Volunteer" data-zh="优秀志愿者">优秀志愿者</h3>
+                            <p data-en="Community Epidemic Prevention Activities" data-zh="社区防疫活动">社区防疫活动</p>
+                            <span class="honor-type" data-en="Volunteer Service" data-zh="志愿服务">志愿服务</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Professional Development -->
                 <div class="honor-category">
-                    <h3 class="category-title">Professional Development</h3>
+                    <h3 class="category-title" data-en="Professional Development" data-zh="专业发展">专业发展</h3>
                     <div class="honor-item">
-                        <div class="honor-date">Jul 2021</div>
+                        <div class="honor-date" data-en="Jul 2021" data-zh="2021年7月">2021年7月</div>
                         <div class="honor-content">
-                            <h3>Excellent Student</h3>
-                            <p>Entrepreneurship Training Program</p>
-                            <span class="honor-type">Professional Training</span>
+                            <h3 data-en="Excellent Student" data-zh="优秀学员">优秀学员</h3>
+                            <p data-en="Entrepreneurship Training Program" data-zh="创业实训">创业实训</p>
+                            <span class="honor-type" data-en="Professional Training" data-zh="专业培训">专业培训</span>
                         </div>
                     </div>
                     <div class="honor-item">
-                        <div class="honor-date">Aug 2021</div>
+                        <div class="honor-date" data-en="Aug 2021" data-zh="2021年8月">2021年8月</div>
                         <div class="honor-content">
-                            <h3>Excellent Intern</h3>
-                            <p>Translation Internship Program</p>
-                            <span class="honor-type">Professional Experience</span>
+                            <h3 data-en="Excellent Intern" data-zh="优秀实习生">优秀实习生</h3>
+                            <p data-en="Translation Internship Program" data-zh="翻译实习生项目">翻译实习生项目</p>
+                            <span class="honor-type" data-en="Professional Experience" data-zh="专业经验">专业经验</span>
                         </div>
                     </div>
                 </div>
@@ -3083,44 +3659,44 @@ img, .experience-card, .skill-category, .activity-card, .awards-gallery > div > 
             <!-- Awards Gallery -->
             <div class="section-header">
                 <span class="section-subtitle">CERTIFICATES & RECOGNITION</span>
-                <h2>获奖证书</h2>
+                <h2 data-en="Awards & Certificates" data-zh="获奖证书">获奖证书</h2>
             </div>
             <div class="awards-gallery">
                 <div>
                     <div>
-                        <h4>学术优秀奖 2024</h4>
+                        <h4 data-en="Academic Excellence Award 2024" data-zh="学术优秀奖 2024">学术优秀奖 2024</h4>
                         <img src="../images/IMG_1492.png" alt="Academic Excellence Award 2024" />
                     </div>
                     <div>
-                        <h4>杰出研究奖 2023</h4>
+                        <h4 data-en="Outstanding Research Award 2023" data-zh="杰出研究奖 2023">杰出研究奖 2023</h4>
                         <img src="../images/IMG_1493.png" alt="Outstanding Research Award 2023" />
                     </div>
                     <div>
-                        <h4>技术创新挑战赛奖 2023</h4>
+                        <h4 data-en="Tech Innovation Challenge Award 2023" data-zh="技术创新挑战赛奖 2023">技术创新挑战赛奖 2023</h4>
                         <img src="../images/IMG_1494.JPG" alt="Tech Innovation Challenge 2023" />
                     </div>
                     <div>
-                        <h4>优秀学生干部 2023</h4>
+                        <h4 data-en="Outstanding Student Leader 2023" data-zh="优秀学生干部 2023">优秀学生干部 2023</h4>
                         <img src="../images/IMG_1495.JPG" alt="Outstanding Student Leader 2023" />
                     </div>
                     <div>
-                        <h4>志愿服务优秀奖 2023</h4>
+                        <h4 data-en="Volunteer Service Excellence Award 2023" data-zh="志愿服务优秀奖 2023">志愿服务优秀奖 2023</h4>
                         <img src="../images/IMG_1580.JPG" alt="Volunteer Service Award 2023" />
                     </div>
                     <div>
-                        <h4>创新创业大赛奖 2022</h4>
+                        <h4 data-en="Innovation & Entrepreneurship Competition Award 2022" data-zh="创新创业大赛奖 2022">创新创业大赛奖 2022</h4>
                         <img src="../images/IMG_1584.JPG" alt="Innovation Competition Award 2022" />
                     </div>
                     <div>
-                        <h4>三好学生 2022</h4>
+                        <h4 data-en="Three Good Students Award 2022" data-zh="三好学生 2022">三好学生 2022</h4>
                         <img src="../images/IMG_1587.JPG" alt="Outstanding Student Award 2022" />
                     </div>
                     <div>
-                        <h4>优秀共青团员 2022</h4>
+                        <h4 data-en="Outstanding Youth League Member 2022" data-zh="优秀共青团员 2022">优秀共青团员 2022</h4>
                         <img src="../images/IMG_1582.JPG" alt="Outstanding Youth League Member 2022" />
                     </div>
                     <div>
-                        <h4>社会实践优秀奖 2021</h4>
+                        <h4 data-en="Social Practice Excellence Award 2021" data-zh="社会实践优秀奖 2021">社会实践优秀奖 2021</h4>
                         <img src="../images/IMG_1583.JPG" alt="Social Practice Award 2021" />
                     </div>
                 </div>
@@ -3130,43 +3706,27 @@ img, .experience-card, .skill-category, .activity-card, .awards-gallery > div > 
         <section class="schedule-section">
             <div class="section-header">
                 <span class="section-subtitle">MY UPCOMING SCHEDULE</span>
-                <h2>What's Next</h2>
+                <h2 data-en="What's Next" data-zh="未来计划">What's Next</h2>
             </div>
-            <div class="schedule-timeline">
-                <div class="schedule-item">
-                    <div class="schedule-date">MAR 2024</div>
-                    <div class="schedule-content">
-                        <h3>Tech Conference</h3>
-                        <p>Speaking at Cornell Tech Summit</p>
-                    </div>
+            <div class="calendar-container">
+                <div class="calendar-wrapper">
+                    <iframe 
+                        src="https://calendar.google.com/calendar/embed?src=huangjiongtao%40gmail.com&ctz=America%2FNew_York&mode=AGENDA&showPrint=0&showDate=0&showCalendars=0"
+                        style="border: 0" 
+                        width="100%" 
+                        height="600" 
+                        frameborder="0" 
+                        scrolling="no"
+                        title="Google Calendar">
+                    </iframe>
                 </div>
-                <div class="schedule-item">
-                    <div class="schedule-date">APR 2024</div>
-                    <div class="schedule-content">
-                        <h3>Research Symposium</h3>
-                        <p>Presenting ML Research at IEEE Conference</p>
-                    </div>
-                </div>
-                <div class="schedule-item">
-                    <div class="schedule-date">MAY 2024</div>
-                    <div class="schedule-content">
-                        <h3>Hackathon</h3>
-                        <p>Organizing Cornell Spring Hackathon</p>
-                    </div>
-                </div>
-                <div class="schedule-item">
-                    <div class="schedule-date">JUN 2024</div>
-                    <div class="schedule-content">
-                        <h3>Workshop Series</h3>
-                        <p>Leading AI/ML Workshop for Undergraduates</p>
-                    </div>
-                </div>
-                <div class="schedule-item">
-                    <div class="schedule-date">JUL 2024</div>
-                    <div class="schedule-content">
-                        <h3>Summer Internship</h3>
-                        <p>Starting at Google - Software Engineering</p>
-                    </div>
+                <div class="calendar-info">
+                    <p data-en="View my full calendar and upcoming events" data-zh="查看我的完整日历和即将到来的活动">View my full calendar and upcoming events</p>
+                    <a href="https://calendar.google.com/calendar/embed?src=huangjiongtao%40gmail.com&ctz=America%2FNew_York&mode=AGENDA&showPrint=0&showDate=0&showCalendars=0" 
+                       target="_blank" 
+                       class="calendar-link"
+                       data-en="Open Full Calendar" 
+                       data-zh="打开完整日历">Open Full Calendar</a>
                 </div>
             </div>
         </section>
@@ -3174,43 +3734,43 @@ img, .experience-card, .skill-category, .activity-card, .awards-gallery > div > 
         <section class="photography-section">
             <div class="section-header">
                 <span class="section-subtitle">PHOTOGRAPHY</span>
-                <h2>My Gallery</h2>
+                <h2 data-en="My Gallery" data-zh="我的相册">My Gallery</h2>
             </div>
             <div class="album-grid">
                 <div class="album-card" onclick="openAlbum('cornell')">
                     <img src="../images/Cornell_graduate/WechatIMG148.jpg" alt="Cornell Graduation">
-                    <h3>Cornell Graduation</h3>
-                    <p>6 photos</p>
+                    <h3 data-en="Cornell Graduation" data-zh="康奈尔毕业">Cornell Graduation</h3>
+                    <p data-en="6 photos" data-zh="6张照片">6 photos</p>
                 </div>
                 <div class="album-card" onclick="openAlbum('summer')">
                     <img src="../images/IMG_1556.JPG" alt="Summer LifeStyles">
-                    <h3>Summer LifeStyles</h3>
-                    <p>7 photos</p>
+                    <h3 data-en="Summer LifeStyles" data-zh="夏日生活">Summer LifeStyles</h3>
+                    <p data-en="7 photos" data-zh="7张照片">7 photos</p>
                 </div>
                 <div class="album-card" onclick="openAlbum('chuanxi')">
                     <img src="../images/IMG_1561.JPG" alt="Western Sichuan">
-                    <h3>Western Sichuan</h3>
-                    <p>8 photos</p>
+                    <h3 data-en="Western Sichuan" data-zh="川西">Western Sichuan</h3>
+                    <p data-en="8 photos" data-zh="8张照片">8 photos</p>
                 </div>
                 <div class="album-card" onclick="openAlbum('campus')">
                     <img src="../images/IMG_1879.JPG" alt="Campus Life">
-                    <h3>Campus Life</h3>
-                    <p>15 photos</p>
+                    <h3 data-en="Campus Life" data-zh="校园生活">Campus Life</h3>
+                    <p data-en="15 photos" data-zh="15张照片">15 photos</p>
                 </div>
                 <div class="album-card" onclick="openAlbum('events')">
                     <img src="assets/albums/events/cover.jpg" alt="Events">
-                    <h3>Events & Activities</h3>
-                    <p>10 photos</p>
+                    <h3 data-en="Events & Activities" data-zh="活动与事件">Events & Activities</h3>
+                    <p data-en="10 photos" data-zh="10张照片">10 photos</p>
                 </div>
                 <div class="album-card" onclick="openAlbum('architecture')">
                     <img src="assets/albums/architecture/cover.jpg" alt="Architecture">
-                    <h3>Architecture</h3>
-                    <p>6 photos</p>
+                    <h3 data-en="Architecture" data-zh="建筑">Architecture</h3>
+                    <p data-en="6 photos" data-zh="6张照片">6 photos</p>
                 </div>
                 <div class="album-card" onclick="openAlbum('food')">
                     <img src="assets/albums/food/cover.jpg" alt="Food">
-                    <h3>Food & Cuisine</h3>
-                    <p>9 photos</p>
+                    <h3 data-en="Food & Cuisine" data-zh="美食与料理">Food & Cuisine</h3>
+                    <p data-en="9 photos" data-zh="9张照片">9 photos</p>
                 </div>
             </div>
         </section>
@@ -3226,7 +3786,7 @@ img, .experience-card, .skill-category, .activity-card, .awards-gallery > div > 
 
     <footer>
         <div class="footer-content">
-            <p class="copyright">&copy; 2025 Jiongtao Huang. All rights reserved.</p>
+            <p class="copyright" data-en="&copy; 2025 Jiongtao Huang. All rights reserved." data-zh="&copy; 2025 黄炯涛. 版权所有。">&copy; 2025 Jiongtao Huang. All rights reserved.</p>
             <div class="footer-links">
                 <a href="https://linkedin.com/in/yourusername" target="_blank" class="footer-link">LinkedIn</a>
                 <span class="footer-separator">|</span>
@@ -3244,6 +3804,31 @@ img, .experience-card, .skill-category, .activity-card, .awards-gallery > div > 
 <script>
 // 添加在文件开头，用于测试JS是否正确加载
 console.log('About page JavaScript loaded successfully');
+
+// 语言切换功能
+let currentLanguage = 'en'; // 默认英文
+
+function toggleLanguage() {
+    currentLanguage = currentLanguage === 'en' ? 'zh' : 'en';
+    updateLanguage();
+}
+
+function updateLanguage() {
+    const elements = document.querySelectorAll('[data-en][data-zh]');
+    elements.forEach(element => {
+        const text = currentLanguage === 'en' ? element.getAttribute('data-en') : element.getAttribute('data-zh');
+        element.textContent = text;
+    });
+    
+    // 更新语言切换按钮文本
+    const langButton = document.querySelector('.lang-text');
+    if (langButton) {
+        langButton.textContent = currentLanguage === 'en' ? '中文' : 'EN';
+    }
+    
+    // 更新页面标题
+    document.title = currentLanguage === 'en' ? 'Introduction|Jiongtao Huang' : '介绍|黄炯涛';
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded');
