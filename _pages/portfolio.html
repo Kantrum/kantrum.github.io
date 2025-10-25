@@ -6,9 +6,9 @@ author_profile: true
 ---
 
 <!-- 语言切换按钮 -->
-<div class="language-switcher">
-    <button class="lang-btn active" data-lang="en">EN</button>
-    <button class="lang-btn" data-lang="zh">中文</button>
+<div class="language-switcher" id="language-switcher">
+    <button class="lang-btn active" data-lang="en" id="btn-en">EN</button>
+    <button class="lang-btn" data-lang="zh" id="btn-zh">中文</button>
 </div>
 
 <style>
@@ -99,7 +99,7 @@ body {
     position: fixed;
     top: 80px; /* 调整到导航栏下方 */
     right: 30px;
-    z-index: 999; /* 降低z-index避免与导航栏冲突 */
+    z-index: 9999; /* 提高z-index确保在最上层 */
     display: flex;
     gap: 5px;
     background: rgba(255, 255, 255, 0.95);
@@ -110,8 +110,11 @@ body {
     transition: all 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.2);
     /* 确保按钮始终可见和可点击 */
-    pointer-events: auto;
+    pointer-events: auto !important;
     -webkit-tap-highlight-color: transparent;
+    /* 强制显示 */
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 /* 备用定位方案 - 如果右侧被遮挡，可以调整到左侧 */
@@ -134,7 +137,7 @@ body {
     font-size: 14px;
     font-weight: 600;
     border-radius: 20px;
-    cursor: pointer;
+    cursor: pointer !important;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -144,6 +147,13 @@ body {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    /* 确保按钮可以点击 */
+    pointer-events: auto !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    /* 强制显示 */
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 .lang-btn::before {
@@ -975,15 +985,20 @@ body {
 <script>
 // 页面加载完成后执行
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, initializing language switcher...');
+    
     // 语言切换功能
     const langButtons = document.querySelectorAll('.lang-btn');
     const body = document.body;
+    
+    console.log('Found language buttons:', langButtons.length);
     
     // 从localStorage获取保存的语言设置，默认为英文
     const savedLang = localStorage.getItem('language') || 'en';
     
     // 设置初始语言
     function setLanguage(lang) {
+        console.log('Setting language to:', lang);
         if (lang === 'zh') {
             body.classList.add('language-zh');
             body.classList.remove('language-en');
@@ -1007,17 +1022,30 @@ document.addEventListener('DOMContentLoaded', function() {
     // 初始化语言
     setLanguage(savedLang);
     
+    // 简单的测试函数
+    function testLanguageSwitch() {
+        console.log('Testing language switch...');
+        const testLang = body.classList.contains('language-zh') ? 'en' : 'zh';
+        setLanguage(testLang);
+    }
+    
     // 检测并调整语言切换按钮位置
     function adjustLanguageSwitcherPosition() {
         const switcher = document.querySelector('.language-switcher');
-        if (!switcher) return;
+        if (!switcher) {
+            console.log('Language switcher not found!');
+            return;
+        }
         
         const rect = switcher.getBoundingClientRect();
         const viewportWidth = window.innerWidth;
         
+        console.log('Switcher position:', rect);
+        
         // 如果按钮被遮挡或超出视窗，调整到左侧
         if (rect.right > viewportWidth - 20 || rect.left < 20) {
             switcher.classList.add('alternative-position');
+            console.log('Moved to alternative position');
         } else {
             switcher.classList.remove('alternative-position');
         }
@@ -1029,9 +1057,31 @@ document.addEventListener('DOMContentLoaded', function() {
     // 窗口大小改变时重新检查
     window.addEventListener('resize', adjustLanguageSwitcherPosition);
     
-    // 语言切换事件监听
+    // 添加全局测试函数
+    window.testLanguageSwitch = testLanguageSwitch;
+    
+    // 语言切换事件监听 - 使用事件委托
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('lang-btn')) {
+            console.log('Button clicked via delegation:', e.target.dataset.lang);
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const lang = e.target.dataset.lang;
+            setLanguage(lang);
+            
+            // 添加切换动画效果
+            body.style.opacity = '0.8';
+            setTimeout(() => {
+                body.style.opacity = '1';
+            }, 200);
+        }
+    });
+    
+    // 直接事件监听作为备用
     langButtons.forEach(btn => {
         btn.addEventListener('click', function(e) {
+            console.log('Button clicked directly:', this.dataset.lang);
             e.preventDefault();
             e.stopPropagation();
             
@@ -1043,6 +1093,26 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
                 body.style.opacity = '1';
             }, 200);
+        });
+        
+        // 添加触摸事件支持（移动端）
+        btn.addEventListener('touchend', function(e) {
+            console.log('Button touched:', this.dataset.lang);
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const lang = this.dataset.lang;
+            setLanguage(lang);
+        });
+        
+        // 添加鼠标按下事件作为额外备用
+        btn.addEventListener('mousedown', function(e) {
+            console.log('Button mousedown:', this.dataset.lang);
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const lang = this.dataset.lang;
+            setLanguage(lang);
         });
     });
     
