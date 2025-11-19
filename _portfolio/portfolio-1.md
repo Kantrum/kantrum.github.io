@@ -15,7 +15,7 @@ This document highlights my journey and key achievements in 100M running.
   - **Location:** Southwest Jiaotong University
 
 <div align="center">
-    <img src="../images/IMG_1871.JPG" alt="100M Running Achievement" style="border: 2px solid #004080;"/>
+    <img src="https://kantrum.github.io/images/IMG_1871.JPG" alt="100M Running Achievement" style="border: 2px solid #004080;"/>
     <p><strong>4X100m Relay Sprint Capture</strong></p>
     
 </div>
@@ -31,26 +31,26 @@ This document highlights my journey and key achievements in 100M running.
 <br/>
 <!-- 重复上面的代码块来添加更多图片 -->
 <div align="center">
-    <img src="../images/IMG_1868.JPG" alt="100M Running Achievement" style="border: 2px solid #004080;"/>
+    <img src="https://kantrum.github.io/images/IMG_1868.JPG" alt="100M Running Achievement" style="border: 2px solid #004080;"/>
     <p><strong>SWJTU-Leeds Joint School's WeChat public number titled "Congratulations to Huang Jiongtao for setting a new SWJTU Men's 100m Record".</strong></p>
 </div>
 <br/>
 <!-- 重复上面的代码块来添加更多图片 -->
 <div align="center">
-    <img src="../images/IMG_1869.JPG" alt="100M Running Achievement" style="border: 2px solid #004080;"/>
+    <img src="https://kantrum.github.io/images/IMG_1869.JPG" alt="100M Running Achievement" style="border: 2px solid #004080;"/>
     <p><strong>Interview and Report by Southwest Jiaotong University's Student Working Department</strong></p>
 </div>
 <br/>
 <!-- 重复上面的代码块来添加更多图片 -->
 <div align="center">
-    <img src="../images/IMG_1870.JPG" alt="100M Running Achievement" style="border: 2px solid #004080;"/>
+    <img src="https://kantrum.github.io/images/IMG_1870.JPG" alt="100M Running Achievement" style="border: 2px solid #004080;"/>
     <p><strong>Interviews and Reports by Southwest Jiaotong University Labour Union</strong></p>
 </div>
 <br/>
 <!-- 重复上面的代码块来添加更多图片 -->
 <div align="center">
     <a href="https://youth.swjtu.edu.cn/info/1211/36261.htm">
-    <img src="../images/IMG_1874.JPG" alt="100M Running Achievement" style="border: 2px solid #004080;"/>
+    <img src="https://kantrum.github.io/images/IMG_1874.JPG" alt="100M Running Achievement" style="border: 2px solid #004080;"/>
     </a>
     <p><strong>News from Southwest Jiaotong University's New Youth Quality Network</strong></p>
     <p>Click on the image to open the original site</p>
