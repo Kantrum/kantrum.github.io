@@ -2117,13 +2117,14 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // 配置社交媒体账号
     const socialConfig = {
-        github: {
-            username: 'Kantrum',
-            apiUrl: 'https://api.github.com/users/Kantrum/events/public'
+        xiaohongshu: {
+            username: '黄炯涛',
+            profileUrl: 'https://www.xiaohongshu.com/user/profile/5f16b885000000000101d720'
         },
-        twitter: {
-            username: 'Kantrum88',
-            rssUrl: 'https://nitter.net/Kantrum88/rss' // 使用Nitter作为Twitter RSS代理
+        weibo: {
+            username: 'Kantrum',
+            profileUrl: 'https://m.weibo.cn/u/5217974261',
+            uid: '5217974261'
         },
         linkedin: {
             username: 'jiongtao-huang-150709203',
@@ -2158,32 +2159,40 @@ document.addEventListener('DOMContentLoaded', () => {
         let statsHTML = '';
         
         switch(platform) {
-            case 'github':
+            case 'xiaohongshu':
                 headerContent = `
                     <div class="feed-platform-icon">
-                        <i class="fab fa-github"></i>
+                        <i class="fas fa-book" style="color: #ff2442;"></i>
                     </div>
-                    <span class="feed-username">${socialConfig.github.username}</span>
-                    <span class="feed-date">${formatTime(data.created_at)}</span>
+                    <span class="feed-username">${socialConfig.xiaohongshu.username}</span>
+                    <span class="feed-date">${formatTime(data.date)}</span>
                 `;
                 contentHTML = `
-                    <p class="feed-text">${data.message || data.type}</p>
-                    ${data.repo ? `<a href="https://github.com/${data.repo.name}" target="_blank" style="color: var(--accent); text-decoration: none; font-size: 0.9rem; margin-top: 10px; display: inline-block;">${data.repo.name}</a>` : ''}
+                    <p class="feed-text">${data.text}</p>
+                    ${data.image ? `<div class="feed-image"><img src="${data.image}" alt="小红书笔记"></div>` : ''}
                 `;
                 statsHTML = `
                     <div class="feed-stat">
+                        <i class="far fa-heart"></i>
+                        <span>${data.likes || 0}</span>
+                    </div>
+                    <div class="feed-stat">
+                        <i class="far fa-comment"></i>
+                        <span>${data.comments || 0}</span>
+                    </div>
+                    <div class="feed-stat">
                         <i class="far fa-star"></i>
-                        <span>${data.repo?.stargazers_count || 0}</span>
+                        <span>${data.collects || 0}</span>
                     </div>
                 `;
                 break;
                 
-            case 'twitter':
+            case 'weibo':
                 headerContent = `
                     <div class="feed-platform-icon">
-                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-weibo" style="color: #e6162d;"></i>
                     </div>
-                    <span class="feed-username">@${socialConfig.twitter.username}</span>
+                    <span class="feed-username">@${socialConfig.weibo.username}</span>
                     <span class="feed-date">${formatTime(data.date)}</span>
                 `;
                 contentHTML = `<p class="feed-text">${data.text}</p>`;
@@ -2198,7 +2207,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <div class="feed-stat">
                         <i class="fas fa-retweet"></i>
-                        <span>${data.retweets || 0}</span>
+                        <span>${data.reposts || 0}</span>
                     </div>
                 `;
                 break;
@@ -2243,96 +2252,37 @@ document.addEventListener('DOMContentLoaded', () => {
         return card;
     }
     
-    // 获取GitHub动态
-    async function fetchGitHubActivity() {
-        try {
-            const response = await fetch(socialConfig.github.apiUrl, {
-                headers: {
-                    'Accept': 'application/vnd.github.v3+json'
-                }
-            });
-            
-            if (!response.ok) throw new Error('GitHub API error');
-            
-            const events = await response.json();
-            const recentEvents = events.slice(0, 2); // 获取最近2个活动
-            const lang = typeof currentLang !== 'undefined' ? currentLang : 'en';
-            
-            return recentEvents.map(event => {
-                let message = '';
-                switch(event.type) {
-                    case 'PushEvent':
-                        message = lang === 'en' 
-                            ? `Pushed ${event.payload.commits?.length || 0} commit(s) to ${event.repo.name}`
-                            : `向 ${event.repo.name} 推送了 ${event.payload.commits?.length || 0} 个提交`;
-                        break;
-                    case 'CreateEvent':
-                        message = lang === 'en'
-                            ? `Created ${event.payload.ref_type} in ${event.repo.name}`
-                            : `在 ${event.repo.name} 中创建了 ${event.payload.ref_type}`;
-                        break;
-                    case 'WatchEvent':
-                        message = lang === 'en'
-                            ? `Starred ${event.repo.name}`
-                            : `收藏了 ${event.repo.name}`;
-                        break;
-                    case 'ForkEvent':
-                        message = lang === 'en'
-                            ? `Forked ${event.repo.name}`
-                            : `Fork了 ${event.repo.name}`;
-                        break;
-                    default:
-                        message = lang === 'en'
-                            ? `${event.type} in ${event.repo.name}`
-                            : `在 ${event.repo.name} 进行了 ${event.type}`;
-                }
-                
-                return {
-                    ...event,
-                    message: message,
-                    repo: event.repo
-                };
-            });
-        } catch (error) {
-            console.error('Error fetching GitHub activity:', error);
-            return [];
-        }
+    // 获取小红书动态（由于API限制，显示引导卡片）
+    function getXiaohongshuFeed() {
+        const lang = typeof currentLang !== 'undefined' ? currentLang : 'en';
+        return [{
+            text: lang === 'en'
+                ? 'Follow me on Xiaohongshu (Little Red Book) to see my latest notes and shares about life, technology, and more!'
+                : '在小红书上关注我，查看我关于生活、科技等方面的最新笔记和分享！',
+            date: new Date().toISOString(),
+            link: socialConfig.xiaohongshu.profileUrl,
+            image: null,
+            likes: 0,
+            comments: 0,
+            collects: 0,
+            isLink: true
+        }];
     }
     
-    // 获取Twitter动态（通过RSS）
-    async function fetchTwitterFeed() {
-        try {
-            // 使用CORS代理来获取RSS
-            const proxyUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(socialConfig.twitter.rssUrl)}`;
-            const response = await fetch(proxyUrl);
-            
-            if (!response.ok) throw new Error('Twitter RSS error');
-            
-            const data = await response.json();
-            if (data.items && data.items.length > 0) {
-                return data.items.slice(0, 2).map(item => ({
-                    text: item.title || item.description,
-                    date: item.pubDate,
-                    link: item.link,
-                    likes: 0,
-                    comments: 0,
-                    retweets: 0
-                }));
-            }
-            return [];
-        } catch (error) {
-            console.error('Error fetching Twitter feed:', error);
-            // 如果RSS失败，返回一个链接卡片
-            const lang = typeof currentLang !== 'undefined' ? currentLang : 'en';
-            return [{
-                text: lang === 'en' 
-                    ? 'Follow me on Twitter for the latest updates!'
-                    : '在Twitter上关注我获取最新动态！',
-                date: new Date().toISOString(),
-                link: `https://twitter.com/${socialConfig.twitter.username}`,
-                isLink: true
-            }];
-        }
+    // 获取微博动态（由于API限制，显示引导卡片）
+    function getWeiboFeed() {
+        const lang = typeof currentLang !== 'undefined' ? currentLang : 'en';
+        return [{
+            text: lang === 'en'
+                ? 'Follow me on Weibo for the latest updates, thoughts, and daily life sharing!'
+                : '在微博上关注我，获取最新动态、想法和日常生活分享！',
+            date: new Date().toISOString(),
+            link: socialConfig.weibo.profileUrl,
+            likes: 0,
+            comments: 0,
+            reposts: 0,
+            isLink: true
+        }];
     }
     
     // 获取LinkedIn动态（由于API限制，显示链接卡片）
@@ -2359,27 +2309,27 @@ document.addEventListener('DOMContentLoaded', () => {
         
         try {
             // 并行获取所有数据
-            const [githubEvents, twitterPosts, linkedinPosts] = await Promise.all([
-                fetchGitHubActivity(),
-                fetchTwitterFeed(),
-                getLinkedInCard()
+            const [xiaohongshuPosts, weiboPosts, linkedinPosts] = await Promise.all([
+                Promise.resolve(getXiaohongshuFeed()),
+                Promise.resolve(getWeiboFeed()),
+                Promise.resolve(getLinkedInCard())
             ]);
             
-            // 创建GitHub卡片
-            githubEvents.forEach(event => {
-                const card = createFeedCard('github', event);
-                if (event.repo?.name) {
+            // 创建小红书卡片
+            xiaohongshuPosts.forEach(post => {
+                const card = createFeedCard('xiaohongshu', post);
+                if (post.link) {
                     card.querySelector('.feed-content').addEventListener('click', () => {
-                        window.open(`https://github.com/${event.repo.name}`, '_blank');
+                        window.open(post.link, '_blank');
                     });
                     card.style.cursor = 'pointer';
                 }
                 feedGrid.appendChild(card);
             });
             
-            // 创建Twitter卡片
-            twitterPosts.forEach(post => {
-                const card = createFeedCard('twitter', post);
+            // 创建微博卡片
+            weiboPosts.forEach(post => {
+                const card = createFeedCard('weibo', post);
                 if (post.link) {
                     card.querySelector('.feed-content').addEventListener('click', () => {
                         window.open(post.link, '_blank');
@@ -2407,8 +2357,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--text-secondary);">
                         <p data-en="Unable to load social updates. Please visit my profiles directly:" data-zh="无法加载社交动态。请直接访问我的个人资料：">Unable to load social updates. Please visit my profiles directly:</p>
                         <div style="margin-top: 20px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                            <a href="https://github.com/${socialConfig.github.username}" target="_blank" style="color: var(--accent);">GitHub</a>
-                            <a href="https://twitter.com/${socialConfig.twitter.username}" target="_blank" style="color: var(--accent);">Twitter</a>
+                            <a href="${socialConfig.xiaohongshu.profileUrl}" target="_blank" style="color: var(--accent);">小红书</a>
+                            <a href="${socialConfig.weibo.profileUrl}" target="_blank" style="color: var(--accent);">微博</a>
                             <a href="${socialConfig.linkedin.profileUrl}" target="_blank" style="color: var(--accent);">LinkedIn</a>
                         </div>
                     </div>
