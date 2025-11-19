@@ -54,7 +54,7 @@ This document highlights my journey and key achievements in 100M running.
 <br/>
 <!-- 重复上面的代码块来添加更多图片 -->
 <div align="center">
-    <a href="https://youth.swjtu.edu.cn/Mobile/shownews-79529.shtml">
+    <a href="https://youth.swjtu.edu.cn/info/1211/36261.htm">
     <img src="../images/IMG_1874.JPG" alt="100M Running Achievement" style="border: 2px solid #004080;"/>
     </a>
     <p><strong>News from Southwest Jiaotong University's New Youth Quality Network</strong></p>
