@@ -10,7 +10,7 @@ date: 2021-12-01
 **Aim:** This project aims to teach the basic operation of a DC motor and various techniques for controlling motor operation. It involves constructing a brushless DC motor using supplied materials like a transistor, Hall sensor, magnets, and wires. The session includes winding a coil, assembling a rotor and stator, and building driving circuits with different components like a reed switch and Hall-effect sensor. The lab focuses on practical skills in circuit development, troubleshooting, and data interpretation, essential for undergraduate project work.
 
 
-<a href="https://kantrum.github.io/huangjiongtao.github.io/files/A_simple_electric_motor_SWJT.pdf" target="_blank">
+<a href="../files/A_simple_electric_motor_SWJT.pdf" target="_blank">
   <button style="background-color: #4CAF50; /* Green */
     border: none;
     color: white;
