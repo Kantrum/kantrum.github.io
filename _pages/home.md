@@ -2117,18 +2117,18 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // 配置社交媒体账号
     const socialConfig = {
-        twitter: {
-            username: 'Kantrum88',
-            rssUrl: 'https://nitter.net/Kantrum88/rss' // 使用Nitter作为Twitter RSS代理
+        xiaohongshu: {
+            username: 'Kantrum',
+            profileUrl: 'https://www.xiaohongshu.com/user/profile/5f16b885000000000101d720'
         },
         weibo: {
             username: 'Kantrum',
             profileUrl: 'https://m.weibo.cn/u/5217974261',
             uid: '5217974261'
         },
-        instagram: {
-            username: 'kantrums',
-            profileUrl: 'https://instagram.com/kantrums'
+        linkedin: {
+            username: 'jiongtao-huang-150709203',
+            profileUrl: 'https://www.linkedin.com/in/jiongtao-huang-150709203/'
         }
     };
     
@@ -2159,15 +2159,18 @@ document.addEventListener('DOMContentLoaded', () => {
         let statsHTML = '';
         
         switch(platform) {
-            case 'twitter':
+            case 'xiaohongshu':
                 headerContent = `
                     <div class="feed-platform-icon">
-                        <i class="fab fa-twitter"></i>
+                        <i class="fas fa-book" style="color: #ff2442;"></i>
                     </div>
-                    <span class="feed-username">@${socialConfig.twitter.username}</span>
+                    <span class="feed-username">${socialConfig.xiaohongshu.username}</span>
                     <span class="feed-date">${formatTime(data.date)}</span>
                 `;
-                contentHTML = `<p class="feed-text">${data.text}</p>`;
+                contentHTML = `
+                    <p class="feed-text">${data.text}</p>
+                    ${data.image ? `<div class="feed-image"><img src="${data.image}" alt="小红书笔记"></div>` : ''}
+                `;
                 statsHTML = `
                     <div class="feed-stat">
                         <i class="far fa-heart"></i>
@@ -2178,8 +2181,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span>${data.comments || 0}</span>
                     </div>
                     <div class="feed-stat">
-                        <i class="fas fa-retweet"></i>
-                        <span>${data.retweets || 0}</span>
+                        <i class="far fa-star"></i>
+                        <span>${data.collects || 0}</span>
                     </div>
                 `;
                 break;
@@ -2209,21 +2212,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
                 break;
                 
-            case 'instagram':
+            case 'linkedin':
                 headerContent = `
                     <div class="feed-platform-icon">
-                        <i class="fab fa-instagram" style="color: #E4405F;"></i>
+                        <i class="fab fa-linkedin-in"></i>
                     </div>
-                    <span class="feed-username">@${socialConfig.instagram.username}</span>
+                    <span class="feed-username">Jiongtao(Kaden) Huang</span>
                     <span class="feed-date">${formatTime(data.date)}</span>
                 `;
                 contentHTML = `
                     <p class="feed-text">${data.text}</p>
-                    ${data.image ? `<div class="feed-image"><img src="${data.image}" alt="Instagram Post"></div>` : ''}
+                    ${data.image ? `<div class="feed-image"><img src="${data.image}" alt="LinkedIn Post"></div>` : ''}
                 `;
                 statsHTML = `
                     <div class="feed-stat">
-                        <i class="far fa-heart"></i>
+                        <i class="far fa-thumbs-up"></i>
                         <span>${data.likes || 0}</span>
                     </div>
                     <div class="feed-stat">
@@ -2249,40 +2252,21 @@ document.addEventListener('DOMContentLoaded', () => {
         return card;
     }
     
-    // 获取Twitter动态（通过RSS）
-    async function fetchTwitterFeed() {
-        try {
-            // 使用CORS代理来获取RSS
-            const proxyUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(socialConfig.twitter.rssUrl)}`;
-            const response = await fetch(proxyUrl);
-            
-            if (!response.ok) throw new Error('Twitter RSS error');
-            
-            const data = await response.json();
-            if (data.items && data.items.length > 0) {
-                return data.items.slice(0, 2).map(item => ({
-                    text: item.title || item.description,
-                    date: item.pubDate,
-                    link: item.link,
-                    likes: 0,
-                    comments: 0,
-                    retweets: 0
-                }));
-            }
-            return [];
-        } catch (error) {
-            console.error('Error fetching Twitter feed:', error);
-            // 如果RSS失败，返回一个链接卡片
-            const lang = typeof currentLang !== 'undefined' ? currentLang : 'en';
-            return [{
-                text: lang === 'en' 
-                    ? 'Follow me on Twitter for the latest updates!'
-                    : '在Twitter上关注我获取最新动态！',
-                date: new Date().toISOString(),
-                link: `https://twitter.com/${socialConfig.twitter.username}`,
-                isLink: true
-            }];
-        }
+    // 获取小红书动态（由于API限制，显示引导卡片）
+    function getXiaohongshuFeed() {
+        const lang = typeof currentLang !== 'undefined' ? currentLang : 'en';
+        return [{
+            text: lang === 'en'
+                ? 'Follow me on Xiaohongshu (Little Red Book) to see my latest notes and shares about life, technology, and more!'
+                : '在小红书上关注我，查看我关于生活、科技等方面的最新笔记和分享！',
+            date: new Date().toISOString(),
+            link: socialConfig.xiaohongshu.profileUrl,
+            image: null,
+            likes: 0,
+            comments: 0,
+            collects: 0,
+            isLink: true
+        }];
     }
     
     // 获取微博动态（由于API限制，显示引导卡片）
@@ -2301,18 +2285,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }];
     }
     
-    // 获取Instagram动态（由于API限制，显示链接卡片）
-    function getInstagramFeed() {
+    // 获取LinkedIn动态（由于API限制，显示链接卡片）
+    function getLinkedInCard() {
         const lang = typeof currentLang !== 'undefined' ? currentLang : 'en';
         return [{
             text: lang === 'en'
-                ? 'Follow me on Instagram to see my latest photos, stories, and moments from daily life!'
-                : '在Instagram上关注我，查看我的最新照片、故事和日常生活瞬间！',
+                ? 'Connect with me on LinkedIn to see my professional updates and achievements.'
+                : '在LinkedIn上与我联系，查看我的专业动态和成就。',
             date: new Date().toISOString(),
-            link: socialConfig.instagram.profileUrl,
-            image: null,
-            likes: 0,
-            comments: 0,
+            link: socialConfig.linkedin.profileUrl,
             isLink: true
         }];
     }
@@ -2328,15 +2309,15 @@ document.addEventListener('DOMContentLoaded', () => {
         
         try {
             // 并行获取所有数据
-            const [twitterPosts, weiboPosts, instagramPosts] = await Promise.all([
-                fetchTwitterFeed(),
+            const [xiaohongshuPosts, weiboPosts, linkedinPosts] = await Promise.all([
+                Promise.resolve(getXiaohongshuFeed()),
                 Promise.resolve(getWeiboFeed()),
-                Promise.resolve(getInstagramFeed())
+                Promise.resolve(getLinkedInCard())
             ]);
             
-            // 创建Twitter卡片
-            twitterPosts.forEach(post => {
-                const card = createFeedCard('twitter', post);
+            // 创建小红书卡片
+            xiaohongshuPosts.forEach(post => {
+                const card = createFeedCard('xiaohongshu', post);
                 if (post.link) {
                     card.querySelector('.feed-content').addEventListener('click', () => {
                         window.open(post.link, '_blank');
@@ -2358,9 +2339,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 feedGrid.appendChild(card);
             });
             
-            // 创建Instagram卡片
-            instagramPosts.forEach(post => {
-                const card = createFeedCard('instagram', post);
+            // 创建LinkedIn卡片
+            linkedinPosts.forEach(post => {
+                const card = createFeedCard('linkedin', post);
                 if (post.link) {
                     card.querySelector('.feed-content').addEventListener('click', () => {
                         window.open(post.link, '_blank');
@@ -2376,9 +2357,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--text-secondary);">
                         <p data-en="Unable to load social updates. Please visit my profiles directly:" data-zh="无法加载社交动态。请直接访问我的个人资料：">Unable to load social updates. Please visit my profiles directly:</p>
                         <div style="margin-top: 20px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                            <a href="https://twitter.com/${socialConfig.twitter.username}" target="_blank" style="color: var(--accent);">Twitter</a>
+                            <a href="${socialConfig.xiaohongshu.profileUrl}" target="_blank" style="color: var(--accent);">小红书</a>
                             <a href="${socialConfig.weibo.profileUrl}" target="_blank" style="color: var(--accent);">微博</a>
-                            <a href="${socialConfig.instagram.profileUrl}" target="_blank" style="color: var(--accent);">Instagram</a>
+                            <a href="${socialConfig.linkedin.profileUrl}" target="_blank" style="color: var(--accent);">LinkedIn</a>
                         </div>
                     </div>
                 `;
