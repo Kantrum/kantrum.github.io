@@ -1561,84 +1561,11 @@ body {
                         <h2 data-en="Social Updates" data-zh="社交动态">Social Updates</h2>
                     </div>
                     
-                    <div class="feed-grid">
-                        <!-- Twitter动态卡片 -->
-                        <div class="feed-card">
-                            <div class="feed-header-bar">
-                                <div class="feed-platform-icon">
-                                    <i class="fab fa-twitter"></i>
-                                </div>
-                                <span class="feed-username">@Kantrum</span>
-                                <span class="feed-date">2 days ago</span>
-                            </div>
-                            <div class="feed-content">
-                                <p class="feed-text" data-en="Excited to share my latest research on advanced ML algorithms for signal processing! #MachineLearning #DSP" data-zh="很高兴分享我最新的关于信号处理中高级机器学习算法的研究！#机器学习 #数字信号处理">Excited to share my latest research on advanced ML algorithms for signal processing! #MachineLearning #DSP</p>
-                                <div class="feed-stats">
-                                    <div class="feed-stat">
-                                        <i class="far fa-heart"></i>
-                                        <span>42</span>
-                                    </div>
-                                    <div class="feed-stat">
-                                        <i class="far fa-comment"></i>
-                                        <span>7</span>
-                                    </div>
-                                    <div class="feed-stat">
-                                        <i class="fas fa-retweet"></i>
-                                        <span>12</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- LinkedIn动态卡片 -->
-                        <div class="feed-card">
-                            <div class="feed-header-bar">
-                                <div class="feed-platform-icon">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </div>
-                                <span class="feed-username">Jiongtao(Kaden) Huang</span>
-                                <span class="feed-date">1 week ago</span>
-                            </div>
-                            <div class="feed-content">
-                                <p class="feed-text" data-en="Honored to announce that our startup has secured seed funding to develop next-generation IoT solutions for smart cities." data-zh="很荣幸宣布我们的创业公司已获得种子轮融资，用于开发面向智慧城市的下一代物联网解决方案。">Honored to announce that our startup has secured seed funding to develop next-generation IoT solutions for smart cities.</p>
-                                <div class="feed-image">
-                                    <img src="https://via.placeholder.com/600x400" alt="Project Image">
-                                </div>
-                                <div class="feed-stats">
-                                    <div class="feed-stat">
-                                        <i class="far fa-thumbs-up"></i>
-                                        <span>138</span>
-                                    </div>
-                                    <div class="feed-stat">
-                                        <i class="far fa-comment"></i>
-                                        <span>24</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- GitHub动态卡片 -->
-                        <div class="feed-card">
-                            <div class="feed-header-bar">
-                                <div class="feed-platform-icon">
-                                    <i class="fab fa-github"></i>
-                                </div>
-                                <span class="feed-username">Kantrum</span>
-                                <span class="feed-date">3 days ago</span>
-                            </div>
-                            <div class="feed-content">
-                                <p class="feed-text" data-en="Just open-sourced our machine learning library for embedded systems. Check it out on GitHub! #OpenSource #EmbeddedML" data-zh="刚刚开源了我们的嵌入式系统机器学习库。欢迎在GitHub上查看！#开源 #嵌入式机器学习">Just open-sourced our machine learning library for embedded systems. Check it out on GitHub! #OpenSource #EmbeddedML</p>
-                                <div class="feed-stats">
-                                    <div class="feed-stat">
-                                        <i class="far fa-star"></i>
-                                        <span>87</span>
-                                    </div>
-                                    <div class="feed-stat">
-                                        <i class="fas fa-code-branch"></i>
-                                        <span>23</span>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="feed-grid" id="social-feed-grid">
+                        <!-- 动态内容将通过JavaScript加载 -->
+                        <div class="feed-loading" style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--text-secondary);">
+                            <i class="fas fa-spinner fa-spin" style="font-size: 2rem; margin-bottom: 15px;"></i>
+                            <p data-en="Loading social updates..." data-zh="正在加载社交动态...">Loading social updates...</p>
                         </div>
                     </div>
                 </div>
@@ -2179,6 +2106,347 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         body.style.opacity = 1;
     }, 100);
+});
+</script>
+
+<script>
+// 社交媒体动态加载功能
+document.addEventListener('DOMContentLoaded', () => {
+    const feedGrid = document.getElementById('social-feed-grid');
+    if (!feedGrid) return;
+    
+    // 配置社交媒体账号
+    const socialConfig = {
+        github: {
+            username: 'Kantrum',
+            apiUrl: 'https://api.github.com/users/Kantrum/events/public'
+        },
+        twitter: {
+            username: 'Kantrum88',
+            rssUrl: 'https://nitter.net/Kantrum88/rss' // 使用Nitter作为Twitter RSS代理
+        },
+        linkedin: {
+            username: 'jiongtao-huang-150709203',
+            profileUrl: 'https://www.linkedin.com/in/jiongtao-huang-150709203/'
+        }
+    };
+    
+    // 格式化时间
+    function formatTime(dateString) {
+        const lang = typeof currentLang !== 'undefined' ? currentLang : 'en';
+        const date = new Date(dateString);
+        const now = new Date();
+        const diff = now - date;
+        const seconds = Math.floor(diff / 1000);
+        const minutes = Math.floor(seconds / 60);
+        const hours = Math.floor(minutes / 60);
+        const days = Math.floor(hours / 24);
+        
+        if (days > 0) return `${days} ${lang === 'en' ? 'day' : '天'}${days > 1 ? (lang === 'en' ? 's' : '') : ''} ago`;
+        if (hours > 0) return `${hours} ${lang === 'en' ? 'hour' : '小时'}${hours > 1 ? (lang === 'en' ? 's' : '') : ''} ago`;
+        if (minutes > 0) return `${minutes} ${lang === 'en' ? 'minute' : '分钟'}${minutes > 1 ? (lang === 'en' ? 's' : '') : ''} ago`;
+        return lang === 'en' ? 'Just now' : '刚刚';
+    }
+    
+    // 创建Feed卡片
+    function createFeedCard(platform, data) {
+        const card = document.createElement('div');
+        card.className = 'feed-card';
+        
+        let headerContent = '';
+        let contentHTML = '';
+        let statsHTML = '';
+        
+        switch(platform) {
+            case 'github':
+                headerContent = `
+                    <div class="feed-platform-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <span class="feed-username">${socialConfig.github.username}</span>
+                    <span class="feed-date">${formatTime(data.created_at)}</span>
+                `;
+                contentHTML = `
+                    <p class="feed-text">${data.message || data.type}</p>
+                    ${data.repo ? `<a href="https://github.com/${data.repo.name}" target="_blank" style="color: var(--accent); text-decoration: none; font-size: 0.9rem; margin-top: 10px; display: inline-block;">${data.repo.name}</a>` : ''}
+                `;
+                statsHTML = `
+                    <div class="feed-stat">
+                        <i class="far fa-star"></i>
+                        <span>${data.repo?.stargazers_count || 0}</span>
+                    </div>
+                `;
+                break;
+                
+            case 'twitter':
+                headerContent = `
+                    <div class="feed-platform-icon">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <span class="feed-username">@${socialConfig.twitter.username}</span>
+                    <span class="feed-date">${formatTime(data.date)}</span>
+                `;
+                contentHTML = `<p class="feed-text">${data.text}</p>`;
+                statsHTML = `
+                    <div class="feed-stat">
+                        <i class="far fa-heart"></i>
+                        <span>${data.likes || 0}</span>
+                    </div>
+                    <div class="feed-stat">
+                        <i class="far fa-comment"></i>
+                        <span>${data.comments || 0}</span>
+                    </div>
+                    <div class="feed-stat">
+                        <i class="fas fa-retweet"></i>
+                        <span>${data.retweets || 0}</span>
+                    </div>
+                `;
+                break;
+                
+            case 'linkedin':
+                headerContent = `
+                    <div class="feed-platform-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <span class="feed-username">Jiongtao(Kaden) Huang</span>
+                    <span class="feed-date">${formatTime(data.date)}</span>
+                `;
+                contentHTML = `
+                    <p class="feed-text">${data.text}</p>
+                    ${data.image ? `<div class="feed-image"><img src="${data.image}" alt="LinkedIn Post"></div>` : ''}
+                `;
+                statsHTML = `
+                    <div class="feed-stat">
+                        <i class="far fa-thumbs-up"></i>
+                        <span>${data.likes || 0}</span>
+                    </div>
+                    <div class="feed-stat">
+                        <i class="far fa-comment"></i>
+                        <span>${data.comments || 0}</span>
+                    </div>
+                `;
+                break;
+        }
+        
+        card.innerHTML = `
+            <div class="feed-header-bar">
+                ${headerContent}
+            </div>
+            <div class="feed-content">
+                ${contentHTML}
+                <div class="feed-stats">
+                    ${statsHTML}
+                </div>
+            </div>
+        `;
+        
+        return card;
+    }
+    
+    // 获取GitHub动态
+    async function fetchGitHubActivity() {
+        try {
+            const response = await fetch(socialConfig.github.apiUrl, {
+                headers: {
+                    'Accept': 'application/vnd.github.v3+json'
+                }
+            });
+            
+            if (!response.ok) throw new Error('GitHub API error');
+            
+            const events = await response.json();
+            const recentEvents = events.slice(0, 2); // 获取最近2个活动
+            const lang = typeof currentLang !== 'undefined' ? currentLang : 'en';
+            
+            return recentEvents.map(event => {
+                let message = '';
+                switch(event.type) {
+                    case 'PushEvent':
+                        message = lang === 'en' 
+                            ? `Pushed ${event.payload.commits?.length || 0} commit(s) to ${event.repo.name}`
+                            : `向 ${event.repo.name} 推送了 ${event.payload.commits?.length || 0} 个提交`;
+                        break;
+                    case 'CreateEvent':
+                        message = lang === 'en'
+                            ? `Created ${event.payload.ref_type} in ${event.repo.name}`
+                            : `在 ${event.repo.name} 中创建了 ${event.payload.ref_type}`;
+                        break;
+                    case 'WatchEvent':
+                        message = lang === 'en'
+                            ? `Starred ${event.repo.name}`
+                            : `收藏了 ${event.repo.name}`;
+                        break;
+                    case 'ForkEvent':
+                        message = lang === 'en'
+                            ? `Forked ${event.repo.name}`
+                            : `Fork了 ${event.repo.name}`;
+                        break;
+                    default:
+                        message = lang === 'en'
+                            ? `${event.type} in ${event.repo.name}`
+                            : `在 ${event.repo.name} 进行了 ${event.type}`;
+                }
+                
+                return {
+                    ...event,
+                    message: message,
+                    repo: event.repo
+                };
+            });
+        } catch (error) {
+            console.error('Error fetching GitHub activity:', error);
+            return [];
+        }
+    }
+    
+    // 获取Twitter动态（通过RSS）
+    async function fetchTwitterFeed() {
+        try {
+            // 使用CORS代理来获取RSS
+            const proxyUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(socialConfig.twitter.rssUrl)}`;
+            const response = await fetch(proxyUrl);
+            
+            if (!response.ok) throw new Error('Twitter RSS error');
+            
+            const data = await response.json();
+            if (data.items && data.items.length > 0) {
+                return data.items.slice(0, 2).map(item => ({
+                    text: item.title || item.description,
+                    date: item.pubDate,
+                    link: item.link,
+                    likes: 0,
+                    comments: 0,
+                    retweets: 0
+                }));
+            }
+            return [];
+        } catch (error) {
+            console.error('Error fetching Twitter feed:', error);
+            // 如果RSS失败，返回一个链接卡片
+            const lang = typeof currentLang !== 'undefined' ? currentLang : 'en';
+            return [{
+                text: lang === 'en' 
+                    ? 'Follow me on Twitter for the latest updates!'
+                    : '在Twitter上关注我获取最新动态！',
+                date: new Date().toISOString(),
+                link: `https://twitter.com/${socialConfig.twitter.username}`,
+                isLink: true
+            }];
+        }
+    }
+    
+    // 获取LinkedIn动态（由于API限制，显示链接卡片）
+    function getLinkedInCard() {
+        const lang = typeof currentLang !== 'undefined' ? currentLang : 'en';
+        return [{
+            text: lang === 'en'
+                ? 'Connect with me on LinkedIn to see my professional updates and achievements.'
+                : '在LinkedIn上与我联系，查看我的专业动态和成就。',
+            date: new Date().toISOString(),
+            link: socialConfig.linkedin.profileUrl,
+            isLink: true
+        }];
+    }
+    
+    // 加载所有社交媒体动态
+    async function loadSocialFeeds() {
+        const loadingElement = feedGrid.querySelector('.feed-loading');
+        if (loadingElement) {
+            loadingElement.remove();
+        }
+        
+        feedGrid.innerHTML = '';
+        
+        try {
+            // 并行获取所有数据
+            const [githubEvents, twitterPosts, linkedinPosts] = await Promise.all([
+                fetchGitHubActivity(),
+                fetchTwitterFeed(),
+                getLinkedInCard()
+            ]);
+            
+            // 创建GitHub卡片
+            githubEvents.forEach(event => {
+                const card = createFeedCard('github', event);
+                if (event.repo?.name) {
+                    card.querySelector('.feed-content').addEventListener('click', () => {
+                        window.open(`https://github.com/${event.repo.name}`, '_blank');
+                    });
+                    card.style.cursor = 'pointer';
+                }
+                feedGrid.appendChild(card);
+            });
+            
+            // 创建Twitter卡片
+            twitterPosts.forEach(post => {
+                const card = createFeedCard('twitter', post);
+                if (post.link) {
+                    card.querySelector('.feed-content').addEventListener('click', () => {
+                        window.open(post.link, '_blank');
+                    });
+                    card.style.cursor = 'pointer';
+                }
+                feedGrid.appendChild(card);
+            });
+            
+            // 创建LinkedIn卡片
+            linkedinPosts.forEach(post => {
+                const card = createFeedCard('linkedin', post);
+                if (post.link) {
+                    card.querySelector('.feed-content').addEventListener('click', () => {
+                        window.open(post.link, '_blank');
+                    });
+                    card.style.cursor = 'pointer';
+                }
+                feedGrid.appendChild(card);
+            });
+            
+            // 如果没有获取到任何内容，显示提示
+            if (feedGrid.children.length === 0) {
+                feedGrid.innerHTML = `
+                    <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--text-secondary);">
+                        <p data-en="Unable to load social updates. Please visit my profiles directly:" data-zh="无法加载社交动态。请直接访问我的个人资料：">Unable to load social updates. Please visit my profiles directly:</p>
+                        <div style="margin-top: 20px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                            <a href="https://github.com/${socialConfig.github.username}" target="_blank" style="color: var(--accent);">GitHub</a>
+                            <a href="https://twitter.com/${socialConfig.twitter.username}" target="_blank" style="color: var(--accent);">Twitter</a>
+                            <a href="${socialConfig.linkedin.profileUrl}" target="_blank" style="color: var(--accent);">LinkedIn</a>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // 添加滚动动画
+            const feedCards = feedGrid.querySelectorAll('.feed-card');
+            feedCards.forEach((card, index) => {
+                gsap.from(card, {
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%",
+                        toggleActions: "play none none none"
+                    },
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.8,
+                    delay: index * 0.2,
+                    ease: "power3.out"
+                });
+            });
+            
+        } catch (error) {
+            console.error('Error loading social feeds:', error);
+            feedGrid.innerHTML = `
+                <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--text-secondary);">
+                    <p data-en="Error loading social updates. Please try again later." data-zh="加载社交动态时出错。请稍后再试。">Error loading social updates. Please try again later.</p>
+                </div>
+            `;
+        }
+    }
+    
+    // 页面加载后获取动态
+    loadSocialFeeds();
+    
+    // 每5分钟刷新一次
+    setInterval(loadSocialFeeds, 5 * 60 * 1000);
 });
 </script>
 
