@@ -13,11 +13,6 @@ This document highlights my journey and key achievements in 100M running.
 - **First in the School Sports Meeting**
   - **Description:** Broke the 38-year school record of Southwest Jiaotong University with 11.10s.
   - **Location:** Southwest Jiaotong University
-  - **Coach's Comment:** [If applicable, include a brief comment from your coach]
-  - **Experience Gained:** [Discuss the experience and learning gained]
-  - **Overcoming Challenges:** A brief story of any challenges or injuries faced and overcome.
-  - **Recovery Process:** [Details about your recovery and comeback]
-
 
 <div align="center">
     <img src="../images/IMG_1871.JPG" alt="100M Running Achievement" style="border: 2px solid #004080;"/>
@@ -69,12 +64,6 @@ This document highlights my journey and key achievements in 100M running.
 - **Second in Sichuan Provincial Athletics Championships**
   - **Description:** Won 2nd place in the Campus Division (non-high level/specialty group).
   - **Location:** Southwest Jiaotong University
-
-## 2024 - Apr
-
-- **Future Goals and Aspirations**
-  - **Description:** Breaking my own record in the school sports meeting.
-  - **Training Plan:** [My upcoming training plan or strategy]
 
 ---
 
