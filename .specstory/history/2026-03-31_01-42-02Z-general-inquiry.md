@@ -905,3 +905,268 @@ _**Agent (default)**_
 **Adjusting layout for scrolling**
 
 I need to edit the home.md section to create a horizontal scrolling layout for certain items. I’ll look for the HTML structure, possibly focusing on "philosophy-item" and "features grid." I’ll inspect the code starting around line 1440 to see how it’s set up. I'll adjust the CSS to use a flex row with `overflow-x: auto` for responsiveness, removing the vertical layout. To implement this, I think wrapping items in a new div named `.why-scroll` works best. The user wants content for these items, which already exists, so I’ll replace the layout with a single `.why-scroll` that includes seven cards. It might require further adjustments.</details></think>
+
+_**Agent (default)**_
+
+我先把 `Why This Digital Space?` 这一段的 HTML 结构（这 7 个卡片目前分别在哪些容器里）读出来，然后把它们重排成**单行横向滚动（overflow-x）**的布局，并保留你现有的样式质感与 AOS/GSAP 动画不至于报错。
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: /Users/mac/Desktop/Personal Web/_pages/home.md</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: /Users/mac/Desktop/Personal Web/_pages/home.md</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
+<details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": false,
+  "outputMode": "content",
+  "path": "/Users/mac/Desktop/Personal Web/_pages/home.md",
+  "pattern": "Innovation Nexus|Knowledge Exchange|Progress Narrative|Research Insights|Startup Journey|Project Portfolio|Community Engagement"
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "content",
+  "path": "/Users/mac/Desktop/Personal Web/_pages/home.md",
+  "pattern": "Innovation Nexus|Knowledge Exchange|Progress Narrative|Research Insights|Startup Journey|Project Portfolio|Community Engagement",
+  "topFiles": [
+    {
+      "matchCount": 7,
+      "uri": "_pages/home.md"
+    }
+  ],
+  "totalFiles": 1,
+  "totalMatches": 7
+}
+```
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
+<details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": false,
+  "outputMode": "content",
+  "path": "/Users/mac/Desktop/Personal Web/_pages/home.md",
+  "pattern": "why-section|why-layout|philosophy-container|feature|why-card|vertical-line"
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "content",
+  "path": "/Users/mac/Desktop/Personal Web/_pages/home.md",
+  "pattern": "why-section|why-layout|philosophy-container|feature|why-card|vertical-line",
+  "topFiles": [
+    {
+      "matchCount": 44,
+      "uri": "_pages/home.md"
+    }
+  ],
+  "totalFiles": 1,
+  "totalMatches": 44
+}
+```
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+**Designing a layout**
+
+I need to create a horizontal layout for items currently in philosophy-item and feature-card. I’m thinking of making a new wrapper called .why-scroll-row and converting each item to a unified card style, perhaps reusing the feature-card. 
+
+I'll keep the existing HTML but change the CSS to display them in a flex row without vertical lines. This involves setting .why-layout to flex with overflow-x:auto, ensuring everything aligns in one horizontal line. Also, I should address the potential issues with display:contents.
+**Revamping item layout**
+
+I could remove the old markup and create a new list with seven items instead. I’ll edit the HTML in section 1445-1538 by replacing the why-layout content with a new div class called why-scroll that wraps around the seven cards, each containing an icon, title, and description. I plan to reuse existing content with the class why-scroll-card. 
+
+For CSS, I’ll ensure that the layout is flexible with proper padding and scrolling. I’ll also remove vertical lines and add the class why-card to the new cards for maintaining behavior.
+**Updating card layout**
+
+I plan to use the feature-card for all seven items. This will include elements like an icon div with the class feature-icon, an h4 for the title with the class feature-title, and a p for the content with feature-content. That should ensure everything maintains its styling. 
+
+I’ll create these seven feature-card items within the .why-scroll container and can remove the philosophy-container. I’ll also need to update the CSS to define .why-scroll with proper flex settings while keeping the old CSS intact. Then, I’ll patch the file after making these updates.</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: /Users/mac/Desktop/Personal Web/_pages/home.md</summary>
+
+</details>
+
+</tool-use>
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="read_lints">
+<details>
+<summary>Tool use: **read_lints**</summary>
+
+
+Parameters:
+
+```json
+{
+  "paths": [
+    "_pages/home.md"
+  ]
+}
+```
+Result:
+
+```json
+{
+  "linterErrorsByFile": [
+    {
+      "relativeWorkspacePath": "_pages/home.md"
+    }
+  ]
+}
+```
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="unknown" data-tool-name="read_lints"><details>
+<summary>Tool use: **read_lints**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
+<details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": false,
+  "outputMode": "content",
+  "path": "/Users/mac/Desktop/Personal Web/_pages/home.md",
+  "pattern": "\u003cdiv class=\"why-layout\"|vertical-line|philosophy-container|features-grid"
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "content",
+  "path": "/Users/mac/Desktop/Personal Web/_pages/home.md",
+  "pattern": "\u003cdiv class=\"why-layout\"|vertical-line|philosophy-container|features-grid",
+  "topFiles": [
+    {
+      "matchCount": 7,
+      "uri": "_pages/home.md"
+    }
+  ],
+  "totalFiles": 1,
+  "totalMatches": 7
+}
+```
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+### 已完成：Why 区块改成“一行横向滚动”布局
+
+我把 `Why This Digital Space?` 里你点名的 7 项内容，改成**单行横向滚动（横向滑动）**的卡片条了，不再左右两列/竖向堆叠。
+
+- **HTML 重排**：把原来的 `.why-layout`（左侧 `philosophy-item` + 中间竖线 + 右侧 `feature-card`）替换为一个 `.why-scroll` 容器，内部按顺序放了 7 张卡：
+  - Innovation Nexus
+  - Research Insights
+  - Knowledge Exchange
+  - Startup Journey
+  - Progress Narrative
+  - Project Portfolio
+  - Community Engagement
+- **样式实现**：新增 `.why-scroll` 的横向滚动样式（`display:flex` + `overflow-x:auto` + `scroll-snap`），并让每张卡固定宽度在一行内滑动浏览。
+- **动画兼容**：每张卡都保留 `data-aos`，并加了 `why-card` class，避免你现有的观察器逻辑找不到元素。
+
+另外我还保留了旧的 `.vertical-line / .philosophy-container / .features-grid` CSS（现在不会再被用到），如果你想我顺手做一次“瘦身清理”，我也可以把这些未使用样式删掉，让文件更干净。
+
+---
+
+_**User**_
+
+优化一下横向滚动的效果，需要自动滚动，按一定速度，同时加一下合适的放大缩小动画
