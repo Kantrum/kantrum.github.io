@@ -519,20 +519,15 @@ body {
 
 /* Why section 横向滚动一行布局（替代竖向排布） */
 .why-scroll {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: clamp(16px, 2vw, 24px);
-    overflow-x: auto;
+    position: relative;
+    overflow: hidden;
     padding: 10px 6px 24px;
     margin: 0 -6px;
-    scroll-snap-type: x proximity;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-x: contain;
-    scroll-behavior: auto;
+    --marquee-duration: 40s;
 }
 
 .why-scroll::-webkit-scrollbar {
-    height: 8px;
+    height: 0;
 }
 
 .why-scroll::-webkit-scrollbar-track {
@@ -549,10 +544,31 @@ body {
     background: rgba(56, 189, 248, 0.75);
 }
 
+.why-scroll-track {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: clamp(16px, 2vw, 24px);
+    width: max-content;
+    will-change: transform;
+    animation: why-marquee var(--marquee-duration) linear infinite;
+}
+
+.why-scroll:hover .why-scroll-track {
+    animation-play-state: paused;
+}
+
+.why-scroll.is-paused .why-scroll-track {
+    animation-play-state: paused;
+}
+
+@keyframes why-marquee {
+    from { transform: translate3d(0, 0, 0); }
+    to { transform: translate3d(-50%, 0, 0); }
+}
+
 .why-scroll .feature-card {
     flex: 0 0 auto;
     width: min(420px, 82vw);
-    scroll-snap-align: start;
     transform-origin: center center;
     will-change: transform;
     transition: transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -1497,6 +1513,7 @@ body {
                 </div>
                 
                     <div class="why-scroll" aria-label="Why This Digital Space cards">
+                        <div class="why-scroll-track">
                         <div class="feature-card why-card" data-aos="fade-up" data-aos-delay="100">
                             <div class="feature-icon">
                                 <i class="fas fa-lightbulb"></i>
@@ -1572,6 +1589,7 @@ body {
                                data-zh="一个与志同道合的同行、导师和合作者建立有意义联系的平台，共同热爱创新和技术进步。">
                                A platform for meaningful connections with peers, mentors, and collaborators who share a passion for innovation and technological advancement.
                             </p>
+                        </div>
                         </div>
                     </div>
                     
@@ -2176,30 +2194,52 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <script>
-// Why 横向滚动：自动滚动 + 动态缩放（尊重 prefers-reduced-motion）
+// Why 横向滚动：自动滚动（跑马灯） + 动态缩放（尊重 prefers-reduced-motion）
 document.addEventListener('DOMContentLoaded', () => {
     const scroller = document.querySelector('.why-scroll');
-    if (!scroller) return;
+    const track = scroller ? scroller.querySelector('.why-scroll-track') : null;
+    if (!scroller || !track) return;
 
     const prefersReducedMotion =
         typeof window !== 'undefined' &&
         typeof window.matchMedia === 'function' &&
         window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    const getCards = () => Array.from(scroller.querySelectorAll('.feature-card'));
+    // 1) 跑马灯无缝：把第一组卡片克隆一份接在后面（track 总长度约为 2x）
+    if (!track.dataset.duplicated) {
+        track.dataset.duplicated = '1';
+        const originals = Array.from(track.children);
+        for (const node of originals) {
+            const clone = node.cloneNode(true);
+            clone.setAttribute('aria-hidden', 'true');
+            clone.querySelectorAll('a, button, input, textarea, select').forEach(el => el.setAttribute('tabindex', '-1'));
+            track.appendChild(clone);
+        }
+    }
 
-    // 动态缩放：越靠近容器中心，scale 越大
+    // 2) 速度控制：根据半程宽度(px) / 速度(px/s) 计算 duration(s)
+    const speedPxPerSec = 30; // 你可以调：20 更慢、40 更快
+    const refreshDuration = () => {
+        // 半程宽度：track.scrollWidth / 2（因为我们复制了一份）
+        const halfWidth = track.scrollWidth / 2;
+        if (!halfWidth || !Number.isFinite(halfWidth)) return;
+        const durationSec = Math.max(8, halfWidth / speedPxPerSec);
+        scroller.style.setProperty('--marquee-duration', `${durationSec.toFixed(2)}s`);
+    };
+
+    // 3) 动态缩放：越靠近容器中心，scale 越大
+    const cards = () => Array.from(track.querySelectorAll('.feature-card'));
     let scaleRaf = null;
     const applyScale = () => {
         scaleRaf = null;
-        const cards = getCards();
-        if (cards.length === 0) return;
+        const list = cards();
+        if (list.length === 0) return;
 
         const containerRect = scroller.getBoundingClientRect();
         const centerX = containerRect.left + containerRect.width / 2;
         const maxDist = containerRect.width / 2;
 
-        for (const card of cards) {
+        for (const card of list) {
             const rect = card.getBoundingClientRect();
             const cardCenter = rect.left + rect.width / 2;
             const dist = Math.min(Math.abs(cardCenter - centerX), maxDist);
@@ -2215,104 +2255,42 @@ document.addEventListener('DOMContentLoaded', () => {
         scaleRaf = requestAnimationFrame(applyScale);
     };
 
-    scroller.addEventListener('scroll', requestScale, { passive: true });
-    window.addEventListener('resize', requestScale, { passive: true });
-    requestScale();
-
-    if (prefersReducedMotion) return;
-
-    // 无缝自动滚动：克隆一份卡片，实现循环
-    const originalCards = Array.from(scroller.children);
-    if (originalCards.length > 0 && !scroller.dataset.autoScrollReady) {
-        scroller.dataset.autoScrollReady = '1';
-        for (const node of originalCards) {
-            const clone = node.cloneNode(true);
-            clone.setAttribute('aria-hidden', 'true');
-            clone.querySelectorAll('a, button, input, textarea, select').forEach(el => {
-                el.setAttribute('tabindex', '-1');
-            });
-            scroller.appendChild(clone);
-        }
-    }
-
-    const speedPxPerSec = 30; // 你可以调：20 慢、40 更快
-    let lastTs = null;
-    let autoRaf = null;
-    let paused = false;
-
-    const getLoopWidth = () => {
-        // 原始一轮的宽度（不含克隆）：用 children 前半段累计
-        const kids = Array.from(scroller.children);
-        const half = Math.floor(kids.length / 2);
-        let w = 0;
-        for (let i = 0; i < half; i++) w += kids[i].getBoundingClientRect().width;
-        // 加上 gap（用 offsetLeft 差值更稳）
-        if (half >= 2) {
-            const gap = kids[1].offsetLeft - kids[0].offsetLeft - kids[0].offsetWidth;
-            if (Number.isFinite(gap) && gap > 0) w += gap * (half - 1);
-        }
-        return w;
-    };
-
-    let loopWidth = 0;
-    const refreshLoopWidth = () => {
-        loopWidth = getLoopWidth();
-    };
-
-    const tick = (ts) => {
-        if (paused) {
-            lastTs = ts;
-            autoRaf = requestAnimationFrame(tick);
-            return;
-        }
-
-        if (lastTs == null) lastTs = ts;
-        const dt = (ts - lastTs) / 1000;
-        lastTs = ts;
-
-        scroller.scrollLeft += speedPxPerSec * dt;
-
-        // 到达一轮末尾就回到开头同位置，形成无缝循环
-        if (loopWidth > 0 && scroller.scrollLeft >= loopWidth) {
-            scroller.scrollLeft -= loopWidth;
-        }
-
-        // 同步缩放（不要每帧强制 layout 太多，走 rAF 节流）
+    // 由于跑马灯是 transform 动画，不会触发 scroll 事件：用 rAF 低频刷新 scale
+    let loopRaf = null;
+    const loop = () => {
         requestScale();
-        autoRaf = requestAnimationFrame(tick);
+        loopRaf = requestAnimationFrame(loop);
     };
 
-    const start = () => {
-        if (autoRaf) return;
-        paused = false;
-        scroller.classList.remove('is-paused');
-        refreshLoopWidth();
-        lastTs = null;
-        autoRaf = requestAnimationFrame(tick);
-    };
-
-    const pause = () => {
-        paused = true;
-        scroller.classList.add('is-paused');
-    };
-
-    // 悬停/触摸/聚焦时暂停，避免“抢滚动”
+    // 悬停/触摸时暂停动画（CSS 已处理），这里同步 class 以显示 cursor
+    const pause = () => scroller.classList.add('is-paused');
+    const resume = () => scroller.classList.remove('is-paused');
     scroller.addEventListener('mouseenter', pause);
-    scroller.addEventListener('mouseleave', () => { paused = false; scroller.classList.remove('is-paused'); });
+    scroller.addEventListener('mouseleave', resume);
     scroller.addEventListener('touchstart', pause, { passive: true });
-    scroller.addEventListener('touchend', () => { paused = false; scroller.classList.remove('is-paused'); }, { passive: true });
+    scroller.addEventListener('touchend', resume, { passive: true });
     scroller.addEventListener('focusin', pause);
-    scroller.addEventListener('focusout', () => { paused = false; scroller.classList.remove('is-paused'); });
+    scroller.addEventListener('focusout', resume);
 
-    // 页面不可见时暂停
     document.addEventListener('visibilitychange', () => {
-        paused = document.hidden;
-        scroller.classList.toggle('is-paused', paused);
+        if (document.hidden) scroller.classList.add('is-paused');
+        else scroller.classList.remove('is-paused');
     });
 
-    // 先让用户看到第一组卡片起点
-    scroller.scrollLeft = 0;
-    start();
+    refreshDuration();
+    window.addEventListener('resize', () => {
+        refreshDuration();
+        requestScale();
+    }, { passive: true });
+
+    if (prefersReducedMotion) {
+        track.style.animation = 'none';
+        applyScale();
+        return;
+    }
+
+    // 开始缩放循环
+    if (!loopRaf) loop();
 });
 </script>
 
