@@ -304,6 +304,15 @@ body {
     hyphens: auto;
     line-height: 1.1;
     letter-spacing: -1px;
+    /* 让渐变字从下面内容“跳出来”，但保持克制 */
+    text-shadow:
+        0 1px 0 rgba(0, 0, 0, 0.28),
+        0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* WebKit 渐变字描边：更清晰但不突兀（Safari/Chrome） */
+.hero-text h1 {
+    -webkit-text-stroke: 0.6px rgba(15, 23, 42, 0.35);
 }
 
 .title {
@@ -324,6 +333,8 @@ body {
     color: transparent;
     display: inline-block;
     padding: 5px 0;
+    /* 稍微降低存在感，突出名字 */
+    opacity: 0.92;
 }
 
 .description {
