@@ -1,0 +1,211 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background: rgba(15, 23, 42, 0.8);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  transition: padding 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar--scrolled {
+  padding: 15px 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.nav-brand a {
+  color: #f1f5f9;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.nav-brand a:hover {
+  color: #38bdf8;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #f1f5f9;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.8;
+  padding: 8px 0;
+  position: relative;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+  color: #38bdf8;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #38bdf8;
+  transition: width 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.language-switch {
+  display: flex;
+  align-items: center;
+}
+
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid rgba(241, 245, 249, 0.2);
+  border-radius: 999px;
+  background: rgba(30, 41, 59, 0.4);
+  color: #f1f5f9;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.lang-btn:hover {
+  border-color: rgba(56, 189, 248, 0.6);
+}
+
+.lang-text {
+  opacity: 0.65;
+}
+
+.lang-text.active {
+  opacity: 1;
+}
+
+.lang-separator {
+  opacity: 0.5;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+}
+
+.mobile-menu-btn span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #f1f5f9;
+  margin: 5px 0;
+  transition: all 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.mobile-menu-btn.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+// 给主题内容留出固定导航的高度
+.page__content,
+.archive,
+#main {
+  scroll-margin-top: 96px;
+}
+
+body {
+  padding-top: 80px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .nav-brand a {
+    font-size: 1.1rem;
+    max-width: 60vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+  }
+
+  .mobile-menu-btn span {
+    width: 32px;
+    height: 3px;
+    margin: 7px 0;
+  }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.97);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10px;
+    gap: 32px;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .nav-links a {
+    font-size: 1.4rem;
+    padding: 16px 0;
+    letter-spacing: 1px;
+  }
+}
+

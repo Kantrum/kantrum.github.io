@@ -1,0 +1,60 @@
+{% include base_path %}
+
+{% assign is_zh = false %}
+{% if site.locale contains "zh" %}
+  {% assign is_zh = true %}
+{% endif %}
+{% if site.baseurl == "/zh" %}
+  {% assign is_zh = true %}
+{% endif %}
+
+{% assign target_baseurl = "/zh" %}
+{% if is_zh %}
+  {% assign target_baseurl = "" %}
+{% endif %}
+
+{% assign lang_switch_href = target_baseurl | append: page.url %}
+
+{% assign nav_data = site.data.navigation_en %}
+{% if is_zh %}
+  {% assign nav_data = site.data.navigation_zh %}
+{% endif %}
+
+<nav class="navbar" role="navigation" aria-label="Primary">
+  <div class="nav-brand">
+    <a href="{{ base_path }}/">
+      <span data-en="Jiongtao Huang" data-zh="黄炯涛">{% if is_zh %}黄炯涛{% else %}Jiongtao Huang{% endif %}</span>
+    </a>
+  </div>
+
+  <div class="nav-right">
+    <div class="language-switch">
+      <a class="lang-btn" href="{{ lang_switch_href }}" aria-label="{% if is_zh %}切换到英文{% else %}Switch to Chinese{% endif %}">
+        <span class="lang-text{% unless is_zh %} active{% endunless %}">EN</span>
+        <span class="lang-separator">/</span>
+        <span class="lang-text{% if is_zh %} active{% endif %}">中文</span>
+      </a>
+    </div>
+
+    <button class="mobile-menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="global-nav-links">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="nav-links" id="global-nav-links">
+      {% for link in nav_data.main %}
+        {% if link.url contains 'http' %}
+          {% assign domain = '' %}
+        {% else %}
+          {% assign domain = base_path | append: "/" %}
+        {% endif %}
+
+        <li>
+          <a href="{{ domain }}{{ link.url | replace_first: '/', '' }}/">{{ link.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
+

@@ -1364,35 +1364,8 @@ body {
 
     <!-- 主要内容 -->
     <div class="content-wrapper">
-        <!-- 导航栏 -->
-        <nav class="navbar">
-            <div class="nav-brand">
-                <a href="" data-en="Jiongtao Huang" data-zh="黄炯涛">Jiongtao Huang</a>
-            </div>
-            <div class="nav-right">
-                <!-- 语言切换按钮 -->
-                <div class="language-switch">
-                    <button class="lang-btn" onclick="toggleLanguage()">
-                        <span class="lang-text">EN</span>
-                        <span class="lang-separator">/</span>
-                        <span class="lang-text">中文</span>
-                    </button>
-                </div>
-                <button class="mobile-menu-btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-links">
-                    <li><a href="introduction/" data-en="Introduction" data-zh="简介">Introduction</a></li>
-                    <li><a href="education/" data-en="Education" data-zh="教育">Education</a></li>
-                    <li><a href="entrepreneurship/" data-en="Entrepreneurship" data-zh="创业">Entrepreneurship</a></li>
-                    <li><a href="portfolio/" data-en="Life" data-zh="生活">Life</a></li>
-                    <li><a href="year-archive/" data-en="Blog" data-zh="博客">Blog</a></li>
-                    <li><a href="cv/" data-en="Resume" data-zh="简历">Resume</a></li>
-                </ul>
-            </div>
-        </nav>
+        <!-- 导航栏（全站统一版本） -->
+        {% include global_nav.html %}
 
         <!-- 主页面内容 -->
         <main class="main-content">
@@ -1761,21 +1734,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// 导航栏滚动效果
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.padding = "15px 40px";
-        navbar.style.boxShadow = "0 10px 30px rgba(0, 0, 0, 0.1)";
-    } else {
-        navbar.style.padding = "20px 40px";
-        navbar.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.1)";
-    }
-});
 </script>
 
 <script>
-let currentLang = 'en';
+// 主页语言显示：根据当前站点语言（构建时 / 或 /zh/）自动选择 data-en/data-zh
+let currentLang = (document.documentElement.lang || 'en').toLowerCase().startsWith('zh') ? 'zh' : 'en';
 
 const translations = {
     en: {
@@ -1798,48 +1761,11 @@ const translations = {
     }
 };
 
-function toggleLanguage() {
-    // 添加过渡动画效果
-    document.querySelectorAll('[data-en], [data-zh]').forEach(element => {
-        element.style.opacity = 0;
-    });
-    
-    setTimeout(() => {
-    currentLang = currentLang === 'en' ? 'zh' : 'en';
-    updateLanguage();
-        
-        // 恢复元素可见性
-        document.querySelectorAll('[data-en], [data-zh]').forEach(element => {
-            element.style.opacity = 1;
-        });
-    
-    // 恢复所有分享tooltip为CSS控制
-    document.querySelectorAll('.share-tooltip').forEach(tip => {
-        tip.style.opacity = '';
-    });
-    
-    // 保存语言偏好到本地存储
-    localStorage.setItem('preferredLanguage', currentLang);
-    }, 300);
-}
-
 function updateLanguage() {
     // 更新导航链接文本
     document.querySelectorAll('[data-en][data-zh]').forEach(element => {
         element.textContent = element.getAttribute(`data-${currentLang}`);
     });
-    
-    // 更新语言按钮样式
-    const enText = document.querySelector('.lang-btn .lang-text:first-child');
-    const zhText = document.querySelector('.lang-btn .lang-text:last-child');
-    
-    if (currentLang === 'en') {
-        enText.classList.add('active');
-        zhText.classList.remove('active');
-    } else {
-        enText.classList.remove('active');
-        zhText.classList.add('active');
-    }
     
     // 更新页面标题
     document.title = currentLang === 'en' ? 'Home | Jiongtao Huang' : '首页 | 黄炯涛';
@@ -1847,12 +1773,7 @@ function updateLanguage() {
 
 // 页面加载时初始化语言
 document.addEventListener('DOMContentLoaded', () => {
-    // 从本地存储获取语言偏好
-    const savedLang = localStorage.getItem('preferredLanguage');
-    if (savedLang) {
-        currentLang = savedLang;
-        updateLanguage();
-    }
+    updateLanguage();
     
     // 为微信图标添加点击事件处理
     const wechatIcon = document.getElementById('wechat-icon');

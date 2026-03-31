@@ -1,10 +1,9 @@
 ---
-permalink: /
+permalink: /about/
 title: "Huang Jiongtao's personal websites"
 excerpt: "Home"
 author_profile: true
 redirect_from: 
-  - /about/
   - /about.html
 ---
 
