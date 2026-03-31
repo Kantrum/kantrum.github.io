@@ -295,7 +295,8 @@ body {
     font-size: clamp(2.5rem, 8vw, 5rem);
     font-weight: 800;
     margin-bottom: clamp(1rem, 3vw, 2rem);
-    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    /* 名字用“更亮的白→冷青蓝”渐变，和下面蓝紫内容区分开 */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, #7dd3fc 55%, var(--gradient-end) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
