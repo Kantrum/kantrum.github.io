@@ -202,9 +202,9 @@ defaults:
   - scope:
       path: "_pages/introduction.html" # 仅对 publications.html 生效
     values:
-      layout: single
-      title: "Introduction"
-      permalink: /introduction/
+      layout: none # 不使用任何布局
+      title: "Huang Jiongtao's Homepage"
+      permalink: /about
   # _posts
   - scope:
       path: ""

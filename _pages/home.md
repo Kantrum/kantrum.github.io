@@ -517,6 +517,42 @@ body {
     position: relative;
 }
 
+/* Why section 横向滚动一行布局（替代竖向排布） */
+.why-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: clamp(16px, 2vw, 24px);
+    overflow-x: auto;
+    padding: 10px 6px 24px;
+    margin: 0 -6px;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+}
+
+.why-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.why-scroll::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 999px;
+}
+
+.why-scroll::-webkit-scrollbar-thumb {
+    background: rgba(56, 189, 248, 0.55);
+    border-radius: 999px;
+}
+
+.why-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(56, 189, 248, 0.75);
+}
+
+.why-scroll .feature-card {
+    flex: 0 0 auto;
+    width: min(420px, 82vw);
+    scroll-snap-align: start;
+}
+
 .vertical-line {
     width: 1px;
     background: linear-gradient(to bottom, transparent, var(--accent), transparent);
@@ -1364,8 +1400,35 @@ body {
 
     <!-- 主要内容 -->
     <div class="content-wrapper">
-        <!-- 导航栏（全站统一版本） -->
-        {% include global_nav.html %}
+        <!-- 导航栏 -->
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a href="" data-en="Jiongtao Huang" data-zh="黄炯涛">Jiongtao Huang</a>
+            </div>
+            <div class="nav-right">
+                <!-- 语言切换按钮 -->
+                <div class="language-switch">
+                    <button class="lang-btn" onclick="toggleLanguage()">
+                        <span class="lang-text">EN</span>
+                        <span class="lang-separator">/</span>
+                        <span class="lang-text">中文</span>
+                    </button>
+                </div>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="introduction/" data-en="Introduction" data-zh="简介">Introduction</a></li>
+                    <li><a href="education/" data-en="Education" data-zh="教育">Education</a></li>
+                    <li><a href="entrepreneurship/" data-en="Entrepreneurship" data-zh="创业">Entrepreneurship</a></li>
+                    <li><a href="portfolio/" data-en="Life" data-zh="生活">Life</a></li>
+                    <li><a href="year-archive/" data-en="Blog" data-zh="博客">Blog</a></li>
+                    <li><a href="cv/" data-en="Resume" data-zh="简历">Resume</a></li>
+                </ul>
+            </div>
+        </nav>
 
         <!-- 主页面内容 -->
         <main class="main-content">
@@ -1415,98 +1478,82 @@ body {
                         </p>
                 </div>
                 
-                    <div class="why-layout">
-                        <div class="why-left">
-                            <div class="philosophy-container">
-                                <div class="philosophy-item" data-aos="fade-right" data-aos-delay="100">
-                                    <div class="philosophy-icon">
-                                        <i class="fas fa-lightbulb"></i>
-                                    </div>
-                                    <div class="philosophy-content">
-                                        <h3 data-en="Innovation Nexus" data-zh="创新枢纽">Innovation Nexus</h3>
-                                        <p data-en="This platform serves as a convergence point where academic rigor meets entrepreneurial spirit, fostering creative problem-solving and technological advancement." 
-                                           data-zh="这个平台是学术严谨与创业精神的交汇点，促进创造性解决问题和技术进步。">
-                                           This platform serves as a convergence point where academic rigor meets entrepreneurial spirit, fostering creative problem-solving and technological advancement.
-                                        </p>
-                                    </div>
-                    </div>
-                    
-                                <div class="philosophy-item" data-aos="fade-right" data-aos-delay="200">
-                                    <div class="philosophy-icon">
-                                        <i class="fas fa-network-wired"></i>
-                                    </div>
-                                    <div class="philosophy-content">
-                                        <h3 data-en="Knowledge Exchange" data-zh="知识交流">Knowledge Exchange</h3>
-                                        <p data-en="Beyond a portfolio, this space facilitates the exchange of ideas and expertise, creating value through shared insights and collaborative exploration." 
-                                           data-zh="超越作品集的范畴，这个空间促进思想和专业知识的交流，通过共享见解和协作探索创造价值。">
-                                           Beyond a portfolio, this space facilitates the exchange of ideas and expertise, creating value through shared insights and collaborative exploration.
-                                        </p>
-                                    </div>
-                    </div>
-                    
-                                <div class="philosophy-item" data-aos="fade-right" data-aos-delay="300">
-                                    <div class="philosophy-icon">
-                                        <i class="fas fa-chart-line"></i>
-                                    </div>
-                                    <div class="philosophy-content">
-                                        <h3 data-en="Progress Narrative" data-zh="进步叙事">Progress Narrative</h3>
-                                        <p data-en="Documenting the journey of continuous improvement and transformation, this platform captures the evolution of projects, ideas, and professional growth." 
-                                           data-zh="记录持续改进和转变的旅程，这个平台捕捉项目、想法和专业成长的演变过程。">
-                                           Documenting the journey of continuous improvement and transformation, this platform captures the evolution of projects, ideas, and professional growth.
-                                        </p>
-                                    </div>
-                                </div>
-                    </div>
-                </div>
-                
-                        <div class="vertical-line"></div>
-                        
-                        <div class="why-right">
-                            <div class="features-grid">
-                                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-                                    <div class="feature-icon">
-                                        <i class="fas fa-microscope"></i>
-                                    </div>
-                                    <h4 class="feature-title" data-en="Research Insights" data-zh="研究洞见">Research Insights</h4>
-                                    <p class="feature-content" data-en="Exploring cutting-edge developments in electrical and computer engineering, with a focus on practical applications and future technologies." 
-                                       data-zh="探索电子与计算机工程的前沿发展，重点关注实际应用和未来技术。">
-                                       Exploring cutting-edge developments in electrical and computer engineering, with a focus on practical applications and future technologies.
-                                    </p>
-                                </div>
-                                
-                                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-                                    <div class="feature-icon">
-                                        <i class="fas fa-rocket"></i>
-                                    </div>
-                                    <h4 class="feature-title" data-en="Startup Journey" data-zh="创业历程">Startup Journey</h4>
-                                    <p class="feature-content" data-en="Chronicles of building and scaling technological ventures, sharing lessons learned and strategies for navigating the entrepreneurial landscape." 
-                                       data-zh="记录建立和扩展科技企业的历程，分享学到的经验教训和应对创业环境的策略。">
-                                       Chronicles of building and scaling technological ventures, sharing lessons learned and strategies for navigating the entrepreneurial landscape.
-                                    </p>
-                                </div>
-                                
-                                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
-                                    <div class="feature-icon">
-                                        <i class="fas fa-project-diagram"></i>
-                                    </div>
-                                    <h4 class="feature-title" data-en="Project Portfolio" data-zh="项目作品集">Project Portfolio</h4>
-                                    <p class="feature-content" data-en="Curated collection of technical projects, academic work, and professional achievements that demonstrate problem-solving capabilities and technical expertise." 
-                                       data-zh="精心策划的技术项目、学术作品和专业成就集合，展示解决问题的能力和技术专长。">
-                                       Curated collection of technical projects, academic work, and professional achievements that demonstrate problem-solving capabilities and technical expertise.
-                                    </p>
-                                </div>
-                                
-                                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
-                                    <div class="feature-icon">
-                                        <i class="fas fa-users"></i>
-                                    </div>
-                                    <h4 class="feature-title" data-en="Community Engagement" data-zh="社区参与">Community Engagement</h4>
-                                    <p class="feature-content" data-en="A platform for meaningful connections with peers, mentors, and collaborators who share a passion for innovation and technological advancement." 
-                                       data-zh="一个与志同道合的同行、导师和合作者建立有意义联系的平台，共同热爱创新和技术进步。">
-                                       A platform for meaningful connections with peers, mentors, and collaborators who share a passion for innovation and technological advancement.
-                                    </p>
-                                </div>
+                    <div class="why-scroll" aria-label="Why This Digital Space cards">
+                        <div class="feature-card why-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="feature-icon">
+                                <i class="fas fa-lightbulb"></i>
                             </div>
+                            <h4 class="feature-title" data-en="Innovation Nexus" data-zh="创新枢纽">Innovation Nexus</h4>
+                            <p class="feature-content" data-en="This platform serves as a convergence point where academic rigor meets entrepreneurial spirit, fostering creative problem-solving and technological advancement." 
+                               data-zh="这个平台是学术严谨与创业精神的交汇点，促进创造性解决问题和技术进步。">
+                               This platform serves as a convergence point where academic rigor meets entrepreneurial spirit, fostering creative problem-solving and technological advancement.
+                            </p>
+                        </div>
+
+                        <div class="feature-card why-card" data-aos="fade-up" data-aos-delay="150">
+                            <div class="feature-icon">
+                                <i class="fas fa-microscope"></i>
+                            </div>
+                            <h4 class="feature-title" data-en="Research Insights" data-zh="研究洞见">Research Insights</h4>
+                            <p class="feature-content" data-en="Exploring cutting-edge developments in electrical and computer engineering, with a focus on practical applications and future technologies." 
+                               data-zh="探索电子与计算机工程的前沿发展，重点关注实际应用和未来技术。">
+                               Exploring cutting-edge developments in electrical and computer engineering, with a focus on practical applications and future technologies.
+                            </p>
+                        </div>
+
+                        <div class="feature-card why-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="feature-icon">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <h4 class="feature-title" data-en="Knowledge Exchange" data-zh="知识交流">Knowledge Exchange</h4>
+                            <p class="feature-content" data-en="Beyond a portfolio, this space facilitates the exchange of ideas and expertise, creating value through shared insights and collaborative exploration." 
+                               data-zh="超越作品集的范畴，这个空间促进思想和专业知识的交流，通过共享见解和协作探索创造价值。">
+                               Beyond a portfolio, this space facilitates the exchange of ideas and expertise, creating value through shared insights and collaborative exploration.
+                            </p>
+                        </div>
+
+                        <div class="feature-card why-card" data-aos="fade-up" data-aos-delay="250">
+                            <div class="feature-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h4 class="feature-title" data-en="Startup Journey" data-zh="创业历程">Startup Journey</h4>
+                            <p class="feature-content" data-en="Chronicles of building and scaling technological ventures, sharing lessons learned and strategies for navigating the entrepreneurial landscape." 
+                               data-zh="记录建立和扩展科技企业的历程，分享学到的经验教训和应对创业环境的策略。">
+                               Chronicles of building and scaling technological ventures, sharing lessons learned and strategies for navigating the entrepreneurial landscape.
+                            </p>
+                        </div>
+
+                        <div class="feature-card why-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4 class="feature-title" data-en="Progress Narrative" data-zh="进步叙事">Progress Narrative</h4>
+                            <p class="feature-content" data-en="Documenting the journey of continuous improvement and transformation, this platform captures the evolution of projects, ideas, and professional growth." 
+                               data-zh="记录持续改进和转变的旅程，这个平台捕捉项目、想法和专业成长的演变过程。">
+                               Documenting the journey of continuous improvement and transformation, this platform captures the evolution of projects, ideas, and professional growth.
+                            </p>
+                        </div>
+
+                        <div class="feature-card why-card" data-aos="fade-up" data-aos-delay="350">
+                            <div class="feature-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <h4 class="feature-title" data-en="Project Portfolio" data-zh="项目作品集">Project Portfolio</h4>
+                            <p class="feature-content" data-en="Curated collection of technical projects, academic work, and professional achievements that demonstrate problem-solving capabilities and technical expertise." 
+                               data-zh="精心策划的技术项目、学术作品和专业成就集合，展示解决问题的能力和技术专长。">
+                               Curated collection of technical projects, academic work, and professional achievements that demonstrate problem-solving capabilities and technical expertise.
+                            </p>
+                        </div>
+
+                        <div class="feature-card why-card" data-aos="fade-up" data-aos-delay="400">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4 class="feature-title" data-en="Community Engagement" data-zh="社区参与">Community Engagement</h4>
+                            <p class="feature-content" data-en="A platform for meaningful connections with peers, mentors, and collaborators who share a passion for innovation and technological advancement." 
+                               data-zh="一个与志同道合的同行、导师和合作者建立有意义联系的平台，共同热爱创新和技术进步。">
+                               A platform for meaningful connections with peers, mentors, and collaborators who share a passion for innovation and technological advancement.
+                            </p>
                         </div>
                     </div>
                     
@@ -1734,11 +1781,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// 导航栏滚动效果
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.style.padding = "15px 40px";
+        navbar.style.boxShadow = "0 10px 30px rgba(0, 0, 0, 0.1)";
+    } else {
+        navbar.style.padding = "20px 40px";
+        navbar.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.1)";
+    }
+});
 </script>
 
 <script>
-// 主页语言显示：根据当前站点语言（构建时 / 或 /zh/）自动选择 data-en/data-zh
-let currentLang = (document.documentElement.lang || 'en').toLowerCase().startsWith('zh') ? 'zh' : 'en';
+let currentLang = 'en';
 
 const translations = {
     en: {
@@ -1761,11 +1818,48 @@ const translations = {
     }
 };
 
+function toggleLanguage() {
+    // 添加过渡动画效果
+    document.querySelectorAll('[data-en], [data-zh]').forEach(element => {
+        element.style.opacity = 0;
+    });
+    
+    setTimeout(() => {
+    currentLang = currentLang === 'en' ? 'zh' : 'en';
+    updateLanguage();
+        
+        // 恢复元素可见性
+        document.querySelectorAll('[data-en], [data-zh]').forEach(element => {
+            element.style.opacity = 1;
+        });
+    
+    // 恢复所有分享tooltip为CSS控制
+    document.querySelectorAll('.share-tooltip').forEach(tip => {
+        tip.style.opacity = '';
+    });
+    
+    // 保存语言偏好到本地存储
+    localStorage.setItem('preferredLanguage', currentLang);
+    }, 300);
+}
+
 function updateLanguage() {
     // 更新导航链接文本
     document.querySelectorAll('[data-en][data-zh]').forEach(element => {
         element.textContent = element.getAttribute(`data-${currentLang}`);
     });
+    
+    // 更新语言按钮样式
+    const enText = document.querySelector('.lang-btn .lang-text:first-child');
+    const zhText = document.querySelector('.lang-btn .lang-text:last-child');
+    
+    if (currentLang === 'en') {
+        enText.classList.add('active');
+        zhText.classList.remove('active');
+    } else {
+        enText.classList.remove('active');
+        zhText.classList.add('active');
+    }
     
     // 更新页面标题
     document.title = currentLang === 'en' ? 'Home | Jiongtao Huang' : '首页 | 黄炯涛';
@@ -1773,7 +1867,12 @@ function updateLanguage() {
 
 // 页面加载时初始化语言
 document.addEventListener('DOMContentLoaded', () => {
-    updateLanguage();
+    // 从本地存储获取语言偏好
+    const savedLang = localStorage.getItem('preferredLanguage');
+    if (savedLang) {
+        currentLang = savedLang;
+        updateLanguage();
+    }
     
     // 为微信图标添加点击事件处理
     const wechatIcon = document.getElementById('wechat-icon');

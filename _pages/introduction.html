@@ -1,18 +1,83 @@
 ---
-layout: single
-title: "Introduction"
-permalink: /introduction/
-author_profile: false
+layout: null
+title: ""
+permalink: introduction/
+author_profile: true
 ---
 
-<div class="notice--warning">
-  <p>
-    本页此前是一个完整的独立 HTML 文档（含自己的导航与样式），为实现全站统一导航与后续中英双站构建，已切换为走站点统一布局。
-  </p>
-  <p>
-    下一步我会把原页面内容拆分为可复用的样式/脚本与正文片段，再逐步恢复原设计与动效（同时用全站统一导航替代旧导航）。
-  </p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction|Jiongtao Huang</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<style>
+/* 添加在文件开头，用于测试CSS是否正确加载 */
+body {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+:root {
+    --primary-color: #2C3E50;
+    --secondary-color: #E74C3C;
+    --accent-color: #3498DB;
+    --bg-color: #FFFFFF;
+    --text-color: #2C3E50;
+    --light-gray: #F8F9FA;
+    --border-color: #E9ECEF;
+    --gradient-start: #f8f9fa;
+    --gradient-end: #e9ecef;
+    --spacing-xs: 0.3rem;
+    --spacing-sm: 0.8rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2.5rem;
+    --spacing-xl: 3.5rem;
+    --border-radius-sm: 6px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 20px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* 导航栏样式 */
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1.2rem 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 2px;
     text-decoration: none;
