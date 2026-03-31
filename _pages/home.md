@@ -825,6 +825,53 @@ body {
     }
 }
 
+/* 逐词模糊到清晰的标题动画（替代 React BlurText 组件效果） */
+.blurtext-animate {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+.blurtext-animate .blurtext-word {
+    display: inline-block;
+    will-change: transform, filter, opacity;
+    filter: blur(10px);
+    opacity: 0;
+    transform: translateY(var(--y-start, -50px));
+}
+
+.hero-text h1.blurtext-animate .blurtext-word {
+    /* 保持原本 hero 标题的渐变文字效果 */
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.blurtext-animate.blurtext-inview .blurtext-word {
+    animation: blurTextIn var(--blur-duration, 0.7s) linear both;
+    animation-delay: var(--delay-ms, 0ms);
+}
+
+@keyframes blurTextIn {
+    0% {
+        filter: blur(10px);
+        opacity: 0;
+        transform: translateY(var(--y-start, -50px));
+    }
+    50% {
+        filter: blur(5px);
+        opacity: 0.5;
+        transform: translateY(var(--y-mid, 5px));
+    }
+    100% {
+        filter: blur(0px);
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 .why-card {
     opacity: 0;
     animation: fadeInUp 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
@@ -1347,7 +1394,7 @@ body {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Jiongtao Huang</title>
+    <title>Home | huang jiongtao</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono&display=swap" rel="stylesheet">
@@ -1367,7 +1414,7 @@ body {
         <!-- 导航栏 -->
         <nav class="navbar">
             <div class="nav-brand">
-                <a href="" data-en="Jiongtao Huang" data-zh="黄炯涛">Jiongtao Huang</a>
+                <a href="" class="blurtext-animate" data-en="huang jiongtao" data-zh="黄炯涛">huang jiongtao</a>
             </div>
             <div class="nav-right">
                 <!-- 语言切换按钮 -->
@@ -1398,7 +1445,7 @@ body {
         <main class="main-content">
             <section class="hero">
                 <div class="hero-text">
-                    <h1 data-en="Jiongtao (Kaden) Huang" data-zh="黄炯涛">Jiongtao (Kaden) Huang</h1>
+                    <h1 class="blurtext-animate" data-en="huang jiongtao" data-zh="黄炯涛">huang jiongtao</h1>
                     <p class="title" data-en="MEng. Student @ Cornell University" data-zh="康奈尔大学电子与计算机工程硕士在读">MEng. Student @ Cornell University</p>
                     <p class="position" data-en="Founder & Executive Director @ Sichuan Jie Min Technology Co., Ltd." data-zh="四川孑民科技有限责任公司 创始人兼执行董事">Founder & Executive Director @ Sichuan Jie Min Technology Co., Ltd.</p>
                     <p class="description" data-en="Exploring the frontiers of Electrical and Computer Engineering" data-zh="探索电子与计算机工程的前沿领域">Exploring the frontiers of Electrical and Computer Engineering</p>
@@ -1770,6 +1817,73 @@ const translations = {
     }
 };
 
+const BLUR_TEXT_CLASS = 'blurtext-animate';
+const BLUR_INVIEW_CLASS = 'blurtext-inview';
+const BLUR_DELAY_MS = 200;
+const BLUR_STEP_DURATION_S = 0.35;
+const BLUR_THRESHOLD = 0.1;
+const BLUR_ROOT_MARGIN = '0px';
+
+let blurObserver = null;
+
+function ensureBlurObserver() {
+    if (blurObserver) return;
+    blurObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add(BLUR_INVIEW_CLASS);
+                obs.unobserve(entry.target); // 只在本轮渲染时触发一次
+            }
+        });
+    }, {
+        threshold: BLUR_THRESHOLD,
+        rootMargin: BLUR_ROOT_MARGIN
+    });
+}
+
+function renderBlurText(element, text) {
+    if (!element || !element.classList || !element.classList.contains(BLUR_TEXT_CLASS)) return;
+
+    // 与你给的 React BlurText 组件保持一致：默认 animateBy='words'，即只按空格拆分
+    const segments = (typeof text === 'string' ? text : '').split(' ');
+
+    const stepCount = 3; // 10px -> 5px -> 0px（与 CSS keyframes 对应）
+    const totalDurationS = BLUR_STEP_DURATION_S * (stepCount - 1); // 0.7s
+
+    // 控制 keyframes 中的位移方向
+    element.style.setProperty('--y-start', '-50px');
+    element.style.setProperty('--y-mid', '5px');
+    element.style.setProperty('--blur-duration', `${totalDurationS}s`);
+
+    // 重渲染前先清空，避免堆叠旧的 span
+    element.classList.remove(BLUR_INVIEW_CLASS);
+    element.innerHTML = '';
+
+    segments.forEach((segment, index) => {
+        const span = document.createElement('span');
+        span.className = 'blurtext-word';
+        span.style.setProperty('--delay-ms', `${index * BLUR_DELAY_MS}ms`);
+
+        // “words”模式：每个词后面补一个 NBSP（除最后一个）
+        const safe = segment === '' ? '\u00A0' : segment;
+        span.textContent = index < segments.length - 1 ? safe + '\u00A0' : safe;
+        element.appendChild(span);
+    });
+
+    ensureBlurObserver();
+    blurObserver.observe(element);
+}
+
+function initBlurTextAnimations() {
+    // 初次加载时：把当前语言的标题文本拆成 span，并触发首次进入视口动画
+    document.querySelectorAll(`.${BLUR_TEXT_CLASS}`).forEach((el) => {
+        // 如果已经渲染过 span，就不重复拆分
+        if (el.querySelector('.blurtext-word')) return;
+        const text = el.getAttribute(`data-${currentLang}`) ?? el.textContent ?? '';
+        renderBlurText(el, text);
+    });
+}
+
 function toggleLanguage() {
     // 添加过渡动画效果
     document.querySelectorAll('[data-en], [data-zh]').forEach(element => {
@@ -1798,7 +1912,13 @@ function toggleLanguage() {
 function updateLanguage() {
     // 更新导航链接文本
     document.querySelectorAll('[data-en][data-zh]').forEach(element => {
-        element.textContent = element.getAttribute(`data-${currentLang}`);
+        const nextText = element.getAttribute(`data-${currentLang}`) ?? '';
+        if (element.classList.contains(BLUR_TEXT_CLASS)) {
+            // 避免 textContent 直接覆盖掉 span 结构，导致动画失效
+            renderBlurText(element, nextText);
+        } else {
+            element.textContent = nextText;
+        }
     });
     
     // 更新语言按钮样式
@@ -1814,7 +1934,7 @@ function updateLanguage() {
     }
     
     // 更新页面标题
-    document.title = currentLang === 'en' ? 'Home | Jiongtao Huang' : '首页 | 黄炯涛';
+    document.title = currentLang === 'en' ? 'Home | huang jiongtao' : '首页 | 黄炯涛';
 }
 
 // 页面加载时初始化语言
@@ -1825,6 +1945,8 @@ document.addEventListener('DOMContentLoaded', () => {
         currentLang = savedLang;
         updateLanguage();
     }
+
+    initBlurTextAnimations();
     
     // 为微信图标添加点击事件处理
     const wechatIcon = document.getElementById('wechat-icon');
